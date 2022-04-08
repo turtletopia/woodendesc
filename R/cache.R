@@ -5,3 +5,7 @@ wood_tempdir <- function() {
   }
   dir_path
 }
+
+wood_clear_cache <- function() {
+  unlink(file.path(wood_tempdir(), "*"))
+}
