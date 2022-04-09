@@ -1,0 +1,33 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://nonexistent_universe.r-universe.dev/packages
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: nginx/1.20.2
+      date: Sat, 09 Apr 2022 19:04:40 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '2'
+      connection: keep-alive
+      x-powered-by: Express
+      access-control-allow-origin: '*'
+      etag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
+      expires: Sat, 09 Apr 2022 19:05:40 GMT
+      cache-control: max-age=60
+      x-runiverse-cache: MISS
+    body:
+      encoding: UTF-8
+      file: no
+      string: '[]'
+  recorded_at: 2022-04-09 19:04:39 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
