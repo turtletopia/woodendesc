@@ -6,7 +6,7 @@
 #'
 #' @export
 wood_clear_cache <- function() {
-  unlink(file.path(wood_tempdir(), "*"))
+  unlink(file.path(wood_tempdir(), "cache*"))
 }
 
 wood_tempdir <- function() {
