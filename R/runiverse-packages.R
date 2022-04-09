@@ -15,6 +15,8 @@
 #' wood_runiverse_packages("tidyverse")
 #' }
 #'
+#' @family runiverse
+#' @family packages
 #' @export
 wood_runiverse_packages <- function(universe = "ropensci") {
   runiverse_packages_cache(universe)
