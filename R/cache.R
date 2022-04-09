@@ -16,3 +16,7 @@ wood_tempdir <- function() {
   }
   dir_path
 }
+
+cache_path <- function(...) {
+  file.path(wood_tempdir(), paste0(paste("cache", ..., sep = "_"), ".rds"))
+}
