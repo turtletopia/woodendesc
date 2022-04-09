@@ -9,6 +9,14 @@ wood_clear_cache <- function() {
   unlink(file.path(wood_tempdir(), "cache*"))
 }
 
+#' Create and access woodendesc temporary directory
+#'
+#' @description Returns the path to woodendesc temporary directory. If the
+#' directory doesn't exist, creates it.
+#'
+#' @return A string with the path to woodendesc temporary directory.
+#'
+#' @noRd
 wood_tempdir <- function() {
   dir_path <- file.path(tempdir(), "woodendesc")
   if (!dir.exists(dir_path)) {
@@ -17,10 +25,33 @@ wood_tempdir <- function() {
   dir_path
 }
 
+#' Create path for cache file
+#'
+#' @description Creates a cache filename from specified components. These
+#' components are separated by underscores and should allow for easy recognizing
+#' what cache is stored inside.
+#'
+#' @param ... \[\code{character(1)}\]\cr
+#'  Components of the filename, to be separated by underscores.
+#'
+#' @return A string with a path to woodendesc cache file.
+#'
+#' @noRd
 cache_path <- function(...) {
   file.path(wood_tempdir(), paste0(paste("cache", ..., sep = "_"), ".rds"))
 }
 
+#' Check cache usability
+#'
+#' @description Checks if the cache exists and if it is older than the limit.
+#' The limit can be modified with `wood_cache_time` option.
+#'
+#' @param file \[\code{character(1)}\]\cr
+#'  Path to file that is to be verified.
+#'
+#' @return A boolean indicating if the cache is usable.
+#'
+#' @noRd
 is_cache_usable <- function(file) {
   file.exists(file) &&
     difftime(Sys.time(), file.info(file)[["mtime"]], units = "secs") <
