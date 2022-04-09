@@ -14,11 +14,11 @@ test_that("clearing cache doesn't remove woodendesc temporary directory", {
   expect_true(dir.exists(file.path(tempdir(), "woodendesc")))
 })
 
-test_that("woodendesc temporary directory is empty after clearing cache", {
+test_that("clearing cache removes only cache files from woodendesc directory", {
   # Generate some cache data
-  file.create(file.path(wood_tempdir(), c("file1", "file2")))
+  file.create(file.path(wood_tempdir(), c("file1", "file2", "cache_A.txt")))
   wood_clear_cache()
-  expect_equal(length(list.files(wood_tempdir())), 0)
+  expect_equal(list.files(wood_tempdir()), c("file1", "file2"))
 })
 
 # CACHE PATH ----
