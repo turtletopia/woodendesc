@@ -20,3 +20,9 @@ wood_tempdir <- function() {
 cache_path <- function(...) {
   file.path(wood_tempdir(), paste0(paste("cache", ..., sep = "_"), ".rds"))
 }
+
+is_cache_usable <- function(file) {
+  file.exists(file) &&
+    difftime(Sys.time(), file.info(file)[["mtime"]], units = "secs") <
+    getOption("wood_cache_time", default = 60 * 60 * 3)
+}
