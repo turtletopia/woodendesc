@@ -1,3 +1,20 @@
+#' List available packages in one of R universes
+#'
+#' @description This function queries the selected universe for a list of
+#' available packages. They are returned as a vector of strings, each element
+#' being a package name.
+#'
+#' @param universe \[\code{character(1)}\]\cr
+#'  Name of a universe within R-universe, e.g. "ropensci".
+#'
+#' @return A character vector of available packages.
+#'
+#' @examples
+#' \donttest{
+#' wood_runiverse_packages()
+#' wood_runiverse_packages("tidyverse")
+#' }
+#'
 #' @export
 wood_runiverse_packages <- function(universe = "ropensci") {
   runiverse_packages_cache(universe)
