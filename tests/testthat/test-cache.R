@@ -42,3 +42,23 @@ test_that("cache path depends on its arguments only (and tempdir() location)", {
   file.create(cache_path("create", "a", "file"))
   expect_true(file.exists(cache_path("create", "a", "file")))
 })
+
+# CACHE USABILITY ----
+test_that("existing new cache files are detected properly", {
+  file_path <- cache_path("an", "existing", "file")
+  file.create(file_path)
+  expect_true(is_cache_usable(file_path))
+})
+
+test_that("is_cache_usable() detects cache file not existing", {
+  wood_clear_cache()
+  expect_false(is_cache_usable(cache_path("not", "existing")))
+})
+
+test_that("is_cache_usable() detects if file is too old", {
+  withr::local_options(list(wood_cache_time = 1))
+  file_path <- cache_path("file", "too", "old")
+  file.create(file_path)
+  Sys.sleep(1.1)
+  expect_false(is_cache_usable(file_path))
+})
