@@ -16,3 +16,9 @@ test_that("returned vector of strings is not empty", {
 test_that("all returned strings are valid package names", {
   expect_pkg_name(ropensci_packages)
 })
+
+test_that("tidyverse universe has ggplot2 package", {
+  vcr::use_cassette("tidyverse-packages", {
+    expect_true("ggplot2" %in% wood_runiverse_packages("tidyverse"))
+  })
+})
