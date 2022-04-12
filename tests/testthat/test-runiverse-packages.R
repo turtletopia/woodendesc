@@ -1,9 +1,14 @@
 skip_if_not_installed("vcr")
 
+# SETUP ----
 vcr::use_cassette("ropensci-packages", {
   ropensci_packages <- wood_runiverse_packages()
 })
+vcr::use_cassette("tidyverse-packages", {
+  tidyverse_packages <- wood_runiverse_packages("tidyverse")
+})
 
+# TESTS ----
 test_that("returns a vector of strings", {
   expect_vector(ropensci_packages,
                 ptype = character())
@@ -18,9 +23,7 @@ test_that("all returned strings are valid package names", {
 })
 
 test_that("tidyverse universe has ggplot2 package", {
-  vcr::use_cassette("tidyverse-packages", {
-    expect_true("ggplot2" %in% wood_runiverse_packages("tidyverse"))
-  })
+  expect_true("ggplot2" %in% tidyverse_packages)
 })
 
 test_that("if a universe doesn't exist, returns an empty character vector with a warning", {
