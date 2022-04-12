@@ -31,6 +31,6 @@ test_that("if a universe doesn't exist, returns an empty character vector with a
     expect_warning(
       nonexistent_packages <- wood_runiverse_packages("nonexistent_universe")
     )
-    expect_equal(nonexistent_packages, character())
   })
+  expect_equal(nonexistent_packages, character())
 })
