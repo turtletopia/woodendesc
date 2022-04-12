@@ -4,8 +4,7 @@
 #' available packages. They are returned as a vector of strings, each element
 #' being a package name.
 #'
-#' @param universe \[\code{character(1)}\]\cr
-#'  Name of a universe within R-universe, e.g. "ropensci".
+#' @template universe
 #'
 #' @return A character vector of available packages.
 #'
