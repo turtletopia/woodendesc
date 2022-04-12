@@ -27,7 +27,7 @@ runiverse_packages_cache <- function(universe = "ropensci") {
 
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
-  url <- paste0("https://", universe, ".r-universe.dev/packages")
+  url <- runiverse_url(universe, "packages")
   response <- GET(url)
 
   # Raise an exception when status code is 400 or higher
