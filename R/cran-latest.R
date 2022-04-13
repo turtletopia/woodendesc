@@ -1,3 +1,20 @@
+#' Get latest package version on CRAN
+#'
+#' @description This function queries CRAN for the code of the latest version
+#' of the selected package.
+#'
+#' @param package \[\code{character(1)}\]\cr
+#'  Name of a package to query.
+#'
+#' @return A single string with a version code.
+#'
+#' @examples
+#' \donttest{
+#' wood_cran_latest("versionsort")
+#' }
+#'
+#' @family cran
+#' @family versions
 #' @export
 wood_cran_latest <- function(package) {
   cran_latest_cache(package)
