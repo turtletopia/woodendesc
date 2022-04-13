@@ -21,19 +21,14 @@ wood_runiverse_packages <- function(universe = "ropensci") {
   runiverse_packages_cache(universe)
 }
 
-#' @importFrom httr GET content stop_for_status
 runiverse_packages_cache <- function(universe = "ropensci") {
   cache_file <- cache_path("packages", "runiverse", universe)
 
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
   url <- runiverse_url(universe, "packages")
-  response <- GET(url)
+  packages <- download_safely(url)
 
-  # Raise an exception when status code is 400 or higher
-  stop_for_status(response, task = paste0("download data from ", url))
-
-  packages <- content(response)
   if (length(packages) == 0) {
     # Warn if response is empty
     warning(
