@@ -41,3 +41,7 @@ cran_url <- function(..., params = list()) {
   # Add question mark before listing parameters
   paste(ret, params, sep = "?")
 }
+
+bioc_url <- function(...) {
+  paste("https://bioconductor.org", ..., sep = "/")
+}
