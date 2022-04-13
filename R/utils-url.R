@@ -42,6 +42,15 @@ cran_url <- function(..., params = list()) {
   paste(ret, params, sep = "?")
 }
 
+#' Get Bioconductor URL
+#'
+#' @description Creates an URL to the selected Bioconductor API.
+#'
+#' @template url-components
+#'
+#' @return A single string with an URL address to selected API.
+#'
+#' @noRd
 bioc_url <- function(...) {
   paste("https://bioconductor.org", ..., sep = "/")
 }
