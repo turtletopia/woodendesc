@@ -58,3 +58,7 @@ cran_url <- function(..., params = list()) {
 bioc_url <- function(...) {
   paste("https://bioconductor.org", ..., sep = "/")
 }
+
+extract_core_url <- function(url) {
+  sub("\\?.*", "", url)
+}
