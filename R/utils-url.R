@@ -4,8 +4,7 @@
 #' within this universe.
 #'
 #' @template universe
-#' @param ... \[\code{character(1)}\]\cr
-#'  Components of the URL path, to be separated by slashes.
+#' @template url-components
 #'
 #' @return A single string with an URL address to selected universe.
 #'
