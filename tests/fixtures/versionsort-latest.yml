@@ -1,0 +1,28 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/desc?start_key=%22versionsort%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: nginx/1.4.6 (Ubuntu)
+      date: Wed, 13 Apr 2022 22:43:42 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "versionsort": { "version": "1.1.0", "title": "Sort and Order Version
+        Codes" } }'
+  recorded_at: 2022-04-13 22:41:36 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

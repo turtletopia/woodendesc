@@ -1,13 +1,9 @@
 skip_if_not_installed("vcr")
 
 # SETUP ----
-# TODO: Use cassette again when this issue is solved:
-#  https://github.com/ropensci/vcr/issues/240
-# vcr::use_cassette("versionsort-latest", {
-#   versionsort_latest <- wood_cran_latest("versionsort")
-# })
-skip_on_cran()
-versionsort_latest <- wood_cran_latest("versionsort")
+vcr::use_cassette("versionsort-latest", {
+  versionsort_latest <- wood_cran_latest("versionsort")
+})
 
 # TESTS ----
 test_that("returns a single string", {

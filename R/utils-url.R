@@ -28,6 +28,7 @@ runiverse_url <- function(universe, ...) {
 #'
 #' @return A single string with an URL address to specified CRAN API.
 #'
+#' @importFrom utils URLencode
 #' @noRd
 cran_url <- function(..., params = list()) {
   ret <- paste("http://crandb.r-pkg.org", ..., sep = "/")
@@ -42,7 +43,7 @@ cran_url <- function(..., params = list()) {
   # Translate list of parameters into URL list
   params <- paste(names(params), params, sep = "=", collapse = "&")
   # Add question mark before listing parameters
-  paste(ret, params, sep = "?")
+  URLencode(paste(ret, params, sep = "?"))
 }
 
 #' Get Bioconductor URL
