@@ -16,6 +16,24 @@ test_that("runiverse_url() separates API with slashes", {
   )
 })
 
+# BIOC URL ----
+test_that("bioc_url() returns a single string", {
+  expect_vector(bioc_url("install"),
+                ptype = character(),
+                size = 1)
+  expect_vector(bioc_url("packages", "release", "bioc", "VIEWS"),
+                ptype = character(),
+                size = 1)
+})
+
+test_that("bioc_url() separates API with slashes", {
+  expect_match(
+    bioc_url("packages", "release", "bioc", "VIEWS"),
+    "/packages/release/bioc/VIEWS",
+    fixed = TRUE
+  )
+})
+
 # CRAN URL ----
 test_that("cran_url() returns a single string", {
   expect_vector(cran_url("-"),
