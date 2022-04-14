@@ -46,6 +46,20 @@ crandb_url <- function(..., params = list()) {
   URLencode(paste(ret, params, sep = "?"))
 }
 
+#' Get CRAN URL
+#'
+#' @description Creates an URL to the selected CRAN API.
+#'
+#' @param ... \[\code{character(1)}\]\cr
+#'  Components of the URL path, to be separated by slashes.
+#'
+#' @return A single string with an URL address to selected API.
+#'
+#' @noRd
+cran_url <- function(...) {
+  paste("https://CRAN.R-project.org", ..., sep = "/")
+}
+
 #' Get Bioconductor URL
 #'
 #' @description Creates an URL to the selected Bioconductor API.

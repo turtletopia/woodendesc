@@ -21,7 +21,7 @@ cran_packages_cache <- function() {
   cache_file <- cache_path("packages", "cran")
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
-  url <- "https://CRAN.R-project.org/src/contrib/PACKAGES.gz"
+  url <- cran_url("src", "contrib", "PACKAGES.gz")
   packages <- download_safely(url)
 
   file <- tempfile()
