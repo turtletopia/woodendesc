@@ -1,0 +1,46 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/allall?start_key=%22versionsort%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: nginx/1.4.6 (Ubuntu)
+      date: Thu, 14 Apr 2022 12:54:56 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "versionsort":{"_id":"versionsort","_rev":"2-7d5bd49628b7dac7aafe61ce14cd400e","name":"versionsort","archived":false,"versions":{"1.0.0":{"Package":"versionsort","Type":"Package","Title":"Sort
+        and Order Version Codes","Version":"1.0.0","Date":"2021-12-15","Authors@R":"c(person(\"Laura\",
+        \"Bakala\",\u000aemail = \"erdaradun.gaztea@gmail.com\",\u000arole = c(\"cre\",
+        \"aut\", \"cph\")))","Description":"A lightweight package for sorting version
+        codes in various forms. No strong dependencies guaranteed.","License":"GPL
+        (>= 3)","Encoding":"UTF-8","RoxygenNote":"7.1.2","Suggests":{"covr":"*","spelling":"*","testthat":">=
+        3.0.0"},"Config/testthat/edition":"3","Language":"en-US","NeedsCompilation":"no","Packaged":"2021-12-15
+        19:09:45 UTC; matib","Author":"Laura Bakala [cre, aut, cph]","Maintainer":"Laura
+        Bakala <erdaradun.gaztea@gmail.com>","Repository":"CRAN","Date/Publication":"2021-12-15
+        20:00:02 UTC","crandb_file_date":"2021-12-15 21:32:25","MD5sum":"d384c2227624ff6a97294a413980a823","date":"2021-12-15T19:00:02+00:00","releases":[]},"1.1.0":{"Package":"versionsort","Type":"Package","Title":"Sort
+        and Order Version Codes","Version":"1.1.0","Date":"2022-03-23","Authors@R":"c(person(\"Laura\",
+        \"Bakala\",\u000aemail = \"erdaradun.gaztea@gmail.com\",\u000arole = c(\"cre\",
+        \"aut\", \"cph\")))","Description":"A lightweight package for sorting version
+        codes in various forms. No strong dependencies guaranteed.","License":"GPL
+        (>= 3)","Encoding":"UTF-8","RoxygenNote":"7.1.2","Suggests":{"covr":"*","spelling":"*","testthat":">=
+        3.0.0"},"Config/testthat/edition":"3","Language":"en-US","NeedsCompilation":"no","Packaged":"2022-03-25
+        00:14:57 UTC; erdar","Author":"Laura Bakala [cre, aut, cph]","Maintainer":"Laura
+        Bakala <erdaradun.gaztea@gmail.com>","Repository":"CRAN","Date/Publication":"2022-03-25
+        08:10:02 UTC","crandb_file_date":"2022-03-25 10:20:35","MD5sum":"634bfff6a502f107a2cebbe19dbc839e","date":"2022-03-25T07:10:02+00:00","releases":[]}},"timeline":{"1.0.0":"2021-12-15T19:00:02+00:00","1.1.0":"2022-03-25T07:10:02+00:00"},"latest":"1.1.0","title":"Sort
+        and Order Version Codes"} }'
+  recorded_at: 2022-04-14 12:52:50 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
