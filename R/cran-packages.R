@@ -21,10 +21,15 @@ cran_packages_cache <- function() {
   cache_file <- cache_path("packages", "cran")
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
-  url <- crandb_url("-", "desc")
+  url <- "https://CRAN.R-project.org/src/contrib/PACKAGES.gz"
   packages <- download_safely(url)
 
-  packages <- names(packages)
+  file <- tempfile()
+  writeBin(packages, file)
+  packages <- read.dcf(file)
+  unlink(file)
+
+  packages <- packages[, "Package"]
   saveRDS(packages, cache_file)
   # Return saved object to save time on reading it
   packages
