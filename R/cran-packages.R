@@ -22,12 +22,7 @@ cran_packages_cache <- function() {
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
   url <- cran_url("src", "contrib", "PACKAGES.gz")
-  packages <- download_safely(url)
-
-  file <- tempfile()
-  writeBin(packages, file)
-  packages <- read.dcf(file)
-  unlink(file)
+  packages <- download_PACKAGES(url)
 
   packages <- packages[, "Package"]
   saveRDS(packages, cache_file)
