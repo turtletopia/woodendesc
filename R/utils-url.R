@@ -15,9 +15,9 @@ runiverse_url <- function(universe, ...) {
   paste(paste0("https://", universe, ".r-universe.dev"), ..., sep = "/")
 }
 
-#' Get CRAN URL
+#' Get CRANDB URL
 #'
-#' @description Creates an URL to the selected CRAN API with specified
+#' @description Creates an URL to the selected CRANDB API with specified
 #' parameters translated to an URL list. The list should be named. In case of
 #' an empty list, parameters are simply not appended to the core URL.
 #'
@@ -26,7 +26,7 @@ runiverse_url <- function(universe, ...) {
 #' @param params \[\code{list}\]\cr
 #'  Parameters to URL call in form of key:value named list.
 #'
-#' @return A single string with an URL address to specified CRAN API.
+#' @return A single string with an URL address to specified CRANDB API.
 #'
 #' @importFrom utils URLencode
 #' @noRd
