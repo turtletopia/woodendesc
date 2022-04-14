@@ -13,5 +13,8 @@ coverage:
         threshold: 1%
         informational: true
 
+ignore:
+  - "R/zzz.R"
+
 codecov:
   token: 7c01376b-220a-4a44-a4a4-4f60325835ff
