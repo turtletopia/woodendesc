@@ -14,7 +14,7 @@ test_that("returns a single string", {
 
 test_that("returned string is a version code", {
   # Since I authored versionsort, I can guarantee version codes fitting that regexp
-  expect_match(versionsort_latest, "\\d+\\.\\d+\\.\\d+")
+  expect_version_code(versionsort_latest)
 })
 
 test_that("if possible, reads from cache", {
