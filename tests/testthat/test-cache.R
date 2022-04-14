@@ -18,7 +18,7 @@ test_that("clearing cache removes only cache files from woodendesc directory", {
   # Generate some cache data
   file.create(file.path(wood_tempdir(), c("file1", "file2", "cache_A.txt")))
   wood_clear_cache()
-  expect_true(all(c("file1", "file2") %in% list.files(wood_tempdir())))
+  expect_subset(c("file1", "file2"), list.files(wood_tempdir()))
   expect_false("cache_A.txt" %in% list.files(wood_tempdir()))
 })
 

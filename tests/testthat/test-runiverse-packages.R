@@ -23,7 +23,7 @@ test_that("all returned strings are valid package names", {
 })
 
 test_that("tidyverse universe has ggplot2 package", {
-  expect_true("ggplot2" %in% tidyverse_packages)
+  expect_subset("ggplot2", tidyverse_packages)
 })
 
 test_that("if possible, reads from cache", {
