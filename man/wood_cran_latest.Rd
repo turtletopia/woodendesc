@@ -8,7 +8,7 @@ wood_cran_latest(package)
 }
 \arguments{
 \item{package}{[\code{character(1)}]\cr
-Name of a package to query.}
+Name of a package to query for.}
 }
 \value{
 A single string with a version code.
