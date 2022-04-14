@@ -1,12 +1,12 @@
-download_PACKAGES <- function(url) {
+download_dcf <- function(url) {
   raw_response <- download_safely(url)
   # read.dcf() accepts only file input, so a tempfile must be created
   file <- tempfile()
   writeBin(raw_response, file)
-  packages <- read.dcf(file)
+  dcf_data <- read.dcf(file)
   unlink(file)
 
-  packages
+  dcf_data
 }
 
 #' @importFrom httr GET content
