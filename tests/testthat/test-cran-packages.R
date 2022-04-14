@@ -3,7 +3,7 @@ skip_if_not_installed("vcr")
 # SETUP ----
 vcr::use_cassette("cran-packages", {
   cran_packages <- wood_cran_packages()
-}, serialize_with = "json")
+})
 
 # TESTS ----
 test_that("returns a vector of strings", {
