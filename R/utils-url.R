@@ -30,7 +30,7 @@ runiverse_url <- function(universe, ...) {
 #'
 #' @importFrom utils URLencode
 #' @noRd
-cran_url <- function(..., params = list()) {
+crandb_url <- function(..., params = list()) {
   ret <- paste("http://crandb.r-pkg.org", ..., sep = "/")
 
   # Add nothing if no parameters passed

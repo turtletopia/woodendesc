@@ -21,7 +21,7 @@ cran_packages_cache <- function() {
   cache_file <- cache_path("packages", "cran")
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
-  url <- cran_url("-", "desc")
+  url <- crandb_url("-", "desc")
   packages <- download_safely(url)
 
   packages <- names(packages)
