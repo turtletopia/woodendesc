@@ -18,13 +18,5 @@ test_that("returned string is a version code", {
 })
 
 test_that("if possible, reads from cache", {
-  skip_if_not_installed("httptest")
-
-  # If the function reads from cache, it means that it will work offline
-  expect_error({
-    httptest::without_internet(
-      versionsort_latest_from_cache <- wood_cran_latest("versionsort")
-    )
-  }, regexp = NA)
-  expect_identical(versionsort_latest, versionsort_latest_from_cache)
+  expect_cache(wood_cran_latest, versionsort_latest, "versionsort")
 })

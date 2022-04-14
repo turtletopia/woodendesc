@@ -27,15 +27,7 @@ test_that("tidyverse universe has ggplot2 package", {
 })
 
 test_that("if possible, reads from cache", {
-  skip_if_not_installed("httptest")
-
-  # If the function reads from cache, it means that it will work offline
-  expect_error({
-    httptest::without_internet(
-      tidyverse_packages_from_cache <- wood_runiverse_packages("tidyverse")
-    )
-  }, regexp = NA)
-  expect_identical(tidyverse_packages, tidyverse_packages_from_cache)
+  expect_cache(wood_runiverse_packages, tidyverse_packages, "tidyverse")
 })
 
 test_that("if a universe doesn't exist, returns an empty character vector with a warning", {
