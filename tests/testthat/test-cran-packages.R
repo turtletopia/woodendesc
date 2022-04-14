@@ -1,5 +1,4 @@
 skip_if_not_installed("vcr")
-skip_on_cran()
 
 # SETUP ----
 vcr::use_cassette("cran-packages", {
