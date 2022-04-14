@@ -2,6 +2,7 @@
 
 export(wood_clear_cache)
 export(wood_cran_latest)
+export(wood_cran_versions)
 export(wood_runiverse_packages)
 importFrom(httr,GET)
 importFrom(httr,content)
