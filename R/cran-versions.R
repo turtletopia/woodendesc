@@ -1,3 +1,19 @@
+#' Get all package versions on CRAN
+#'
+#' @description This function queries CRAN for the codes of all available
+#' package versions, both current and archived, for a given package.
+#'
+#' @template package
+#'
+#' @return A character vector of version codes.
+#'
+#' @examples
+#' \donttest{
+#' wood_cran_versions("versionsort")
+#' }
+#'
+#' @family cran
+#' @family versions
 #' @export
 wood_cran_versions <- function(package) {
   cran_versions_cache(package)

@@ -23,5 +23,12 @@ wood_cran_latest("versionsort")
 }
 
 }
+\seealso{
+Functions for CRAN:
+\code{\link{wood_cran_versions}()}
+
+Functions that query package versions:
+\code{\link{wood_cran_versions}()}
+}
 \concept{cran}
 \concept{versions}
