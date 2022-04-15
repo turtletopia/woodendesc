@@ -22,9 +22,9 @@ cran_packages_cache <- function() {
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
   url <- cran_url("src", "contrib", "PACKAGES.gz")
-  packages <- download_dcf(url)
+  packages_dcf <- download_dcf(url)
 
-  packages <- packages[, "Package"]
+  packages <- read_dcf_packages(packages_dcf)
   saveRDS(packages, cache_file)
   # Return saved object to save time on reading it
   packages
