@@ -1,12 +1,6 @@
 download_dcf <- function(url) {
-  raw_response <- download_safely(url)
-  # read.dcf() accepts only file input, so a tempfile must be created
-  file <- tempfile()
-  writeBin(raw_response, file)
-  dcf_data <- read.dcf(file)
-  unlink(file)
-
-  dcf_data
+  raw_response <- download_safely(url, as = "raw")
+  memDecompress(raw_response, type = "gzip", asChar = TRUE)
 }
 
 #' @importFrom httr GET content
