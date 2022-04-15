@@ -10,10 +10,10 @@ download_dcf <- function(url) {
 }
 
 #' @importFrom httr GET content
-download_safely <- function(url) {
+download_safely <- function(url, ...) {
   response <- GET(url)
   stop_for_download_fail(response, url)
-  content(response)
+  content(response, ...)
 }
 
 #' @importFrom httr stop_for_status
