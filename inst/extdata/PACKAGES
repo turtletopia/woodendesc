@@ -1,0 +1,59 @@
+Package: dm
+Version: 0.2.8.9000
+License: MIT + file LICENSE
+NeedsCompilation: no
+MD5sum: 3bf55df981de5d2b4e542de074f89098
+Depends: R (>= 3.3)
+Imports: backports, cli (>= 2.2.0), DBI, dplyr (>= 1.0.3), ellipsis, glue, igraph, lifecycle, magrittr, memoise, methods, pillar (>= 1.6.2), purrr, rlang (>= 1.0.1), tibble, tidyr (>= 1.0.0), tidyselect (>= 1.0.1), vctrs (>= 0.3.2)
+Suggests: brio, covr, crayon, dbplyr, DiagrammeR, DiagrammeRsvg, digest, duckdb, fansi, keyring, knitr, mockr, nycflights13, odbc, pixarfilms, pool, progress, RMariaDB (>= 1.0.10), rmarkdown, RPostgres, RSQLite (>= 2.2.8), testthat (>= 3.1.2), tidyverse, waldo, withr
+
+Package: cynkrathis
+Version: 0.3.3
+License: MIT + file LICENSE
+NeedsCompilation: no
+MD5sum: edb1d68773b3a288244cb47aa22575a4
+Imports: callr, checkmate, cli, gh, glue, jsonlite, lifecycle, purrr, renv, rlang, rstudioapi, usethis, utils
+Suggests: covr, desc, drat (>= 0.2.0), gert, gitignore, lintr, pkgbuild, precommit, rmarkdown, roxygen2, rsconnect, stringr, testthat (>= 3.0.0), tic (>= 0.9.0.9005), withr
+
+Package: munch
+Version: 0.0.8.9006
+License: GPL-3
+NeedsCompilation: no
+MD5sum: af55c671ccc1069b9487bb6097695c7f
+Depends: R (>= 2.10)
+Imports: cli, dplyr (>= 0.8.3), dttr2, glue, lifecycle, logging (>= 0.8-104), lubridate, Matrix, purrr (>= 0.3.2), readr, reshape2 (>= 1.4.3), rlang, tibble (>= 1.4.2), tidyr
+Suggests: daff, gert, knitr, readxl, rmarkdown, rvest, stringr, testthat (>= 2.1.0), usethis (>= 1.4.0), xml2
+
+Package: fledge
+Version: 0.1.0.9002
+License: GPL-3
+NeedsCompilation: no
+MD5sum: 75b2579f90286f44da338365d8215785
+Imports: callr, cli, clipr, desc (>= 1.2.0), devtools, enc, foghorn, gert (>= 1.4.0), gh, glue, httr, purrr (>= 0.3.2), rematch2, rlang (>= 0.4.12), rversions, tibble, usethis (>= 2.1.5), whoami, withr
+Suggests: brio, covr, fansi, fs, knitr, mockery, parsedate, pkgbuild, pkgload, rmarkdown, rstudioapi, testthat (>= 3.0.0), vctrs
+
+Package: tic
+Version: 0.12.0
+License: GPL (>= 2)
+NeedsCompilation: no
+MD5sum: ad0c64bcd1898e35abeda1298c1f0f5d
+Depends: R (>= 3.2.0)
+Imports: cli (>= 3.2.0), crayon, git2r, lifecycle, magrittr, memoise, methods, R6, remotes, rlang (>= 1.0.0), usethis, withr
+Suggests: base64enc, blogdown, bookdown, callr, circle, covr, desc, devtools, drat, fansi, gh (>= 1.1.0), knitr, openssl, pkgdown, purrr, rcmdcheck, rmarkdown, rprojroot, sodium, stats, stringr, testthat (>= 2.1.0), utils
+
+Package: indiedown
+Version: 0.1.1
+License: MIT + file LICENSE
+NeedsCompilation: no
+MD5sum: 49a1f5e3cce39d8b5f907edd1de68e13
+Depends: R (>= 4.0.0)
+Imports: cli, fs, gfonts, rlang, withr
+Suggests: callr, knitr (>= 1.12), rcmdcheck, rmarkdown, rstudioapi, spelling, testthat (>= 3.0.0), tinytex
+
+Package: tv
+Version: 0.0-0
+License: GPL-3
+NeedsCompilation: no
+MD5sum: dfd2393562c45b3090082eac01cdf2af
+Imports: fst, future, miniUI, parallel, reactable, shiny, shinyWidgets, tibble, utils
+
