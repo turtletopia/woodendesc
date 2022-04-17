@@ -1,5 +1,6 @@
 # SETUP ----
 PACKAGES <- read_to_string("extdata", "PACKAGES")
+PACKAGES_2 <- read_to_string("extdata", "misc_PACKAGES")
 
 # READ ALL ----
 cynkra_all <- read_dcf(PACKAGES)
@@ -39,18 +40,23 @@ test_that("all package fields in read_dcf() are single strings", {
 
 # READ PACKAGES ----
 cynkra_packages <- read_dcf_packages(PACKAGES)
+misc_packages <- read_dcf_packages(PACKAGES_2)
 
 test_that("read_dcf_packages() returns a vector of strings", {
   expect_vector(cynkra_packages,
+                ptype = character())
+  expect_vector(misc_packages,
                 ptype = character())
 })
 
 test_that("read_dcf_packages() returns non-empty string", {
   expect_gt(length(cynkra_packages), 0)
+  expect_gt(length(misc_packages), 0)
 })
 
 test_that("read_dcf_packages() returns only valid package names", {
   expect_pkg_name(cynkra_packages)
+  expect_pkg_name(misc_packages)
 })
 
 test_that("read_dcf_packages() returns all expected packages from example file", {
