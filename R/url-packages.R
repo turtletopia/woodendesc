@@ -31,8 +31,14 @@ url_PACKAGES_cache <- function(repository) {
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
   # TODO: handle case if repository ends with a slash
-  url <- paste(repository, "src", "contrib", "PACKAGES.gz", sep = "/")
-  dcf_data <- download_dcf(url)
+  if (R_older_than("4.0.0")) {
+    # Don't use gzipped PACKAGES file
+    url <- paste(repository, "src", "contrib", "PACKAGES", sep = "/")
+    dcf_data <- download_dcf(url, compression = "none")
+  } else {
+    url <- paste(repository, "src", "contrib", "PACKAGES.gz", sep = "/")
+    dcf_data <- download_dcf(url)
+  }
   repo_data <- read_dcf(dcf_data)
 
   saveRDS(repo_data, cache_file)

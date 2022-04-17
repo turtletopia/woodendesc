@@ -1,6 +1,6 @@
-download_dcf <- function(url) {
+download_dcf <- function(url, compression = "gzip") {
   raw_response <- download_safely(url, as = "raw")
-  memDecompress(raw_response, type = "gzip", asChar = TRUE)
+  memDecompress(raw_response, type = compression, asChar = TRUE)
 }
 
 #' @importFrom httr GET content
