@@ -1,6 +1,10 @@
 skip_if_not_installed("vcr")
 
 # SETUP ----
+if (R_older_than("4.0.0")) {
+  # Re-record on older R versions since it queries for PACKAGES without .gz
+  vcr::eject_cassette("omegahat-packages")
+}
 vcr::use_cassette("omegahat-packages", {
   omegahat_packages <- wood_url_packages("http://www.omegahat.net/R")
 })
