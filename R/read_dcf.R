@@ -2,7 +2,10 @@ read_dcf <- function(object) {
   # Split into packages
   packages <- strsplit(object, "\\n\\n")[[1]]
   # Split into lines, each line being Key: Values
-  packages <- strsplit(packages, "\\n")
+  # Some fields are newlines
+  # Use lookahead to match and not strip Key characters
+  # As long as there are no Values with ":" in second or later line it will work
+  packages <- strsplit(packages, "\\n(?=[^\n]*: )", perl = TRUE)
   # Extract field names
   packages <- lapply(packages, function(p_data) {
     # Extract field names and field values as separate strings
