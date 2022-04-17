@@ -13,9 +13,11 @@ read_dcf <- function(object) {
     # Field names are first values in lists, values are second
     ret <- lapply(split_data, `[[`, 2)
     # Don't parse values until necessary
-    setNames(ret, vapply(split_data, `[[`, character(1), 1))
+    names(ret) <- vapply(split_data, `[[`, character(1), 1)
+    ret
   })
-  setNames(packages, vapply(packages, `[[`, character(1), "Package"))
+  names(packages) <- vapply(packages, `[[`, character(1), "Package")
+  packages
 }
 
 read_dcf_packages <- function(object) {
