@@ -2,6 +2,42 @@
 PACKAGES_path <- system.file("extdata", "PACKAGES", package = "woodendesc")
 PACKAGES <- readChar(PACKAGES_path, nchar = file.info(PACKAGES_path)[["size"]])
 
+# READ ALL ----
+cynkra_all <- read_dcf(PACKAGES)
+
+test_that("read_dcf() returns a list of lists", {
+  expect_vector(cynkra_all,
+                ptype = list())
+  for (x in cynkra_all) {
+    expect_vector(x,
+                  ptype = list())
+  }
+})
+
+test_that("read_dcf() returns a list named with package names", {
+  expect_named(
+    cynkra_all,
+    c("dm", "cynkrathis", "fledge", "indiedown", "munch", "tic", "tv"),
+    ignore.order = TRUE
+  )
+})
+
+test_that("each element of read_dcf() contains 'Package' and 'Version' fields", {
+  for (x in cynkra_all) {
+    expect_subset(c("Package", "Version"), names(x))
+  }
+})
+
+test_that("all package fields in read_dcf() are single strings", {
+  for (x in cynkra_all) {
+    for (field in x) {
+      expect_vector(field,
+                    ptype = character(),
+                    size = 1)
+    }
+  }
+})
+
 # READ PACKAGES ----
 cynkra_packages <- read_dcf_packages(PACKAGES)
 
