@@ -27,7 +27,8 @@ wood_runiverse_packages("tidyverse")
 }
 \seealso{
 Functions that query available packages:
-\code{\link{wood_cran_packages}()}
+\code{\link{wood_cran_packages}()},
+\code{\link{wood_url_packages}()}
 }
 \concept{packages}
 \concept{runiverse}
