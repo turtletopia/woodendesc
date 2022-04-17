@@ -4,15 +4,9 @@ read_dcf <- function(object) {
 
   # Split into lines, each line being Key: Values
   # Some fields are newlines
-  if (.Platform$OS.type != "windows") {
-    # Use lookahead to match and not strip Key characters
-    # As long as there are no Values with ":" in second or later line it will work
-    packages <- strsplit(packages, "\r?\n(?=[^\n]*: )", perl = TRUE)
-  } else {
-    # Seems like lookahead may not work on Windows sometimes
-    packages <- gsub("\r?\n([^\n]+: )", "\n@\\1", packages)
-    packages <- strsplit(packages, "\r?\n@")
-  }
+  # Use lookahead to match and not strip Key characters
+  # As long as there are no Values with ":" in second or later line it will work
+  packages <- strsplit(packages, "\r?\n(?=[^\n]*: )", perl = TRUE)
 
   # Extract field names
   packages <- lapply(packages, function(p_data) {
