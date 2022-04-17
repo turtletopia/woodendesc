@@ -1,6 +1,5 @@
 # SETUP ----
-PACKAGES_path <- system.file("extdata", "PACKAGES", package = "woodendesc")
-PACKAGES <- readChar(PACKAGES_path, nchar = file.info(PACKAGES_path)[["size"]])
+PACKAGES <- read_to_string("extdata", "PACKAGES")
 
 # READ ALL ----
 cynkra_all <- read_dcf(PACKAGES)
