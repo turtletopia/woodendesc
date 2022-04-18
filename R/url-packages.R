@@ -29,10 +29,10 @@ wood_url_packages <- function(repository) {
 
 #' @importFrom digest digest
 url_PACKAGES_cache <- function(repository) {
+  repository <- remove_trailing_slash(repository)
+
   cache_file <- cache_path("PACKAGES", digest(repository))
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
-
-  repository <- remove_trailing_slash(repository)
 
   dcf_data <- NULL
   if (!R_older_than("4.0.0")) {
