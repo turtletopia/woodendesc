@@ -32,4 +32,4 @@ vcr::use_cassette("cynkra-slashes", {
   test_that("trailing slash is removed from url parameter", {
     expect_no_error(wood_url_packages("https://cynkra.r-universe.dev/"))
   })
-})
+}, record = "new_episodes")
