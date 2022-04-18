@@ -22,6 +22,14 @@ test_that("local packages include woodendesc package", {
   expect_subset("woodendesc", local_packages)
 })
 
+test_that("different path may be specified", {
+  local_fakelib <- wood_local_packages(lib_dir)
+
+  expect_vector(local_fakelib,
+                ptype = character())
+  expect_equal(local_fakelib, "fakepackage")
+})
+
 test_that("multiple paths may be specified", {
   local_multiple <- wood_local_packages(c(.libPaths(), lib_dir))
 
