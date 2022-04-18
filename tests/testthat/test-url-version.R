@@ -1,4 +1,5 @@
 skip_if_not_installed("vcr")
+wood_clear_cache()
 
 # SETUP ----
 vcr::use_cassette("RGD-version", {

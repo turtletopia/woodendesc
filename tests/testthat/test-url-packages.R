@@ -1,4 +1,5 @@
 skip_if_not_installed("vcr")
+wood_clear_cache()
 
 # SETUP ----
 # Re-record on older R versions since it queries for PACKAGES without .gz
