@@ -5,8 +5,7 @@
 #' being a package name. The data is retrieved from `/src/contrib/PACKAGES`
 #' or `/src/contrib/PACKAGES.gz` file.
 #'
-#' @param repository \[\code{character(1)}\]\cr
-#'  URL to repository, e.g. `"http://www.omegahat.net/R"`.
+#' @template repository
 #'
 #' @return A character vector of available packages.
 #'
