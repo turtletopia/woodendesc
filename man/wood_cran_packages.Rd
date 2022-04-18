@@ -25,6 +25,7 @@ Functions for CRAN:
 \code{\link{wood_cran_versions}()}
 
 Functions that query available packages:
+\code{\link{wood_local_packages}()},
 \code{\link{wood_runiverse_packages}()},
 \code{\link{wood_url_packages}()}
 }
