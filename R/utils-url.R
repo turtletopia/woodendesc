@@ -77,3 +77,7 @@ bioc_url <- function(...) {
 extract_core_url <- function(url) {
   sub("\\?.*", "", url)
 }
+
+remove_trailing_slash <- function(url) {
+  gsub("/$", "", url)
+}
