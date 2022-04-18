@@ -33,3 +33,9 @@ vcr::use_cassette("cynkra-slashes", {
     expect_no_error(wood_url_packages("https://cynkra.r-universe.dev/"))
   })
 }, record = "new_episodes")
+
+vcr::use_cassette("colinfay-packages", {
+  test_that("url_packages() uses PACKAGES if PACKAGES.gz is not available", {
+    expect_no_error(wood_url_packages("https://colinfay.me"))
+  })
+}, record = "new_episodes")
