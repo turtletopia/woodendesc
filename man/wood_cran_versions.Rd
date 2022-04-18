@@ -29,7 +29,8 @@ Functions for CRAN:
 \code{\link{wood_cran_packages}()}
 
 Functions that query package versions:
-\code{\link{wood_cran_latest}()}
+\code{\link{wood_cran_latest}()},
+\code{\link{wood_url_version}()}
 }
 \concept{cran}
 \concept{versions}
