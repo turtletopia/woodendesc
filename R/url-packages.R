@@ -3,7 +3,7 @@
 #' @description This function queries any online repository for a list of
 #' available packages. They are returned as a vector of strings, each element
 #' being a package name. The data is retrieved from `/src/contrib/PACKAGES`
-#' file.
+#' or `/src/contrib/PACKAGES.gz` file.
 #'
 #' @param repository \[\code{character(1)}\]\cr
 #'  URL to repository, e.g. `"http://www.omegahat.net/R"`.
@@ -13,6 +13,8 @@
 #' @examples
 #' \donttest{
 #' wood_url_packages("http://www.omegahat.net/R")
+#' # Trailing slashes are removed
+#' wood_url_packages("http://www.omegahat.net/R/")
 #' }
 #'
 #' @family url

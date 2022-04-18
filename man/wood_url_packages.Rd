@@ -17,11 +17,13 @@ A character vector of available packages.
 This function queries any online repository for a list of
 available packages. They are returned as a vector of strings, each element
 being a package name. The data is retrieved from \verb{/src/contrib/PACKAGES}
-file.
+or \verb{/src/contrib/PACKAGES.gz} file.
 }
 \examples{
 \donttest{
 wood_url_packages("http://www.omegahat.net/R")
+# Trailing slashes are removed
+wood_url_packages("http://www.omegahat.net/R/")
 }
 
 }
