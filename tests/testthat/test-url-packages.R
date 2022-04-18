@@ -24,3 +24,7 @@ vcr::use_cassette("colinfay-packages", {
     expect_no_error(wood_url_packages("https://colinfay.me"))
   })
 }, record = "new_episodes")
+
+test_that("trailing slash url and without one share the same cache", {
+  expect_cache(wood_url_packages, omegahat_packages, "http://www.omegahat.net/R/")
+})
