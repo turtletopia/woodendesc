@@ -30,7 +30,8 @@ url_PACKAGES_cache <- function(repository) {
   cache_file <- cache_path("PACKAGES", digest(repository))
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
-  # TODO: handle case if repository ends with a slash
+  repository <- remove_trailing_slash(repository)
+
   if (R_older_than("4.0.0")) {
     # Don't use gzipped PACKAGES file
     url <- paste(repository, "src", "contrib", "PACKAGES", sep = "/")
