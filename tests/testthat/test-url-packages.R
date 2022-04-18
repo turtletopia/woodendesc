@@ -27,3 +27,9 @@ test_that("Omega repository has RGraphicsDevice package", {
 test_that("if possible, reads from cache", {
   expect_cache(wood_url_packages, omegahat_packages, "http://www.omegahat.net/R")
 })
+
+vcr::use_cassette("cynkra-slashes", {
+  test_that("trailing slash is removed from url parameter", {
+    expect_no_error(wood_url_packages("https://cynkra.r-universe.dev/"))
+  })
+})
