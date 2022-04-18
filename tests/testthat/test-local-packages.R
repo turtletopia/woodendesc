@@ -45,3 +45,10 @@ test_that("repeated packages are listed only once", {
   local_multiple <- wood_local_packages(c(.libPaths(), lib_dir))
   expect_equal(sum(local_multiple == "woodendesc"), 1)
 })
+
+test_that("paths = \"all\" is a shorthand for all .libPaths()", {
+  expect_equal(
+    wood_local_packages("all"),
+    wood_local_packages(.libPaths())
+  )
+})
