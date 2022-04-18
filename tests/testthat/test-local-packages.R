@@ -1,3 +1,11 @@
+# SETUP ----
+# Create fake local library
+lib_dir <- tempdir()
+withr::local_tempdir(tmpdir = lib_dir)
+dir.create(file.path(lib_dir, "fakepackage"))
+file.create(file.path(lib_dir, "fakepackage", "DESCRIPTION"))
+
+# TESTS ----
 local_packages <- wood_local_packages()
 
 test_that("returns a vector of strings", {
@@ -18,17 +26,8 @@ test_that("local packages include woodendesc package", {
 })
 
 test_that("multiple paths may be specified", {
-  lib_dir <- tempdir()
-  withr::with_tempdir({
-    # Create fake local library
-    dir.create(file.path(lib_dir, "fakepackage"))
-    file.create(file.path(lib_dir, "fakepackage", "DESCRIPTION"))
+  local_multiple <- wood_local_packages(c(.libPaths(), lib_dir))
 
-    # Call function
-    local_multiple <- wood_local_packages(c(.libPaths(), lib_dir))
-  }, tmpdir = lib_dir)
-
-  # Actual tests
   expect_vector(local_multiple,
                 ptype = character())
   expect_pkg_name(local_multiple)
