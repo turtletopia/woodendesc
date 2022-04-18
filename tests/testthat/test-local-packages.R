@@ -32,6 +32,6 @@ test_that("multiple paths may be specified", {
   expect_vector(local_multiple,
                 ptype = character())
   expect_pkg_name(local_multiple)
-  expect_subset("woodendesc", local_multiple)
   expect_subset("fakepackage", local_multiple)
+  expect_subset(local_packages, local_multiple)
 })
