@@ -4,7 +4,7 @@ skip_if_not_installed("vcr")
 # Re-record on older R versions since it queries for PACKAGES without .gz
 vcr::use_cassette("omegahat-packages", {
   omegahat_packages <- wood_url_packages("http://www.omegahat.net/R")
-}, record = if (R_older_than("4.0.0")) "new_episodes" else NULL)
+}, record = "new_episodes")
 
 # TESTS ----
 test_that("returns a vector of strings", {
