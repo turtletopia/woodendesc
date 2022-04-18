@@ -40,3 +40,8 @@ test_that("multiple paths may be specified", {
   expect_subset(fake_pkgs, local_multiple)
   expect_subset(local_packages, local_multiple)
 })
+
+test_that("repeated packages are listed only once", {
+  local_multiple <- wood_local_packages(c(.libPaths(), lib_dir))
+  expect_equal(sum(local_multiple == "woodendesc"), 1)
+})
