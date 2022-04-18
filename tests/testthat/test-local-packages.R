@@ -1,9 +1,6 @@
 # SETUP ----
 # Create fake local library
-lib_dir <- tempdir()
-withr::local_tempdir(tmpdir = lib_dir)
-dir.create(file.path(lib_dir, "fakepackage"))
-file.create(file.path(lib_dir, "fakepackage", "DESCRIPTION"))
+lib_dir <- local_fake_library()
 
 # TESTS ----
 local_packages <- wood_local_packages()
