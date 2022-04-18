@@ -22,17 +22,17 @@ http_interactions:
       etag: W/"61a902de-1f69"
       content-encoding: gzip
       x-proxy-cache: MISS
-      x-github-request-id: 8EA8:455C:1E40B45:1F26C8F:625D5756
+      x-github-request-id: 6664:E2CD:14FC6A0:15A3B92:625D7016
       accept-ranges: bytes
-      date: Mon, 18 Apr 2022 12:19:34 GMT
+      date: Mon, 18 Apr 2022 14:24:19 GMT
       via: 1.1 varnish
-      age: '0'
-      x-served-by: cache-hhn4058-HHN
-      x-cache: MISS
-      x-cache-hits: '0'
-      x-timer: S1650284374.094808,VS0,VE87
+      age: '1149'
+      x-served-by: cache-hhn4055-HHN
+      x-cache: HIT
+      x-cache-hits: '1'
+      x-timer: S1650291860.968667,VS0,VE1
       vary: Accept-Encoding
-      x-fastly-request-id: 75bc3e52d745dbe4d37af53c5d9d34642617aa49
+      x-fastly-request-id: 6c3fab82655b1dc21ca7138ea44fd613047505da
     body:
       encoding: UTF-8
       file: no
@@ -101,7 +101,7 @@ http_interactions:
         \   \n\n    <div class=\"page__inner-wrap\">\n      \n        <header>\n          <h1
         id=\"page-title\" class=\"page__title\" itemprop=\"headline\">404 Page not
         found\n</h1>\n          \n        </header>\n      \n\n      <section class=\"page__content\"
-        itemprop=\"text\">\n        \n        <p>Sorry, the requested page wasn’t
+        itemprop=\"text\">\n        \n        <p>Sorry, the requested page wasnâ€™t
         found on the server.</p>\n\n        \n      </section>\n\n      <footer class=\"page__meta\">\n
         \       \n        \n\n\n        \n      </footer>\n\n      \n\n      \n    </div>\n\n
         \   \n  </article>\n\n  \n  \n</div>\n    </div>\n\n    \n\n    <div class=\"page__footer\">\n
@@ -136,7 +136,7 @@ http_interactions:
         \ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\n\n
         \ ga('create', 'UA-65307055-3', 'auto');\n  ga('send', 'pageview');\n</script>\n\n\n\n\n\n\n\n
         \ </body>\n</html>"
-  recorded_at: 2022-04-18 14:04:48 GMT
+  recorded_at: 2022-04-18 14:24:19 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -165,15 +165,15 @@ http_interactions:
       x-proxy-cache: MISS
       x-github-request-id: EC0A:8DA1:137BD04:141AA41:625D7001
       accept-ranges: bytes
-      date: Mon, 18 Apr 2022 14:04:49 GMT
+      date: Mon, 18 Apr 2022 14:24:20 GMT
       via: 1.1 varnish
       age: '0'
-      x-served-by: cache-hhn4021-HHN
-      x-cache: MISS
-      x-cache-hits: '0'
-      x-timer: S1650290689.363480,VS0,VE87
+      x-served-by: cache-hhn4055-HHN
+      x-cache: HIT
+      x-cache-hits: '1'
+      x-timer: S1650291860.032277,VS0,VE87
       vary: Accept-Encoding
-      x-fastly-request-id: 9549ab34c88397dbed3f3b590d271b2124998301
+      x-fastly-request-id: dbe9ee78985c3eacbefd09399099b6949feba144
     body:
       encoding: UTF-8
       file: no
@@ -267,5 +267,5 @@ http_interactions:
         License: What license is it under?
         MD5sum: 61ba9f704c335b5945ce32a7208cb80e
         NeedsCompilation: no
-  recorded_at: 2022-04-18 14:04:48 GMT
+  recorded_at: 2022-04-18 14:24:19 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
