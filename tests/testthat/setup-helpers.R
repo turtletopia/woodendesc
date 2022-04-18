@@ -13,15 +13,19 @@ expect_subset <- function(object, expected) {
   expect_true(all(object %in% expected))
 }
 
+expect_no_error <- function(object) {
+  expect_error(object, regexp = NA)
+}
+
 expect_cache <- function(tested_function, expected, ...) {
   skip_if_not_installed("httptest")
 
   # TODO: simplify once httptest::expect_no_request() works with httr again
   # If the function reads from cache, it means that it will work offline
-  expect_error({
+  expect_no_error({
     httptest::without_internet(
       result_from_cache <- tested_function(...)
     )
-  }, regexp = NA)
+  })
   expect_identical(result_from_cache, expected)
 }
