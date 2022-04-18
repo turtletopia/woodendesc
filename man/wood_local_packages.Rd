@@ -4,22 +4,24 @@
 \alias{wood_local_packages}
 \title{List locally available packages}
 \usage{
-wood_local_packages(path = .libPaths()[1])
+wood_local_packages(paths = .libPaths()[1])
 }
 \arguments{
-\item{path}{[\code{character(1)}]\cr
-A path to local library, by default the first in \code{.libPaths()}.}
+\item{paths}{[\code{character()}]\cr
+Paths to local libraries, by default the first element of \code{.libPaths()}. If
+equal to \code{"all"}, uses all elements of \code{.libPaths()}.}
 }
 \value{
 A character vector of available packages.
 }
 \description{
-This function searches for installed packages inside a specified
-library path.
+This function searches for installed packages inside specified
+library paths.
 }
 \examples{
 \donttest{
 wood_local_packages()
+wood_local_packages("all")
 }
 
 }

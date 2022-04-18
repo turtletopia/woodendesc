@@ -1,16 +1,18 @@
 #' List locally available packages
 #'
-#' @description This function searches for installed packages inside a specified
-#' library path.
+#' @description This function searches for installed packages inside specified
+#' library paths.
 #'
-#' @param path \[\code{character(1)}\]\cr
-#'  A path to local library, by default the first in `.libPaths()`.
+#' @param paths \[\code{character()}\]\cr
+#'  Paths to local libraries, by default the first element of `.libPaths()`. If
+#'  equal to `"all"`, uses all elements of `.libPaths()`.
 #'
 #' @return A character vector of available packages.
 #'
 #' @examples
 #' \donttest{
 #' wood_local_packages()
+#' wood_local_packages("all")
 #' }
 #'
 #' @family local
