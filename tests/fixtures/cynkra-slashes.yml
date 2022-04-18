@@ -1,0 +1,53 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://cynkra.r-universe.dev/src/contrib/PACKAGES.gz
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: nginx/1.20.2
+      date: Mon, 18 Apr 2022 11:49:47 GMT
+      content-type: application/x-gzip
+      transfer-encoding: chunked
+      connection: keep-alive
+      x-powered-by: Express
+      access-control-allow-origin: '*'
+      cache-control: max-age=60
+      expires: Mon, 18 Apr 2022 11:50:47 GMT
+      x-runiverse-cache: MISS
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: |-
+        H4sIAAAAAAAAA51WyW7bOBi++yl8HGMSQ6JELQVmDm2KQYCkSJNZzhRJSawpUiApx377+UnJtpRlOu0h
+        MiNx+7+NfCB0Rxr+YU2PameIa4Vd/c2NFVp9WEfbZJus7gTlykKX+9s/17+uayH5+u720+cvT59XXzhn
+        9pPueiGJC2OUXt3fYDt0MGWZRziPUpxhnDCC4gKXKUmius6qrOLF6rbrtXEWehIpzdWatpzuOuI4NKW4
+        Wjct/MkB/v1mtZLCf5Ci5vRIJTT7wRgYZbjaw1MS1cCPdQMTmvQwfLDc1wMNJ6RdPQ1Nw21YTu9hHOOW
+        whOKXv/y+29QLNpGG1iQGwdP4USjtAkrKgfd+11TDUIyaBlOddcJ6GY6YnZMPyto6sOx4Qr5PVCtFKfw
+        3TojVAOjHazs2mmpZBuFpZyg09IlvCmjCMPLZ+Fas1o9nIiBTnNGYtjlhZI/Hu7CDGjz31SUUVpnWcKj
+        jHBSVzlmBBcRi/I6z9IoK1Y3vOeKATaP0w49GDOCpJi9B3oMOWoVYEJmQUpHGiOcB6zjnRbWvwIaNAMe
+        HjPPVqcBjImwMGk8wXHma4TgwldFLM9SroCuSupmxLvSekL+pB5hwg4W7PK901rakeerdU2UDcKaFo7D
+        wjsl/IY1QGCtDFSPM58URjsWtLkkvDf6m9Ha06yZGDpPN3H2PdbRtNqoxgvBQjHB/ZQLmrfxzxsP84zg
+        MqpQnuZpiTgrMSE8K1GN8hhT/JLtNBCwYBuggkKaWitnz+Z6ycsEfIDvBCjavIvXzJq25xJ81bxrDHV0
+        /DB3wX6OTnS99MB18h1ASEyLhJI4RTlGWVGRLK8LXPEy5SjD6FJ6bb1KBjd453dCib9uQQbEQKVcevUS
+        6kjlZWZb2OT0849gDfdAOVGFjy85Zt18+2hbeLdHP89wUtUYs7osYsYxQ1XKcYoYj/K0LsqofMPPyYzf
+        CrYVmldnY6PJ2DcfoV7Wy6M5WzOB156t3npvjnksGkP69n8bH2qQ5DRjtvUaOVlrkQLx5gKhE2y2iVEV
+        7Gi5hGBdDNhTZ+yUo5BPm3lwGKFPgXCKLFb56qBSARsmXccf5227B00y4cfD70B3rDqnxo4fTdDslBed
+        pjv4UUdaS9G0zsYJhAirqC/4QAzQ2fniIYD8oaEbw61PwXtiBLn5eCnCFzczyuODts53hubT1zs49s4U
+        FZtXjokDnB6bPSgMgHsmkunX50g3KNouTDSqMPshJxHQHc3ymFIaR1lZlWmRV1UWlXlWYprXL4WHfHUv
+        kuUiL78FLy8GukEnbc00BWHfiEkf0Pc6jlLoLQfglYVrwj2BqD1MapppIDiVhcuBbUnP0QR2Gpab4mxU
+        2vnLCcZ5wjFS16crwcS6n/ggl8m2D3L5TuyPp9t5Of/u0Ek0o6iWHHJkeQyEewH6IY5yXCGcl3UZoSKr
+        05SRJCmSDLMCxTgv8Ot7l2cFHv10bk57HBPhcoSGA7jWTauNGkFZFHO5rbUhBt7iBC53tEVz20cwejw0
+        9mPZ8xSdQeZhDNejVpNOvHFHmFl98qs/wWZW5eYYotzyUTuzC92ukZqwd0+rN8+oEDur1b+zYZVhQQsA
+        AA==
+  recorded_at: 2022-04-18 11:49:47 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
