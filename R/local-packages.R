@@ -16,6 +16,8 @@
 #' @family local
 #' @family packages
 #' @export
-wood_local_packages <- function(path = .libPaths()[1]) {
-  unique(list.dirs(path, full.names = FALSE, recursive = FALSE))
+wood_local_packages <- function(paths = .libPaths()[1]) {
+  if (length(paths) == 1 && paths == "all")
+    paths <- .libPaths()
+  unique(list.dirs(paths, full.names = FALSE, recursive = FALSE))
 }
