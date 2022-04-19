@@ -41,6 +41,8 @@ read_dcf <- function(object) {
 #'
 #' @param object \[\code{character(1)}\]\cr
 #'  Contents of a file to parse in a form of a single string.
+#' @param field \[\code{character(1)}\]\cr
+#'  Name of a field to look for.
 #'
 #' @return A character vector, each element being an extracted value.
 #'
@@ -69,6 +71,8 @@ read_dcf_all_values <- function(object, field) {
 #'
 #' @param object \[\code{character(1)}\]\cr
 #'  Contents of a file to parse in a form of a single string.
+#' @param field \[\code{character(1)}\]\cr
+#'  Name of a field to look for.
 #'
 #' @return A single string with an extracted value.
 #'
