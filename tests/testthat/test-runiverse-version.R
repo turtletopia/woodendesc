@@ -23,3 +23,7 @@ test_that("if possible, reads from cache", {
                package = "versionsort",
                universe = "turtletopia")
 })
+
+test_that("raises an exception if package not available", {
+  expect_error(wood_runiverse_version("fakepackage", "turtletopia"))
+})
