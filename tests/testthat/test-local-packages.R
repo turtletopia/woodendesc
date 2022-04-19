@@ -42,7 +42,7 @@ test_that("multiple paths may be specified", {
 
 test_that("repeated packages are listed only once", {
   local_multiple <- wood_local_packages(c(.libPaths(), lib_dir))
-  expect_equal(sum(local_multiple == "woodendesc"), 1)
+  expect_setequal(local_multiple, unique(local_multiple))
 })
 
 test_that("paths = \"all\" is a shorthand for all .libPaths()", {
