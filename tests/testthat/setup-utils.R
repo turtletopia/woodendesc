@@ -23,6 +23,9 @@ local_fake_library <- function(fake_pkgs = "fakepackage",
     file.copy(from = file.path(.libPaths()[1], pkg),
               to = lib_dir,
               recursive = TRUE)
+    withr::with_dir(file.path(lib_dir, pkg), {
+      silence(usethis::use_version("major"))
+    })
   }
 
   lib_dir
