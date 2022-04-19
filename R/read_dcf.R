@@ -38,3 +38,10 @@ read_dcf_packages <- function(object) {
     unique(matches[[1]][2, ])
   }
 }
+
+read_description_version <- function(object) {
+  regmatches(
+    object,
+    regexec("Version: (\\S+)", object)
+  )[[1]][2]
+}
