@@ -1,3 +1,20 @@
+#' Get locally available package versions
+#'
+#' @description This function searches for installed package versions inside
+#' specified library paths.
+#'
+#' @template package
+#' @template paths-local
+#'
+#' @return A character vector of version codes.
+#'
+#' @examples
+#' \donttest{
+#' wood_local_versions("httr")
+#' }
+#'
+#' @family local
+#' @family versions
 #' @export
 wood_local_versions <- function(package, paths = .libPaths()[1]) {
   paths <- match_local_paths_args(paths)
