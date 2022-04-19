@@ -1,3 +1,21 @@
+#' Get current package version in one of R universes
+#'
+#' @description This function queries the selected universe for the code of the
+#' current version of the selected package.
+#'
+#' @template package
+#' @template universe
+#'
+#' @return A single string with a version code.
+#'
+#' @examples
+#' \donttest{
+#' wood_runiverse_version("targets")
+#' wood_runiverse_version("ggplot2", universe = "tidyverse")
+#' }
+#'
+#' @family runiverse
+#' @family versions
 #' @export
 wood_runiverse_version <- function(package, universe = "ropensci") {
   runiverse_description_cache(package, universe)[["Version"]]
