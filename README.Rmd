@@ -11,6 +11,8 @@ output: github_document
 [![Codecov test coverage](https://codecov.io/gh/ErdaradunGaztea/woodendesc/branch/master/graph/badge.svg)](https://codecov.io/gh/ErdaradunGaztea/woodendesc?branch=master)
 <!-- badges: end -->
 
+Package not yet finished!
+
 ## Installation
 
 ```{r eval = FALSE}
