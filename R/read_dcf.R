@@ -73,9 +73,9 @@ read_dcf_all_values <- function(object, field) {
 #' @return A single string with an extracted value.
 #'
 #' @noRd
-read_description_version <- function(object) {
+read_dcf_one_value <- function(object, field) {
   regmatches(
     object,
-    regexec("Version: (\\S+)", object)
+    regexec(paste0(field, ": (\\S+)"), object)
   )[[1]][2]
 }
