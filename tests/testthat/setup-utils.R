@@ -10,8 +10,9 @@ silence <- function(expr) {
 }
 
 local_fake_library <- function(fake_pkgs = "fakepackage",
-                               true_pkgs = "woodendesc") {
-  lib_dir <- file.path(tempdir(), "test_dir")
+                               true_pkgs = "woodendesc",
+                               path = "test_dir") {
+  lib_dir <- file.path(tempdir(), path)
   withr::local_tempdir(tmpdir = lib_dir)
 
   for (pkg in fake_pkgs) {
