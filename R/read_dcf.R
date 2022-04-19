@@ -45,18 +45,18 @@ read_dcf <- function(object) {
 #' @return A character vector, each element being an extracted value.
 #'
 #' @noRd
-read_dcf_packages <- function(object) {
+read_dcf_all_values <- function(object, field) {
   if (R_older_than("4.1.0")) {
     # gregexec was introduced in 4.1.0
     matches <- regmatches(
       object,
-      gregexpr("Package: (\\S+)", object)
+      gregexpr(paste0(field, ": (\\S+)"), object)
     )
     unique(substring(matches[[1]], first = 10))
   } else {
     matches <- regmatches(
       object,
-      gregexec("Package: (\\S+)", object)
+      gregexec(paste0(field, ": (\\S+)"), object)
     )
     unique(matches[[1]][2, ])
   }

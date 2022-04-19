@@ -33,7 +33,7 @@ cran_packages_cache <- function() {
     unlink(file)
   } else {
     packages_dcf <- download_dcf(url)
-    packages <- read_dcf_packages(packages_dcf)
+    packages <- read_dcf_all_values(packages_dcf, "Package")
   }
 
   saveRDS(packages, cache_file)
