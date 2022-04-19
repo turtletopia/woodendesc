@@ -94,10 +94,14 @@ test_that("read_dcf_all_values() returns all expected values from example file",
 
 # READ ONE VALUE ----
 dm_version <- read_dcf_one_value(PACKAGES, "Version")
+dm_package <- read_dcf_one_value(PACKAGES, "Package")
 A3_version <- read_dcf_one_value(PACKAGES_2, "Version")
 
 test_that("read_dcf_one_value() returns single string", {
   expect_vector(dm_version,
+                ptype = character(),
+                size = 1)
+  expect_vector(dm_package,
                 ptype = character(),
                 size = 1)
   expect_vector(A3_version,
@@ -107,5 +111,6 @@ test_that("read_dcf_one_value() returns single string", {
 
 test_that("read_dcf_one_value() returns an expected value from example file", {
   expect_equal(dm_version, "0.2.8.9000")
+  expect_equal(dm_package, "dm")
   expect_equal(A3_version, "1.0.0")
 })
