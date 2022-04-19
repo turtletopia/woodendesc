@@ -3,13 +3,26 @@ read_to_string <- function(...) {
   readChar(path, nchar = file.info(path)[["size"]])
 }
 
-local_fake_library <- function(fake_pkgs = "fakepackage") {
+silence <- function(expr) {
+  # suppressMessages silences message()
+  # invisible(capture.output()) silences print()
+  invisible(capture.output(suppressMessages(expr)))
+}
+
+local_fake_library <- function(fake_pkgs = "fakepackage",
+                               true_pkgs = "woodendesc") {
   lib_dir <- file.path(tempdir(), "test_dir")
   withr::local_tempdir(tmpdir = lib_dir)
 
   for (pkg in fake_pkgs) {
-    dir.create(file.path(lib_dir, pkg))
-    file.create(file.path(lib_dir, pkg, "DESCRIPTION"))
+    withr::with_dir(lib_dir, {
+      silence(usethis::create_package("fakepackage"))
+    })
+  }
+  for (pkg in true_pkgs) {
+    file.copy(from = file.path(.libPaths()[1], pkg),
+              to = lib_dir,
+              recursive = TRUE)
   }
 
   lib_dir

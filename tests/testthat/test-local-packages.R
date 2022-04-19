@@ -1,7 +1,7 @@
 # SETUP ----
 # Create fake local library
 fake_lib_pkgs <- c("fakepackage", "woodendesc")
-lib_dir <- local_fake_library(fake_pkgs)
+lib_dir <- local_fake_library("fakepackage", "woodendesc")
 
 # TESTS ----
 local_packages <- wood_local_packages()
