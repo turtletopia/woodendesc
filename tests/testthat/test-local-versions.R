@@ -5,24 +5,19 @@ lib_dir <- local_fake_library("fakepackage", "woodendesc")
 lib_dir_2 <- local_fake_library("fakepackage", "woodendesc", path = "fake_dir")
 
 # TESTS ----
-versionsort_versions <- wood_local_versions("versionsort")
+woodendesc_versions <- wood_local_versions("woodendesc")
 
 test_that("returns a vector of strings", {
-  expect_vector(versionsort_versions,
+  expect_vector(woodendesc_versions,
                 ptype = character())
 })
 
 test_that("returned vector is not empty if package found", {
-  expect_gt(length(versionsort_versions), 0)
+  expect_gt(length(woodendesc_versions), 0)
 })
 
 test_that("returned vector is empty if package not found", {
   expect_equal(wood_local_versions("fakepackage"), character())
-})
-
-test_that("all returned strings are valid version codes", {
-  # Using versionsort as I can guarantee validity of its codes
-  expect_version_code(versionsort_versions)
 })
 
 test_that("different path may be specified", {
