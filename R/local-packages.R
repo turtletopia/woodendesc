@@ -19,7 +19,10 @@
 #' @family packages
 #' @export
 wood_local_packages <- function(paths = .libPaths()[1]) {
-  if (length(paths) == 1 && paths == "all")
-    paths <- .libPaths()
+  paths <- match_local_paths_args(paths)
   unique(list.dirs(paths, full.names = FALSE, recursive = FALSE))
+}
+
+match_local_paths_args <- function(paths) {
+  if (length(paths) == 1 && paths == "all") .libPaths() else paths
 }
