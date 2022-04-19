@@ -12,6 +12,8 @@ status](https://www.r-pkg.org/badges/version-last-release/woodendesc)](https://C
 coverage](https://codecov.io/gh/ErdaradunGaztea/woodendesc/branch/master/graph/badge.svg)](https://codecov.io/gh/ErdaradunGaztea/woodendesc?branch=master)
 <!-- badges: end -->
 
+Package not yet finished!
+
 ## Installation
 
 ``` r
