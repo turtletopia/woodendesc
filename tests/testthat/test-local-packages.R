@@ -1,6 +1,6 @@
 # SETUP ----
 # Create fake local library
-fake_pkgs <- c("fakepackage", "woodendesc")
+fake_lib_pkgs <- c("fakepackage", "woodendesc")
 lib_dir <- local_fake_library(fake_pkgs)
 
 # TESTS ----
@@ -28,7 +28,7 @@ test_that("different path may be specified", {
 
   expect_vector(local_fakelib,
                 ptype = character())
-  expect_setequal(local_fakelib, fake_pkgs)
+  expect_setequal(local_fakelib, fake_lib_pkgs)
 })
 
 test_that("multiple paths may be specified", {
@@ -37,7 +37,7 @@ test_that("multiple paths may be specified", {
   expect_vector(local_multiple,
                 ptype = character())
   expect_pkg_name(local_multiple)
-  expect_subset(fake_pkgs, local_multiple)
+  expect_subset(fake_lib_pkgs, local_multiple)
   expect_subset(local_packages, local_multiple)
 })
 
