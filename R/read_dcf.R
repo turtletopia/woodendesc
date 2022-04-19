@@ -1,3 +1,15 @@
+#' Parse DCF file to list
+#'
+#' @description Takes a single string with newlines and returns a list of lists
+#' for each package.
+#'
+#' @param object \[\code{character(1)}\]\cr
+#'  Contents of a file to parse in a form of a single string.
+#'
+#' @return A list with one element for each package; each element being a list
+#' of fields, each field in the form of a single string.
+#'
+#' @noRd
 read_dcf <- function(object) {
   # Split into packages
   packages <- strsplit(object, "\r?\n\r?\n")[[1]]
@@ -22,6 +34,17 @@ read_dcf <- function(object) {
   packages
 }
 
+#' Extract all values of a field from DCF file
+#'
+#' @description Scans a string in search of certain field, then extracts all
+#' encountered values.
+#'
+#' @param object \[\code{character(1)}\]\cr
+#'  Contents of a file to parse in a form of a single string.
+#'
+#' @return A character vector, each element being an extracted value.
+#'
+#' @noRd
 read_dcf_packages <- function(object) {
   if (R_older_than("4.1.0")) {
     # gregexec was introduced in 4.1.0
@@ -39,6 +62,17 @@ read_dcf_packages <- function(object) {
   }
 }
 
+#' Extract first value of a field from DCF file
+#'
+#' @description Scans a string in search of certain field, then extracts the
+#' first encountered value.
+#'
+#' @param object \[\code{character(1)}\]\cr
+#'  Contents of a file to parse in a form of a single string.
+#'
+#' @return A single string with an extracted value.
+#'
+#' @noRd
 read_description_version <- function(object) {
   regmatches(
     object,
