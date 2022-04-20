@@ -12,7 +12,8 @@ test_that("returns a data frame with package, version & type columns", {
                 ptype = data.frame(
                   package = character(),
                   version = character(),
-                  type = character()
+                  type = character(),
+                  stringsAsFactors = FALSE
                 ))
 })
 
