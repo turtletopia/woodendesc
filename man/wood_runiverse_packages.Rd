@@ -27,6 +27,7 @@ wood_runiverse_packages("tidyverse")
 }
 \seealso{
 Functions for R-universe:
+\code{\link{wood_runiverse_dependencies}()},
 \code{\link{wood_runiverse_version}()}
 
 Functions that query available packages:

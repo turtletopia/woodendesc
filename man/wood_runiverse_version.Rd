@@ -29,6 +29,7 @@ wood_runiverse_version("ggplot2", universe = "tidyverse")
 }
 \seealso{
 Functions for R-universe:
+\code{\link{wood_runiverse_dependencies}()},
 \code{\link{wood_runiverse_packages}()}
 
 Functions that query package versions:

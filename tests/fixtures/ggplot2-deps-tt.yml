@@ -1,0 +1,705 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://tidyverse.r-universe.dev/packages/ggplot2/any/src
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: nginx/1.20.2
+      date: Wed, 20 Apr 2022 14:00:25 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '20876'
+      connection: keep-alive
+      x-powered-by: Express
+      access-control-allow-origin: '*'
+      etag: W/"518c-cxi/xGR93brEq6f0opQ1r4I5G34"
+      expires: Wed, 20 Apr 2022 14:01:25 GMT
+      cache-control: max-age=60
+      x-runiverse-cache: MISS
+    body:
+      encoding: UTF-8
+      file: no
+      string: |-
+        [
+          {
+            "_id": "625ffc389484c30012f5531f",
+            "Package": "ggplot2",
+            "Title": "Create Elegant Data Visualisations Using the Grammar of Graphics",
+            "Version": "3.3.5.9000",
+            "Authors@R": "c(\nperson(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"aut\",\ncomment = c(ORCID = \"0000-0003-4757-117X\")),\nperson(\"Winston\", \"Chang\", role = \"aut\",\ncomment = c(ORCID = \"0000-0002-1576-2126\")),\nperson(\"Lionel\", \"Henry\", role = \"aut\"),\nperson(\"Thomas Lin\", \"Pedersen\", , \"thomas.pedersen@rstudio.com\", role = c(\"aut\", \"cre\"),\ncomment = c(ORCID = \"0000-0002-5147-4711\")),\nperson(\"Kohske\", \"Takahashi\", role = \"aut\"),\nperson(\"Claus\", \"Wilke\", role = \"aut\",\ncomment = c(ORCID = \"0000-0002-7470-9261\")),\nperson(\"Kara\", \"Woo\", role = \"aut\",\ncomment = c(ORCID = \"0000-0002-5125-4188\")),\nperson(\"Hiroaki\", \"Yutani\", role = \"aut\",\ncomment = c(ORCID = \"0000-0002-3385-7233\")),\nperson(\"Dewey\", \"Dunnington\", role = \"aut\",\ncomment = c(ORCID = \"0000-0002-9415-4582\")),\nperson(\"RStudio\", role = c(\"cph\", \"fnd\"))\n)",
+            "Description": "A system for 'declaratively' creating graphics, based on \"The\nGrammar of Graphics\". You provide the data, tell 'ggplot2' how to map\nvariables to aesthetics, what graphical primitives to use, and it\ntakes care of the details.",
+            "License": "MIT + file LICENSE",
+            "URL": "https://ggplot2.tidyverse.org,\nhttps://github.com/tidyverse/ggplot2",
+            "BugReports": "https://github.com/tidyverse/ggplot2/issues",
+            "VignetteBuilder": "knitr",
+            "Config/Needs/website": "ggtext, tidyr, forcats, tidyverse/tidytemplate",
+            "Config/testthat/edition": "3",
+            "Encoding": "UTF-8",
+            "LazyData": "true",
+            "Roxygen": "list(markdown = TRUE)",
+            "RoxygenNote": "7.1.2",
+            "Collate": "'ggproto.r' 'ggplot-global.R' 'aaa-.r'\n'aes-colour-fill-alpha.r' 'aes-evaluation.r'\n'aes-group-order.r' 'aes-linetype-size-shape.r'\n'aes-position.r' 'compat-plyr.R' 'utilities.r' 'aes.r'\n'legend-draw.r' 'geom-.r' 'annotation-custom.r'\n'annotation-logticks.r' 'geom-polygon.r' 'geom-map.r'\n'annotation-map.r' 'geom-raster.r' 'annotation-raster.r'\n'annotation.r' 'autolayer.r' 'autoplot.r' 'axis-secondary.R'\n'backports.R' 'bench.r' 'bin.R' 'coord-.r' 'coord-cartesian-.r'\n'coord-fixed.r' 'coord-flip.r' 'coord-map.r' 'coord-munch.r'\n'coord-polar.r' 'coord-quickmap.R' 'coord-sf.R'\n'coord-transform.r' 'data.R' 'facet-.r' 'facet-grid-.r'\n'facet-null.r' 'facet-wrap.r' 'fortify-lm.r' 'fortify-map.r'\n'fortify-multcomp.r' 'fortify-spatial.r' 'fortify.r' 'stat-.r'\n'geom-abline.r' 'geom-rect.r' 'geom-bar.r' 'geom-bin2d.r'\n'geom-blank.r' 'geom-boxplot.r' 'geom-col.r' 'geom-path.r'\n'geom-contour.r' 'geom-count.r' 'geom-crossbar.r'\n'geom-segment.r' 'geom-curve.r' 'geom-defaults.r'\n'geom-ribbon.r' 'geom-density.r' 'geom-density2d.r'\n'geom-dotplot.r' 'geom-errorbar.r' 'geom-errorbarh.r'\n'geom-freqpoly.r' 'geom-function.R' 'geom-hex.r'\n'geom-histogram.r' 'geom-hline.r' 'geom-jitter.r'\n'geom-label.R' 'geom-linerange.r' 'geom-point.r'\n'geom-pointrange.r' 'geom-quantile.r' 'geom-rug.r' 'geom-sf.R'\n'geom-smooth.r' 'geom-spoke.r' 'geom-text.r' 'geom-tile.r'\n'geom-violin.r' 'geom-vline.r' 'ggplot2-package.R'\n'grob-absolute.r' 'grob-dotstack.r' 'grob-null.r' 'grouping.r'\n'guide-bins.R' 'guide-colorbar.r' 'guide-colorsteps.R'\n'guide-legend.r' 'guides-.r' 'guides-axis.r' 'guides-grid.r'\n'guides-none.r' 'hexbin.R' 'labeller.r' 'labels.r' 'layer.r'\n'layer-sf.R' 'layout.R' 'limits.r' 'margins.R' 'performance.R'\n'plot-build.r' 'plot-construction.r' 'plot-last.r' 'plot.r'\n'position-.r' 'position-collide.r' 'position-dodge.r'\n'position-dodge2.r' 'position-identity.r' 'position-jitter.r'\n'position-jitterdodge.R' 'position-nudge.R' 'position-stack.r'\n'quick-plot.r' 'range.r' 'reshape-add-margins.R' 'save.r'\n'scale-.r' 'scale-alpha.r' 'scale-binned.R' 'scale-brewer.r'\n'scale-colour.r' 'scale-continuous.r' 'scale-date.r'\n'scale-discrete-.r' 'scale-expansion.r' 'scale-gradient.r'\n'scale-grey.r' 'scale-hue.r' 'scale-identity.r'\n'scale-linetype.r' 'scale-manual.r' 'scale-shape.r'\n'scale-size.r' 'scale-steps.R' 'scale-type.R' 'scale-view.r'\n'scale-viridis.r' 'scales-.r' 'stat-bin.r' 'stat-bin2d.r'\n'stat-bindot.r' 'stat-binhex.r' 'stat-boxplot.r'\n'stat-contour.r' 'stat-count.r' 'stat-density-2d.r'\n'stat-density.r' 'stat-ecdf.r' 'stat-ellipse.R'\n'stat-function.r' 'stat-identity.r' 'stat-qq-line.R'\n'stat-qq.r' 'stat-quantile.r' 'stat-sf-coordinates.R'\n'stat-sf.R' 'stat-smooth-methods.r' 'stat-smooth.r'\n'stat-sum.r' 'stat-summary-2d.r' 'stat-summary-bin.R'\n'stat-summary-hex.r' 'stat-summary.r' 'stat-unique.r'\n'stat-ydensity.r' 'summarise-plot.R' 'summary.r'\n'theme-elements.r' 'theme.r' 'theme-defaults.r'\n'theme-current.R' 'translate-qplot-ggplot.r'\n'translate-qplot-lattice.r' 'utilities-break.r'\n'utilities-grid.r' 'utilities-help.r' 'utilities-matrix.r'\n'utilities-resolution.r' 'utilities-table.r'\n'utilities-tidy-eval.R' 'zxx.r' 'zzz.r'",
+            "Repository": "https://tidyverse.r-universe.dev",
+            "RemoteUrl": "https://github.com/tidyverse/ggplot2",
+            "RemoteRef": "HEAD",
+            "RemoteSha": "6fc24304a733f0abc0ad25d50fcb3f45466662e0",
+            "NeedsCompilation": "no",
+            "Packaged": "2022-04-20 12:14:42 UTC; root",
+            "Author": "Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\nWinston Chang [aut] (<https://orcid.org/0000-0002-1576-2126>),\nLionel Henry [aut],\nThomas Lin Pedersen [aut, cre]\n(<https://orcid.org/0000-0002-5147-4711>),\nKohske Takahashi [aut],\nClaus Wilke [aut] (<https://orcid.org/0000-0002-7470-9261>),\nKara Woo [aut] (<https://orcid.org/0000-0002-5125-4188>),\nHiroaki Yutani [aut] (<https://orcid.org/0000-0002-3385-7233>),\nDewey Dunnington [aut] (<https://orcid.org/0000-0002-9415-4582>),\nRStudio [cph, fnd]",
+            "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@rstudio.com>",
+            "_user": "tidyverse",
+            "_type": "src",
+            "_file": "ggplot2_3.3.5.9000.tar.gz",
+            "_published": "2022-04-20T12:27:36.822Z",
+            "_builder": {
+              "upstream": "https://github.com/tidyverse/ggplot2",
+              "registered": "true",
+              "commit": {
+                "id": "6fc24304a733f0abc0ad25d50fcb3f45466662e0",
+                "author": "Hadley Wickham <h.wickham@gmail.com>",
+                "committer": "Hadley Wickham <h.wickham@gmail.com>",
+                "message": "Use union merge strategy for NEWS\n",
+                "time": 1650455855
+              },
+              "maintainer": {
+                "name": "Thomas Lin Pedersen",
+                "email": "thomas.pedersen@rstudio.com",
+                "login": "thomasp85",
+                "orcid": "0000-0002-5147-4711"
+              },
+              "distro": "focal",
+              "host": "GitHub-Actions",
+              "status": "success",
+              "vignettes": [
+                {
+                  "source": "ggplot2-specs.Rmd",
+                  "filename": "ggplot2-specs.html",
+                  "title": "Aesthetic specifications",
+                  "engine": "knitr::rmarkdown",
+                  "created": "2015-08-14 15:10:42",
+                  "modified": "2021-04-16 07:12:09",
+                  "commits": 13
+                },
+                {
+                  "source": "extending-ggplot2.Rmd",
+                  "filename": "extending-ggplot2.html",
+                  "title": "Extending ggplot2",
+                  "engine": "knitr::rmarkdown",
+                  "created": "2015-08-05 21:25:53",
+                  "modified": "2022-03-30 15:52:23",
+                  "commits": 38
+                },
+                {
+                  "source": "ggplot2-in-packages.Rmd",
+                  "filename": "ggplot2-in-packages.html",
+                  "title": "Using ggplot2 in packages",
+                  "engine": "knitr::rmarkdown",
+                  "created": "2019-06-04 18:28:37",
+                  "modified": "2021-04-16 07:12:09",
+                  "commits": 2
+                }
+              ],
+              "gitstats": {
+                "updates": [
+                  {
+                    "week": "2021-16",
+                    "n": 13
+                  },
+                  {
+                    "week": "2021-17",
+                    "n": 10
+                  },
+                  {
+                    "week": "2021-18",
+                    "n": 5
+                  },
+                  {
+                    "week": "2021-19",
+                    "n": 2
+                  },
+                  {
+                    "week": "2021-21",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-23",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-24",
+                    "n": 2
+                  },
+                  {
+                    "week": "2021-26",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-28",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-31",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-34",
+                    "n": 2
+                  },
+                  {
+                    "week": "2021-36",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-37",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-38",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-43",
+                    "n": 1
+                  },
+                  {
+                    "week": "2021-44",
+                    "n": 3
+                  },
+                  {
+                    "week": "2021-45",
+                    "n": 7
+                  },
+                  {
+                    "week": "2021-46",
+                    "n": 3
+                  },
+                  {
+                    "week": "2021-47",
+                    "n": 4
+                  },
+                  {
+                    "week": "2021-49",
+                    "n": 4
+                  },
+                  {
+                    "week": "2022-09",
+                    "n": 1
+                  },
+                  {
+                    "week": "2022-10",
+                    "n": 2
+                  },
+                  {
+                    "week": "2022-11",
+                    "n": 12
+                  },
+                  {
+                    "week": "2022-12",
+                    "n": 1
+                  },
+                  {
+                    "week": "2022-13",
+                    "n": 1
+                  },
+                  {
+                    "week": "2022-15",
+                    "n": 1
+                  },
+                  {
+                    "week": "2022-16",
+                    "n": 6
+                  }
+                ],
+                "tags": [
+                  {
+                    "name": "v3.3.4",
+                    "date": "2021-06-15"
+                  },
+                  {
+                    "name": "v3.3.5",
+                    "date": "2021-06-24"
+                  }
+                ],
+                "contributions": {
+                  "hadley": 2554,
+                  "wch": 654,
+                  "thomasp85": 289,
+                  "kohske": 232,
+                  "yutannihilation": 129,
+                  "clauswilke": 97,
+                  "jiho": 63,
+                  "lionel-": 60,
+                  "paleolimbot": 53,
+                  "karawoo": 52,
+                  "briandiggs": 28,
+                  "jakeruss": 21,
+                  "batpigandme": 21,
+                  "jorane": 17,
+                  "hrbrmstr": 16,
+                  "jofrhwld": 14,
+                  "jimhester": 12,
+                  "has2k1": 10,
+                  "teunbrand": 10,
+                  "topepo": 10,
+                  "cpsievert": 7,
+                  "dpseidel": 7,
+                  "krlmlr": 7,
+                  "jrnold": 7,
+                  "richierocks": 7,
+                  "eliocamp": 6,
+                  "mine-cetinkaya-rundel": 6,
+                  "tdhock": 6,
+                  "noamross": 5,
+                  "pkq": 5,
+                  "tmshn": 5,
+                  "foo-bar-baz-qux": 5,
+                  "baptiste": 5,
+                  "tonytonov": 4,
+                  "davidmorrison": 4,
+                  "djmurphy420": 4,
+                  "wligtenberg": 4,
+                  "burchill": 4,
+                  "bfgray3": 4,
+                  "mitchelloharawild": 4,
+                  "schloerke": 3,
+                  "edzer": 3,
+                  "gregrs-uk": 3,
+                  "jankatins": 3,
+                  "jdagilliland": 3,
+                  "katiedaisey": 3,
+                  "malcolmbarrett": 3,
+                  "goyalmunish": 3,
+                  "seaaan": 3,
+                  "stragu": 3,
+                  "setempler": 3,
+                  "markpayneatwork": 3,
+                  "microly": 3,
+                  "veraanadi": 3,
+                  "dkahle": 3,
+                  "coolbutuseless": 3,
+                  "ahobert": 2,
+                  "annennenne": 2,
+                  "annelyng": 2,
+                  "bjreisman": 2,
+                  "carywreams": 2,
+                  "categitau": 2,
+                  "infotroph": 2,
+                  "connorlewis": 2,
+                  "maschette": 2,
+                  "daniel-barnett": 2,
+                  "davharris": 2,
+                  "daattali": 2,
+                  "delferts": 2,
+                  "dylan-stark": 2,
+                  "alistaire47": 2,
+                  "bisaloo": 2,
+                  "ikosmidis": 2,
+                  "jonocarroll": 2,
+                  "jfalip": 2,
+                  "slowkow": 2,
+                  "kelseymoty": 2,
+                  "kevinushey": 2,
+                  "lwjohnst86": 2,
+                  "mrtns": 2,
+                  "mjskay": 2,
+                  "melimore86": 2,
+                  "mvkorpel": 2,
+                  "orrymr": 2,
+                  "seancarmody": 2,
+                  "steveharoz": 2,
+                  "wibeasley": 2,
+                  "dongzhuoer": 2,
+                  "bbolker": 2,
+                  "johan-ejstrud": 2,
+                  "bbrewington": 2,
+                  "katrinleinweber": 2,
+                  "mikmart": 2,
+                  "tjmahr": 2,
+                  "lindbrook": 2,
+                  "ajschumacher": 1,
+                  "yeedle": 1,
+                  "jabranham": 1,
+                  "truemoid": 1,
+                  "aliciaschep": 1,
+                  "alonmar": 1,
+                  "amysheep": 1,
+                  "andrewwbutler": 1,
+                  "andrewdolman": 1,
+                  "econandrew": 1,
+                  "accustodio": 1,
+                  "idno0001": 1,
+                  "pierucci": 1,
+                  "alamstein-trulia": 1,
+                  "averiperny": 1,
+                  "banfai": 1,
+                  "bkmgit": 1,
+                  "bernhardkonrad": 1,
+                  "bwiernik": 1,
+                  "briandk": 1,
+                  "brianrice2": 1,
+                  "brianwdavis": 1,
+                  "brodieg": 1,
+                  "cwickham": 1,
+                  "ismayc": 1,
+                  "cderv": 1,
+                  "croach": 1,
+                  "codetrainee": 1,
+                  "clairemcwhite": 1,
+                  "cuixueqin": 1,
+                  "damonbayer": 1,
+                  "dlependorf": 1,
+                  "danruderman": 1,
+                  "dgromer": 1,
+                  "mastropi": 1,
+                  "daniel-wells": 1,
+                  "djnavarro": 1,
+                  "dariobuttari": 1,
+                  "dariyasydykova": 1,
+                  "dvcv": 1,
+                  "davidkretch": 1,
+                  "eli-berkow": 1,
+                  "erictleung": 1,
+                  "fabern": 1,
+                  "symaxion": 1,
+                  "erocoar": 1,
+                  "gfiumara": 1,
+                  "gregmacfarlane": 1,
+                  "guangchuangyu": 1,
+                  "gokceneraslan": 1,
+                  "haleyjeppson": 1,
+                  "heathgilham": 1,
+                  "hlendway": 1,
+                  "hbuschme": 1,
+                  "salmasian": 1,
+                  "hughparsonage": 1,
+                  "izahn": 1,
+                  "rjake": 1,
+                  "jamescuster": 1,
+                  "jan-glx": 1,
+                  "netique": 1,
+                  "jgjl": 1,
+                  "jeroen": 1,
+                  "botanize": 1,
+                  "jschoeley": 1,
+                  "jonathan-g": 1,
+                  "jsta": 1,
+                  "caijun": 1,
+                  "jentjr": 1,
+                  "kbroman": 1,
+                  "huftis": 1,
+                  "kloesing": 1,
+                  "wendtke": 1,
+                  "kbodwin": 1,
+                  "darrkj": 1,
+                  "kent37": 1,
+                  "kferris10": 1,
+                  "klmr": 1,
+                  "llrs": 1,
+                  "lselzer": 1,
+                  "jemus42": 1,
+                  "mcguinlu": 1,
+                  "mdlama": 1,
+                  "maraalexeev": 1,
+                  "mcol": 1,
+                  "tereom": 1,
+                  "flrd": 1,
+                  "martin-martin": 1,
+                  "mruessler": 1,
+                  "mattsteadman": 1,
+                  "mbergins": 1,
+                  "mpancia": 1,
+                  "mnazarov": 1,
+                  "maelle": 1,
+                  "meganbeckett": 1,
+                  "mnbram": 1,
+                  "krassowski": 1,
+                  "nalimilan": 1,
+                  "mmhamdy": 1,
+                  "njtierney": 1,
+                  "nicksolomon": 1,
+                  "niknakk": 1,
+                  "ppaccioretti": 1,
+                  "joey711": 1,
+                  "pmur002": 1,
+                  "ppanko": 1,
+                  "aphalo": 1,
+                  "perezp44": 1,
+                  "petehaitch": 1,
+                  "crowding": 1,
+                  "flying-sheep": 1,
+                  "tutuchan": 1,
+                  "pridiltal": 1,
+                  "rasmusab": 1,
+                  "raerickson": 1,
+                  "richardjacton": 1,
+                  "smudgerville": 1,
+                  "rsaporta": 1,
+                  "rivaquiroga": 1,
+                  "robertzk": 1,
+                  "romainfrancois": 1,
+                  "darwinawardwinner": 1,
+                  "rcurtin": 1,
+                  "ryo-n7": 1,
+                  "808sandbr": 1,
+                  "sebkopf": 1,
+                  "restonslacker": 1,
+                  "shelmith-kariuki": 1,
+                  "smsaladi": 1,
+                  "sinarueeger": 1,
+                  "songeo": 1,
+                  "stefanbras": 1,
+                  "lianos": 1,
+                  "sushmitavgopalan16": 1,
+                  "sowla": 1,
+                  "talgalili": 1,
+                  "thell": 1,
+                  "thieffen": 1,
+                  "thiyangt": 1,
+                  "tgs": 1,
+                  "tklebel": 1,
+                  "durtal": 1,
+                  "tdmcarthur": 1,
+                  "vinay-swamy": 1,
+                  "violetr": 1,
+                  "waltersom": 1,
+                  "billybarc": 1,
+                  "ax3man": 1,
+                  "xvrdm": 1,
+                  "pursuitofdatascience": 1,
+                  "yihui": 1,
+                  "andrasberczi": 1,
+                  "arilamstein": 1,
+                  "atusy": 1,
+                  "beckymaust": 1,
+                  "bersbersbers": 1,
+                  "buyske": 1,
+                  "dmurdoch": 1,
+                  "evanhaldane": 1,
+                  "heckendorfc": 1,
+                  "jashapiro": 1,
+                  "laresbernardo": 1,
+                  "larspijnappel": 1,
+                  "lehy": 1,
+                  "margoal1": 1,
+                  "metanoid": 1,
+                  "mone27": 1,
+                  "pank": 1,
+                  "pbiecek": 1,
+                  "r2evans": 1,
+                  "stefanedwards": 1,
+                  "timgoodman": 1,
+                  "tomschloss": 1
+                },
+                "topics": [
+                  "data-visualisation",
+                  "visualisation"
+                ],
+                "organization": true,
+                "stars": 5380
+              },
+              "pkglogo": "https://github.com/tidyverse/ggplot2/raw/HEAD/man/figures/logo.png",
+              "pkgdocs": "skipped",
+              "url": "https://github.com/r-universe/tidyverse/actions/runs/2195564228"
+            },
+            "_owner": "tidyverse",
+            "_selfowned": true,
+            "_registered": true,
+            "MD5sum": "837b9d4357a25bc60b739b56aba6f73c",
+            "_hard_deps": [
+              {
+                "package": "R",
+                "version": ">= 3.3",
+                "role": "Depends"
+              },
+              {
+                "package": "cli",
+                "role": "Imports"
+              },
+              {
+                "package": "digest",
+                "role": "Imports"
+              },
+              {
+                "package": "glue",
+                "role": "Imports"
+              },
+              {
+                "package": "grDevices",
+                "role": "Imports"
+              },
+              {
+                "package": "grid",
+                "role": "Imports"
+              },
+              {
+                "package": "gtable",
+                "version": ">= 0.1.1",
+                "role": "Imports"
+              },
+              {
+                "package": "isoband",
+                "role": "Imports"
+              },
+              {
+                "package": "lifecycle",
+                "role": "Imports"
+              },
+              {
+                "package": "MASS",
+                "role": "Imports"
+              },
+              {
+                "package": "mgcv",
+                "role": "Imports"
+              },
+              {
+                "package": "rlang",
+                "version": ">= 1.0.0",
+                "role": "Imports"
+              },
+              {
+                "package": "scales",
+                "version": ">= 0.5.0",
+                "role": "Imports"
+              },
+              {
+                "package": "stats",
+                "role": "Imports"
+              },
+              {
+                "package": "tibble",
+                "role": "Imports"
+              },
+              {
+                "package": "withr",
+                "version": ">= 2.0.0",
+                "role": "Imports"
+              }
+            ],
+            "_soft_deps": [
+              {
+                "package": "covr",
+                "role": "Suggests"
+              },
+              {
+                "package": "dplyr",
+                "role": "Suggests"
+              },
+              {
+                "package": "ggplot2movies",
+                "role": "Suggests"
+              },
+              {
+                "package": "hexbin",
+                "role": "Suggests"
+              },
+              {
+                "package": "Hmisc",
+                "role": "Suggests"
+              },
+              {
+                "package": "interp",
+                "role": "Suggests"
+              },
+              {
+                "package": "knitr",
+                "role": "Suggests"
+              },
+              {
+                "package": "lattice",
+                "role": "Suggests"
+              },
+              {
+                "package": "mapproj",
+                "role": "Suggests"
+              },
+              {
+                "package": "maps",
+                "role": "Suggests"
+              },
+              {
+                "package": "maptools",
+                "role": "Suggests"
+              },
+              {
+                "package": "multcomp",
+                "role": "Suggests"
+              },
+              {
+                "package": "munsell",
+                "role": "Suggests"
+              },
+              {
+                "package": "nlme",
+                "role": "Suggests"
+              },
+              {
+                "package": "profvis",
+                "role": "Suggests"
+              },
+              {
+                "package": "quantreg",
+                "role": "Suggests"
+              },
+              {
+                "package": "ragg",
+                "role": "Suggests"
+              },
+              {
+                "package": "RColorBrewer",
+                "role": "Suggests"
+              },
+              {
+                "package": "rgeos",
+                "role": "Suggests"
+              },
+              {
+                "package": "rmarkdown",
+                "role": "Suggests"
+              },
+              {
+                "package": "rpart",
+                "role": "Suggests"
+              },
+              {
+                "package": "sf",
+                "version": ">= 0.7-3",
+                "role": "Suggests"
+              },
+              {
+                "package": "svglite",
+                "version": ">= 1.2.0.9001",
+                "role": "Suggests"
+              },
+              {
+                "package": "testthat",
+                "version": ">= 3.0.0",
+                "role": "Suggests"
+              },
+              {
+                "package": "vdiffr",
+                "version": ">= 1.0.0",
+                "role": "Suggests"
+              },
+              {
+                "package": "xml2",
+                "role": "Suggests"
+              },
+              {
+                "package": "sp",
+                "role": "Enhances"
+              }
+            ]
+          }
+        ]
+  recorded_at: 2022-04-20 14:00:25 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
