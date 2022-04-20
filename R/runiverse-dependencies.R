@@ -1,3 +1,24 @@
+#' Get dependencies of a package in one of R universes
+#'
+#' @description This function queries the selected universe for dependencies
+#' of the selected package.
+#'
+#' @template package
+#' @template universe
+#'
+#' @return A data frame with three columns, all in string format:
+#' * `package` (package name),
+#' * `version` (version requirement or `NA` if none),
+#' * `type` (dependency type, e.g. `"Imports"`).
+#'
+#' @examples
+#' \donttest{
+#' wood_runiverse_dependencies("targets")
+#' wood_runiverse_dependencies("ggplot2", universe = "tidyverse")
+#' }
+#'
+#' @family runiverse
+#' @family dependencies
 #' @export
 wood_runiverse_dependencies <- function(package, universe = "ropensci") {
   desc <- runiverse_description_cache(package, universe)
