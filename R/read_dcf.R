@@ -83,3 +83,8 @@ read_dcf_one_value <- function(object, field) {
     regexec(paste0(field, ": (\\S+)"), object)
   )[[1]][2]
 }
+
+read_char <- function(path) {
+  # A wrapper for readChar that reads whole file
+  readChar(path, nchar = file.info(path)[["size"]])
+}
