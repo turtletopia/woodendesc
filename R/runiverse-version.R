@@ -18,7 +18,7 @@
 #' @family versions
 #' @export
 wood_runiverse_version <- function(package, universe = "ropensci") {
-  runiverse_description_cache(package, universe)[["Version"]]
+  runiverse_description_cache(package, universe)[["version"]]
 }
 
 runiverse_description_cache <- function(package, universe = "ropensci") {
@@ -37,7 +37,10 @@ runiverse_description_cache <- function(package, universe = "ropensci") {
   }
 
   # Save selected description fields
-  desc <- desc[[1]][c("Version", "_hard_deps", "_soft_deps")]
+  desc <- list(
+    version = desc[[1]][["Version"]],
+    deps = c(desc[[1]][["_hard_deps"]], desc[[1]][["_soft_deps"]])
+  )
   saveRDS(desc, cache_file)
   # Return saved object to save time on reading it
   desc
