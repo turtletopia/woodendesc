@@ -1,5 +1,8 @@
 expect_pkg_name <- function(object) {
-  expect_match(object, .standard_regexps()$valid_package_name)
+  expect_match(
+    object,
+    paste0("R|(", .standard_regexps()$valid_package_name, ")")
+  )
 }
 
 expect_version_code <- function(object) {
