@@ -114,3 +114,25 @@ test_that("read_dcf_one_value() returns an expected value from example file", {
   expect_equal(dm_package, "dm")
   expect_equal(A3_version, "1.0.0")
 })
+
+# READ TO STRING ----
+packages <- read_char(system.file("extdata", "PACKAGES", package = "woodendesc"))
+
+test_that("read_char() returns a single string", {
+  expect_vector(packages,
+                ptype = character(),
+                size = 1)
+})
+
+test_that("read_char() contains data from the file", {
+  expect_match(
+    packages,
+    "MD5sum: 3bf55df981de5d2b4e542de074f89098",
+    fixed = TRUE
+  )
+  expect_match(
+    packages,
+    "fst, future, miniUI, parallel, reactable, shiny, shinyWidgets, tibble",
+    fixed = TRUE
+  )
+})
