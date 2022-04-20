@@ -29,10 +29,7 @@ test_that("returned 'version' column contains version codes or NA values", {
 })
 
 test_that("returned 'type' column contains dependency types", {
-  expect_subset(
-    ggplot2_deps[["type"]],
-    c("Depends", "Imports", "Suggests", "LinkingTo", "Enhances")
-  )
+  expect_dependency_type(ggplot2_deps[["type"]])
 })
 
 test_that("if possible, reads from cache", {

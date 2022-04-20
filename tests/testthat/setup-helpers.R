@@ -9,6 +9,13 @@ expect_version_code <- function(object) {
   expect_match(object, .standard_regexps()$valid_numeric_version)
 }
 
+expect_dependency_type <- function(object) {
+  expect_subset(
+    object,
+    c("Depends", "Imports", "Suggests", "LinkingTo", "Enhances")
+  )
+}
+
 expect_subset <- function(object, expected) {
   expect_true(all(object %in% expected))
 }
