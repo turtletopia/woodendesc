@@ -23,7 +23,7 @@ wood_local_versions <- function(package, paths = .libPaths()[1]) {
   descriptions <- descriptions[file.exists(descriptions)]
   # Extract package version from each DESCRIPTION found
   ret <- vapply(descriptions, function(desc) {
-    read_dcf_one_value(readChar(desc, nchar = file.info(desc)[["size"]]), "Version")
+    read_dcf_one_value(read_char(desc), "Version")
   }, character(1), USE.NAMES = FALSE)
   # Return only unique values
   unique(ret)
