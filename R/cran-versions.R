@@ -35,8 +35,17 @@ cran_versions_cache <- function(package) {
   # Download new data and cache it
   url <- crandb_url("-", "allall", params = list(start_key = package, limit = 1))
   desc <- download_safely(url)
-  version_codes <- names(desc[[package]][["versions"]])
 
+  # Extract all cacheable data
+  versions <- desc[[package]][["versions"]]
+  version_codes <- names(versions)
+  latest <- desc[[package]][["latest"]]
+
+  # Save cache
+  saveRDS(versions, cache_path("descriptions", "CRAN", package))
   saveRDS(version_codes, cache_file)
+  saveRDS(latest, cache_path("latest", "CRAN", package))
+
+  # Return value
   version_codes
 }
