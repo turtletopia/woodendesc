@@ -8,7 +8,7 @@
 #'
 #' @return A data frame with three columns, all in string format:
 #' * `package` (package name),
-#' * `version` (version requirement or `NA` if none),
+#' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
 #' @examples

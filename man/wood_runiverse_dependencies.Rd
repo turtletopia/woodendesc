@@ -17,7 +17,7 @@ Name of a universe within R-universe, e.g. "ropensci".}
 A data frame with three columns, all in string format:
 \itemize{
 \item \code{package} (package name),
-\item \code{version} (version requirement or \code{NA} if none),
+\item \code{version} (minimum version requirement or \code{NA} if none),
 \item \code{type} (dependency type, e.g. \code{"Imports"}).
 }
 }
