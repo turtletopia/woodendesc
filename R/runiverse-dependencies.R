@@ -26,7 +26,10 @@ wood_runiverse_dependencies <- function(package, universe = "ropensci") {
     package = vapply(desc[["deps"]], `[[`, character(1), "package"),
     version = vapply(desc[["deps"]], function(dep) {
       version <- dep[["version"]]
-      if (is.null(version)) NA_character_ else version
+      if (is.null(version)) return(NA_character_)
+      version <- regmatches(version, regexec(
+        ">=\\s+(.*)", version
+      ))[[1]][2]
     }, character(1)),
     type = vapply(desc[["deps"]], `[[`, character(1), "role"),
     stringsAsFactors = FALSE
