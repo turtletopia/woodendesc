@@ -28,15 +28,15 @@ cran_versions_cache <- function(package) {
 
   # Return "expired" cache if no new version was published in the meantime
   if (file.exists(cache_file)) {
-    versions <- readRDS(cache_file)
-    if (ver_latest(versions) == wood_cran_latest(package)) return(versions)
+    version_codes <- readRDS(cache_file)
+    if (ver_latest(version_codes) == wood_cran_latest(package)) return(version_codes)
   }
 
   # Download new data and cache it
   url <- crandb_url("-", "allall", params = list(start_key = package, limit = 1))
   desc <- download_safely(url)
-  versions <- names(desc[[package]][["versions"]])
+  version_codes <- names(desc[[package]][["versions"]])
 
-  saveRDS(versions, cache_file)
-  versions
+  saveRDS(version_codes, cache_file)
+  version_codes
 }
