@@ -22,7 +22,7 @@ test_that("returned 'package' column contains package names", {
 })
 
 test_that("returned 'version' column contains version codes or NA values", {
-  versions <- ggplot2_deps[["version"]][!is.na(ggplot2_deps[["version"]])]
+  versions <- omit_na(ggplot2_deps[["version"]])
   if (length(versions) == 0) {
     expect_equal(versions, character())
   } else {
