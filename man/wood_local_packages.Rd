@@ -27,6 +27,7 @@ wood_local_packages("all")
 }
 \seealso{
 Functions for local libraries:
+\code{\link{wood_local_dependencies}()},
 \code{\link{wood_local_versions}()}
 
 Functions that query available packages:

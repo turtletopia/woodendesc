@@ -36,6 +36,9 @@ wood_runiverse_dependencies("ggplot2", universe = "tidyverse")
 Functions for R-universe:
 \code{\link{wood_runiverse_packages}()},
 \code{\link{wood_runiverse_version}()}
+
+Functions that query package dependencies:
+\code{\link{wood_local_dependencies}()}
 }
 \concept{dependencies}
 \concept{runiverse}

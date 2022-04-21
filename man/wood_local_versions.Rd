@@ -29,6 +29,7 @@ wood_local_versions("httr")
 }
 \seealso{
 Functions for local libraries:
+\code{\link{wood_local_dependencies}()},
 \code{\link{wood_local_packages}()}
 
 Functions that query package versions:
