@@ -36,10 +36,11 @@ wood_local_dependencies <- function(package, paths = .libPaths()[1]) {
     function(dep_type) {
       if (!is.null(desc[[dep_type]]))
         cbind(parse_dependencies(desc[[dep_type]]),
-              type = dep_type)
+              type = dep_type,
+              stringsAsFactors = FALSE)
     }
   )
-  do.call(rbind, deps)
+  do.call(rbind, c(deps, stringsAsFactors = FALSE))
 }
 
 parse_dependencies <- function(deps) {
