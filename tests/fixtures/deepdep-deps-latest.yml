@@ -1,0 +1,98 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/desc?start_key=%22deepdep%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: nginx/1.4.6 (Ubuntu)
+      date: Thu, 21 Apr 2022 21:38:33 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "deepdep": { "version": "0.4.1", "title": "Visualise and Explore
+        the Deep Dependencies of R Packages" } }'
+  recorded_at: 2022-04-21 21:36:20 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/cran/deepdep/0.4.1/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '1008'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"22b30fc6186ddadb6a974187ccfcf413f90175a3b042da086d45c5067116a3ed"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: BF1A:EC79:B825B4:BFF2F5:6261CE54
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Thu, 21 Apr 2022 21:36:20 GMT
+      via: 1.1 varnish
+      x-served-by: cache-hhn4034-HHN
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1650576981.684530,VS0,VE183
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 439edf9567c2aa73769998829e7a51205bcb3ab8
+      expires: Thu, 21 Apr 2022 21:41:20 GMT
+      source-age: '0'
+    body:
+      encoding: UTF-8
+      file: no
+      string: "Package: deepdep\nTitle: Visualise and Explore the Deep Dependencies
+        of R Packages\nVersion: 0.4.1\nAuthors@R: c(person(\"Dominik\", \"Rafacz\",
+        email = \"dominikrafacz@gmail.com\",\n                  role = c(\"aut\",
+        \"cre\"),\n                  comment = c(ORCID = \"0000-0003-0925-1909\")),\n
+        \            person(\"Hubert\", \"Baniecki\", role = c(\"aut\")),\n             person(\"Szymon\",
+        \"Maksymiuk\", role = c(\"aut\")),\n             person(\"Laura\", \"Bakala\",
+        role = c(\"aut\")),\n             person(\"Dirk\", \"Eddelbuettel\", role
+        = c(\"ctb\")))\nDescription: Provides tools for exploration of R package dependencies.
+        \n    The main deepdep() function allows to acquire deep dependencies of any
+        package and plot them in an elegant way.\n    It also adds some popularity
+        measures for the packages e.g. in the form of download count through the 'cranlogs'
+        package. \n    Uses the CRAN metadata database <http://crandb.r-pkg.org> and
+        Bioconductor metadata <http://bioconductor.org>.\n    Other data acquire functions
+        are: get_dependencies(), get_downloads() and get_description(). \n    The
+        deepdep_shiny() function runs shiny application that helps to produce a nice
+        'deepdep' plot. \nLicense: GPL-3\nEncoding: UTF-8\nRoxygenNote: 7.1.2\nDepends:
+        R (>= 3.2.0)\nImports: cranlogs, httr, jsonlite\nSuggests: BiocManager, covr,
+        devtools, ggplot2, ggraph, graphlayouts,\n        igraph, knitr, miniCRAN,
+        plyr, rmarkdown, scales, shiny,\n        shinycssloaders, spelling, stringi,
+        testthat (>= 2.1.0), vcr\nVignetteBuilder: knitr\nURL: https://dominikrafacz.github.io/deepdep/,\n
+        \       https://github.com/DominikRafacz/deepdep\nBugReports: https://github.com/DominikRafacz/deepdep/issues\nLanguage:
+        en-GB\nNeedsCompilation: no\nPackaged: 2021-12-19 22:29:39 UTC; matib\nAuthor:
+        Dominik Rafacz [aut, cre] (<https://orcid.org/0000-0003-0925-1909>),\n  Hubert
+        Baniecki [aut],\n  Szymon Maksymiuk [aut],\n  Laura Bakala [aut],\n  Dirk
+        Eddelbuettel [ctb]\nMaintainer: Dominik Rafacz <dominikrafacz@gmail.com>\nRepository:
+        CRAN\nDate/Publication: 2021-12-20 16:20:02 UTC\n"
+  recorded_at: 2022-04-21 21:36:20 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
