@@ -60,6 +60,10 @@ cran_url <- function(...) {
   paste("https://CRAN.R-project.org", ..., sep = "/")
 }
 
+github_url <- function(...) {
+  paste("https://raw.githubusercontent.com", ..., sep = "/")
+}
+
 #' Get Bioconductor URL
 #'
 #' @description Creates an URL to the selected Bioconductor API.
