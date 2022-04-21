@@ -1,3 +1,25 @@
+#' Get dependencies of a package on CRAN
+#'
+#' @description This function queries CRAN for dependencies of the selected
+#' version of a selected package. By default, it queries the latest version.
+#'
+#' @template package
+#' @param version \[\code{character(1)}\]\cr
+#'  A version code without leading `"v"`, e.g. `"1.6.0"`.
+#'
+#' @return A data frame with three columns, all in string format:
+#' * `package` (package name),
+#' * `version` (minimum version requirement or `NA` if none),
+#' * `type` (dependency type, e.g. `"Imports"`).
+#'
+#' @examples
+#' \donttest{
+#' wood_cran_dependencies("ggplot2")
+#' wood_cran_dependencies("deepdep", version = "0.2.1")
+#' }
+#'
+#' @family cran
+#' @family dependencies
 #' @export
 wood_cran_dependencies <- function(package, version = "latest") {
   version <- match_version_cran(package, version)
