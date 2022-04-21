@@ -1,3 +1,7 @@
+omit_na <- function(object) {
+  object[!is.na(object)]
+}
+
 read_to_string <- function(...) {
   path <- system.file(..., package = "woodendesc")
   readChar(path, nchar = file.info(path)[["size"]])
