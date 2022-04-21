@@ -40,6 +40,14 @@ test_that("if possible, reads from cache", {
                version = "0.2.0")
 })
 
+test_that("uses cache from wood_cran_versions() if available", {
+  wood_clear_cache()
+  wood_cran_versions("deepdep")
+  expect_cache(wood_cran_dependencies, deepdep_deps,
+               package = "deepdep",
+               version = "0.2.0")
+})
+
 vcr::use_cassette("deepdep-deps-latest", {
   test_that("version = 'latest' is an alias to latest package version", {
     expect_equal(
