@@ -39,6 +39,7 @@ Functions for local libraries:
 \code{\link{wood_local_versions}()}
 
 Functions that query package dependencies:
+\code{\link{wood_cran_dependencies}()},
 \code{\link{wood_runiverse_dependencies}()}
 }
 \concept{dependencies}

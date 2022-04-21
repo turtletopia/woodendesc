@@ -38,6 +38,7 @@ Functions for R-universe:
 \code{\link{wood_runiverse_version}()}
 
 Functions that query package dependencies:
+\code{\link{wood_cran_dependencies}()},
 \code{\link{wood_local_dependencies}()}
 }
 \concept{dependencies}
