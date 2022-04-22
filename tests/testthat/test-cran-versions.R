@@ -39,3 +39,7 @@ test_that("use cache even if expired, but latest version hasn't changed yet", {
   })
   expect_cache(wood_cran_versions, versionsort_versions, "versionsort")
 })
+
+test_that("raises an exception if package not available", {
+  expect_error(wood_cran_versions("fakepackage"))
+})
