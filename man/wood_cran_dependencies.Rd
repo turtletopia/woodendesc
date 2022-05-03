@@ -40,7 +40,8 @@ Functions for CRAN:
 
 Functions that query package dependencies:
 \code{\link{wood_local_dependencies}()},
-\code{\link{wood_runiverse_dependencies}()}
+\code{\link{wood_runiverse_dependencies}()},
+\code{\link{wood_url_dependencies}()}
 }
 \concept{cran}
 \concept{dependencies}

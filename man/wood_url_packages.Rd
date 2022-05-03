@@ -29,6 +29,7 @@ wood_url_packages("http://www.omegahat.net/R/")
 }
 \seealso{
 Functions for any URL:
+\code{\link{wood_url_dependencies}()},
 \code{\link{wood_url_version}()}
 
 Functions that query available packages:

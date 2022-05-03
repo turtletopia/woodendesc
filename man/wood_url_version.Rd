@@ -28,6 +28,7 @@ wood_url_version("XML", repository = "http://www.omegahat.net/R")
 }
 \seealso{
 Functions for any URL:
+\code{\link{wood_url_dependencies}()},
 \code{\link{wood_url_packages}()}
 
 Functions that query package versions:
