@@ -21,7 +21,10 @@ bioc_releases_cache <- function() {
 
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
-  response <- download_safely(bioc_url("about", "release-announcements"))
+  response <- download_safely(
+    bioc_url("about", "release-announcements"),
+    encoding = "UTF-8"
+  )
   releases <- extract_bioc_releases(response)
 
   saveRDS(releases, cache_file)
