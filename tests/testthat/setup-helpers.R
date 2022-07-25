@@ -12,6 +12,10 @@ expect_version_code <- function(object) {
   )
 }
 
+expect_bioc_release_code <- function(object) {
+  expect_match(object, "^\\d+\\.\\d+$")
+}
+
 expect_dependency_type <- function(object) {
   expect_subset(
     object,
