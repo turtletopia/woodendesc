@@ -1,3 +1,16 @@
+#' List Bioconductor releases
+#'
+#' @description This function scrapes the Bioconductor site for version codes
+#' of all its releases.
+#'
+#' @return A character vector, where each element is a Bioconductor release.
+#'
+#' @examples
+#' \donttest{
+#' wood_bioc_releases()
+#' }
+#'
+#' @family bioc
 #' @export
 wood_bioc_releases <- function() {
   bioc_releases_cache()
