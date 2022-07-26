@@ -1,3 +1,8 @@
+# CACHE ----
+vcr::use_cassette("bioc-releases-cache", {
+  wood_bioc_releases()
+})
+
 # R-UNIVERSE URL ----
 test_that("runiverse_url() returns a single string", {
   expect_vector(runiverse_url("ropensci"),
@@ -30,6 +35,71 @@ test_that("bioc_url() separates API with slashes", {
   expect_match(
     bioc_url("packages", "release", "bioc", "VIEWS"),
     "/packages/release/bioc/VIEWS",
+    fixed = TRUE
+  )
+})
+
+# BIOC RELEASE URL ----
+test_that("bioc_release_url() returns a single string", {
+  expect_vector(bioc_release_url("3.12"),
+                ptype = character(),
+                size = 1)
+  expect_vector(bioc_release_url("2.1", "src", "contrib"),
+                ptype = character(),
+                size = 1)
+})
+
+test_that("bioc_release_url() separates API with slashes", {
+  expect_match(
+    bioc_release_url("2.1", "src", "contrib"),
+    "packages/2.1/bioc/src/contrib",
+    fixed = TRUE
+  )
+})
+
+test_that("bioc_release_url() uses different path for older releases", {
+  expect_match(
+    bioc_release_url("1.8", "src", "contrib"),
+    "packages/1.8/bioc/src/contrib",
+    fixed = TRUE
+  )
+  expect_match(
+    bioc_release_url("1.7", "src", "contrib"),
+    "1.7/packages/bioc/src/contrib",
+    fixed = TRUE
+  )
+})
+
+test_that("bioc_release_url() doesn't support releases older than 1.5", {
+  expect_error(
+    bioc_release_url("1.4", "src", "contrib"),
+    regexp = "Unsupported release",
+    fixed = TRUE
+  )
+})
+
+test_that("bioc_release_url() throws exception for non-existent releases", {
+  expect_error(
+    bioc_release_url("3.6.1"),
+    regexp = "does not exist",
+    fixed = TRUE
+  )
+  expect_error(
+    bioc_release_url("1.15"),
+    regexp = "does not exist",
+    fixed = TRUE
+  )
+})
+
+test_that("bioc_release_url() allows keywords for release", {
+  expect_match(
+    bioc_release_url("release", "src", "contrib"),
+    "packages/release/bioc/src/contrib",
+    fixed = TRUE
+  )
+  expect_match(
+    bioc_release_url("devel", "src", "contrib"),
+    "packages/devel/bioc/src/contrib",
     fixed = TRUE
   )
 })
