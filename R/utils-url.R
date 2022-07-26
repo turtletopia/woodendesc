@@ -78,6 +78,27 @@ bioc_url <- function(...) {
   paste("https://bioconductor.org", ..., sep = "/")
 }
 
+bioc_release_url <- function(release = "release", ...) {
+  if (release %in% c("release", "devel")) {
+    # Early return for special release names
+    return(bioc_url("packages", release, "bioc", ...))
+  }
+
+  if (!release %in% wood_bioc_releases()) {
+    stop("Release code does not exist.", call. = FALSE)
+  }
+
+  if (ver_latest(c(release, "1.8")) == release) {
+    # Release at least 1.8
+    paste("https://bioconductor.org", "packages", release, "bioc", ..., sep = "/")
+  } else if (ver_latest(c(release, "1.5")) == release) {
+    # Releases between 1.5 and 1.7 had different order of URL components
+    paste("https://bioconductor.org", release, "packages", "bioc", ..., sep = "/")
+  } else {
+    stop("Unsupported release, cannot find PACKAGES file.", call. = FALSE)
+  }
+}
+
 extract_core_url <- function(url) {
   sub("\\?.*", "", url)
 }
