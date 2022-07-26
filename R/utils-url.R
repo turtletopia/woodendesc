@@ -78,6 +78,7 @@ bioc_url <- function(...) {
   paste("https://bioconductor.org", ..., sep = "/")
 }
 
+#' @importFrom versionsort ver_latest
 bioc_release_url <- function(release = "release", ...) {
   if (release %in% c("release", "devel")) {
     # Early return for special release names
@@ -105,4 +106,8 @@ extract_core_url <- function(url) {
 
 remove_trailing_slash <- function(url) {
   gsub("/$", "", url)
+}
+
+add_trailing_slash <- function(url) {
+  gsub("(?<=[^/])$", "/", url, perl = TRUE)
 }
