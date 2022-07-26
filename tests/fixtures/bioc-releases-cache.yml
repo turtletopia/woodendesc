@@ -29,8 +29,8 @@ http_interactions:
       x-cache: Hit from cloudfront
       via: 1.1 dce4c8b7b9f77858bc00bb5154e30f3c.cloudfront.net (CloudFront)
       x-amz-cf-pop: WAW50-C1
-      x-amz-cf-id: YYuNbKcuJF4DX18h13lCWHLg-fzsz6DRg8rd6hHj8ZVT0AoXXrjkTA==
-      age: '119'
+      x-amz-cf-id: usoxyDBZzbCQZMfWSisBhxfAKL-Pcf8eAvQ7t7kv-dUf9NMfgDBWbg==
+      age: '127'
     body:
       encoding: UTF-8
       file: no
@@ -287,5 +287,5 @@ http_interactions:
         \       </li>\n        <li class=\"masthead_nav_element\" id=\"masthead_nav_element_5\">\n
         \         <a href=\"/about/\">About</a>\n        </li>\n      </ul>\n\n    </div>\n
         \ </div>\n\n</div>\n\n    </div>\n  </body>\n</html>\n"
-  recorded_at: 2022-07-26 08:31:42 GMT
+  recorded_at: 2022-07-26 08:31:49 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
