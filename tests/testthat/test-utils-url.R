@@ -166,3 +166,22 @@ test_that("if no trailing slash, url returned is the same as input", {
   test_url <- "https://test.org"
   expect_equal(remove_trailing_slash(test_url), test_url)
 })
+
+test_that("add_trailing_slash() returns a single string", {
+  expect_vector(add_trailing_slash(runiverse_url("ropensci")),
+                ptype = character(),
+                size = 1)
+  expect_vector(add_trailing_slash("https://cynkra.r-universe.dev/"),
+                ptype = character(),
+                size = 1)
+})
+
+test_that("a trailing slash is added if missing", {
+  test_url <- add_trailing_slash("https://test.org")
+  expect_match(test_url, "https://test.org/", fixed = TRUE)
+})
+
+test_that("if trailing slash is present, url returned is the same as input", {
+  test_url <- "https://test.org/"
+  expect_equal(add_trailing_slash(test_url), test_url)
+})
