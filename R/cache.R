@@ -9,6 +9,18 @@ wood_clear_cache <- function() {
   unlink(file.path(wood_tempdir(), "cache*"))
 }
 
+#' Wrap expression with cache
+#'
+#' @description Adds caching to an expression with a specified cache file.
+#'
+#' @param expr \[\code{call(1)}\]\cr
+#'  An expression in brackets to evaluate if cache not usable.
+#' @param ... \[\code{character(1)}\]\cr
+#'  Components of the path filename.
+#'
+#' @return A value returned by `expr` or a cache (if valid).
+#'
+#' @noRd
 with_cache <- function(expr, ...) {
   cache_file <- cache_path(...)
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
