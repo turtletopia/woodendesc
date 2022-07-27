@@ -9,6 +9,17 @@ wood_clear_cache <- function() {
   unlink(file.path(wood_tempdir(), "cache*"))
 }
 
+with_cache <- function(expr, ...) {
+  cache_file <- cache_path(...)
+  if (is_cache_usable(cache_file)) return(readRDS(cache_file))
+
+  ret <- evalq(expr)
+
+  saveRDS(ret, cache_file)
+  # Return saved object to save time on reading it
+  ret
+}
+
 #' Create and access woodendesc temporary directory
 #'
 #' @description Returns the path to woodendesc temporary directory. If the
