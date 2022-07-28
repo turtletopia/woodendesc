@@ -32,3 +32,39 @@ test_version <- function(version, tested_function, ...) {
     expect_cache(tested_function, version, ...)
   })
 }
+
+test_dependencies <- function(deps, tested_function, ...,
+                              .test_cache = TRUE) {
+  test_that("returns a data frame with package, version & type columns", {
+    expect_vector(deps,
+                  ptype = data.frame(
+                    package = character(),
+                    version = character(),
+                    type = character(),
+                    stringsAsFactors = FALSE
+                  ))
+  })
+
+  test_that("returned 'package' column contains package names", {
+    expect_pkg_name(deps[["package"]])
+  })
+
+  test_that("returned 'version' column contains version codes or NA values", {
+    versions <- omit_na(deps[["version"]])
+    if (length(versions) == 0) {
+      expect_equal(versions, character())
+    } else {
+      expect_version_code(versions)
+    }
+  })
+
+  test_that("returned 'type' column contains dependency types", {
+    expect_dependency_type(deps[["type"]])
+  })
+
+  if (.test_cache) {
+    test_that("if possible, reads from cache", {
+      expect_cache(tested_function, deps, ...)
+    })
+  }
+}
