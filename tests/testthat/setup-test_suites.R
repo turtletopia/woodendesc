@@ -16,3 +16,19 @@ test_packages <- function(packages, tested_function, ...) {
     expect_cache(tested_function, packages, ...)
   })
 }
+
+test_version <- function(version, tested_function, ...) {
+  test_that("returns a single string", {
+    expect_vector(version,
+                  ptype = character(),
+                  size = 1)
+  })
+
+  test_that("returned string is a version code", {
+    expect_version_code(version)
+  })
+
+  test_that("if possible, reads from cache", {
+    expect_cache(tested_function, version, ...)
+  })
+}
