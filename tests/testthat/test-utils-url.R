@@ -65,7 +65,7 @@ test_that("bioc_release_url() uses different path for older releases", {
   )
   expect_match(
     bioc_release_url("1.7", "src", "contrib"),
-    "1.7/packages/bioc/src/contrib",
+    "packages/bioc/1.7/src/contrib",
     fixed = TRUE
   )
 })
