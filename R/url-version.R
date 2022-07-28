@@ -17,5 +17,10 @@
 #' @family versions
 #' @export
 wood_url_version <- function(package, repository) {
-  url_PACKAGES_cache(repository)[[package]][["Version"]]
+  desc <- url_PACKAGES_cache(repository)[[package]]
+
+  if (is.null(desc))
+    stop("package not found in the specified URL", call. = FALSE)
+
+  desc[["Version"]]
 }
