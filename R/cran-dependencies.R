@@ -64,16 +64,11 @@ cran_descriptions_cache <- function(package) {
 }
 
 cran_dependencies_cache <- function(package, version) {
-  cache_file <- cache_path("dependencies", "CRAN", package, version)
-
-  if (is_cache_usable(cache_file)) return(readRDS(cache_file))
-
-  url <- github_url("cran", package, version, "DESCRIPTION")
-  desc <- download_safely(url)
-  desc <- read_dcf(desc)[[package]]
-
-  saveRDS(desc, cache_file)
-  desc
+  with_cache({
+    url <- github_url("cran", package, version, "DESCRIPTION")
+    desc <- download_safely(url)
+    read_dcf(desc)[[package]]
+  }, "dependencies", "CRAN", package, version)
 }
 
 match_version_cran <- function(package, version) {

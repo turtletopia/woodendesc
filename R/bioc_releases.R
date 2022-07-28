@@ -17,19 +17,13 @@ wood_bioc_releases <- function() {
 }
 
 bioc_releases_cache <- function() {
-  cache_file <- cache_path("releases", "bioc")
-
-  if (is_cache_usable(cache_file)) return(readRDS(cache_file))
-
-  response <- download_safely(
-    add_trailing_slash(bioc_url("about", "release-announcements")),
-    encoding = "UTF-8"
-  )
-  releases <- extract_bioc_releases(response)
-
-  saveRDS(releases, cache_file)
-  # Return saved object to save time on reading it
-  releases
+  with_cache({
+    response <- download_safely(
+      add_trailing_slash(bioc_url("about", "release-announcements")),
+      encoding = "UTF-8"
+    )
+    extract_bioc_releases(response)
+  }, "releases", "bioc")
 }
 
 extract_bioc_releases <- function(html) {

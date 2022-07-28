@@ -22,26 +22,21 @@ wood_runiverse_version <- function(package, universe = "ropensci") {
 }
 
 runiverse_description_cache <- function(package, universe = "ropensci") {
-  cache_file <- cache_path("description", "runiverse", universe, package)
+  with_cache({
+    url <- runiverse_url(universe, "packages", package, "any", "src")
+    desc <- download_safely(url)
 
-  if (is_cache_usable(cache_file)) return(readRDS(cache_file))
+    if (length(desc) == 0) {
+      stop(
+        "received package data is empty; does this universe or package exist?",
+        call. = FALSE
+      )
+    }
 
-  url <- runiverse_url(universe, "packages", package, "any", "src")
-  desc <- download_safely(url)
-
-  if (length(desc) == 0) {
-    stop(
-      "received package data is empty; does this universe or package exist?",
-      call. = FALSE
+    # Save selected description fields
+    list(
+      version = desc[[1]][["Version"]],
+      deps = c(desc[[1]][["_hard_deps"]], desc[[1]][["_soft_deps"]])
     )
-  }
-
-  # Save selected description fields
-  desc <- list(
-    version = desc[[1]][["Version"]],
-    deps = c(desc[[1]][["_hard_deps"]], desc[[1]][["_soft_deps"]])
-  )
-  saveRDS(desc, cache_file)
-  # Return saved object to save time on reading it
-  desc
+  }, "description", "runiverse", universe, package)
 }

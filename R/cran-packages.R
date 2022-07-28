@@ -18,25 +18,22 @@ wood_cran_packages <- function() {
 }
 
 cran_packages_cache <- function() {
-  cache_file <- cache_path("packages", "cran")
-  if (is_cache_usable(cache_file)) return(readRDS(cache_file))
+  with_cache({
+    url <- cran_url("src", "contrib", "PACKAGES.gz")
 
-  url <- cran_url("src", "contrib", "PACKAGES.gz")
+    if (getRversion() >= "4.0.0") {
+      packages_dcf <- download_dcf(url)
+      packages <- read_dcf_all_values(packages_dcf, "Package")
+    } else {
+      # memDecompress handles gzip since R 4.0.0
+      raw_response <- download_safely(url, as = "raw")
+      file <- tempfile()
+      writeBin(raw_response, file)
+      packages <- read.dcf(file)[, "Package"]
 
-  if (getRversion() >= "4.0.0") {
-    packages_dcf <- download_dcf(url)
-    packages <- read_dcf_all_values(packages_dcf, "Package")
-  } else {
-    # memDecompress handles gzip since R 4.0.0
-    raw_response <- download_safely(url, as = "raw")
-    file <- tempfile()
-    writeBin(raw_response, file)
-    packages <- read.dcf(file)[, "Package"]
+      unlink(file)
+    }
 
-    unlink(file)
-  }
-
-  saveRDS(packages, cache_file)
-  # Return saved object to save time on reading it
-  packages
+    packages
+  }, "packages", "cran")
 }
