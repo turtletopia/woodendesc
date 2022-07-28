@@ -31,28 +31,5 @@ wood_local_dependencies <- function(package, paths = .libPaths()[1]) {
     stop("package not found in the specified paths", call. = FALSE)
 
   desc <- read_dcf(read_char(desc_path))[[package]]
-  deps <- lapply(
-    c("Depends", "Imports", "Suggests", "LinkingTo", "Enhances"),
-    function(dep_type) {
-      if (!is.null(desc[[dep_type]]))
-        cbind(parse_dependencies(desc[[dep_type]]),
-              type = dep_type,
-              stringsAsFactors = FALSE)
-    }
-  )
-  do.call(rbind, c(deps, stringsAsFactors = FALSE))
-}
-
-parse_dependencies <- function(deps) {
-  deps <- strsplit(deps, ",")[[1]]
-  versions <- regmatches(deps, regexec(
-    "\\(>=\\s+(.*)\\)", deps
-  ))
-  versions <- vapply(versions, `[`, character(1), 2)
-  packages <- regmatches(deps, regexpr("\\S+", deps))
-  data.frame(
-    package = packages,
-    version = versions,
-    stringsAsFactors = FALSE
-  )
+  extract_dependencies(desc)
 }
