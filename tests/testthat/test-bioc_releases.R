@@ -4,7 +4,7 @@ wood_clear_cache()
 # SETUP ----
 vcr::use_cassette("bioc-releases", {
   bioc_releases <- wood_bioc_releases()
-})
+}, record = "new_episodes")
 
 # TESTS ----
 test_that("returns a vector of strings", {

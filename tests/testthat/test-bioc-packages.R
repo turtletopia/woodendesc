@@ -4,7 +4,7 @@ wood_clear_cache()
 # SETUP ----
 vcr::use_cassette("bioc-packages", {
   bioc_packages <- wood_bioc_packages()
-})
+}, record = "new_episodes")
 
 # TESTS ----
 test_packages(bioc_packages, wood_bioc_packages)
