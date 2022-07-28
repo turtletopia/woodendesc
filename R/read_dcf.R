@@ -86,5 +86,5 @@ read_dcf_one_value <- function(object, field) {
 
 read_char <- function(path) {
   # A wrapper for readChar that reads whole file
-  readChar(path, nchar = file.info(path)[["size"]])
+  readChar(path, nchars = file.info(path)[["size"]])
 }
