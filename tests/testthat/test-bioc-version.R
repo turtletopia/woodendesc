@@ -15,10 +15,9 @@ test_that("raises an exception if package not available", {
   }, record = "new_episodes")
 })
 
-test_that("correctly retrieves data from older releases", {
-  vcr::use_cassette("affy-version-old", {
+vcr::use_cassette("affy-version-old", {
+  test_that("correctly retrieves data from older releases", {
     affy_version_old <- wood_bioc_version("affy", release = "1.5")
-  }, record = "new_episodes")
-
-  expect_equal(affy_version_old, "1.5.8-1")
-})
+    expect_equal(affy_version_old, "1.5.8-1")
+  })
+}, record = "new_episodes")
