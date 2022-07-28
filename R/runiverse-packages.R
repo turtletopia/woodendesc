@@ -22,25 +22,12 @@ wood_runiverse_packages <- function(universe = "ropensci") {
 }
 
 runiverse_packages_cache <- function(universe = "ropensci") {
-  cache_file <- cache_path("packages", "runiverse", universe)
-
-  if (is_cache_usable(cache_file)) return(readRDS(cache_file))
-
-  url <- runiverse_url(universe, "packages")
-  packages <- download_safely(url)
-
-  if (length(packages) == 0) {
-    # Warn if response is empty
-    warning(
-      "received list of packages is empty; does this universe exist?",
-      call. = FALSE
-    )
+  with_cache({
+    url <- runiverse_url(universe, "packages")
+    packages <- download_safely(url)
+    unlist(packages, recursive = FALSE)
+  }, .if_null = {
+    warning("received list of packages is empty; does this universe exist?", call. = FALSE)
     character()
-  } else {
-    # Save a non-empty vector of packages
-    packages <- unlist(packages, recursive = FALSE)
-    saveRDS(packages, cache_file)
-    # Return saved object to save time on reading it
-    packages
-  }
+  }, "packages", "runiverse", universe)
 }

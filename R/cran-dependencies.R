@@ -38,10 +38,7 @@ wood_cran_dependencies <- function(package, version = "latest") {
 }
 
 cran_descriptions_cache <- function(package) {
-  cache_file <- cache_path("descriptions", "CRAN", package)
-
-  # Return usable cache if exists
-  if (is_cache_usable(cache_file)) readRDS(cache_file) else NULL
+  with_cache({}, "descriptions", "CRAN", package)
 }
 
 cran_dependencies_cache <- function(package, version) {
