@@ -23,7 +23,10 @@ cran_packages_cache <- function() {
 
   url <- cran_url("src", "contrib", "PACKAGES.gz")
 
-  if (R_older_than("4.0.0")) {
+  if (getRversion() >= "4.0.0") {
+    packages_dcf <- download_dcf(url)
+    packages <- read_dcf_all_values(packages_dcf, "Package")
+  } else {
     # memDecompress handles gzip since R 4.0.0
     raw_response <- download_safely(url, as = "raw")
     file <- tempfile()
@@ -31,9 +34,6 @@ cran_packages_cache <- function() {
     packages <- read.dcf(file)[, "Package"]
 
     unlink(file)
-  } else {
-    packages_dcf <- download_dcf(url)
-    packages <- read_dcf_all_values(packages_dcf, "Package")
   }
 
   saveRDS(packages, cache_file)

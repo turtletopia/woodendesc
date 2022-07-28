@@ -34,7 +34,7 @@ url_PACKAGES_cache <- function(repository) {
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
   dcf_data <- NULL
-  if (!R_older_than("4.0.0")) {
+  if (getRversion() >= "4.0.0") {
     # PACKAGES.gz may be unavailable sometimes
     url <- paste(repository, "src", "contrib", "PACKAGES.gz", sep = "/")
     try({
