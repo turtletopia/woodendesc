@@ -31,22 +31,6 @@ url_PACKAGES_cache <- function(repository) {
   repository <- remove_trailing_slash(repository)
 
   with_cache({
-    dcf_data <- NULL
-
-    if (getRversion() >= "4.0.0") {
-      # PACKAGES.gz may be unavailable sometimes
-      url <- paste(repository, "src", "contrib", "PACKAGES.gz", sep = "/")
-      try({
-        dcf_data <- download_dcf(url)
-      }, silent = TRUE)
-    }
-
-    if (is.null(dcf_data)) {
-      # Use non-gzipped PACKAGES file
-      url <- paste(repository, "src", "contrib", "PACKAGES", sep = "/")
-      dcf_data <- download_dcf(url, compression = "none")
-    }
-
-    read_dcf(dcf_data)
+    download_repo_data(paste(repository, "src", "contrib", sep = "/"))
   }, "PACKAGES", digest(repository))
 }
