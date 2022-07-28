@@ -21,6 +21,7 @@ wood_bioc_releases()
 }
 \seealso{
 Functions for Bioconductor:
-\code{\link{wood_bioc_packages}()}
+\code{\link{wood_bioc_packages}()},
+\code{\link{wood_bioc_version}()}
 }
 \concept{bioc}

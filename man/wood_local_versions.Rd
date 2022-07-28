@@ -33,6 +33,7 @@ Functions for local libraries:
 \code{\link{wood_local_packages}()}
 
 Functions that query package versions:
+\code{\link{wood_bioc_version}()},
 \code{\link{wood_cran_latest}()},
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_runiverse_version}()},
