@@ -2,6 +2,7 @@
 
 export(wood_bioc_packages)
 export(wood_bioc_releases)
+export(wood_bioc_version)
 export(wood_clear_cache)
 export(wood_cran_dependencies)
 export(wood_cran_latest)
