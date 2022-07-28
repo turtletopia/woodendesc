@@ -101,7 +101,7 @@ bioc_release_url <- function(release = "release", ...) {
     bioc_url("packages", release, "bioc", ...)
   } else if (ver_latest(c(release, "1.5")) == release) {
     # Releases between 1.5 and 1.7 had different order of URL components
-    bioc_url(release, "packages", "bioc", ...)
+    bioc_url("packages", "bioc", release, ...)
   } else {
     stop("Unsupported release, cannot find PACKAGES file.", call. = FALSE)
   }
