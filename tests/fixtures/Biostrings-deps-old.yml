@@ -1,0 +1,362 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://bioconductor.org/about/release-announcements/
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      content-type: text/html
+      content-length: '3585'
+      connection: keep-alive
+      date: Thu, 28 Jul 2022 18:55:05 GMT
+      server: Apache/2.4.18 (Ubuntu)
+      last-modified: Thu, 28 Jul 2022 18:05:05 GMT
+      accept-ranges: bytes
+      content-encoding: gzip
+      cache-control: max-age=600
+      expires: Thu, 28 Jul 2022 19:05:05 GMT
+      etag: '"4e69-5e4e15f87cb69-gzip"'
+      vary: Accept-Encoding
+      x-cache: Hit from cloudfront
+      via: 1.1 b3b1689b5de3293227c415784ed3c268.cloudfront.net (CloudFront)
+      x-amz-cf-pop: WAW50-C1
+      x-amz-cf-id: 7tp9FD6PLMqF01ojzaz8DhO3YvjLFkqG_62BNnhdFVlr1L8DCWfB3w==
+      age: '84'
+    body:
+      encoding: UTF-8
+      file: no
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" dir=\"ltr\" lang=\"en-US\"\nprefix=\"og:
+        http://ogp.me/ns#\">\n  <head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=utf-8\" />\n  <meta http-equiv=\"Content-Language\" content=\"en-us\"
+        />\n  <meta name=\"robots\" content=\"all\" />\n  \n\n\n\n  \n  \n  \n    <script
+        type=\"text/javascript\" src=\"/js/jquery.js\"></script>\n  \n  \n  <script
+        src=\"/js/jquery.tools.min.js\"></script>\n\n  \n  \n  <title>Bioconductor
+        - Release Announcements</title>\n  <link rel=\"stylesheet\" type=\"text/css\"
+        href=\"/style/bioconductor.css\" media=\"screen\" />\n  <link rel=\"SHORTCUT
+        ICON\" type=\"image/x-icon\" href=\"/favicon.ico\" />\n  <link rel=\"ICON\"
+        type=\"image/x-icon\" href=\"/favicon.ico\" />\n  <script type=\"text/javascript\"
+        src=\"/js/bioconductor.js\"></script>\n \n  <script type=\"text/javascript\"
+        src=\"/js/jquery.corner.js\"></script>\n  <script type=\"text/javascript\"
+        src=\"/js/jquery.timeago.js\"></script>\n  <script type=\"text/javascript\"
+        src=\"/js/bioc-style.js\"></script>\n  <script type=\"text/javascript\" src=\"/js/versions.js\"></script>\n\n
+        \ <!-- Google Analytics script -->\n  <script type=\"text/javascript\">\n
+        \   var _gaq = _gaq || [];\n    _gaq.push(['_setAccount', 'UA-9338486-1']);\n
+        \   _gaq.push(['_trackPageview']);\n\n    (function() {\n      var ga = document.createElement('script');
+        ga.type = 'text/javascript'; ga.async = true;\n      ga.src = ('https:' ==
+        document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n
+        \     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\n    })();\n  </script>\n</head>\n\n  <body>\n    <a name=\"top\"></a>\n\n<!--
+        a few hooks for screen readers -->\n<a href=\"#site-navigation\" title=\"Jump
+        to site nav\"></a>\n\n<a href=\"#section-navigation\" title=\"Jump to section
+        nav\"></a>\n\n<a href=\"#site-map\" title=\"Jump to site map\"></a>\n\n\n
+        \   <div id=\"SiteContainer\" class=\"SiteContainer\">\n      \n      <div
+        id=\"PageContent\" class=\"PageContent WithRightRail\">\n      \n\n\n\t\n\t
+        \ <div id=\"PageBreadcrumbs\" class=\"PageBreadcrumbs\">\n  <ul>\n    \n    \n
+        \   \n      \n\t  \t\n        <li><a href=\"/\">Home</a></li>\n      \n    \n
+        \   \n      \n\t  \t\n        <li><a href=\"/about/\">About</a></li>\n      \n
+        \   \n    \n      \n        <li>Release Announcements</li>\n      \n    \n
+        \ </ul>\n</div>\n\n\t\n\n\t\n\t\n\t\n\n\t<h1 id=\"bioconductor-releases\">Bioconductor
+        releases</h1>\n\n<p>Each <em>Bioconductor</em> release is designed to work
+        with a specific\nversion of <em>R</em>. The following table summarizes the
+        relationship, and\nlinks to packages designed to work with the corresponding
+        <em>R</em> /\n<em>Bioconductor</em> version.</p>\n\n<p><em>Bioconductor</em>
+        versions are linked to their release announcement (when\navailable). Release
+        announcements summarize new package additions,\nupdates to existing packages,
+        and package removals.</p>\n\n<table>\n  <thead>\n    <tr>\n      <th style=\"text-align:
+        left\">Release</th>\n      <th style=\"text-align: left\">Date</th>\n      <th
+        style=\"text-align: right\">Software packages</th>\n      <th style=\"text-align:
+        left\">R</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"text-align:
+        left\"><a href=\"/news/bioc_3_15_release\">3.15</a></td>\n      <td style=\"text-align:
+        left\">April 27, 2022</td>\n      <td style=\"text-align: right\"><a href=\"/packages/3.15/\">2140</a></td>\n
+        \     <td style=\"text-align: left\">4.2</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_3_14_release\">3.14</a></td>\n
+        \     <td style=\"text-align: left\">October 27, 2021</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/3.14/\">2083</a></td>\n      <td style=\"text-align:
+        left\">4.1</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_3_13_release\">3.13</a></td>\n      <td style=\"text-align:
+        left\">May 20, 2021</td>\n      <td style=\"text-align: right\"><a href=\"/packages/3.13/\">2042</a></td>\n
+        \     <td style=\"text-align: left\">4.1</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_3_12_release\">3.12</a></td>\n
+        \     <td style=\"text-align: left\">October 28, 2020</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/3.12/\">1974</a></td>\n      <td style=\"text-align:
+        left\">4.0</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_3_11_release\">3.11</a></td>\n      <td style=\"text-align:
+        left\">April 28, 2020</td>\n      <td style=\"text-align: right\"><a href=\"/packages/3.11/\">1903</a></td>\n
+        \     <td style=\"text-align: left\">4.0</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_3_10_release\">3.10</a></td>\n
+        \     <td style=\"text-align: left\">October 30, 2019</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/3.10/\">1823</a></td>\n      <td style=\"text-align:
+        left\">3.6</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_3_9_release\">3.9</a></td>\n      <td style=\"text-align:
+        left\">May 3, 2019</td>\n      <td style=\"text-align: right\"><a href=\"/packages/3.9/\">1741</a></td>\n
+        \     <td style=\"text-align: left\">3.6</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_3_8_release\">3.8</a></td>\n
+        \     <td style=\"text-align: left\">October 31, 2018</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/3.8/\">1649</a></td>\n      <td style=\"text-align:
+        left\">3.5</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_3_7_release\">3.7</a></td>\n      <td style=\"text-align:
+        left\">May 1, 2018</td>\n      <td style=\"text-align: right\"><a href=\"/packages/3.7/\">1560</a></td>\n
+        \     <td style=\"text-align: left\">3.5</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_3_6_release\">3.6</a></td>\n
+        \     <td style=\"text-align: left\">October 31, 2017</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/3.6/\">1473</a></td>\n      <td style=\"text-align:
+        left\">3.4</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_3_5_release\">3.5</a></td>\n      <td style=\"text-align:
+        left\">April 25, 2017</td>\n      <td style=\"text-align: right\"><a href=\"/packages/3.5/\">1383</a></td>\n
+        \     <td style=\"text-align: left\">3.4</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_3_4_release\">3.4</a></td>\n
+        \     <td style=\"text-align: left\">October 18, 2016</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/3.4/\">1296</a></td>\n      <td style=\"text-align:
+        left\">3.3</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_3_3_release\">3.3</a></td>\n      <td style=\"text-align:
+        left\">May 4, 2016</td>\n      <td style=\"text-align: right\"><a href=\"/packages/3.3/\">1211</a></td>\n
+        \     <td style=\"text-align: left\">3.3</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_3_2_release\">3.2</a></td>\n
+        \     <td style=\"text-align: left\">October 14, 2015</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/3.2/\">1104</a></td>\n      <td style=\"text-align:
+        left\">3.2</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_3_1_release\">3.1</a></td>\n      <td style=\"text-align:
+        left\">April 17, 2015</td>\n      <td style=\"text-align: right\"><a href=\"/packages/3.1/\">1024</a></td>\n
+        \     <td style=\"text-align: left\">3.2</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_3_0_release\">3.0</a></td>\n
+        \     <td style=\"text-align: left\">October 14, 2014</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/3.0/\">934</a></td>\n      <td style=\"text-align:
+        left\">3.1</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_2_14_release\">2.14</a></td>\n      <td style=\"text-align:
+        left\">April 14, 2014</td>\n      <td style=\"text-align: right\"><a href=\"/packages/2.14/\">824</a></td>\n
+        \     <td style=\"text-align: left\">3.1</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_2_13_release\">2.13</a></td>\n
+        \     <td style=\"text-align: left\">October 15, 2013</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.13/\">749</a></td>\n      <td style=\"text-align:
+        left\">3.0</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_2_12_release\">2.12</a></td>\n      <td style=\"text-align:
+        left\">April 4, 2013</td>\n      <td style=\"text-align: right\"><a href=\"/packages/2.12/\">671</a></td>\n
+        \     <td style=\"text-align: left\">3.0</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_2_11_release\">2.11</a></td>\n
+        \     <td style=\"text-align: left\">October 3, 2012</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.11/\">610</a></td>\n      <td style=\"text-align:
+        left\">2.15</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_2_10_release\">2.10</a></td>\n      <td style=\"text-align:
+        left\">April 2, 2012</td>\n      <td style=\"text-align: right\"><a href=\"/packages/2.10/\">554</a></td>\n
+        \     <td style=\"text-align: left\">2.15</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_2_9_release\">2.9</a></td>\n
+        \     <td style=\"text-align: left\">November 1, 2011</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.9/\">517</a></td>\n      <td style=\"text-align:
+        left\">2.14</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_2_8_release\">2.8</a></td>\n      <td style=\"text-align:
+        left\">April 14, 2011</td>\n      <td style=\"text-align: right\"><a href=\"/packages/2.8/\">466</a></td>\n
+        \     <td style=\"text-align: left\">2.13</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_2_7_release\">2.7</a></td>\n
+        \     <td style=\"text-align: left\">October 18, 2010</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.7/\">418</a></td>\n      <td style=\"text-align:
+        left\">2.12</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\"><a
+        href=\"/news/bioc_2_6_release\">2.6</a></td>\n      <td style=\"text-align:
+        left\">April 23, 2010</td>\n      <td style=\"text-align: right\"><a href=\"/packages/2.6/\">389</a></td>\n
+        \     <td style=\"text-align: left\">2.11</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\"><a href=\"/news/bioc_2_5_release\">2.5</a></td>\n
+        \     <td style=\"text-align: left\">October 28, 2009</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.5/\">352</a></td>\n      <td style=\"text-align:
+        left\">2.10</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">2.4</td>\n
+        \     <td style=\"text-align: left\">April 21, 2009</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.4/BiocViews.html\">320</a></td>\n      <td style=\"text-align:
+        left\">2.9</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">2.3</td>\n
+        \     <td style=\"text-align: left\">October 22, 2008</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.3/BiocViews.html\">294</a></td>\n      <td style=\"text-align:
+        left\">2.8</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">2.2</td>\n
+        \     <td style=\"text-align: left\">May 1, 2008</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.2/BiocViews.html\">260</a></td>\n      <td style=\"text-align:
+        left\">2.7</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">2.1</td>\n
+        \     <td style=\"text-align: left\">October 8, 2007</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.1/BiocViews.html\">233</a></td>\n      <td style=\"text-align:
+        left\">2.6</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">2.0</td>\n
+        \     <td style=\"text-align: left\">April 26, 2007</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/2.0/BiocViews.html\">214</a></td>\n      <td style=\"text-align:
+        left\">2.5</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">1.9</td>\n
+        \     <td style=\"text-align: left\">October 4, 2006</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/1.9/BiocViews.html\">188</a></td>\n      <td style=\"text-align:
+        left\">2.4</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">1.8</td>\n
+        \     <td style=\"text-align: left\">April 27, 2006</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/1.8/BiocViews.html\">172</a></td>\n      <td style=\"text-align:
+        left\">2.3</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">1.7</td>\n
+        \     <td style=\"text-align: left\">October 14, 2005</td>\n      <td style=\"text-align:
+        right\"><a href=\"/packages/bioc/1.7/src/contrib/html/\">141</a></td>\n      <td
+        style=\"text-align: left\">2.2</td>\n    </tr>\n    <tr>\n      <td style=\"text-align:
+        left\">1.6</td>\n      <td style=\"text-align: left\">May 18, 2005</td>\n
+        \     <td style=\"text-align: right\"><a href=\"/packages/bioc/1.6/src/contrib/html/\">123</a></td>\n
+        \     <td style=\"text-align: left\">2.1</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\">1.5</td>\n      <td style=\"text-align: left\">October
+        25, 2004</td>\n      <td style=\"text-align: right\"><a href=\"/packages/bioc/1.5/src/contrib/html/\">100</a></td>\n
+        \     <td style=\"text-align: left\">2.0</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\">1.4</td>\n      <td style=\"text-align: left\">May
+        17, 2004</td>\n      <td style=\"text-align: right\">81</td>\n      <td style=\"text-align:
+        left\">1.9</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">1.3</td>\n
+        \     <td style=\"text-align: left\">October 30, 2003</td>\n      <td style=\"text-align:
+        right\">49</td>\n      <td style=\"text-align: left\">1.8</td>\n    </tr>\n
+        \   <tr>\n      <td style=\"text-align: left\">1.2</td>\n      <td style=\"text-align:
+        left\">May 29, 2003</td>\n      <td style=\"text-align: right\">30</td>\n
+        \     <td style=\"text-align: left\">1.7</td>\n    </tr>\n    <tr>\n      <td
+        style=\"text-align: left\">1.1</td>\n      <td style=\"text-align: left\">November
+        19, 2002</td>\n      <td style=\"text-align: right\">20</td>\n      <td style=\"text-align:
+        left\">1.6</td>\n    </tr>\n    <tr>\n      <td style=\"text-align: left\">1.0</td>\n
+        \     <td style=\"text-align: left\">May 1, 2002</td>\n      <td style=\"text-align:
+        right\">15</td>\n      <td style=\"text-align: left\">1.5</td>\n    </tr>\n
+        \ </tbody>\n</table>\n\n\n\t\n\t  </div>\n\t  <div id=\"RightRail\" class=\"RightRail\">\n\t
+        \ <a name=\"section-navigation\"></a> <!-- accessibility anchor -->\n\t  \n
+        \ \n    <ul class=\"section_nav\">\n      <li><a href=\"/about/community-advisory-board/\">Advisory
+        Board -- Community</a></li>\n    </ul>\n  \n    <ul class=\"section_nav\">\n
+        \     <li><a href=\"/about/scientific-advisory-board/\">Advisory Board --
+        Scientific</a></li>\n    </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a
+        href=\"/about/technical-advisory-board/\">Advisory Board -- Technical</a></li>\n
+        \   </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a href=\"/about/annual-reports/\">Annual
+        Reports</a></li>\n    </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a
+        href=\"/about/awards/\">BiocAwards</a></li>\n    </ul>\n  \n    <ul class=\"section_nav\">\n
+        \     <li><a href=\"/about/code-of-conduct/\">Code of Conduct Policy</a></li>\n
+        \   </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a href=\"/about/core-team/\">Core
+        Team</a></li>\n    </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a
+        href=\"/about/european-bioconductor-society/\">European Bioconductor Society</a></li>\n
+        \   </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a href=\"/about/logo/\">Logos</a></li>\n
+        \   </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a href=\"/about/mirrors/\">Mirrors</a></li>\n
+        \   </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a href=\"/about/package-reviewers/\">Package
+        Reviewers</a></li>\n    </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a
+        href=\"/about/related-projects/\">Related Projects</a></li>\n    </ul>\n  \n
+        \   <ul class=\"section_nav\">\n      <li><a href=\"/about/release-announcements/\">Release
+        Announcements</a></li>\n    </ul>\n  \n    <ul class=\"section_nav\">\n      <li><a
+        href=\"/about/removed-packages/\">Removed Packages</a></li>\n    </ul>\n  \n\n\n\n\t\n\n
+        \     </div>\n\n      <div id=\"SiteGlobalFooter\" class=\"SiteGlobalFooter\">\n\n
+        \ <span class=\"global_footer_logo_bc noprint\"><img src=\"/images/logo_global_footer_bioconductor.gif\"
+        height=\"51\" width=\"154\" alt=\"\"/></span>\n\n  <div class=\"attribution_copyright\">\n
+        \   <p>Contact us: <a href=\"https://support.bioconductor.org/\">support.bioconductor.org</a></p>\n
+        \   <p>Copyright &copy; 2003 - 2022, Bioconductor</p>\n  </div>\n\n  <a name=\"site-map\"></a>
+        <!-- accessibility anchor -->\n  <ul class=\"footer_nav_list noprint\">\n
+        \   <li class=\"footer_nav_list_element footer_nav_list_element_0\">\n      <b><a
+        href=\"/index.html\">Home</a></b>\n    </li>\n    <li class=\"footer_nav_list_element
+        footer_nav_list_element_1\">\n      <ul>\n        <li><b><a href=\"/install/index.html\">Install</a></b></li>\n
+        \       <li><a href=\"/install/index.html#install-R\">Install R</a></li>\n
+        \       <li><a href=\"/install/index.html#find-bioconductor-packages\">Find
+        Bioconductor Packages</a></li>\n        <li><a href=\"/install/index.html#install-bioconductor-packages\">Install
+        Bioconductor Packages</a></li>\n        <li><a href=\"/install/index.html#update-bioconductor-packages\">Update
+        Bioconductor Packages</a></li>\n      </ul>\n    </li>\n    <li class=\"footer_nav_list_element
+        footer_nav_list_element_2\">\n      <ul>\n        <li><b><a href=\"/help/index.html\">Help</a></b></li>\n
+        \       <li><a href=\"/packages/release/workflows/\">Workflows</a></li>\n
+        \       <li><a href=\"/help/package-vignettes/\">Package Vignettes</a></li>\n
+        \       <li><a href=\"/help/faq/\">FAQ</a></li>\n        <li><a href=\"/help/support/\">Support</a></li>\n
+        \       <li><a href=\"http://cran.r-project.org/\">Using R</a></li>\n        <li><a
+        href=\"/help/course-materials/\">Courses</a></li>\n        <li><a href=\"/help/publications/\">Publications</a></li>\n
+        \       <li><a href=\"/help/docker/\">Docker Images</a></li>\n        <li><a
+        href=\"https://anvil.bioconductor.org/\">Bioc in AnVIL</a></li>\t\n        <li><a
+        href=\"/help/community/\">Community Resources</a></li>\n\n      </ul>\n    </li>\n
+        \   <li class=\"footer_nav_list_element footer_nav_list_element_3\">\n      <ul>\n
+        \       <li><b><a href=\"/developers/index.html\">Developers</a></b></li>\n\t\t<li><a
+        href=\"/developers/package-guidelines/\">Package Guidelines</a></li>\n\t\t<li><a
+        href=\"/developers/package-submission/\">Package Submission</a></li>\n\t\t<li><a
+        href=\"/developers/release-schedule/\">Release Schedule</a></li>\n\t\t<li><a
+        href=\"/developers/source-control/\">Source Control</a></li>\n      </ul>\n
+        \   </li>\n    <li class=\"footer_nav_list_element footer_nav_list_element_4\">\n
+        \     <ul>\n        <li><b><a href=\"/about/index.html\">About</a></b></li>\n
+        \       <li><a href=\"/about/annual-reports/\">Annual Reports</a></li>\n        <li><a
+        href=\"/about/core-team/\">Core Team</a></li>\n        <li><a href=\"/about/mirrors/\">Mirrors</a></li>\n
+        \       <li><a href=\"/about/related-projects/\">Related Projects</a></li>\n
+        \       <li><a href=\"/about/code-of-conduct/\">Code of Conduct</a></li>\n
+        \    </ul>\n    </li>\n  </ul>\n  <br style=\"clear:both\"/>\n  &nbsp;\n\n</div>\n\n\n<div
+        id=\"SiteMasthead\" class=\"SiteMasthead\">\n\n  <a name=\"site-navigation\"></a>
+        <!-- accessibility anchor -->\n\n  <span class=\"logo_vanity_bar noprint\"></span>\n\n
+        \ <a href=\"/\">\n\t<img src=\"/images/logo_bioconductor.gif\" border=\"0\"
+        class=\"masthead_logo\" height=\"78\" width=\"260\" alt=\"Bioconductor - open
+        source software for bioinformatics\"/>\n  </a>\n\n  <div id=\"SiteMastheadRight\"
+        class=\"SiteMastheadRight\">\n    <div id=\"SiteMastheadRightBackground\"
+        class=\"SiteMastheadRightBackground\">\n\n      <a name=\"site-search\"></a>
+        <!-- accessibility anchor -->\n      <form class=\"site_search\" id=\"search_form\"
+        method=\"GET\"\n            action=\"/help/search/index.html\">\n        Search:
+        <input id=\"q\" name=\"q\" />\n      </form>\n\n      <ul class=\"masthead_nav
+        noprint\">\n        <li class=\"masthead_nav_element\" id=\"masthead_nav_element_1\">\n
+        \         <a href=\"/\">Home</a>\n        </li>\n        <li class=\"masthead_nav_element\"
+        id=\"masthead_nav_element_2\">\n          <a href=\"/install/\">Install</a>\n
+        \       </li>\n        <li class=\"masthead_nav_element\" id=\"masthead_nav_element_3\">\n
+        \         <a href=\"/help/\">Help</a>\n        </li>\n        <li class=\"masthead_nav_element\"
+        id=\"masthead_nav_element_4\">\n          <a href=\"/developers/\">Developers</a>\n
+        \       </li>\n        <li class=\"masthead_nav_element\" id=\"masthead_nav_element_5\">\n
+        \         <a href=\"/about/\">About</a>\n        </li>\n      </ul>\n\n    </div>\n
+        \ </div>\n\n</div>\n\n    </div>\n  </body>\n</html>\n"
+  recorded_at: 2022-07-28 18:56:30 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://bioconductor.org/packages/bioc/1.5/src/contrib/PACKAGES.gz
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      content-type: application/x-gzip
+      content-length: '2191'
+      connection: keep-alive
+      server: Apache/2.4.18 (Ubuntu)
+      last-modified: Fri, 12 Aug 2005 16:41:54 GMT
+      accept-ranges: bytes
+      date: Thu, 28 Jul 2022 18:56:29 GMT
+      cache-control: max-age=30
+      etag: '"88f-3fe2630f97880"'
+      x-cache: RefreshHit from cloudfront
+      via: 1.1 b3b1689b5de3293227c415784ed3c268.cloudfront.net (CloudFront)
+      x-amz-cf-pop: WAW50-C1
+      x-amz-cf-id: XTcy6w1oqHL7ZoZ-uZcnkIQWTRJzF4zBmWkQn7TdtyG9B-P9h6S-TQ==
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: |-
+        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
+  recorded_at: 2022-07-28 18:56:30 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
