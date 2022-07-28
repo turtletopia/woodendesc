@@ -34,6 +34,7 @@ wood_bioc_version("Biostrings", release = "1.5")
 }
 \seealso{
 Functions for Bioconductor:
+\code{\link{wood_bioc_dependencies}()},
 \code{\link{wood_bioc_packages}()},
 \code{\link{wood_bioc_releases}()}
 

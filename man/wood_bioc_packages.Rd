@@ -36,6 +36,7 @@ wood_bioc_packages("1.5")
 }
 \seealso{
 Functions for Bioconductor:
+\code{\link{wood_bioc_dependencies}()},
 \code{\link{wood_bioc_releases}()},
 \code{\link{wood_bioc_version}()}
 
