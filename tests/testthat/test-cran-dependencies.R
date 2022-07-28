@@ -28,6 +28,8 @@ vcr::use_cassette("deepdep-deps-latest", {
   })
 })
 
-test_that("raises an exception if package not available", {
-  expect_error(wood_cran_dependencies("fakepackage"))
+vcr::use_cassette("fakepackage-cran-deps", {
+  test_that("raises an exception if package not available", {
+    expect_error(wood_cran_dependencies("fakepackage"))
+  })
 })

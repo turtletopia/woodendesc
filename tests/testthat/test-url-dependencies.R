@@ -16,6 +16,6 @@ test_dependencies(
 
 test_that("raises an exception if package not available", {
   expect_error(wood_url_dependencies(
-    "notavailable", "http://www.omegahat.net/R"
+    "fakepackage", "http://www.omegahat.net/R"
   ))
 })

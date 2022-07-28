@@ -1,0 +1,69 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/desc?start_key=%22fakepackage%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: nginx/1.4.6 (Ubuntu)
+      date: Thu, 28 Jul 2022 18:56:12 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "fakmct": { "version": "0.1.0", "title": "Fuzzy Adaptive Resonance
+        Theory K-Means Clustering Technique" } }'
+  recorded_at: 2022-07-28 18:52:47 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/cran/fakepackage/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 400
+      category: Client error
+      reason: Bad Request
+      message: 'Client error: (400) Bad Request'
+    headers:
+      connection: keep-alive
+      content-length: '20'
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-type: text/plain; charset=utf-8
+      x-github-request-id: A3BC:3DB5:9167B6:9AC24B:62E2DAFF
+      accept-ranges: bytes
+      date: Thu, 28 Jul 2022 18:52:47 GMT
+      via: 1.1 varnish
+      x-served-by: cache-fra19158-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1659034367.438047,VS0,VE89
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: b89e1ba3a70e56dc99cf2d75808ce913b29690b3
+      expires: Thu, 28 Jul 2022 18:57:47 GMT
+    body:
+      encoding: UTF-8
+      file: no
+      string: '400: Invalid request'
+  recorded_at: 2022-07-28 18:52:47 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
