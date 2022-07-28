@@ -17,19 +17,25 @@ wood_clear_cache <- function() {
 #'  An expression in brackets to evaluate if cache not usable.
 #' @param ... \[\code{character(1)}\]\cr
 #'  Components of the path filename.
+#' @param .if_null \[\code{call(1)}\]\cr
+#'  An expression to execute if value is `NULL`, returns `NULL` by default.
 #'
 #' @return A value returned by `expr` or a cache (if valid).
 #'
 #' @noRd
-with_cache <- function(expr, ...) {
+with_cache <- function(expr, ..., .if_null = {}) {
   cache_file <- cache_path(...)
   if (is_cache_usable(cache_file)) return(readRDS(cache_file))
 
   ret <- evalq(expr)
 
-  saveRDS(ret, cache_file)
-  # Return saved object to save time on reading it
-  ret
+  if (is.null(ret)) {
+    evalq(.if_null)
+  } else {
+    saveRDS(ret, cache_file)
+    # Return saved object to save time on reading it
+    ret
+  }
 }
 
 #' Create and access woodendesc temporary directory
