@@ -9,18 +9,10 @@ vcr::use_cassette("RGD-version", {
 }, record = "new_episodes")
 
 # TESTS ----
-test_that("returns a single string", {
-  expect_vector(RGD_version,
-                ptype = character(),
-                size = 1)
-})
+test_version(
+  RGD_version, wood_url_version, "RGraphicsDevice", "http://www.omegahat.net/R"
+)
 
-test_that("returned string is a version code", {
-  expect_match(RGD_version, "\\d+\\.\\d+\\-\\d+")
-})
-
-test_that("if possible, reads from cache", {
-  expect_cache(wood_url_version, RGD_version,
-               package = "RGraphicsDevice",
-               repository = "http://www.omegahat.net/R")
+test_that("raises an exception if package not available", {
+  expect_error(wood_url_version("fakepackage", "http://www.omegahat.net/R"))
 })
