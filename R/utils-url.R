@@ -85,16 +85,23 @@ bioc_release_url <- function(release = "release", ...) {
     return(bioc_url("packages", release, "bioc", ...))
   }
 
-  if (!release %in% wood_bioc_releases()) {
-    stop("Release code does not exist.", call. = FALSE)
+  if (is_pkg_installed("xml2")) {
+    # Perform precise check only if xml2 installed
+    if (!release %in% wood_bioc_releases()) {
+      stop("Release code does not exist.", call. = FALSE)
+    }
+  } else {
+    if (!grepl("^\\d+\\.\\d+$", release, perl = TRUE)) {
+      stop("Incorrectly formatted release code.", call. = FALSE)
+    }
   }
 
   if (ver_latest(c(release, "1.8")) == release) {
     # Release at least 1.8
-    paste("https://bioconductor.org", "packages", release, "bioc", ..., sep = "/")
+    bioc_url("packages", release, "bioc", ...)
   } else if (ver_latest(c(release, "1.5")) == release) {
     # Releases between 1.5 and 1.7 had different order of URL components
-    paste("https://bioconductor.org", release, "packages", "bioc", ..., sep = "/")
+    bioc_url(release, "packages", "bioc", ...)
   } else {
     stop("Unsupported release, cannot find PACKAGES file.", call. = FALSE)
   }
