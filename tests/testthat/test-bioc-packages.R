@@ -16,7 +16,7 @@ test_that("there's a Biostrings package in the list", {
 test_that("works with older releases", {
   vcr::use_cassette("bioc-packages-old", {
     bioc_packages_old <- wood_bioc_packages(release = "1.5")
-  })
+  }, record = "new_episodes")
   expect_subset(c("affy", "Biostrings", "impute", "RMAGEML"), bioc_packages_old)
   expect_length(bioc_packages_old, 97)
 })
