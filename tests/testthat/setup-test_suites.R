@@ -1,3 +1,11 @@
+test_cache <- function(execute, tested_function, expected_value, ...) {
+  if (execute) {
+    test_that("if possible, reads from cache", {
+      expect_cache(tested_function, expected_value, ...)
+    })
+  }
+}
+
 test_packages <- function(packages, tested_function, ...) {
   test_that("returns a vector of strings", {
     expect_vector(packages,
