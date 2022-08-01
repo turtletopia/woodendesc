@@ -6,7 +6,8 @@ test_cache <- function(execute, tested_function, expected_value, ...) {
   }
 }
 
-test_packages <- function(packages, tested_function, ...) {
+test_packages <- function(packages, tested_function, ...,
+                          .test_cache = TRUE) {
   test_that("returns a vector of strings", {
     expect_vector(packages,
                   ptype = character())
@@ -20,12 +21,11 @@ test_packages <- function(packages, tested_function, ...) {
     expect_pkg_name(packages)
   })
 
-  test_that("if possible, reads from cache", {
-    expect_cache(tested_function, packages, ...)
-  })
+  test_cache(.test_cache, tested_function, packages, ...)
 }
 
-test_version <- function(version, tested_function, ...) {
+test_version <- function(version, tested_function, ...,
+                         .test_cache = TRUE) {
   test_that("returns a single string", {
     expect_vector(version,
                   ptype = character(),
@@ -36,9 +36,7 @@ test_version <- function(version, tested_function, ...) {
     expect_version_code(version)
   })
 
-  test_that("if possible, reads from cache", {
-    expect_cache(tested_function, version, ...)
-  })
+  test_cache(.test_cache, tested_function, version, ...)
 }
 
 test_dependencies <- function(deps, tested_function, ...,
@@ -70,9 +68,5 @@ test_dependencies <- function(deps, tested_function, ...,
     expect_dependency_type(deps[["type"]])
   })
 
-  if (.test_cache) {
-    test_that("if possible, reads from cache", {
-      expect_cache(tested_function, deps, ...)
-    })
-  }
+  test_cache(.test_cache, tested_function, deps, ...)
 }
