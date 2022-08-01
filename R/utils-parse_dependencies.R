@@ -2,7 +2,7 @@ extract_dependencies <- function(desc, parser = parse_dependencies) {
   deps <- lapply(
     c("Depends", "Imports", "Suggests", "LinkingTo", "Enhances"),
     function(dep_type) {
-      if (!is.null(desc[[dep_type]]))
+      if (!is.null(desc[[dep_type]]) && !is.na(desc[[dep_type]]))
         cbind(parser(desc[[dep_type]]),
               type = dep_type,
               stringsAsFactors = FALSE)
