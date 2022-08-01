@@ -38,6 +38,7 @@ Functions for any URL:
 
 Functions that query package dependencies:
 \code{\link{wood_bioc_dependencies}()},
+\code{\link{wood_core_dependencies}()},
 \code{\link{wood_cran_dependencies}()},
 \code{\link{wood_local_dependencies}()},
 \code{\link{wood_runiverse_dependencies}()}

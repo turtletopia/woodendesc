@@ -25,6 +25,7 @@ wood_core_version("graphics")
 }
 \seealso{
 Functions for core R packages:
+\code{\link{wood_core_dependencies}()},
 \code{\link{wood_core_packages}()}
 
 Functions that query package versions:

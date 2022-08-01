@@ -20,6 +20,7 @@ wood_core_packages()
 }
 \seealso{
 Functions for core R packages:
+\code{\link{wood_core_dependencies}()},
 \code{\link{wood_core_version}()}
 
 Functions that query available packages:

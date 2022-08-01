@@ -45,6 +45,7 @@ Functions for Bioconductor:
 \code{\link{wood_bioc_version}()}
 
 Functions that query package dependencies:
+\code{\link{wood_core_dependencies}()},
 \code{\link{wood_cran_dependencies}()},
 \code{\link{wood_local_dependencies}()},
 \code{\link{wood_runiverse_dependencies}()},
