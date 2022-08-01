@@ -4,6 +4,9 @@ interpret_repos <- function(repos, context) {
     if (grepl("^cran$", repo, perl = TRUE)) {
       return(query_maker("cran", context))
     }
+    if (grepl("^core$", repo, perl = TRUE)) {
+      return(query_maker("core", context))
+    }
     if (grepl("^bioc", repo, perl = TRUE)) {
       return(interpret_bioc(repo, context))
     }
