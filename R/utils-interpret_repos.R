@@ -1,20 +1,20 @@
 interpret_repos <- function(repos, context) {
-  repos <- tolower(repos)
   lapply(repos, function(repo) {
-    if (grepl("^cran$", repo, perl = TRUE)) {
+    l_repo <- tolower(repo)
+    if (grepl("^cran$", l_repo, perl = TRUE)) {
       return(query_maker("cran", context))
     }
-    if (grepl("^core$", repo, perl = TRUE)) {
+    if (grepl("^core$", l_repo, perl = TRUE)) {
       return(query_maker("core", context))
     }
-    if (grepl("^bioc", repo, perl = TRUE)) {
-      return(interpret_bioc(repo, context))
+    if (grepl("^bioc", l_repo, perl = TRUE)) {
+      return(interpret_bioc(l_repo, context))
     }
-    if (grepl("^local", repo, perl = TRUE)) {
-      return(interpret_local(repo, context))
+    if (grepl("^local", l_repo, perl = TRUE)) {
+      return(interpret_local(l_repo, context))
     }
-    if (grepl("^runiverse", repo, perl = TRUE)) {
-      return(interpret_runiverse(repo, context))
+    if (grepl("^runiverse", l_repo, perl = TRUE)) {
+      return(interpret_runiverse(l_repo, context))
     }
     query_maker("url", context, repository = repo)
   })
