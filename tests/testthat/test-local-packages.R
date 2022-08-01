@@ -3,9 +3,9 @@
 fake_lib_pkgs <- c("fakepackage", "woodendesc")
 lib_dir <- local_fake_library("fakepackage", "woodendesc")
 
-# TESTS ----
 local_packages <- wood_local_packages()
 
+# TESTS ----
 test_packages(local_packages, wood_local_packages, .test_cache = FALSE)
 
 test_that("local packages include woodendesc package", {
