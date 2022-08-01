@@ -19,6 +19,9 @@ wood_core_packages()
 
 }
 \seealso{
+Functions for core R packages:
+\code{\link{wood_core_version}()}
+
 Functions that query available packages:
 \code{\link{wood_bioc_packages}()},
 \code{\link{wood_cran_packages}()},

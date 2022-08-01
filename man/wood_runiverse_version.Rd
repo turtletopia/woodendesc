@@ -34,6 +34,7 @@ Functions for R-universe:
 
 Functions that query package versions:
 \code{\link{wood_bioc_version}()},
+\code{\link{wood_core_version}()},
 \code{\link{wood_cran_latest}()},
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_local_versions}()},
