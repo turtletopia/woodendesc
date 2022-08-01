@@ -18,5 +18,5 @@ Package not yet finished!
 ```{r eval = FALSE}
 # Install the development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("ErdaradunGaztea/woodendesc")
+devtools::install_github("turtletopia/woodendesc")
 ```
