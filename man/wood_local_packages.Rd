@@ -34,6 +34,7 @@ Functions that query available packages:
 \code{\link{wood_bioc_packages}()},
 \code{\link{wood_core_packages}()},
 \code{\link{wood_cran_packages}()},
+\code{\link{wood_packages}()},
 \code{\link{wood_runiverse_packages}()},
 \code{\link{wood_url_packages}()}
 }

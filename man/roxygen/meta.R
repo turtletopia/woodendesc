@@ -1,5 +1,6 @@
 list(
   rd_family_title = list(
+    wood = "Functions for all repositories:",
     runiverse = "Functions for R-universe:",
     cran = "Functions for CRAN:",
     core = "Functions for core R packages:",

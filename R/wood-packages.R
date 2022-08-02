@@ -1,3 +1,22 @@
+#' Collect available packages from multiple repositories
+#'
+#' @description This function queries the selected repositories for the
+#' available packages and collects the unique occurrences.
+#'
+#' @template repos
+#'
+#' @return A character vector of available packages.
+#'
+#' @examples
+#' \donttest{
+#' wood_packages(c("local#all", "bioc@1.7", "cran", "core"))
+#' wood_packages(c("http://www.omegahat.net/R", "runiverse@turtletopia"))
+#' # By default, only CRAN is queried:
+#' wood_packages()
+#' }
+#'
+#' @family wood
+#' @family packages
 #' @export
 wood_packages <- function(repos = "cran") {
   query_makers <- interpret_repos(repos, context = "packages")
