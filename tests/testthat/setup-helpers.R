@@ -23,6 +23,10 @@ expect_dependency_type <- function(object) {
   )
 }
 
+expect_not_empty <- function(object) {
+  expect_gt(length(object), 0)
+}
+
 expect_subset <- function(object, expected) {
   expect_true(all(object %in% expected))
 }
