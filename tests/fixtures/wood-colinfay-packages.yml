@@ -1,0 +1,271 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://colinfay.me/src/contrib/PACKAGES.gz
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      connection: keep-alive
+      content-length: '3064'
+      server: GitHub.com
+      content-type: text/html; charset=utf-8
+      access-control-allow-origin: '*'
+      etag: W/"61a902de-1f69"
+      content-encoding: gzip
+      x-proxy-cache: MISS
+      x-github-request-id: CA50:57D6:C9B9C:D78C8:62E9128B
+      accept-ranges: bytes
+      date: Tue, 02 Aug 2022 12:03:23 GMT
+      via: 1.1 varnish
+      age: '0'
+      x-served-by: cache-fra19167-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1659441803.268061,VS0,VE87
+      vary: Accept-Encoding
+      x-fastly-request-id: c2d1c3ce97dff99d60717a26399272db63b38ae4
+    body:
+      encoding: UTF-8
+      file: no
+      string: "<!doctype html>\n<!--\n  Minimal Mistakes Jekyll Theme 4.11.1 by Michael
+        Rose\n  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes\n
+        \ Free for personal and commercial use under the MIT license\n  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt\n-->\n<html
+        lang=\"en\" class=\"no-js\">\n  <head>\n    <meta charset=\"utf-8\">\n\n<!--
+        begin _includes/seo.html --><title>404 Page not found - Colin Fay</title>\n<meta
+        name=\"description\" content=\"Mostly R, data, and code.\">\n\n\n\n<meta property=\"og:type\"
+        content=\"website\">\n<meta property=\"og:locale\" content=\"en_US\">\n<meta
+        property=\"og:site_name\" content=\"Colin Fay\">\n<meta property=\"og:title\"
+        content=\"404 Page not found\">\n<meta property=\"og:url\" content=\"https://colinfay.me/404.html\">\n\n\n\n\n
+        \ <meta property=\"og:image\" content=\"https://pbs.twimg.com/profile_banners/84618490/1545734426/1500x500\">\n\n\n\n
+        \ <meta name=\"twitter:site\" content=\"@_ColinFay\">\n  <meta name=\"twitter:title\"
+        content=\"404 Page not found\">\n  <meta name=\"twitter:description\" content=\"Mostly
+        R, data, and code.\">\n  <meta name=\"twitter:url\" content=\"https://colinfay.me/404.html\">\n\n
+        \ \n    <meta name=\"twitter:card\" content=\"summary\">\n    \n      <meta
+        name=\"twitter:image\" content=\"https://pbs.twimg.com/profile_banners/84618490/1545734426/1500x500\">\n
+        \   \n  \n\n  \n\n\n\n\n\n\n\n  \n\n  \n\n\n<link rel=\"canonical\" href=\"https://colinfay.me/404.html\">\n\n\n\n\n\n
+        \ <script type=\"application/ld+json\">\n    {\n      \"@context\": \"http://schema.org\",\n
+        \     \"@type\": \"Organization\",\n      \"url\": \"https://colinfay.me\",\n
+        \     \"logo\": \"https://pbs.twimg.com/profile_banners/84618490/1545734426/1500x500\"\n
+        \   }\n  </script>\n\n\n\n  <script type=\"application/ld+json\">\n    {\n
+        \     \"@context\": \"http://schema.org\",\n      \"@type\": \"Person\",\n
+        \     \"name\": \"Colin Fay\",\n      \"url\": \"https://colinfay.me\",\n
+        \     \"sameAs\": null\n    }\n  </script>\n\n\n\n\n\n\n\n<!-- end _includes/seo.html
+        -->\n\n\n<link href=\"/feed.xml\" type=\"application/atom+xml\" rel=\"alternate\"
+        title=\"Colin Fay Feed\">\n\n<!-- http://t.co/dKP3o1e -->\n<meta name=\"HandheldFriendly\"
+        content=\"True\">\n<meta name=\"MobileOptimized\" content=\"320\">\n<meta
+        name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n<script>\n
+        \ document.documentElement.className = document.documentElement.className.replace(/\\bno-js\\b/g,
+        '') + ' js ';\n</script>\n\n<!-- For all browsers -->\n<link rel=\"stylesheet\"
+        href=\"/assets/css/main.css\">\n<link rel=\"stylesheet\" href=\"/assets/css/github.css\">\n<script
+        type=\"text/javascript\" src=\" \"></script>\n\n<!--[if lte IE 9]>\n  <style>\n
+        \   /* old IE unsupported flexbox fixes */\n    .greedy-nav .site-title {\n
+        \     padding-right: 3em;\n    }\n    .greedy-nav button {\n      position:
+        absolute;\n      top: 0;\n      right: 0;\n      height: 100%;\n    }\n  </style>\n<![endif]-->\n\n\n
+        \   <!-- start custom head snippets -->\n\n<!-- insert favicons. use https://realfavicongenerator.net/
+        -->\n<link rel=\"shortcut icon\" type=\"image/jpg\" href=\"/css/favicon.ico\"/>\n\n<!--
+        end custom head snippets -->\n\n  </head>\n\n  <body class=\"layout--single\">\n\n
+        \   <!--[if lt IE 9]>\n<div class=\"notice--danger align-center\" style=\"margin:
+        0;\">You are using an <strong>outdated</strong> browser. Please <a href=\"https://browsehappy.com/\">upgrade
+        your browser</a> to improve your experience.</div>\n<![endif]-->\n\n\n    <div
+        class=\"initial-content\">\n      \n\n\n\n<div id=\"main\" role=\"main\">\n
+        \ \n  <div class=\"sidebar sticky\">\n  \n\n\n<div itemscope itemtype=\"http://schema.org/Person\">\n\n
+        \ \n    <div class=\"author__avatar\">\n      \n\n      \n        <img src=\"https://avatars1.githubusercontent.com/u/17936236?v=3&s=460\"
+        alt=\"Colin FAY\" itemprop=\"image\">\n      \n    </div>\n  \n\n  <div class=\"author__content\">\n
+        \   \n      <h3 class=\"author__name\" itemprop=\"name\">Colin FAY</h3>\n
+        \   \n    \n      <p class=\"author__bio\" itemprop=\"description\">\n        Data
+        Science and Engineering at <a href='https://thinkr.fr/'><u>ThinkR</u></a>.
+        'Chaotic good developer'. International Speaker. Runs. Eats plants.\n      </p>\n
+        \   \n  </div>\n\n  <div class=\"author__urls-wrapper\">\n    <button class=\"btn
+        btn--inverse\"><i class = 'fas fa-bars'></i></button>\n    <ul class=\"author__urls
+        social-icons\">\n      <p><b>Navigation:</b></p>\n      <!--\n  <li>\n    <a
+        href=\"http://link-to-whatever-social-network.com/user/\" itemprop=\"sameAs\">\n
+        \     <i class=\"fas fa-fw\" aria-hidden=\"true\"></i> Custom Social Profile
+        Link\n    </a>\n  </li>\n-->\n\n<li>\n  <a href=\"/\">\n     &#127969; Home\n
+        \ </a>\n</li>\n<li>\n  <a href=\"/categories/\">\n     &#9997; Blog\n  </a>\n</li>\n<li>\n
+        \ <a href=\"/about/\">\n     &#129304; About\n  </a>\n</li>\n<li>\n  <a href=\"/talks-publications/\">\n
+        \    &#128226; Talks & Publications\n  </a>\n</li>\n<li>\n  <a href=\"/open-source/\">\n
+        \    &#128190; Open Source\n  </a>\n</li>\n<li>\n  <a href=\"https://engineering-shiny.org/\">\n
+        \    &#128217; Engineering Shiny\n  </a>\n</li>\n<li>\n  <a href=\"/search/\">\n
+        \    &#128270; Search\n  </a>\n</li>\n    </ul>\n  </div>\n</div>\n\n  \n
+        \ </div>\n\n\n  <article class=\"page\" itemscope itemtype=\"http://schema.org/CreativeWork\">\n
+        \   <meta itemprop=\"headline\" content=\"404 Page not found\">\n    \n    \n
+        \   \n\n    <div class=\"page__inner-wrap\">\n      \n        <header>\n          <h1
+        id=\"page-title\" class=\"page__title\" itemprop=\"headline\">404 Page not
+        found\n</h1>\n          \n        </header>\n      \n\n      <section class=\"page__content\"
+        itemprop=\"text\">\n        \n        <p>Sorry, the requested page wasn’t
+        found on the server.</p>\n\n        \n      </section>\n\n      <footer class=\"page__meta\">\n
+        \       \n        \n\n\n        \n      </footer>\n\n      \n\n      \n    </div>\n\n
+        \   \n  </article>\n\n  \n  \n</div>\n    </div>\n\n    \n\n    <div class=\"page__footer\">\n
+        \     <footer>\n        <!-- start custom footer snippets -->\n\n<!-- end
+        custom footer snippets -->\n        <div class=\"page__footer-follow\">\n
+        \ <ul class=\"social-icons\">\n    \n      <li><strong>Get social:</strong></li>\n
+        \   \n    \n      <li><a href=\"https://twitter.com/_ColinFay\"><i class=\"fab
+        fa-fw fa-twitter-square\" aria-hidden=\"true\"></i> Twitter</a></li>\n    \n
+        \   \n    \n      <li><a href=\"https://github.com/ColinFay\"><i class=\"fab
+        fa-fw fa-github\" aria-hidden=\"true\"></i> GitHub</a></li>\n    \n    \n
+        \   \n    \n      <li><a href=\"https://www.linkedin.com/in/colinfay\"><i
+        class=\"fab fa-fw fa-linkedin-in\" aria-hidden=\"true\"></i> LinkedIn</a></li>\n
+        \   \n     \n        <li>\n          <a href=\"mailto:\">\n            <meta
+        itemprop=\"email\" content=\"\" />\n            <i class=\"fas fa-fw fa-envelope-square\"
+        aria-hidden=\"true\"></i> Email\n          </a>\n        </li>\n      \n    <li><a
+        href=\"/feed.xml\"><i class=\"fas fa-fw fa-rss-square\" aria-hidden=\"true\"></i>
+        Feed</a></li>\n  </ul>\n</div>\n\n<div class=\"page__footer-copyright\">&copy;
+        2021 Colin Fay. Powered by <a href=\"https://jekyllrb.com\" rel=\"nofollow\">Jekyll</a>,
+        built on top of the <a href=\"https://mademistakes.com/work/minimal-mistakes-jekyll-theme/\"
+        rel=\"nofollow\">Minimal Mistakes</a> jekyll theme. </div>\n\n<div class=\"page__footer-copyright\">All
+        blog posts are aggregated to <a href = \"https://www.r-bloggers.com/\">R-bloggers</a>
+        and <a href=\"http://www.rweekly.org\">RWeekly</a>.</div>\n\n<div class=\"page__footer-copyright\">All
+        written content on this blog is released under the <a href = \"https://creativecommons.org/licenses/by-nc-sa/4.0//\">CC
+        BY-NC-SA 4.0</a> license, with the exception of code which is released under
+        the <a href=\"https://opensource.org/licenses/mit-license.php\">MIT</a> license</div>.\n\n
+        \     </footer>\n    </div>\n\n    \n  <script src=\"/assets/js/main.min.js\"></script>\n
+        \ <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.2/css/all.css\"
+        integrity=\"sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay\"
+        crossorigin=\"anonymous\">\n\n\n\n\n\n\n\n  <script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+        \ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+        \ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+        \ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\n\n
+        \ ga('create', 'UA-65307055-3', 'auto');\n  ga('send', 'pageview');\n</script>\n\n\n\n\n\n\n\n
+        \ </body>\n</html>"
+  recorded_at: 2022-08-02 12:03:23 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://colinfay.me/src/contrib/PACKAGES
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '2227'
+      server: GitHub.com
+      content-type: application/octet-stream
+      last-modified: Thu, 02 Dec 2021 17:30:17 GMT
+      access-control-allow-origin: '*'
+      etag: '"61a902a9-8b3"'
+      expires: Tue, 02 Aug 2022 12:13:23 GMT
+      cache-control: max-age=600
+      x-proxy-cache: MISS
+      x-github-request-id: 4BC2:91B3:185E2F:19832C:62E9128B
+      accept-ranges: bytes
+      date: Tue, 02 Aug 2022 12:03:23 GMT
+      via: 1.1 varnish
+      age: '0'
+      x-served-by: cache-fra19167-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1659441803.398619,VS0,VE88
+      vary: Accept-Encoding
+      x-fastly-request-id: 9f002663fd6d72bdbdc7db9cc5dd9455e1be7b6d
+    body:
+      encoding: UTF-8
+      file: no
+      string: |
+        Package: craneur
+        Version: 0.0.0.9000
+        Imports: attempt, desc, glue, R6, tools
+        Suggests: testthat
+        License: MIT + file LICENSE
+        MD5sum: e3ef1ff3d829c040c9bafb960fb8630b
+        NeedsCompilation: no
+
+        Package: jekyllthat
+        Version: 0.0.0.9000
+        Imports: rmarkdown, glue
+        License: MIT + file LICENSE
+        MD5sum: 86b2fc2948c03fdbf9b5327227875102
+        NeedsCompilation: no
+
+        Package: tidystringdist
+        Version: 0.1.2
+        Imports: stringdist, rlang, magrittr, dplyr, purrr, attempt
+        Suggests: testthat, knitr, rmarkdown, covr
+        License: MIT + file LICENSE
+        MD5sum: 8327a9ae41009f57ddb376fa423b4e7a
+        NeedsCompilation: no
+
+        Package: attempt
+        Version: 0.2.1
+        Imports: rlang
+        Suggests: testthat, knitr, rmarkdown
+        License: MIT + file LICENSE
+        MD5sum: 3ba02dbb8a7a4daa75b29325895f2b36
+        NeedsCompilation: no
+
+        Package: rpinterest
+        Version: 0.4.0
+        Imports: attempt, curl, glue, httr, jsonlite, magrittr, purrr
+        Suggests: testthat
+        License: GPL-3
+        MD5sum: e5d077a6c4b3659539bdaf7307571d9f
+        NeedsCompilation: no
+
+        Package: rgeoapi
+        Version: 1.2.0
+        Imports: httr, rjson, magrittr, tools, jsonlite, curl, attempt, purrr,
+                glue
+        Suggests: testthat
+        License: MIT + file LICENSE
+        MD5sum: bf6261f4694ad5b49ae1c84ebedf2e30
+        NeedsCompilation: no
+
+        Package: proustr
+        Version: 0.3.0.9000
+        Imports: dplyr, magrittr, stringr, rlang, purrr, tidyr, tokenizers,
+                SnowballC, attempt
+        Depends: R (>= 2.10)
+        Suggests: testthat, knitr, rmarkdown, covr
+        License: MIT + file LICENSE
+        MD5sum: 30c5df1586bd9f6d6f3f0af9b989b7d7
+        NeedsCompilation: no
+
+        Package: languagelayeR
+        Version: 1.2.3
+        Imports: httr, rjson, attempt, curl
+        Suggests: testthat, knitr, rmarkdown, covr
+        License: MIT + file LICENSE
+        MD5sum: 5dc52e5cf9830d7cbcc256db5fed619e
+        NeedsCompilation: no
+
+        Package: fryingpane
+        Version: 0.0.0.9000
+        Imports: attempt, glue, shiny, tibble
+        Suggests: testthat
+        License: MIT + file LICENSE
+        MD5sum: 1c6476f515edb54a514a0884e664b340
+        NeedsCompilation: no
+
+        Package: dockerfiler
+        Version: 0.1.1
+        Imports: attempt, glue, R6
+        Suggests: covr, testthat, knitr, rmarkdown
+        License: MIT + file LICENSE
+        MD5sum: c3c9b2985d963f693a4422a4a80603ee
+        NeedsCompilation: no
+
+        Package: devaddins
+        Version: 0.0.0.9000
+        Imports: devtools
+        Depends: R (>= 3.4.3)
+        License: What license is it under?
+        MD5sum: 61ba9f704c335b5945ce32a7208cb80e
+        NeedsCompilation: no
+  recorded_at: 2022-08-02 12:03:23 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
