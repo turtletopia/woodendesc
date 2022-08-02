@@ -7,9 +7,7 @@ vcr::use_cassette("lcb-packages", {
 }, record = "new_episodes")
 
 # TESTS ----
-test_packages(
-  packages, wood_packages, .test_cache = FALSE
-)
+test_packages(packages)
 
 vcr::use_cassette("wood-omegahat-packages", {
   test_that("uppercase in URL is preserved", {

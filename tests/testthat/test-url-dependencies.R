@@ -10,8 +10,9 @@ vcr::use_cassette("RDG-deps", {
 }, record = "new_episodes")
 
 # TESTS ----
-test_dependencies(
-  RGD_deps, wood_url_dependencies, "RGraphicsDevice", "http://www.omegahat.net/R"
+test_dependencies(RGD_deps)
+test_cache(
+  wood_url_dependencies, RGD_deps, "RGraphicsDevice", "http://www.omegahat.net/R"
 )
 
 test_that("raises an exception if package not available", {

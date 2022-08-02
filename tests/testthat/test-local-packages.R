@@ -6,7 +6,7 @@ lib_dir <- local_fake_library("fakepackage", "woodendesc")
 local_packages <- wood_local_packages()
 
 # TESTS ----
-test_packages(local_packages, wood_local_packages, .test_cache = FALSE)
+test_packages(local_packages)
 
 test_that("local packages include woodendesc package", {
   expect_subset("woodendesc", local_packages)

@@ -8,7 +8,8 @@ vcr::use_cassette("Biostrings-deps", {
 }, record = "new_episodes")
 
 # TESTS ----
-test_dependencies(Biostrings_deps, wood_bioc_dependencies, "Biostrings")
+test_dependencies(Biostrings_deps)
+test_cache(wood_bioc_dependencies, Biostrings_deps, "Biostrings")
 
 test_that("raises an exception if package not available", {
   expect_error(wood_bioc_dependencies("fakepackage"))

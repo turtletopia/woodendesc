@@ -7,9 +7,8 @@ vcr::use_cassette("deepdep-deps", {
 })
 
 # TESTS ----
-test_dependencies(
-  deepdep_deps, wood_cran_dependencies, "deepdep", version = "0.2.0"
-)
+test_dependencies(deepdep_deps)
+test_cache(wood_cran_dependencies, deepdep_deps, "deepdep", version = "0.2.0")
 
 test_that("uses cache from wood_cran_versions() if available", {
   wood_clear_cache()

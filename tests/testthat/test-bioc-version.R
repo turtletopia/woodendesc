@@ -7,7 +7,8 @@ vcr::use_cassette("affy-version", {
 }, record = "new_episodes")
 
 # TESTS ----
-test_version(affy_version, wood_bioc_version, "affy")
+test_version(affy_version)
+test_cache(wood_bioc_version, affy_version, "affy")
 
 test_that("raises an exception if package not available", {
   vcr::use_cassette("bioc-fakepackage-version", {

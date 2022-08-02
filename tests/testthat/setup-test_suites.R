@@ -1,13 +1,10 @@
-test_cache <- function(execute, tested_function, expected_value, ...) {
-  if (execute) {
-    test_that("if possible, reads from cache", {
-      expect_cache(tested_function, expected_value, ...)
-    })
-  }
+test_cache <- function(tested_function, expected_value, ...) {
+  test_that("if possible, reads from cache", {
+    expect_cache(tested_function, expected_value, ...)
+  })
 }
 
-test_packages <- function(packages, tested_function, ...,
-                          .test_cache = TRUE) {
+test_packages <- function(packages) {
   test_that("returns a vector of strings", {
     expect_vector(packages,
                   ptype = character())
@@ -20,12 +17,9 @@ test_packages <- function(packages, tested_function, ...,
   test_that("all returned strings are valid package names", {
     expect_pkg_name(packages)
   })
-
-  test_cache(.test_cache, tested_function, packages, ...)
 }
 
-test_version <- function(version, tested_function, ...,
-                         .test_cache = TRUE) {
+test_version <- function(version) {
   test_that("returns a single string", {
     expect_vector(version,
                   ptype = character(),
@@ -35,12 +29,9 @@ test_version <- function(version, tested_function, ...,
   test_that("returned string is a version code", {
     expect_version_code(version)
   })
-
-  test_cache(.test_cache, tested_function, version, ...)
 }
 
-test_dependencies <- function(deps, tested_function, ...,
-                              .test_cache = TRUE) {
+test_dependencies <- function(deps) {
   test_that("returns a data frame with package, version & type columns", {
     expect_vector(deps,
                   ptype = data.frame(
@@ -67,6 +58,4 @@ test_dependencies <- function(deps, tested_function, ...,
   test_that("returned 'type' column contains dependency types", {
     expect_dependency_type(deps[["type"]])
   })
-
-  test_cache(.test_cache, tested_function, deps, ...)
 }

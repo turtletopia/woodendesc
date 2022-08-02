@@ -7,8 +7,9 @@ vcr::use_cassette("versionsort-version-tt", {
 })
 
 # TESTS ----
-test_version(
-  versionsort_version, wood_runiverse_version, "versionsort", "turtletopia"
+test_version(versionsort_version)
+test_cache(
+  wood_runiverse_version, versionsort_version, "versionsort", "turtletopia"
 )
 
 test_that("raises an exception if package not available", {

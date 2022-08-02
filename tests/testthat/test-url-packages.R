@@ -8,7 +8,8 @@ vcr::use_cassette("omegahat-packages", {
 }, record = "new_episodes")
 
 # TESTS ----
-test_packages(omegahat_packages, wood_url_packages, "http://www.omegahat.net/R")
+test_packages(omegahat_packages)
+test_cache(wood_url_packages, omegahat_packages, "http://www.omegahat.net/R")
 
 test_that("Omega repository has RGraphicsDevice package", {
   expect_subset("RGraphicsDevice", omegahat_packages)
