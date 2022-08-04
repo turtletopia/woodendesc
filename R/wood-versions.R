@@ -1,12 +1,13 @@
 #' Collect all package versions from multiple repositories
 #'
 #' @description This function queries the selected repositories for version
-#' codes of the selected package and collects the unique occurences.
+#' codes of the selected packages and collects the unique occurences.
 #'
 #' @template packages
 #' @template repos
 #'
-#' @return A character vector of version codes.
+#' @return A list named after queried packages, each element being a character
+#' vector of version codes.
 #'
 #' @examples
 #' \donttest{

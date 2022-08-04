@@ -26,11 +26,12 @@ an \code{all} keyword;
 }}
 }
 \value{
-A character vector of version codes.
+A list named after queried packages, each element being a character
+vector of version codes.
 }
 \description{
 This function queries the selected repositories for version
-codes of the selected package and collects the unique occurences.
+codes of the selected packages and collects the unique occurences.
 }
 \examples{
 \donttest{
