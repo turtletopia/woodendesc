@@ -14,6 +14,7 @@
 #'
 #' @family core
 #' @family versions
+#' @importFrom utils installed.packages
 #' @export
 wood_core_version <- function(package) {
   core_pkgs <- installed.packages(priority = "base")
