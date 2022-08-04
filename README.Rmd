@@ -11,7 +11,13 @@ output: github_document
 [![Codecov test coverage](https://codecov.io/gh/turtletopia/woodendesc/branch/master/graph/badge.svg)](https://codecov.io/gh/turtletopia/woodendesc?branch=master)
 <!-- badges: end -->
 
-Package not yet finished!
+woodendesc strives to provide an unified API to query any R repository for the following data:
+
+* list of available packages,
+* version code of any selected package,
+* direct dependencies of any selected package.
+
+The package tries to cache as much as possible and reuse existing cache wherever possible to minimize internet usage. Many repositories (CRAN, Bioconductor, R-universe, and local libraries) have custom implementations of their handlers to make use of additional possibilities they present (e.g. previous versions on CRAN or old releases of Bioconductor).
 
 ## Installation
 
@@ -20,3 +26,65 @@ Package not yet finished!
 # install.packages("devtools")
 devtools::install_github("turtletopia/woodendesc")
 ```
+
+## How to use woodendesc?
+
+Each repository has its dedicated functions for listing available packages, package version, and package dependencies:
+
+```{r bioc_funcs}
+library(woodendesc)
+
+# Too many packages to list them all
+wood_bioc_packages() |> head()
+wood_bioc_version("Biobase")
+wood_bioc_dependencies("Biobase")
+```
+
+Sometimes a repository may contain multiple versions of the same package, this is signified by pluralizing `_version` in function name, as in CRAN:
+
+```{r cran_versions}
+wood_cran_versions("versionsort")
+```
+
+The other functions can query R-universe, local libraries or base R packages:
+
+```{r other_funcs}
+wood_runiverse_version("woodendesc", universe = "turtletopia")
+wood_local_dependencies("httr", paths = "all")
+wood_core_packages()
+```
+
+And if none of the above satisfies your use case, there are default `_url_` functions:
+
+```{r url_funcs}
+wood_url_packages("https://colinfay.me")
+wood_url_version("XML", "http://www.omegahat.net/R")
+wood_url_dependencies("XML", "http://www.omegahat.net/R")
+```
+
+Last, but not least, there are three functions for searching through multiple repositories and collecting the results. Read the documentation for details on how to specify `repos` parameter.
+
+```{r wood_funcs}
+# These functions collect data from all repositories and return unique elements
+wood_packages(repos = c("core", "https://colinfay.me"))
+# wood_versions() and wood_dependencies() can take multiple packages
+wood_versions(
+  c("versionsort", "woodendesc"),
+  c("local#all", "runiverse@turtletopia", "cran")
+)
+# This one returns the first working occurence instead
+wood_dependencies(
+  c("versionsort", "woodendesc"),
+  c("local#all", "runiverse@turtletopia", "cran")
+)
+```
+
+And if you ever need to clear cache, simply call:
+
+```{r clear_cache}
+wood_clear_cache()
+```
+
+## End notes
+
+I believe in equal rights and treatment for everybody, regardless of their sexuality, gender identity, skin tone, nationality, and other features beyond human control. Thus, I do not allow woodendesc to be used in any project that promotes hate based on the aforementioned factors.
