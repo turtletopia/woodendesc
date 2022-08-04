@@ -40,6 +40,7 @@ wood_packages()
 }
 \seealso{
 Functions for all repositories:
+\code{\link{wood_dependencies}()},
 \code{\link{wood_versions}()}
 
 Functions that query available packages:
