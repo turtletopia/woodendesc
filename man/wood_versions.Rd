@@ -7,6 +7,9 @@
 wood_versions(packages, repos = "cran")
 }
 \arguments{
+\item{packages}{[\code{character()}]\cr
+Names of the packages to query for.}
+
 \item{repos}{[\code{character()}]\cr
 A vector of repositories to query. The following values are available:
 \itemize{
@@ -35,7 +38,7 @@ wood_versions("woodendesc", c("local#all", "runiverse@turtletopia"))
 # Multiple packages are also possible:
 wood_versions(
   c("ggplot2", "Biostrings", "woodendesc"),
-  repos = c("local#all", "cran", "bioc@1.5")
+  repos = c("runiverse@turtletopia", "cran", "bioc@1.5")
 )
 # By default, only CRAN is queried:
 wood_versions("versionsort")

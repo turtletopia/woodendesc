@@ -3,6 +3,7 @@
 #' @description This function queries the selected repositories for version
 #' codes of the selected package and collects the unique occurences.
 #'
+#' @template packages
 #' @template repos
 #'
 #' @return A character vector of version codes.
@@ -13,7 +14,7 @@
 #' # Multiple packages are also possible:
 #' wood_versions(
 #'   c("ggplot2", "Biostrings", "woodendesc"),
-#'   repos = c("local#all", "cran", "bioc@1.5")
+#'   repos = c("runiverse@turtletopia", "cran", "bioc@1.5")
 #' )
 #' # By default, only CRAN is queried:
 #' wood_versions("versionsort")
