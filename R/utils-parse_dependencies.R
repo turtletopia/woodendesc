@@ -9,7 +9,8 @@ extract_dependencies <- function(desc, parser = parse_dependencies) {
               stringsAsFactors = FALSE)
     }
   )
-  do.call(rbind, c(deps, stringsAsFactors = FALSE))
+  ret <- do.call(rbind, c(deps, stringsAsFactors = FALSE))
+  as_wood_deps(ret)
 }
 
 parse_dependencies <- function(deps) {
