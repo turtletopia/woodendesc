@@ -21,12 +21,12 @@ vcr::use_cassette("Biostrings-deps-old", {
 
     expect_equal(
       Biostrings_deps_old,
-      data.frame(
+      as_wood_deps(data.frame(
         package = "R",
         version = "1.8.0",
         type = "Depends",
         stringsAsFactors = FALSE
-      )
+      ))
     )
   })
 }, record = "new_episodes")

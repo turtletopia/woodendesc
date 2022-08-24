@@ -34,12 +34,12 @@ test_version <- function(version) {
 test_dependencies <- function(deps) {
   test_that("returns a data frame with package, version & type columns", {
     expect_vector(deps,
-                  ptype = data.frame(
+                  ptype = as_wood_deps(data.frame(
                     package = character(),
                     version = character(),
                     type = character(),
                     stringsAsFactors = FALSE
-                  ))
+                  )))
   })
 
   test_that("returned 'package' column contains package names", {
