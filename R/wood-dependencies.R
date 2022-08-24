@@ -34,5 +34,5 @@ wood_dependencies <- function(packages, repos = "cran") {
     try_repos(query_makers, package = package)
   })
   names(ret) <- packages
-  ret
+  as_wood_dep_list(ret)
 }
