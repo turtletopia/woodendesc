@@ -5,7 +5,8 @@ Version: 0.1.0
 Date: 2022-04-08
 Authors@R: c(person("Laura", "Bakala",
              email = "erdaradun.gaztea@gmail.com",
-             role = c("cre", "aut", "cph")))
+             role = c("cre", "aut", "cph"),
+             comment = c(ORCID = "0000-0002-3213-2484")))
 Description: Get the available packages and their version codes as well as their dependencies from any R repository with unified API. Uses extensive caching for repeated queries.
 License: GPL (>= 3)
 Encoding: UTF-8
