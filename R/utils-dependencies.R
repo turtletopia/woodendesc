@@ -51,6 +51,10 @@ filter_dependencies.wood_dep_list <- function(object, which = "strong") {
   as_wood_dep_list(lapply(object, filter_dependencies, which = which))
 }
 
+#' @rdname filter_dependencies
+#' @export
+filter_dependencies.NULL <- function(object, which = "strong") { NULL }
+
 match_dep_type <- function(which) {
   dep_types <- c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")
 
