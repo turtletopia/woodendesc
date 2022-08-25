@@ -7,3 +7,5 @@ test_dependencies(stats_deps)
 test_that("raises an exception if package not available", {
   expect_error(wood_core_dependencies("fakepackage"))
 })
+
+# TODO: test datasets package since it has no dependencies
