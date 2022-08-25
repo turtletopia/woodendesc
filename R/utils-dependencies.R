@@ -33,6 +33,34 @@ squash.wood_dep_list <- function(object) {
   do.call(rbind, c(deps, make.row.names = FALSE))
 }
 
+#' Filter dependencies by type
+#'
+#' @description This function removes all dependencies that are not one of the
+#' specified types.
+#'
+#' @param object \code{wood_deps || wood_dep_list}\cr
+#'  Dependencies to filter.
+#' @param which \code{character()}\cr
+#'  A vector listing the types of dependencies, a subset of
+#'  \code{c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")}.
+#'  Character string `"all"` is shorthand for that vector, character string
+#'  `"most"`for the same vector without `"Enhances"`, character string
+#'  `"strong"` (default) for the first three elements of that vector. The same
+#'  convention as in \code{\link[tools]{package_dependencies}()}.
+#'
+#' @return Object of the same class as `object` parameter, but with filtered
+#' dependencies.
+#'
+#' @examples
+#' # It can filter both single-package dependencies...
+#' stats_deps <- wood_core_dependencies("stats")
+#' filter_dependencies(stats_deps)
+#'
+#' # ...and a list for multiple packages too.
+#' core_pkgs <- wood_core_packages()
+#' core_deps <- wood_dependencies(core_pkgs, "core")
+#' filter_dependencies(core_deps, c("Imports", "Enhances"))
+#'
 #' @export
 filter_dependencies <- function(object, which = "strong") {
   UseMethod("filter_dependencies")
