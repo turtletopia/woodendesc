@@ -60,7 +60,7 @@ cran_url <- function(...) {
   paste("https://CRAN.R-project.org", ..., sep = "/")
 }
 
-github_url <- function(...) {
+raw_github_url <- function(...) {
   paste("https://raw.githubusercontent.com", ..., sep = "/")
 }
 

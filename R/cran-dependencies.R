@@ -43,7 +43,7 @@ cran_descriptions_cache <- function(package) {
 
 cran_dependencies_cache <- function(package, version) {
   with_cache({
-    url <- github_url("cran", package, version, "DESCRIPTION")
+    url <- raw_github_url("cran", package, version, "DESCRIPTION")
     desc <- download_safely(url)
     read_dcf(desc)[[package]]
   }, "dependencies", "CRAN", package, version)
