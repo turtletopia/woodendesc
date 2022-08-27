@@ -6,23 +6,23 @@ wood_github_packages <- function(user) {
 
 github_packages_cache <- function(user) {
   with_cache({
-    # TODO: add pagination
     url <- github_url("users", user, "repos")
-    content <- download_safely(url)
-    repos <- vapply(content, `[[`, character(1), "name")
-    Filter(function(repo) is_github_R_repo(user, repo), repos)
-  }, "packages", "github", user)
+    content <- paginate(url)
+    repos <- Filter(is_github_R_repo, content)
+    vapply(repos, `[[`, character(1), "name")
+  }, "repos", "github", user)
 }
 
-is_github_R_repo <- function(owner, repo) {
+is_github_R_repo <- function(repo) {
+  owner <- repo[["owner"]][["login"]]
+  name <- repo[["name"]]
+  branch <- repo[["default_branch"]]
+  # TODO: save both the content and the existence of DESCRIPTION
   with_cache({
-    url <- github_url("repos", owner, repo, "contents", "DESCRIPTION")
+    url <- raw_github_url(owner, name, branch, "DESCRIPTION")
     tryCatch({
       content <- download_safely(url)
-
-      all(c("name", "type") %in% names(content)) &&
-        identical(content[["name"]], "DESCRIPTION") &&
-        identical(content[["type"]], "file")
+      TRUE
     }, error = function(e) FALSE)
-  }, "isrepo", "github", owner, repo)
+  }, "isrepo", "github", owner, name)
 }
