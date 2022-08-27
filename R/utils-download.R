@@ -23,6 +23,21 @@ download_dcf <- function(url, compression = "gzip") {
   memDecompress(raw_response, type = compression, asChar = TRUE)
 }
 
+paginate <- function(url, ..., .per_page = 100) {
+  ret <- list()
+  page <- 1
+  while (TRUE) {
+    url <- append_url_params(url, list(per_page = .per_page, page = page))
+    content <- download_safely(url, ...)
+    # Append result
+    ret <- c(ret, content)
+    # Stop iterating if the last page
+    if (length(content) != .per_page) break
+    page <- page + 1
+  }
+  ret
+}
+
 #' @importFrom httr GET content
 download_safely <- function(url, ...) {
   response <- GET(url)
