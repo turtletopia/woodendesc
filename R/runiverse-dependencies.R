@@ -22,6 +22,7 @@
 #' @export
 wood_runiverse_dependencies <- function(package, universe = "ropensci") {
   assert_param_package(package)
+  assert_param_runiverse(universe)
 
   desc <- runiverse_description_cache(package, universe)
   ret <- data.frame(

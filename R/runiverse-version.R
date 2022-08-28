@@ -19,6 +19,7 @@
 #' @export
 wood_runiverse_version <- function(package, universe = "ropensci") {
   assert_param_package(package)
+  assert_param_runiverse(universe)
 
   runiverse_description_cache(package, universe)[["version"]]
 }
