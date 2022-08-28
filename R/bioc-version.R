@@ -22,6 +22,8 @@
 #' @family versions
 #' @export
 wood_bioc_version <- function(package, release = "release") {
+  assert_param_package(package)
+
   desc <- bioc_PACKAGES_cache(release)[[package]]
 
   if (is.null(desc))

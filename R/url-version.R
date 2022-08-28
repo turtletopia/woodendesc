@@ -17,6 +17,8 @@
 #' @family versions
 #' @export
 wood_url_version <- function(package, repository) {
+  assert_param_package(package)
+
   desc <- url_PACKAGES_cache(repository)[[package]]
 
   if (is.null(desc))

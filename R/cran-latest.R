@@ -16,6 +16,8 @@
 #' @family versions
 #' @export
 wood_cran_latest <- function(package) {
+  assert_param_package(package)
+
   cran_latest_cache(package)
 }
 

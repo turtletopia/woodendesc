@@ -22,6 +22,8 @@
 #' @family dependencies
 #' @export
 wood_cran_dependencies <- function(package, version = "latest") {
+  assert_param_package(package)
+
   version <- match_version_cran(package, version)
 
   descs <- cran_descriptions_cache(package)

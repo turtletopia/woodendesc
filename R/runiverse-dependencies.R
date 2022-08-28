@@ -21,6 +21,8 @@
 #' @family dependencies
 #' @export
 wood_runiverse_dependencies <- function(package, universe = "ropensci") {
+  assert_param_package(package)
+
   desc <- runiverse_description_cache(package, universe)
   ret <- data.frame(
     package = vapply(desc[["deps"]], `[[`, character(1), "package"),

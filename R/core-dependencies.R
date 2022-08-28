@@ -20,6 +20,8 @@
 #' @importFrom utils installed.packages
 #' @export
 wood_core_dependencies <- function(package) {
+  assert_param_package(package)
+
   core_pkgs <- installed.packages(priority = "base")
 
   if (!package %in% rownames(core_pkgs))

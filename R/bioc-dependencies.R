@@ -26,6 +26,8 @@
 #' @family dependencies
 #' @export
 wood_bioc_dependencies <- function(package, release = "release") {
+  assert_param_package(package)
+
   desc <- bioc_PACKAGES_cache(release)[[package]]
 
   if (is.null(desc))

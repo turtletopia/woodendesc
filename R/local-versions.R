@@ -17,6 +17,8 @@
 #' @family versions
 #' @export
 wood_local_versions <- function(package, paths = .libPaths()[1]) {
+  assert_param_package(package)
+
   paths <- match_local_paths_args(paths)
   # Filter paths that contain package DESCRIPTION
   descriptions <- file.path(paths, package, "DESCRIPTION")

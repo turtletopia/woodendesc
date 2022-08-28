@@ -18,6 +18,8 @@
 #' @family versions
 #' @export
 wood_runiverse_version <- function(package, universe = "ropensci") {
+  assert_param_package(package)
+
   runiverse_description_cache(package, universe)[["version"]]
 }
 
