@@ -13,11 +13,11 @@ wood_clear_cache <- function() {
 #'
 #' @description Adds caching to an expression with a specified cache file.
 #'
-#' @param expr \[\code{call(1)}\]\cr
+#' @param expr \code{call(1)}\cr
 #'  An expression in brackets to evaluate if cache not usable.
-#' @param ... \[\code{character(1)}\]\cr
+#' @param ... \code{character(1)}\cr
 #'  Components of the path filename.
-#' @param .if_null \[\code{call(1)}\]\cr
+#' @param .if_null \code{call(1)}\cr
 #'  An expression to execute if value is `NULL`, returns `NULL` by default.
 #'
 #' @return A value returned by `expr` or a cache (if valid).
@@ -60,7 +60,7 @@ wood_tempdir <- function() {
 #' components are separated by underscores and should allow for easy recognizing
 #' what cache is stored inside.
 #'
-#' @param ... \[\code{character(1)}\]\cr
+#' @param ... \code{character(1)}\cr
 #'  Components of the filename, to be separated by underscores.
 #'
 #' @return A string with a path to woodendesc cache file.
@@ -75,7 +75,7 @@ cache_path <- function(...) {
 #' @description Checks if the cache exists and if it is older than the limit.
 #' The limit can be modified with `wood_cache_time` option.
 #'
-#' @param file \[\code{character(1)}\]\cr
+#' @param file \code{character(1)}\cr
 #'  Path to file that is to be verified.
 #'
 #' @return A boolean indicating if the cache is usable.

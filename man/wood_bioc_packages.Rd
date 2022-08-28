@@ -7,7 +7,7 @@
 wood_bioc_packages(release = "release")
 }
 \arguments{
-\item{release}{[\code{character(1)}]\cr
+\item{release}{\code{character(1)}\cr
 Bioconductor release to query for. Can be either a numeric code (like
 \code{3.12}) or one of two keywords: \code{"release"} and \code{"devel"}.}
 }

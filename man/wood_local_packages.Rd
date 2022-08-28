@@ -7,7 +7,7 @@
 wood_local_packages(paths = .libPaths()[1])
 }
 \arguments{
-\item{paths}{[\code{character()}]\cr
+\item{paths}{\code{character()}\cr
 Paths to local libraries, by default the first element of \code{.libPaths()}. If
 equal to \code{"all"}, uses all elements of \code{.libPaths()}.}
 }

@@ -7,10 +7,10 @@
 wood_url_dependencies(package, repository)
 }
 \arguments{
-\item{package}{[\code{character(1)}]\cr
+\item{package}{\code{character(1)}\cr
 Name of a package to query for.}
 
-\item{repository}{[\code{character(1)}]\cr
+\item{repository}{\code{character(1)}\cr
 URL to repository, e.g. \code{"http://www.omegahat.net/R"}.}
 }
 \value{

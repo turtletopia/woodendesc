@@ -7,7 +7,7 @@
 wood_packages(repos = "cran")
 }
 \arguments{
-\item{repos}{[\code{character()}]\cr
+\item{repos}{\code{character()}\cr
 A vector of repositories to query. The following values are available:
 \itemize{
 \item \code{"cran"}, meaning CRAN;

@@ -7,10 +7,10 @@
 wood_cran_dependencies(package, version = "latest")
 }
 \arguments{
-\item{package}{[\code{character(1)}]\cr
+\item{package}{\code{character(1)}\cr
 Name of a package to query for.}
 
-\item{version}{[\code{character(1)}]\cr
+\item{version}{\code{character(1)}\cr
 A version code without leading \code{"v"}, e.g. \code{"1.6.0"}.}
 }
 \value{

@@ -7,10 +7,10 @@
 wood_local_dependencies(package, paths = .libPaths()[1])
 }
 \arguments{
-\item{package}{[\code{character(1)}]\cr
+\item{package}{\code{character(1)}\cr
 Name of a package to query for.}
 
-\item{paths}{[\code{character()}]\cr
+\item{paths}{\code{character()}\cr
 Paths to local libraries, by default the first element of \code{.libPaths()}. If
 equal to \code{"all"}, uses all elements of \code{.libPaths()}.}
 }

@@ -7,7 +7,7 @@
 wood_cran_versions(package)
 }
 \arguments{
-\item{package}{[\code{character(1)}]\cr
+\item{package}{\code{character(1)}\cr
 Name of a package to query for.}
 }
 \value{

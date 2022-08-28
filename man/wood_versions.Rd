@@ -7,10 +7,10 @@
 wood_versions(packages, repos = "cran")
 }
 \arguments{
-\item{packages}{[\code{character()}]\cr
+\item{packages}{\code{character()}\cr
 Names of the packages to query for.}
 
-\item{repos}{[\code{character()}]\cr
+\item{repos}{\code{character()}\cr
 A vector of repositories to query. The following values are available:
 \itemize{
 \item \code{"cran"}, meaning CRAN;

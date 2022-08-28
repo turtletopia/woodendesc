@@ -33,9 +33,9 @@ make_query.wood_query_maker <- function(object, ...) {
 #' @description This function returns information from the first repository
 #' that works with the specified parameters (e.g. `package = "Biostrings"`).
 #'
-#' @param query_makers \[\code{wood_query_maker()}\]\cr
+#' @param query_makers \code{wood_query_maker()}\cr
 #'  Repositories with their handlers.
-#' @param ... \cr
+#' @param ... \code{ANY}\cr
 #'  Additional parameters for queries.
 #'
 #' @return Return value from the first working repository.
@@ -54,9 +54,9 @@ try_repos <- function(query_makers, ...) {
 #' @description This function collects character vectors from all specified
 #' repos and removes duplicate values.
 #'
-#' @param query_makers \[\code{wood_query_maker()}\]\cr
+#' @param query_makers \code{wood_query_maker()}\cr
 #'  Repositories with their handlers.
-#' @param ... \cr
+#' @param ... \code{ANY}\cr
 #'  Additional parameters for queries.
 #'
 #' @return A character vector of unique values.

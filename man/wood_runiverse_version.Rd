@@ -7,10 +7,10 @@
 wood_runiverse_version(package, universe = "ropensci")
 }
 \arguments{
-\item{package}{[\code{character(1)}]\cr
+\item{package}{\code{character(1)}\cr
 Name of a package to query for.}
 
-\item{universe}{[\code{character(1)}]\cr
+\item{universe}{\code{character(1)}\cr
 Name of a universe within R-universe, e.g. "ropensci".}
 }
 \value{

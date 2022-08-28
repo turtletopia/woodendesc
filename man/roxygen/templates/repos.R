@@ -1,4 +1,4 @@
-#' @param repos \[\code{character()}\]\cr
+#' @param repos \code{character()}\cr
 #'  A vector of repositories to query. The following values are available:
 #'  * `"cran"`, meaning CRAN;
 #'  * `"bioc@release"`, meaning Bioconductor, where `release` should be replaced

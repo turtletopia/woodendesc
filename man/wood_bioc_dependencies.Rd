@@ -7,10 +7,10 @@
 wood_bioc_dependencies(package, release = "release")
 }
 \arguments{
-\item{package}{[\code{character(1)}]\cr
+\item{package}{\code{character(1)}\cr
 Name of a package to query for.}
 
-\item{release}{[\code{character(1)}]\cr
+\item{release}{\code{character(1)}\cr
 Bioconductor release to query for. Can be either a numeric code (like
 \code{3.12}) or one of two keywords: \code{"release"} and \code{"devel"}.}
 }

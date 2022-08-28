@@ -1,2 +1,2 @@
-#' @param repository \[\code{character(1)}\]\cr
+#' @param repository \code{character(1)}\cr
 #'  URL to repository, e.g. `"http://www.omegahat.net/R"`.

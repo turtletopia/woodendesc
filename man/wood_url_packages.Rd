@@ -7,7 +7,7 @@
 wood_url_packages(repository)
 }
 \arguments{
-\item{repository}{[\code{character(1)}]\cr
+\item{repository}{\code{character(1)}\cr
 URL to repository, e.g. \code{"http://www.omegahat.net/R"}.}
 }
 \value{

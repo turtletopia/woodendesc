@@ -7,7 +7,7 @@
 wood_runiverse_packages(universe = "ropensci")
 }
 \arguments{
-\item{universe}{[\code{character(1)}]\cr
+\item{universe}{\code{character(1)}\cr
 Name of a universe within R-universe, e.g. "ropensci".}
 }
 \value{
