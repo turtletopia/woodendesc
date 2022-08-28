@@ -1,0 +1,1131 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/turtletopia/repos?per_page=100&page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: GitHub.com
+      date: Sat, 27 Aug 2022 13:33:45 GMT
+      content-type: application/json; charset=utf-8
+      cache-control: public, max-age=60, s-maxage=60
+      vary: Accept, Accept-Encoding, Accept, X-Requested-With
+      etag: W/"5aeceab55e231ddf2862456fa8bff82b1e341bb0bcea4c4eed4df5445b5ae0b3"
+      x-github-media-type: github.v3
+      access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP,
+        X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+      access-control-allow-origin: '*'
+      strict-transport-security: max-age=31536000; includeSubdomains; preload
+      x-frame-options: deny
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin
+      content-security-policy: default-src 'none'
+      content-encoding: gzip
+      x-ratelimit-limit: '60'
+      x-ratelimit-remaining: '51'
+      x-ratelimit-reset: '1661609545'
+      x-ratelimit-resource: core
+      x-ratelimit-used: '9'
+      accept-ranges: bytes
+      transfer-encoding: chunked
+      x-github-request-id: 153C:75A1:15653BA:16148E9:630A1D39
+    body:
+      encoding: ''
+      file: no
+      string: |
+        [
+          {
+            "id": 521922436,
+            "node_id": "R_kgDOHxvnhA",
+            "name": "gglgbtq",
+            "full_name": "turtletopia/gglgbtq",
+            "private": false,
+            "owner": {
+              "login": "turtletopia",
+              "id": 103829938,
+              "node_id": "O_kgDOBjBRsg",
+              "avatar_url": "https://avatars.githubusercontent.com/u/103829938?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/turtletopia",
+              "html_url": "https://github.com/turtletopia",
+              "followers_url": "https://api.github.com/users/turtletopia/followers",
+              "following_url": "https://api.github.com/users/turtletopia/following{/other_user}",
+              "gists_url": "https://api.github.com/users/turtletopia/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/turtletopia/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/turtletopia/subscriptions",
+              "organizations_url": "https://api.github.com/users/turtletopia/orgs",
+              "repos_url": "https://api.github.com/users/turtletopia/repos",
+              "events_url": "https://api.github.com/users/turtletopia/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/turtletopia/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/turtletopia/gglgbtq",
+            "description": "Provides multiple palettes based on pride flags with tailored themes.",
+            "fork": false,
+            "url": "https://api.github.com/repos/turtletopia/gglgbtq",
+            "forks_url": "https://api.github.com/repos/turtletopia/gglgbtq/forks",
+            "keys_url": "https://api.github.com/repos/turtletopia/gglgbtq/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/turtletopia/gglgbtq/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/turtletopia/gglgbtq/teams",
+            "hooks_url": "https://api.github.com/repos/turtletopia/gglgbtq/hooks",
+            "issue_events_url": "https://api.github.com/repos/turtletopia/gglgbtq/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/turtletopia/gglgbtq/events",
+            "assignees_url": "https://api.github.com/repos/turtletopia/gglgbtq/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/turtletopia/gglgbtq/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/turtletopia/gglgbtq/tags",
+            "blobs_url": "https://api.github.com/repos/turtletopia/gglgbtq/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/turtletopia/gglgbtq/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/turtletopia/gglgbtq/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/turtletopia/gglgbtq/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/turtletopia/gglgbtq/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/turtletopia/gglgbtq/languages",
+            "stargazers_url": "https://api.github.com/repos/turtletopia/gglgbtq/stargazers",
+            "contributors_url": "https://api.github.com/repos/turtletopia/gglgbtq/contributors",
+            "subscribers_url": "https://api.github.com/repos/turtletopia/gglgbtq/subscribers",
+            "subscription_url": "https://api.github.com/repos/turtletopia/gglgbtq/subscription",
+            "commits_url": "https://api.github.com/repos/turtletopia/gglgbtq/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/turtletopia/gglgbtq/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/turtletopia/gglgbtq/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/turtletopia/gglgbtq/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/turtletopia/gglgbtq/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/turtletopia/gglgbtq/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/turtletopia/gglgbtq/merges",
+            "archive_url": "https://api.github.com/repos/turtletopia/gglgbtq/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/turtletopia/gglgbtq/downloads",
+            "issues_url": "https://api.github.com/repos/turtletopia/gglgbtq/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/turtletopia/gglgbtq/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/turtletopia/gglgbtq/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/turtletopia/gglgbtq/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/turtletopia/gglgbtq/labels{/name}",
+            "releases_url": "https://api.github.com/repos/turtletopia/gglgbtq/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/turtletopia/gglgbtq/deployments",
+            "created_at": "2022-08-06T11:02:28Z",
+            "updated_at": "2022-08-27T12:14:35Z",
+            "pushed_at": "2022-08-14T18:04:53Z",
+            "git_url": "git://github.com/turtletopia/gglgbtq.git",
+            "ssh_url": "git@github.com:turtletopia/gglgbtq.git",
+            "clone_url": "https://github.com/turtletopia/gglgbtq.git",
+            "svn_url": "https://github.com/turtletopia/gglgbtq",
+            "homepage": "",
+            "size": 217,
+            "stargazers_count": 4,
+            "watchers_count": 4,
+            "language": "R",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "forks_count": 0,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 9,
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            },
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+              "ggplot2",
+              "ggplot2-themes",
+              "lgbt",
+              "palettes",
+              "pride",
+              "pride-flags",
+              "r"
+            ],
+            "visibility": "public",
+            "forks": 0,
+            "open_issues": 9,
+            "watchers": 4,
+            "default_branch": "master"
+          },
+          {
+            "id": 487333731,
+            "node_id": "R_kgDOHQwfYw",
+            "name": "ggpizza",
+            "full_name": "turtletopia/ggpizza",
+            "private": false,
+            "owner": {
+              "login": "turtletopia",
+              "id": 103829938,
+              "node_id": "O_kgDOBjBRsg",
+              "avatar_url": "https://avatars.githubusercontent.com/u/103829938?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/turtletopia",
+              "html_url": "https://github.com/turtletopia",
+              "followers_url": "https://api.github.com/users/turtletopia/followers",
+              "following_url": "https://api.github.com/users/turtletopia/following{/other_user}",
+              "gists_url": "https://api.github.com/users/turtletopia/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/turtletopia/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/turtletopia/subscriptions",
+              "organizations_url": "https://api.github.com/users/turtletopia/orgs",
+              "repos_url": "https://api.github.com/users/turtletopia/repos",
+              "events_url": "https://api.github.com/users/turtletopia/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/turtletopia/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/turtletopia/ggpizza",
+            "description": "Makes GG Pizza Points",
+            "fork": false,
+            "url": "https://api.github.com/repos/turtletopia/ggpizza",
+            "forks_url": "https://api.github.com/repos/turtletopia/ggpizza/forks",
+            "keys_url": "https://api.github.com/repos/turtletopia/ggpizza/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/turtletopia/ggpizza/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/turtletopia/ggpizza/teams",
+            "hooks_url": "https://api.github.com/repos/turtletopia/ggpizza/hooks",
+            "issue_events_url": "https://api.github.com/repos/turtletopia/ggpizza/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/turtletopia/ggpizza/events",
+            "assignees_url": "https://api.github.com/repos/turtletopia/ggpizza/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/turtletopia/ggpizza/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/turtletopia/ggpizza/tags",
+            "blobs_url": "https://api.github.com/repos/turtletopia/ggpizza/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/turtletopia/ggpizza/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/turtletopia/ggpizza/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/turtletopia/ggpizza/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/turtletopia/ggpizza/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/turtletopia/ggpizza/languages",
+            "stargazers_url": "https://api.github.com/repos/turtletopia/ggpizza/stargazers",
+            "contributors_url": "https://api.github.com/repos/turtletopia/ggpizza/contributors",
+            "subscribers_url": "https://api.github.com/repos/turtletopia/ggpizza/subscribers",
+            "subscription_url": "https://api.github.com/repos/turtletopia/ggpizza/subscription",
+            "commits_url": "https://api.github.com/repos/turtletopia/ggpizza/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/turtletopia/ggpizza/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/turtletopia/ggpizza/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/turtletopia/ggpizza/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/turtletopia/ggpizza/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/turtletopia/ggpizza/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/turtletopia/ggpizza/merges",
+            "archive_url": "https://api.github.com/repos/turtletopia/ggpizza/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/turtletopia/ggpizza/downloads",
+            "issues_url": "https://api.github.com/repos/turtletopia/ggpizza/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/turtletopia/ggpizza/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/turtletopia/ggpizza/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/turtletopia/ggpizza/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/turtletopia/ggpizza/labels{/name}",
+            "releases_url": "https://api.github.com/repos/turtletopia/ggpizza/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/turtletopia/ggpizza/deployments",
+            "created_at": "2022-04-30T17:01:03Z",
+            "updated_at": "2022-05-05T16:07:58Z",
+            "pushed_at": "2022-05-04T14:59:55Z",
+            "git_url": "git://github.com/turtletopia/ggpizza.git",
+            "ssh_url": "git@github.com:turtletopia/ggpizza.git",
+            "clone_url": "https://github.com/turtletopia/ggpizza.git",
+            "svn_url": "https://github.com/turtletopia/ggpizza",
+            "homepage": "",
+            "size": 52,
+            "stargazers_count": 2,
+            "watchers_count": 2,
+            "language": "R",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "forks_count": 0,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 0,
+            "license": null,
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+
+            ],
+            "visibility": "public",
+            "forks": 0,
+            "open_issues": 0,
+            "watchers": 2,
+            "default_branch": "master"
+          },
+          {
+            "id": 491115408,
+            "node_id": "R_kgDOHUXTkA",
+            "name": "simpleprogress",
+            "full_name": "turtletopia/simpleprogress",
+            "private": false,
+            "owner": {
+              "login": "turtletopia",
+              "id": 103829938,
+              "node_id": "O_kgDOBjBRsg",
+              "avatar_url": "https://avatars.githubusercontent.com/u/103829938?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/turtletopia",
+              "html_url": "https://github.com/turtletopia",
+              "followers_url": "https://api.github.com/users/turtletopia/followers",
+              "following_url": "https://api.github.com/users/turtletopia/following{/other_user}",
+              "gists_url": "https://api.github.com/users/turtletopia/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/turtletopia/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/turtletopia/subscriptions",
+              "organizations_url": "https://api.github.com/users/turtletopia/orgs",
+              "repos_url": "https://api.github.com/users/turtletopia/repos",
+              "events_url": "https://api.github.com/users/turtletopia/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/turtletopia/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/turtletopia/simpleprogress",
+            "description": null,
+            "fork": false,
+            "url": "https://api.github.com/repos/turtletopia/simpleprogress",
+            "forks_url": "https://api.github.com/repos/turtletopia/simpleprogress/forks",
+            "keys_url": "https://api.github.com/repos/turtletopia/simpleprogress/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/turtletopia/simpleprogress/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/turtletopia/simpleprogress/teams",
+            "hooks_url": "https://api.github.com/repos/turtletopia/simpleprogress/hooks",
+            "issue_events_url": "https://api.github.com/repos/turtletopia/simpleprogress/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/turtletopia/simpleprogress/events",
+            "assignees_url": "https://api.github.com/repos/turtletopia/simpleprogress/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/turtletopia/simpleprogress/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/turtletopia/simpleprogress/tags",
+            "blobs_url": "https://api.github.com/repos/turtletopia/simpleprogress/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/turtletopia/simpleprogress/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/turtletopia/simpleprogress/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/turtletopia/simpleprogress/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/turtletopia/simpleprogress/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/turtletopia/simpleprogress/languages",
+            "stargazers_url": "https://api.github.com/repos/turtletopia/simpleprogress/stargazers",
+            "contributors_url": "https://api.github.com/repos/turtletopia/simpleprogress/contributors",
+            "subscribers_url": "https://api.github.com/repos/turtletopia/simpleprogress/subscribers",
+            "subscription_url": "https://api.github.com/repos/turtletopia/simpleprogress/subscription",
+            "commits_url": "https://api.github.com/repos/turtletopia/simpleprogress/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/turtletopia/simpleprogress/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/turtletopia/simpleprogress/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/turtletopia/simpleprogress/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/turtletopia/simpleprogress/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/turtletopia/simpleprogress/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/turtletopia/simpleprogress/merges",
+            "archive_url": "https://api.github.com/repos/turtletopia/simpleprogress/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/turtletopia/simpleprogress/downloads",
+            "issues_url": "https://api.github.com/repos/turtletopia/simpleprogress/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/turtletopia/simpleprogress/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/turtletopia/simpleprogress/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/turtletopia/simpleprogress/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/turtletopia/simpleprogress/labels{/name}",
+            "releases_url": "https://api.github.com/repos/turtletopia/simpleprogress/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/turtletopia/simpleprogress/deployments",
+            "created_at": "2022-05-11T13:07:33Z",
+            "updated_at": "2022-05-17T13:02:07Z",
+            "pushed_at": "2022-05-11T21:04:54Z",
+            "git_url": "git://github.com/turtletopia/simpleprogress.git",
+            "ssh_url": "git@github.com:turtletopia/simpleprogress.git",
+            "clone_url": "https://github.com/turtletopia/simpleprogress.git",
+            "svn_url": "https://github.com/turtletopia/simpleprogress",
+            "homepage": "",
+            "size": 17,
+            "stargazers_count": 2,
+            "watchers_count": 2,
+            "language": null,
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": false,
+            "has_pages": false,
+            "forks_count": 0,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 0,
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            },
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+
+            ],
+            "visibility": "public",
+            "forks": 0,
+            "open_issues": 0,
+            "watchers": 2,
+            "default_branch": "master"
+          },
+          {
+            "id": 493848614,
+            "node_id": "R_kgDOHW-IJg",
+            "name": "turtletopia.github.io",
+            "full_name": "turtletopia/turtletopia.github.io",
+            "private": false,
+            "owner": {
+              "login": "turtletopia",
+              "id": 103829938,
+              "node_id": "O_kgDOBjBRsg",
+              "avatar_url": "https://avatars.githubusercontent.com/u/103829938?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/turtletopia",
+              "html_url": "https://github.com/turtletopia",
+              "followers_url": "https://api.github.com/users/turtletopia/followers",
+              "following_url": "https://api.github.com/users/turtletopia/following{/other_user}",
+              "gists_url": "https://api.github.com/users/turtletopia/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/turtletopia/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/turtletopia/subscriptions",
+              "organizations_url": "https://api.github.com/users/turtletopia/orgs",
+              "repos_url": "https://api.github.com/users/turtletopia/repos",
+              "events_url": "https://api.github.com/users/turtletopia/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/turtletopia/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/turtletopia/turtletopia.github.io",
+            "description": null,
+            "fork": false,
+            "url": "https://api.github.com/repos/turtletopia/turtletopia.github.io",
+            "forks_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/forks",
+            "keys_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/teams",
+            "hooks_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/hooks",
+            "issue_events_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/events",
+            "assignees_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/tags",
+            "blobs_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/languages",
+            "stargazers_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/stargazers",
+            "contributors_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/contributors",
+            "subscribers_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/subscribers",
+            "subscription_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/subscription",
+            "commits_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/merges",
+            "archive_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/downloads",
+            "issues_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/labels{/name}",
+            "releases_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/turtletopia/turtletopia.github.io/deployments",
+            "created_at": "2022-05-18T22:51:58Z",
+            "updated_at": "2022-07-01T12:58:54Z",
+            "pushed_at": "2022-08-18T07:14:12Z",
+            "git_url": "git://github.com/turtletopia/turtletopia.github.io.git",
+            "ssh_url": "git@github.com:turtletopia/turtletopia.github.io.git",
+            "clone_url": "https://github.com/turtletopia/turtletopia.github.io.git",
+            "svn_url": "https://github.com/turtletopia/turtletopia.github.io",
+            "homepage": "",
+            "size": 713,
+            "stargazers_count": 0,
+            "watchers_count": 0,
+            "language": "HTML",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 2,
+            "license": null,
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+
+            ],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 2,
+            "watchers": 0,
+            "default_branch": "master"
+          },
+          {
+            "id": 482338843,
+            "node_id": "R_kgDOHL_oGw",
+            "name": "universe",
+            "full_name": "turtletopia/universe",
+            "private": false,
+            "owner": {
+              "login": "turtletopia",
+              "id": 103829938,
+              "node_id": "O_kgDOBjBRsg",
+              "avatar_url": "https://avatars.githubusercontent.com/u/103829938?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/turtletopia",
+              "html_url": "https://github.com/turtletopia",
+              "followers_url": "https://api.github.com/users/turtletopia/followers",
+              "following_url": "https://api.github.com/users/turtletopia/following{/other_user}",
+              "gists_url": "https://api.github.com/users/turtletopia/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/turtletopia/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/turtletopia/subscriptions",
+              "organizations_url": "https://api.github.com/users/turtletopia/orgs",
+              "repos_url": "https://api.github.com/users/turtletopia/repos",
+              "events_url": "https://api.github.com/users/turtletopia/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/turtletopia/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/turtletopia/universe",
+            "description": null,
+            "fork": false,
+            "url": "https://api.github.com/repos/turtletopia/universe",
+            "forks_url": "https://api.github.com/repos/turtletopia/universe/forks",
+            "keys_url": "https://api.github.com/repos/turtletopia/universe/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/turtletopia/universe/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/turtletopia/universe/teams",
+            "hooks_url": "https://api.github.com/repos/turtletopia/universe/hooks",
+            "issue_events_url": "https://api.github.com/repos/turtletopia/universe/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/turtletopia/universe/events",
+            "assignees_url": "https://api.github.com/repos/turtletopia/universe/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/turtletopia/universe/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/turtletopia/universe/tags",
+            "blobs_url": "https://api.github.com/repos/turtletopia/universe/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/turtletopia/universe/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/turtletopia/universe/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/turtletopia/universe/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/turtletopia/universe/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/turtletopia/universe/languages",
+            "stargazers_url": "https://api.github.com/repos/turtletopia/universe/stargazers",
+            "contributors_url": "https://api.github.com/repos/turtletopia/universe/contributors",
+            "subscribers_url": "https://api.github.com/repos/turtletopia/universe/subscribers",
+            "subscription_url": "https://api.github.com/repos/turtletopia/universe/subscription",
+            "commits_url": "https://api.github.com/repos/turtletopia/universe/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/turtletopia/universe/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/turtletopia/universe/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/turtletopia/universe/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/turtletopia/universe/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/turtletopia/universe/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/turtletopia/universe/merges",
+            "archive_url": "https://api.github.com/repos/turtletopia/universe/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/turtletopia/universe/downloads",
+            "issues_url": "https://api.github.com/repos/turtletopia/universe/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/turtletopia/universe/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/turtletopia/universe/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/turtletopia/universe/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/turtletopia/universe/labels{/name}",
+            "releases_url": "https://api.github.com/repos/turtletopia/universe/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/turtletopia/universe/deployments",
+            "created_at": "2022-04-16T19:05:47Z",
+            "updated_at": "2022-04-16T19:05:47Z",
+            "pushed_at": "2022-04-30T20:32:59Z",
+            "git_url": "git://github.com/turtletopia/universe.git",
+            "ssh_url": "git@github.com:turtletopia/universe.git",
+            "clone_url": "https://github.com/turtletopia/universe.git",
+            "svn_url": "https://github.com/turtletopia/universe",
+            "homepage": null,
+            "size": 1,
+            "stargazers_count": 0,
+            "watchers_count": 0,
+            "language": null,
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 1,
+            "license": null,
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+
+            ],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 1,
+            "watchers": 0,
+            "default_branch": "main"
+          },
+          {
+            "id": 438610328,
+            "node_id": "R_kgDOGiSpmA",
+            "name": "versionsort",
+            "full_name": "turtletopia/versionsort",
+            "private": false,
+            "owner": {
+              "login": "turtletopia",
+              "id": 103829938,
+              "node_id": "O_kgDOBjBRsg",
+              "avatar_url": "https://avatars.githubusercontent.com/u/103829938?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/turtletopia",
+              "html_url": "https://github.com/turtletopia",
+              "followers_url": "https://api.github.com/users/turtletopia/followers",
+              "following_url": "https://api.github.com/users/turtletopia/following{/other_user}",
+              "gists_url": "https://api.github.com/users/turtletopia/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/turtletopia/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/turtletopia/subscriptions",
+              "organizations_url": "https://api.github.com/users/turtletopia/orgs",
+              "repos_url": "https://api.github.com/users/turtletopia/repos",
+              "events_url": "https://api.github.com/users/turtletopia/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/turtletopia/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/turtletopia/versionsort",
+            "description": "Sorting version codes for R",
+            "fork": false,
+            "url": "https://api.github.com/repos/turtletopia/versionsort",
+            "forks_url": "https://api.github.com/repos/turtletopia/versionsort/forks",
+            "keys_url": "https://api.github.com/repos/turtletopia/versionsort/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/turtletopia/versionsort/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/turtletopia/versionsort/teams",
+            "hooks_url": "https://api.github.com/repos/turtletopia/versionsort/hooks",
+            "issue_events_url": "https://api.github.com/repos/turtletopia/versionsort/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/turtletopia/versionsort/events",
+            "assignees_url": "https://api.github.com/repos/turtletopia/versionsort/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/turtletopia/versionsort/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/turtletopia/versionsort/tags",
+            "blobs_url": "https://api.github.com/repos/turtletopia/versionsort/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/turtletopia/versionsort/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/turtletopia/versionsort/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/turtletopia/versionsort/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/turtletopia/versionsort/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/turtletopia/versionsort/languages",
+            "stargazers_url": "https://api.github.com/repos/turtletopia/versionsort/stargazers",
+            "contributors_url": "https://api.github.com/repos/turtletopia/versionsort/contributors",
+            "subscribers_url": "https://api.github.com/repos/turtletopia/versionsort/subscribers",
+            "subscription_url": "https://api.github.com/repos/turtletopia/versionsort/subscription",
+            "commits_url": "https://api.github.com/repos/turtletopia/versionsort/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/turtletopia/versionsort/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/turtletopia/versionsort/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/turtletopia/versionsort/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/turtletopia/versionsort/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/turtletopia/versionsort/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/turtletopia/versionsort/merges",
+            "archive_url": "https://api.github.com/repos/turtletopia/versionsort/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/turtletopia/versionsort/downloads",
+            "issues_url": "https://api.github.com/repos/turtletopia/versionsort/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/turtletopia/versionsort/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/turtletopia/versionsort/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/turtletopia/versionsort/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/turtletopia/versionsort/labels{/name}",
+            "releases_url": "https://api.github.com/repos/turtletopia/versionsort/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/turtletopia/versionsort/deployments",
+            "created_at": "2021-12-15T11:49:29Z",
+            "updated_at": "2022-08-06T12:11:11Z",
+            "pushed_at": "2022-07-02T08:44:40Z",
+            "git_url": "git://github.com/turtletopia/versionsort.git",
+            "ssh_url": "git@github.com:turtletopia/versionsort.git",
+            "clone_url": "https://github.com/turtletopia/versionsort.git",
+            "svn_url": "https://github.com/turtletopia/versionsort",
+            "homepage": "",
+            "size": 68,
+            "stargazers_count": 6,
+            "watchers_count": 6,
+            "language": "R",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": false,
+            "has_pages": false,
+            "forks_count": 0,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 8,
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            },
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+              "natural-sort",
+              "r",
+              "version-code"
+            ],
+            "visibility": "public",
+            "forks": 0,
+            "open_issues": 8,
+            "watchers": 6,
+            "default_branch": "master"
+          },
+          {
+            "id": 479397856,
+            "node_id": "R_kgDOHJMH4A",
+            "name": "woodendesc",
+            "full_name": "turtletopia/woodendesc",
+            "private": false,
+            "owner": {
+              "login": "turtletopia",
+              "id": 103829938,
+              "node_id": "O_kgDOBjBRsg",
+              "avatar_url": "https://avatars.githubusercontent.com/u/103829938?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/turtletopia",
+              "html_url": "https://github.com/turtletopia",
+              "followers_url": "https://api.github.com/users/turtletopia/followers",
+              "following_url": "https://api.github.com/users/turtletopia/following{/other_user}",
+              "gists_url": "https://api.github.com/users/turtletopia/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/turtletopia/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/turtletopia/subscriptions",
+              "organizations_url": "https://api.github.com/users/turtletopia/orgs",
+              "repos_url": "https://api.github.com/users/turtletopia/repos",
+              "events_url": "https://api.github.com/users/turtletopia/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/turtletopia/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/turtletopia/woodendesc",
+            "description": "Get the available packages and their version codes as well as their dependencies from any R repository with unified API.",
+            "fork": false,
+            "url": "https://api.github.com/repos/turtletopia/woodendesc",
+            "forks_url": "https://api.github.com/repos/turtletopia/woodendesc/forks",
+            "keys_url": "https://api.github.com/repos/turtletopia/woodendesc/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/turtletopia/woodendesc/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/turtletopia/woodendesc/teams",
+            "hooks_url": "https://api.github.com/repos/turtletopia/woodendesc/hooks",
+            "issue_events_url": "https://api.github.com/repos/turtletopia/woodendesc/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/turtletopia/woodendesc/events",
+            "assignees_url": "https://api.github.com/repos/turtletopia/woodendesc/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/turtletopia/woodendesc/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/turtletopia/woodendesc/tags",
+            "blobs_url": "https://api.github.com/repos/turtletopia/woodendesc/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/turtletopia/woodendesc/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/turtletopia/woodendesc/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/turtletopia/woodendesc/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/turtletopia/woodendesc/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/turtletopia/woodendesc/languages",
+            "stargazers_url": "https://api.github.com/repos/turtletopia/woodendesc/stargazers",
+            "contributors_url": "https://api.github.com/repos/turtletopia/woodendesc/contributors",
+            "subscribers_url": "https://api.github.com/repos/turtletopia/woodendesc/subscribers",
+            "subscription_url": "https://api.github.com/repos/turtletopia/woodendesc/subscription",
+            "commits_url": "https://api.github.com/repos/turtletopia/woodendesc/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/turtletopia/woodendesc/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/turtletopia/woodendesc/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/turtletopia/woodendesc/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/turtletopia/woodendesc/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/turtletopia/woodendesc/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/turtletopia/woodendesc/merges",
+            "archive_url": "https://api.github.com/repos/turtletopia/woodendesc/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/turtletopia/woodendesc/downloads",
+            "issues_url": "https://api.github.com/repos/turtletopia/woodendesc/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/turtletopia/woodendesc/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/turtletopia/woodendesc/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/turtletopia/woodendesc/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/turtletopia/woodendesc/labels{/name}",
+            "releases_url": "https://api.github.com/repos/turtletopia/woodendesc/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/turtletopia/woodendesc/deployments",
+            "created_at": "2022-04-08T13:17:26Z",
+            "updated_at": "2022-08-04T17:48:01Z",
+            "pushed_at": "2022-08-25T21:12:41Z",
+            "git_url": "git://github.com/turtletopia/woodendesc.git",
+            "ssh_url": "git@github.com:turtletopia/woodendesc.git",
+            "clone_url": "https://github.com/turtletopia/woodendesc.git",
+            "svn_url": "https://github.com/turtletopia/woodendesc",
+            "homepage": "",
+            "size": 4130,
+            "stargazers_count": 2,
+            "watchers_count": 2,
+            "language": "R",
+            "has_issues": true,
+            "has_projects": true,
+            "has_downloads": true,
+            "has_wiki": true,
+            "has_pages": false,
+            "forks_count": 0,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 8,
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            },
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+              "available-packages",
+              "available-versions",
+              "dependencies",
+              "r",
+              "unified-api"
+            ],
+            "visibility": "public",
+            "forks": 0,
+            "open_issues": 8,
+            "watchers": 2,
+            "default_branch": "master"
+          }
+        ]
+  recorded_at: 2022-08-27 13:33:47 GMT
+  recorded_with: vcr/1.0.2.95, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/gglgbtq/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '413'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"c73bcd981e013fdf79aa122ccc75880d6d5dcc9b48cef34a653c0f0bea5c5fd8"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: 109E:5DC4:B023A8:BBA349:630A1D3A
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Sat, 27 Aug 2022 13:33:46 GMT
+      via: 1.1 varnish
+      x-served-by: cache-fra19130-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1661607226.001691,VS0,VE285
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 998afb39316b87a4c8fb13a1f2297ec3327551a9
+      expires: Sat, 27 Aug 2022 13:38:46 GMT
+      source-age: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "Package: gglgbtq\nType: Package\nTitle: Show Pride on 'ggplot2' Plots\nVersion:
+        0.1.0\nDate: 2022-08-06\nAuthors@R: c(person(\"Laura\", \"Bakala\",\n             email
+        = \"erdaradun.gaztea@gmail.com\",\n             role = c(\"cre\", \"aut\",
+        \"cph\")))\nDescription: Provides multiple palettes based on pride flags with
+        tailored themes.\nImports: \n    ggplot2,\n    graphics,\n    grDevices\nSuggests:
+        \n    spelling,\n    testthat (>= 3.0.0)\nLicense: GPL (>= 3)\nEncoding: UTF-8\nRoxygen:
+        list(markdown = TRUE)\nRoxygenNote: 7.1.2\nConfig/testthat/edition: 3\nURL:
+        https://github.com/turtletopia/gglgbtq\nLanguage: en-US\n"
+  recorded_at: 2022-08-27 13:33:47 GMT
+  recorded_with: vcr/1.0.2.95, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/ggpizza/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '365'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"d2deacb8f93f5e2db34cffbeb8f40f7a5779487418ebd82d398838c5f8695758"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: DD14:580A:3B3550:4CCA8D:630A1D3A
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Sat, 27 Aug 2022 13:33:46 GMT
+      via: 1.1 varnish
+      x-served-by: cache-fra19130-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1661607226.358049,VS0,VE186
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 25743a98591d2f4bc417c537b58fce40eb95c9bf
+      expires: Sat, 27 Aug 2022 13:38:46 GMT
+      source-age: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "Package: ggpizza\nTitle: Makes Points Which Are Pizza\nVersion: 0.1.0\nAuthors@R:
+        \n    person(\"Dominik\", \"Rafacz\", \n        email = \"dominikrafacz@gmail.com\",\n
+        \       comment = c(ORCID = \"0000-0003-0925-1909\"),\n        role = c(\"cre\",
+        \"aut\"))\nDescription: Makes pizza. Will expand that later\nLicense: `use_mit_license()`,
+        `use_gpl3_license()` or friends to pick a\n    license\nEncoding: UTF-8\nRoxygen:
+        list(markdown = TRUE)\nRoxygenNote: 7.1.2\nImports: \n    ggplot2,\n    dplyr\nURL:
+        https://github.com/turtletopia/ggpizza\n"
+  recorded_at: 2022-08-27 13:33:47 GMT
+  recorded_with: vcr/1.0.2.95, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/simpleprogress/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      connection: keep-alive
+      content-length: '14'
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-type: text/plain; charset=utf-8
+      x-github-request-id: 2D3A:BBA3:AEA113:C22019:630A1D3A
+      accept-ranges: bytes
+      date: Sat, 27 Aug 2022 13:33:46 GMT
+      via: 1.1 varnish
+      x-served-by: cache-fra19130-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1661607227.600104,VS0,VE170
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: dbf07266a741722750ba66fbf99f00758bc6e849
+      expires: Sat, 27 Aug 2022 13:38:46 GMT
+      source-age: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '404: Not Found'
+  recorded_at: 2022-08-27 13:33:47 GMT
+  recorded_with: vcr/1.0.2.95, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/turtletopia.github.io/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      connection: keep-alive
+      content-length: '14'
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-type: text/plain; charset=utf-8
+      x-github-request-id: 7806:3A3A:1304DD2:14408B1:630A1D3A
+      accept-ranges: bytes
+      date: Sat, 27 Aug 2022 13:33:47 GMT
+      via: 1.1 varnish
+      x-served-by: cache-fra19130-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1661607227.819728,VS0,VE189
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 2573d64299fb5a2e1d2e2f0c0efea6d14386a892
+      expires: Sat, 27 Aug 2022 13:38:47 GMT
+      source-age: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '404: Not Found'
+  recorded_at: 2022-08-27 13:33:47 GMT
+  recorded_with: vcr/1.0.2.95, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/universe/main/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      connection: keep-alive
+      content-length: '14'
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-type: text/plain; charset=utf-8
+      x-github-request-id: B286:9E29:8101DD:906DDF:630A1D3B
+      accept-ranges: bytes
+      date: Sat, 27 Aug 2022 13:33:47 GMT
+      via: 1.1 varnish
+      x-served-by: cache-fra19130-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1661607227.057802,VS0,VE162
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: eed0ef658549abd25190dad540f3770885aec1cd
+      expires: Sat, 27 Aug 2022 13:38:47 GMT
+      source-age: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '404: Not Found'
+  recorded_at: 2022-08-27 13:33:47 GMT
+  recorded_with: vcr/1.0.2.95, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/versionsort/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '403'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"b1ec1a38f7890dd71a4bf3132d7f3e68b2c02d3763a8c9eee8ca83ceaf34d5a6"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: B9DA:114DB:3BC6C5:406F6F:630A1D3B
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Sat, 27 Aug 2022 13:33:47 GMT
+      via: 1.1 varnish
+      x-served-by: cache-fra19130-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1661607227.271853,VS0,VE213
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: eb24eb0cd60e63d1da2b3af2aa6bf7d8889d5009
+      expires: Sat, 27 Aug 2022 13:38:47 GMT
+      source-age: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "Package: versionsort\nType: Package\nTitle: Sort and Order Version
+        Codes\nVersion: 1.1.0\nDate: 2022-03-23\nAuthors@R: c(person(\"Laura\", \"Bakala\",\n
+        \            email = \"erdaradun.gaztea@gmail.com\",\n             role =
+        c(\"cre\", \"aut\", \"cph\")))\nDescription: A lightweight package for sorting
+        version codes in various forms. No strong dependencies guaranteed.\nLicense:
+        GPL (>= 3)\nEncoding: UTF-8\nRoxygen: list(markdown = TRUE)\nRoxygenNote:
+        7.1.2\nSuggests: \n    covr,\n    spelling,\n    testthat (>= 3.0.0)\nURL:
+        https://github.com/turtletopia/versionsort\nConfig/testthat/edition: 3\nLanguage:
+        en-US\n"
+  recorded_at: 2022-08-27 13:33:47 GMT
+  recorded_with: vcr/1.0.2.95, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/woodendesc/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '523'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"ef7aecd2a3773f5ca54353694c8dfb3e52b8f593423f3cf8147af65edc45e648"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: 76EC:5664:FBB326:10D6A1D:630A1D3B
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Sat, 27 Aug 2022 13:33:47 GMT
+      via: 1.1 varnish
+      x-served-by: cache-fra19130-FRA
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1661607228.543720,VS0,VE157
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: bed69217109ee5750b940476c65a6ff39b4c5ce9
+      expires: Sat, 27 Aug 2022 13:38:47 GMT
+      source-age: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "Package: woodendesc\nType: Package\nTitle: Query Any R Repository for
+        Available Packages and Their Dependencies\nVersion: 0.1.0\nDate: 2022-04-08\nAuthors@R:
+        c(person(\"Laura\", \"Bakala\",\n             email = \"erdaradun.gaztea@gmail.com\",\n
+        \            role = c(\"cre\", \"aut\", \"cph\"),\n             comment =
+        c(ORCID = \"0000-0002-3213-2484\")))\nDescription: Get the available packages
+        and their version codes as well as their dependencies from any R repository
+        with unified API. Uses extensive caching for repeated queries.\nLicense: GPL
+        (>= 3)\nEncoding: UTF-8\nRoxygen: list(markdown = TRUE)\nRoxygenNote: 7.1.2\nDepends:\n
+        \   R (>= 3.5.0)\nImports: \n    digest,\n    httr,\n    versionsort (>= 1.1.0)\nSuggests:
+        \n    httptest,\n    testthat (>= 3.0.0),\n    usethis,\n    vcr,\n    withr,\n
+        \   xml2\nConfig/testthat/edition: 3\nURL: https://github.com/turtletopia/woodendesc\n"
+  recorded_at: 2022-08-27 13:33:47 GMT
+  recorded_with: vcr/1.0.2.95, webmockr/0.8.0
