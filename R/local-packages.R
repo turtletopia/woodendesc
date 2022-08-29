@@ -17,6 +17,8 @@
 #' @family packages
 #' @export
 wood_local_packages <- function(paths = .libPaths()[1]) {
+  assert_param_paths(paths)
+
   paths <- match_local_paths_args(paths)
   unique(list.dirs(paths, full.names = FALSE, recursive = FALSE))
 }

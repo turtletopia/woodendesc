@@ -22,6 +22,7 @@
 #' @export
 wood_local_dependencies <- function(package, paths = .libPaths()[1]) {
   assert_param_package(package)
+  assert_param_paths(paths)
 
   paths <- match_local_paths_args(paths)
   # Find first path for which DESCRIPTION exists

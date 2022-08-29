@@ -37,3 +37,21 @@ assert_no_NA <- function(object, label) {
     stop(msg, call. = FALSE)
   }
 }
+
+# CUSTOM ASSERTIONS ----
+assert_all_or_paths <- function(object, label) {
+  if (length(object) > 1 && any(object == "all")) {
+    locations <- which(object == "all")
+    msg <- sprintf(
+      c("`%1$s` must not contain both \"all\" and paths.\n",
+        "(i) You can specify either \"all\" or paths, not both\n",
+        "(i) \"all\" found at %2$s: %3$s\n",
+        "(i) Vector length is %4$i"),
+      label,
+      ngettext(length(locations), "location", "locations"),
+      collapse_comma(locations),
+      length(object)
+    )
+    stop(msg, call. = FALSE)
+  }
+}
