@@ -56,6 +56,35 @@ test_param_runiverse <- function(tested_function, ...) {
   })
 }
 
+test_param_url_repo <- function(tested_function, ...) {
+  test_that("`repository` must be a character vector", {
+    expect_error(
+      tested_function(repository = 1, ...),
+      "`repository` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(repository = list(), ...),
+      "`repository` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`repository` must have length 1", {
+    expect_error(
+      tested_function(repository = letters, ...),
+      sprintf("`repository` must have length 1, not %i.", length(letters)),
+      fixed = TRUE
+    )
+  })
+
+  test_that("`repository` must not be NA", {
+    expect_error(
+      tested_function(repository = NA_character_, ...),
+      "`repository` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+}
+
 test_param_paths <- function(tested_function, ...) {
   test_that("`paths` must be a character vector", {
     expect_error(

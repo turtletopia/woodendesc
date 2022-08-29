@@ -15,6 +15,7 @@ test_cache(
   wood_url_dependencies, RGD_deps, "RGraphicsDevice", "http://www.omegahat.net/R"
 )
 test_param_package(wood_url_dependencies, repository = "http://www.omegahat.net/R")
+test_param_url_repo(wood_url_dependencies, package = "RGraphicsDevice")
 
 test_that("raises an exception if package not available", {
   expect_error(wood_url_dependencies(

@@ -10,6 +10,7 @@ vcr::use_cassette("omegahat-packages", {
 # TESTS ----
 test_packages(omegahat_packages)
 test_cache(wood_url_packages, omegahat_packages, "http://www.omegahat.net/R")
+test_param_url_repo(wood_url_packages)
 
 test_that("Omega repository has RGraphicsDevice package", {
   expect_subset("RGraphicsDevice", omegahat_packages)
