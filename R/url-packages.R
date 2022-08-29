@@ -20,6 +20,8 @@
 #' @family packages
 #' @export
 wood_url_packages <- function(repository) {
+  assert_param_url_repo(repository)
+
   packages <- vapply(
     url_PACKAGES_cache(repository), `[[`, character(1), "Package"
   )

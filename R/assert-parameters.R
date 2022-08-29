@@ -23,3 +23,9 @@ assert_param_bioc_release <- function(value) {
   assert_no_NA(value, "release")
   assert_keyword_or_release(value, "release")
 }
+
+assert_param_url_repo <- function(value) {
+  assert_string(value, "repository")
+  assert_length_1(value, "repository")
+  assert_no_NA(value, "repository")
+}

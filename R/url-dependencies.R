@@ -21,6 +21,7 @@
 #' @export
 wood_url_dependencies <- function(package, repository) {
   assert_param_package(package)
+  assert_param_url_repo(repository)
 
   desc <- url_PACKAGES_cache(repository)[[package]]
 
