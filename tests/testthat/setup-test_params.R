@@ -27,6 +27,35 @@ test_param_package <- function(tested_function, ...) {
   })
 }
 
+test_param_version <- function(tested_function, ...) {
+  test_that("`version` must be a character vector", {
+    expect_error(
+      tested_function(version = 1, ...),
+      "`version` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(version = list(), ...),
+      "`version` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`version` must have length 1", {
+    expect_error(
+      tested_function(version = letters, ...),
+      sprintf("`version` must have length 1, not %i.", length(letters)),
+      fixed = TRUE
+    )
+  })
+
+  test_that("`version` must not be NA", {
+    expect_error(
+      tested_function(version = NA_character_, ...),
+      "`version` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+}
+
 test_param_runiverse <- function(tested_function, ...) {
   test_that("`universe` must be a character vector", {
     expect_error(
