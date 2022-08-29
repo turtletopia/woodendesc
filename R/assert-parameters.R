@@ -35,3 +35,9 @@ assert_param_url_repo <- function(value) {
   assert_length_1(value, "repository")
   assert_no_NA(value, "repository")
 }
+
+assert_param_gh_user <- function(value) {
+  assert_string(value, "user")
+  assert_length_1(value, "user")
+  assert_no_NA(value, "user")
+}

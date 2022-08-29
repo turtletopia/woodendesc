@@ -22,6 +22,8 @@
 #' @family packages
 #' @export
 wood_github_packages <- function(user, include_forks = FALSE) {
+  assert_param_gh_user(user)
+
   repos <- github_packages_cache(user)
   if (!include_forks) {
     repos <- Filter(Negate(is_fork), repos)
