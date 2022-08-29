@@ -41,3 +41,9 @@ assert_param_gh_user <- function(value) {
   assert_length_1(value, "user")
   assert_no_NA(value, "user")
 }
+
+assert_param_include_forks <- function(value) {
+  assert_logical(value, "include_forks")
+  assert_length_1(value, "include_forks")
+  assert_no_NA(value, "include_forks")
+}

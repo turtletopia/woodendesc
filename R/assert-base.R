@@ -23,6 +23,14 @@ assert_string <- function(object, label) {
   }
 }
 
+assert_logical <- function(object, label) {
+  type <- typeof(object)
+  if (type != "logical") {
+    msg <- sprintf("`%s` must be a logical vector, not %s.", label, type)
+    stop(msg, call. = FALSE)
+  }
+}
+
 # MISSING VALUES ----
 assert_no_NA <- function(object, label) {
   if (anyNA(object)) {
