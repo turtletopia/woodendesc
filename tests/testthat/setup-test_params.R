@@ -92,3 +92,45 @@ test_param_paths <- function(tested_function, ...) {
     )
   })
 }
+
+test_param_bioc_release <- function(tested_function, ...) {
+  test_that("`release` must be a character vector", {
+    expect_error(
+      tested_function(release = 1, ...),
+      "`release` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(release = list(), ...),
+      "`release` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`release` must have length 1", {
+    expect_error(
+      tested_function(release = letters, ...),
+      sprintf("`release` must have length 1, not %i.", length(letters)),
+      fixed = TRUE
+    )
+  })
+
+  test_that("`release` must not be NA", {
+    expect_error(
+      tested_function(release = NA_character_, ...),
+      "`release` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`release` must be a release code or a keyword", {
+    expect_error(
+      tested_function(release = "1.10.0", ...),
+      "`release` must be a valid Bioconductor release code.",
+      fixed = TRUE
+    )
+    expect_error(
+      tested_function(release = "future", ...),
+      "`release` must be a valid Bioconductor release code.",
+      fixed = TRUE
+    )
+  })
+}
