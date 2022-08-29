@@ -82,10 +82,6 @@ bioc_release_url <- function(release = "release", ...) {
     if (!release %in% wood_bioc_releases()) {
       stop("Release code does not exist.", call. = FALSE)
     }
-  } else {
-    if (!grepl("^\\d+\\.\\d+$", release, perl = TRUE)) {
-      stop("Incorrectly formatted release code.", call. = FALSE)
-    }
   }
 
   if (ver_latest(c(release, "1.8")) == release) {
