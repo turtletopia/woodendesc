@@ -10,6 +10,7 @@ vcr::use_cassette("Biostrings-deps", {
 # TESTS ----
 test_dependencies(Biostrings_deps)
 test_cache(wood_bioc_dependencies, Biostrings_deps, "Biostrings")
+test_param_package(wood_bioc_dependencies)
 
 test_that("raises an exception if package not available", {
   expect_error(wood_bioc_dependencies("fakepackage"))

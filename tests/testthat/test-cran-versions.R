@@ -7,6 +7,8 @@ vcr::use_cassette("versionsort-versions", {
 })
 
 # TESTS ----
+test_param_package(wood_cran_versions)
+
 test_that("returns a vector of strings", {
   expect_vector(versionsort_versions,
                 ptype = character())

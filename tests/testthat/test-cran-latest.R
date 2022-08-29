@@ -9,3 +9,4 @@ vcr::use_cassette("versionsort-latest", {
 # TESTS ----
 test_version(versionsort_latest)
 test_cache(wood_cran_latest, versionsort_latest, "versionsort")
+test_param_package(wood_cran_latest)

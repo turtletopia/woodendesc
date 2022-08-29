@@ -10,7 +10,7 @@ test_param_package <- function(tested_function, ...) {
     )
   })
 
-  test_that("`package` must be length 1", {
+  test_that("`package` must have length 1", {
     expect_error(
       tested_function(package = letters, ...),
       sprintf("`package` must have length 1, not %i.", length(letters)),

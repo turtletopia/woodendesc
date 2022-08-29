@@ -5,6 +5,8 @@ lib_dir <- local_fake_library("fakepackage", "woodendesc")
 lib_dir_2 <- local_fake_library("fakepackage", "woodendesc", path = "fake_dir")
 
 # TESTS ----
+test_param_package(wood_local_versions)
+
 woodendesc_versions <- wood_local_versions("woodendesc")
 
 test_that("returns a vector of strings", {

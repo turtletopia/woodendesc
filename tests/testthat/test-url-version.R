@@ -13,6 +13,7 @@ test_version(RGD_version)
 test_cache(
   wood_url_version, RGD_version, "RGraphicsDevice", "http://www.omegahat.net/R"
 )
+test_param_package(wood_url_version, repository = "http://www.omegahat.net/R")
 
 test_that("raises an exception if package not available", {
   expect_error(wood_url_version("fakepackage", "http://www.omegahat.net/R"))

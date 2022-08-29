@@ -9,6 +9,7 @@ vcr::use_cassette("ggplot2-deps-tt", {
 # TESTS ----
 test_dependencies(ggplot2_deps)
 test_cache(wood_runiverse_dependencies, ggplot2_deps, "ggplot2", "tidyverse")
+test_param_package(wood_runiverse_dependencies, universe = "tidyverse")
 
 vcr::use_cassette("fakepackage-runiverse-deps", {
   test_that("raises an exception if package not available", {
