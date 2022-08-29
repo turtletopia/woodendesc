@@ -26,6 +26,8 @@
 #' @family packages
 #' @export
 wood_bioc_packages <- function(release = "release") {
+  assert_param_bioc_release(release)
+
   packages <- vapply(
     bioc_PACKAGES_cache(release), `[[`, character(1), "Package"
   )

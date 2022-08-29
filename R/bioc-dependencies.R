@@ -27,6 +27,7 @@
 #' @export
 wood_bioc_dependencies <- function(package, release = "release") {
   assert_param_package(package)
+  assert_param_bioc_release(release)
 
   desc <- bioc_PACKAGES_cache(release)[[package]]
 
