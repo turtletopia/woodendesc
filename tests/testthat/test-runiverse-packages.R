@@ -12,6 +12,7 @@ vcr::use_cassette("tidyverse-packages", {
 # TESTS ----
 test_packages(ropensci_packages)
 test_cache(wood_runiverse_packages, ropensci_packages, "ropensci")
+test_param_runiverse(wood_runiverse_packages)
 
 test_that("tidyverse universe has ggplot2 package", {
   expect_subset("ggplot2", tidyverse_packages)
