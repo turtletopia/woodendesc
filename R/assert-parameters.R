@@ -4,6 +4,12 @@ assert_param_package <- function(value) {
   assert_no_NA(value, "package")
 }
 
+assert_param_version <- function(value) {
+  assert_string(value, "version")
+  assert_length_1(value, "version")
+  assert_no_NA(value, "version")
+}
+
 assert_param_runiverse <- function(value) {
   assert_string(value, "universe")
   assert_length_1(value, "universe")
