@@ -221,3 +221,32 @@ test_param_gh_user <- function(tested_function, ...) {
     )
   })
 }
+
+test_param_include_forks <- function(tested_function, ...) {
+  test_that("`include_forks` must be a logical vector", {
+    expect_error(
+      tested_function(include_forks = "TRUE", ...),
+      "`include_forks` must be a logical vector, not .*"
+    )
+    expect_error(
+      tested_function(include_forks = list(), ...),
+      "`include_forks` must be a logical vector, not .*"
+    )
+  })
+
+  test_that("`include_forks` must have length 1", {
+    expect_error(
+      tested_function(include_forks = c(TRUE, FALSE, FALSE), ...),
+      "`include_forks` must have length 1, not 3.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`include_forks` must not be NA", {
+    expect_error(
+      tested_function(include_forks = NA, ...),
+      "`include_forks` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+}
