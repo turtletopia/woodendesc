@@ -6,6 +6,7 @@ lib_dir_2 <- local_fake_library("fakepackage", "woodendesc", path = "fake_dir")
 
 # TESTS ----
 test_param_package(wood_local_versions)
+test_param_paths(wood_local_versions, package = "woodendesc")
 
 woodendesc_versions <- wood_local_versions("woodendesc")
 

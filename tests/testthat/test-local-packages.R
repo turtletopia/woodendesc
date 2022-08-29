@@ -7,6 +7,7 @@ local_packages <- wood_local_packages()
 
 # TESTS ----
 test_packages(local_packages)
+test_param_paths(wood_local_packages)
 
 test_that("local packages include woodendesc package", {
   expect_subset("woodendesc", local_packages)

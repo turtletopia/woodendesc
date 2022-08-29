@@ -55,3 +55,40 @@ test_param_runiverse <- function(tested_function, ...) {
     )
   })
 }
+
+test_param_paths <- function(tested_function, ...) {
+  test_that("`paths` must be a character vector", {
+    expect_error(
+      tested_function(paths = 1, ...),
+      "`paths` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(paths = list(), ...),
+      "`paths` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`paths` must not be empty", {
+    expect_error(
+      tested_function(paths = character(), ...),
+      "`paths` must not be empty.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`paths` must not be NA", {
+    expect_error(
+      tested_function(paths = c(letters, NA_character_), ...),
+      "`paths` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`paths` cannot contain \"all\" mixed with paths", {
+    expect_error(
+      tested_function(paths = c("all", letters), ...),
+      "`paths` must not contain both \"all\" and paths.",
+      fixed = TRUE
+    )
+  })
+}
