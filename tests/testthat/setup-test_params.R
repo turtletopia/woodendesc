@@ -192,3 +192,32 @@ test_param_bioc_release <- function(tested_function, ...) {
     )
   })
 }
+
+test_param_gh_user <- function(tested_function, ...) {
+  test_that("`user` must be a character vector", {
+    expect_error(
+      tested_function(user = 1, ...),
+      "`user` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(user = list(), ...),
+      "`user` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`user` must have length 1", {
+    expect_error(
+      tested_function(user = letters, ...),
+      sprintf("`user` must have length 1, not %i.", length(letters)),
+      fixed = TRUE
+    )
+  })
+
+  test_that("`user` must not be NA", {
+    expect_error(
+      tested_function(user = NA_character_, ...),
+      "`user` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+}

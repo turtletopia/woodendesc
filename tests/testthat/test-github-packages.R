@@ -9,6 +9,7 @@ vcr::use_cassette("gh-turtletopia-packages", {
 # TESTS ----
 test_packages(turtletopia_packages)
 test_cache(wood_github_packages, turtletopia_packages, user = "turtletopia")
+test_param_gh_user(wood_github_packages)
 
 test_that("several packages make the list", {
   expect_subset(c("versionsort", "gglgbtq", "woodendesc"), turtletopia_packages)
