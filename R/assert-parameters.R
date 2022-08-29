@@ -16,3 +16,10 @@ assert_param_paths <- function(value) {
   assert_no_NA(value, "paths")
   assert_all_or_paths(value, "paths")
 }
+
+assert_param_bioc_release <- function(value) {
+  assert_string(value, "release")
+  assert_length_1(value, "release")
+  assert_no_NA(value, "release")
+  assert_keyword_or_release(value, "release")
+}

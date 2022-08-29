@@ -55,3 +55,18 @@ assert_all_or_paths <- function(object, label) {
     stop(msg, call. = FALSE)
   }
 }
+
+assert_keyword_or_release <- function(object, label) {
+  if (!object %in% c("release", "devel") &&
+      !grepl("^\\d+\\.\\d+$", object, perl = TRUE)) {
+    msg <- sprintf(
+      c("`%1$s` must be a valid Bioconductor release code.\n",
+        "(i) Received value is \"%2$s\"\n",
+        "(i) Valid codes are two number separated by a dot\n",
+        "(i) Alternatively, you can use \"release\" or \"devel\" keywords"),
+      label,
+      object
+    )
+    stop(msg, call. = FALSE)
+  }
+}
