@@ -7,6 +7,13 @@ assert_length_1 <- function(object, label) {
   }
 }
 
+assert_not_empty <- function(object, label) {
+  if (length(object) == 0) {
+    msg <- sprintf("`%s` must not be empty.", label)
+    stop(msg, call. = FALSE)
+  }
+}
+
 # TYPE ----
 assert_string <- function(object, label) {
   type <- typeof(object)
