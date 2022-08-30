@@ -28,6 +28,8 @@
 #' @family dependencies
 #' @export
 wood_dependencies <- function(packages, repos = "cran") {
+  assert_param_repos(repos)
+
   query_makers <- interpret_repos(repos, context = "dependencies")
 
   ret <- lapply(packages, function(package) {

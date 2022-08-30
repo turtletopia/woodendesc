@@ -10,6 +10,12 @@ assert_param_version <- function(value) {
   assert_no_NA(value, "version")
 }
 
+assert_param_repos <- function(value) {
+  assert_string(value, "repos")
+  assert_not_empty(value, "repos")
+  assert_no_NA(value, "repos")
+}
+
 assert_param_runiverse <- function(value) {
   assert_string(value, "universe")
   assert_length_1(value, "universe")
