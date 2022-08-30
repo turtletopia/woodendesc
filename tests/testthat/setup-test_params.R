@@ -85,6 +85,27 @@ test_param_repos <- function(tested_function, ...) {
   })
 }
 
+test_param_packages <- function(tested_function, ...) {
+  test_that("`packages` must be a character vector", {
+    expect_error(
+      tested_function(packages = 1, ...),
+      "`packages` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(packages = list(), ...),
+      "`packages` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`packages` must not be NA", {
+    expect_error(
+      tested_function(packages = c(letters, NA_character_), ...),
+      "`packages` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+}
+
 test_param_runiverse <- function(tested_function, ...) {
   test_that("`universe` must be a character vector", {
     expect_error(
