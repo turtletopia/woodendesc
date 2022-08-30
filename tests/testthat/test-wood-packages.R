@@ -12,6 +12,7 @@ vcr::use_cassette("wood-colinfay-packages", {
 
 # TESTS ----
 test_packages(packages)
+test_param_repos(wood_packages)
 
 test_that("uppercase in URL is preserved", {
   expect_not_empty(colinfay_packages)

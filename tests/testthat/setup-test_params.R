@@ -56,6 +56,35 @@ test_param_version <- function(tested_function, ...) {
   })
 }
 
+test_param_repos <- function(tested_function, ...) {
+  test_that("`repos` must be a character vector", {
+    expect_error(
+      tested_function(repos = 1, ...),
+      "`repos` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(repos = list(), ...),
+      "`repos` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`repos` must not be empty", {
+    expect_error(
+      tested_function(repos = character(), ...),
+      "`repos` must not be empty.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`repos` must not be NA", {
+    expect_error(
+      tested_function(repos = c(letters, NA_character_), ...),
+      "`repos` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+}
+
 test_param_runiverse <- function(tested_function, ...) {
   test_that("`universe` must be a character vector", {
     expect_error(
