@@ -16,6 +16,11 @@ assert_param_repos <- function(value) {
   assert_no_NA(value, "repos")
 }
 
+assert_param_packages <- function(value) {
+  assert_string(value, "packages")
+  assert_no_NA(value, "packages")
+}
+
 assert_param_runiverse <- function(value) {
   assert_string(value, "universe")
   assert_length_1(value, "universe")

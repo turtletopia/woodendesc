@@ -26,6 +26,7 @@
 #' @importFrom versionsort ver_sort
 #' @export
 wood_versions <- function(packages, repos = "cran") {
+  assert_param_packages(packages)
   assert_param_repos(repos)
 
   query_makers <- interpret_repos(repos, context = "version")
