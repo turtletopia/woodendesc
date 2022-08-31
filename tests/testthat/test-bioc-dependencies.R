@@ -14,7 +14,11 @@ test_param_package(wood_bioc_dependencies)
 test_param_bioc_release(wood_bioc_dependencies, package = "Biostrings")
 
 test_that("raises an exception if package not available", {
-  expect_error(wood_bioc_dependencies("fakepackage"))
+  expect_error(
+    wood_bioc_dependencies("fakepackage"),
+    "Can't find package `fakepackage` in Bioconductor release `release`.",
+    fixed = TRUE
+  )
 })
 
 vcr::use_cassette("Biostrings-deps-old", {

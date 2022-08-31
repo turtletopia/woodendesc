@@ -12,11 +12,15 @@ test_cache(wood_bioc_version, affy_version, "affy")
 test_param_package(wood_bioc_version)
 test_param_bioc_release(wood_bioc_version, package = "affy")
 
-test_that("raises an exception if package not available", {
-  vcr::use_cassette("bioc-fakepackage-version", {
-    expect_error(wood_bioc_version("fakepackage", release = "3.14"))
-  }, record = "new_episodes")
-})
+vcr::use_cassette("bioc-fakepackage-version", {
+  test_that("raises an exception if package not available", {
+    expect_error(
+      wood_bioc_version("fakepackage", release = "3.14"),
+      "Can't find package `fakepackage` in Bioconductor release `3.14`.",
+      fixed = TRUE
+    )
+  })
+}, record = "new_episodes")
 
 vcr::use_cassette("affy-version-old", {
   test_that("correctly retrieves data from older releases", {
