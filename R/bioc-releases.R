@@ -13,8 +13,11 @@
 #' @family bioc
 #' @export
 wood_bioc_releases <- function() {
-  if (!require_packages("xml2", "list Bioconductor release codes"))
-    stop("xml2 not installed.", call. = FALSE)
+  if (!require_packages("xml2", "list Bioconductor release codes")) {
+    msg <- "xml2 package is required to list Bioconductor release codes."
+    stop(msg, call. = FALSE)
+  }
+
   bioc_releases_cache()
 }
 
