@@ -31,8 +31,14 @@ wood_bioc_dependencies <- function(package, release = "release") {
 
   desc <- bioc_PACKAGES_cache(release)[[package]]
 
-  if (is.null(desc))
-    stop("Package not found in the specified Bioconductor release.", call. = FALSE)
+  if (is.null(desc)) {
+    msg <- sprintf(
+      "Can't find package `%1$s` in Bioconductor release `%2$s`.",
+      package,
+      release
+    )
+    stop(msg, call. = FALSE)
+  }
 
   extract_dependencies(desc)
 }
