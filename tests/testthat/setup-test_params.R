@@ -324,3 +324,56 @@ test_param_include_forks <- function(tested_function, ...) {
     )
   })
 }
+
+test_param_which_deps <- function(tested_function, ...) {
+  test_that("`which` must be a character vector", {
+    expect_error(
+      tested_function(which = 1, ...),
+      "`which` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(which = list(), ...),
+      "`which` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`which` must not be NA", {
+    expect_error(
+      tested_function(which = c(letters, NA_character_), ...),
+      "`which` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`which` must be unique", {
+    expect_error(
+      tested_function(which = c("h", letters), ...),
+      "`which` must not contain duplicate values.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`which` must be a subset of legal values", {
+    expect_error(
+      tested_function(which = c("Depends", "Imports", "Cracks"), ...),
+      "`which` must contain valid dependency types.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`which` must not contain multiple keywords", {
+    expect_error(
+      tested_function(which = c("most", "strong"), ...),
+      "`which` must not contain multiple keywords.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`which` must not mix dep types and keywords", {
+    expect_error(
+      tested_function(which = c("Depends", "strong"), ...),
+      "`which` must not mix dependency types and keywords.",
+      fixed = TRUE
+    )
+  })
+}
