@@ -38,8 +38,7 @@ cran_versions_cache <- function(package) {
   url <- crandb_url("-", "allall", params = list(start_key = package, limit = 1))
   desc <- download_safely(url)
 
-  if (is.null(desc[[package]]))
-    stop("package not found on CRAN", call. = FALSE)
+  validate_cran_package(package, desc)
 
   # Extract all cacheable data
   versions <- desc[[package]][["versions"]]
@@ -53,4 +52,14 @@ cran_versions_cache <- function(package) {
 
   # Return value
   version_codes
+}
+
+validate_cran_package <- function(package, desc) {
+  if (is.null(desc[[package]])) {
+    msg <- sprintf(
+      "Can't find package `%1$s` on CRAN.",
+      package
+    )
+    stop(msg, call. = FALSE)
+  }
 }

@@ -25,6 +25,8 @@ cran_latest_cache <- function(package) {
   with_cache({
     url <- crandb_url("-", "desc", params = list(start_key = package, limit = 1))
     desc <- download_safely(url)
+    validate_cran_package(package, desc)
+
     desc[[package]][["version"]]
   }, "latest", "CRAN", package)
 }
