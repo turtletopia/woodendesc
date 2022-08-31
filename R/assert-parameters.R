@@ -66,5 +66,6 @@ assert_param_which_deps <- function(value) {
   assert_string(value, "which")
   assert_no_NA(value, "which")
   assert_unique(value, "which")
+  assert_keyword_single(value, "which", c("all", "most", "strong"))
   assert_keyword_or_dep_type(value, "which")
 }

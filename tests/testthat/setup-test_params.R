@@ -208,18 +208,18 @@ test_param_paths <- function(tested_function, ...) {
     )
   })
 
-  test_that("`paths` cannot contain \"all\" mixed with paths", {
-    expect_error(
-      tested_function(paths = c("all", letters), ...),
-      "`paths` must not contain both \"all\" and paths.",
-      fixed = TRUE
-    )
-  })
-
   test_that("`paths` must be unique", {
     expect_error(
       tested_function(paths = c("h", letters), ...),
       "`paths` must not contain duplicate values.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`paths` cannot contain \"all\" mixed with paths", {
+    expect_error(
+      tested_function(paths = c("all", letters), ...),
+      "`paths` must not contain both \"all\" and paths.",
       fixed = TRUE
     )
   })
@@ -353,18 +353,18 @@ test_param_which_deps <- function(tested_function, ...) {
     )
   })
 
-  test_that("`which` must be a subset of legal values", {
-    expect_error(
-      tested_function(which = c("Depends", "Imports", "Cracks"), ...),
-      "`which` must contain valid dependency types.",
-      fixed = TRUE
-    )
-  })
-
   test_that("`which` must not contain multiple keywords", {
     expect_error(
       tested_function(which = c("most", "strong"), ...),
       "`which` must not contain multiple keywords.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`which` must be a subset of legal values", {
+    expect_error(
+      tested_function(which = c("Depends", "Imports", "Cracks"), ...),
+      "`which` must contain valid dependency types.",
       fixed = TRUE
     )
   })
