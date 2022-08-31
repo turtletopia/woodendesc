@@ -73,7 +73,7 @@ test_that("bioc_release_url() uses different path for older releases", {
 test_that("bioc_release_url() doesn't support releases older than 1.5", {
   expect_error(
     bioc_release_url("1.4", "src", "contrib"),
-    regexp = "Unsupported release",
+    "`release` must be at least 1.5.",
     fixed = TRUE
   )
 })
@@ -81,12 +81,12 @@ test_that("bioc_release_url() doesn't support releases older than 1.5", {
 test_that("bioc_release_url() throws exception for non-existent releases", {
   expect_error(
     bioc_release_url("3.6.1"),
-    regexp = "does not exist",
+    "Bioconductor release 3.6.1 does not exist.",
     fixed = TRUE
   )
   expect_error(
     bioc_release_url("1.15"),
-    regexp = "does not exist",
+    "Bioconductor release 1.15 does not exist.",
     fixed = TRUE
   )
 })

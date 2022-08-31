@@ -80,7 +80,11 @@ bioc_release_url <- function(release = "release", ...) {
   if (is_pkg_installed("xml2")) {
     # Perform precise check only if xml2 installed
     if (!release %in% wood_bioc_releases()) {
-      stop("Release code does not exist.", call. = FALSE)
+      msg <- sprintf(
+        c("Bioconductor release %1$s does not exist."),
+        release
+      )
+      stop(msg, call. = FALSE)
     }
   }
 
@@ -91,7 +95,13 @@ bioc_release_url <- function(release = "release", ...) {
     # Releases between 1.5 and 1.7 had different order of URL components
     bioc_url("packages", "bioc", release, ...)
   } else {
-    stop("Unsupported release, cannot find PACKAGES file.", call. = FALSE)
+    msg <- sprintf(
+      c("`release` must be at least 1.5.",
+        "(i) You've provided release code %1$s",
+        "(i) Releases older than 1.5 are not supported"),
+      release
+    )
+    stop(msg, call. = FALSE)
   }
 }
 
