@@ -23,9 +23,7 @@ wood_core_dependencies <- function(package) {
   assert_param_package(package)
 
   core_pkgs <- installed.packages(priority = "base")
-
-  if (!package %in% rownames(core_pkgs))
-    stop("package not part of R core", call. = FALSE)
+  validate_core_package(package, core_pkgs)
 
   extract_dependencies(core_pkgs[package, ])
 }

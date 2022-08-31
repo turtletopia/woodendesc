@@ -20,9 +20,18 @@ wood_core_version <- function(package) {
   assert_param_package(package)
 
   core_pkgs <- installed.packages(priority = "base")
-
-  if (!package %in% rownames(core_pkgs))
-    stop("package not part of R core", call. = FALSE)
+  validate_core_package(package, core_pkgs)
 
   core_pkgs[package, "Version"]
+}
+
+validate_core_package <- function(package, packages) {
+  if (!package %in% rownames(packages)) {
+    msg <- sprintf(
+      c("`package` must be one of R core packages.\n",
+        "(i) Package `%1$s` is not a part of R core"),
+      package
+    )
+    stop(msg, call. = FALSE)
+  }
 }
