@@ -61,3 +61,10 @@ assert_param_include_forks <- function(value) {
   assert_length_1(value, "include_forks")
   assert_no_NA(value, "include_forks")
 }
+
+assert_param_which_deps <- function(value) {
+  assert_string(value, "which")
+  assert_no_NA(value, "which")
+  assert_unique(value, "which")
+  assert_keyword_or_dep_type(value, "which")
+}

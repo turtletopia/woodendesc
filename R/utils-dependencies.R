@@ -84,15 +84,13 @@ filter_dependencies.wood_dep_list <- function(object, which = "strong") {
 filter_dependencies.NULL <- function(object, which = "strong") { NULL }
 
 match_dep_type <- function(which) {
+  assert_param_which_deps(which)
+
   dep_types <- c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")
 
   if (identical(which, "all")) return(dep_types)
   if (identical(which, "most")) return(dep_types[1:4])
   if (identical(which, "strong")) return(dep_types[1:3])
-
-  # TODO: Make error messages more precise
-  if (!all(which %in% dep_types))
-    stop("Incorrect dependency type specified.", call. = FALSE)
 
   which
 }

@@ -92,3 +92,51 @@ assert_keyword_or_release <- function(object, label) {
     stop(msg, call. = FALSE)
   }
 }
+
+assert_keyword_or_dep_type <- function(object, label) {
+  dep_types <- c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")
+  keywords <- c("all", "most", "strong")
+
+  if (any(!object %in% c(dep_types, keywords))) {
+    locations <- which(!object %in% c(dep_types, keywords))
+    msg <- sprintf(
+      c("`%1$s` must contain valid dependency types.\n",
+        "(i) Found illegal strings at %2$s: %3$s\n",
+        "(i) Valid types are: %4$s\n",
+        "(i) Alternatively, use one of these keywords: %5$s"),
+      label,
+      ngettext(length(locations), "location", "locations"),
+      collapse_comma(locations),
+      collapse_comma(dep_types, truncate_at = Inf),
+      collapse_comma(keywords, truncate_at = Inf)
+    )
+    stop(msg, call. = FALSE)
+  }
+
+  if (length(object) > 1 && any(object %in% keywords)) {
+    # Separate error message for different cases
+    if (!any(object %in% dep_types)) {
+      # Multiple keywords and nothing else
+      msg <- sprintf(
+        c("`%1$s` must not contain multiple keywords.\n",
+          "(i) Vector length is %2$i\n",
+          "(i) Keywords must be used as length 1 strings"),
+        label,
+        length(object)
+      )
+    } else {
+      # Keywords and dependency types
+      locations <- which(object %in% keywords)
+      msg <- sprintf(
+        c("`%1$s` must not mix dependency types and keywords.\n",
+          "(i) Found keywords at %2$s: %3$s\n",
+          "(i) Valid dependency types are: %4$s"),
+        label,
+        ngettext(length(locations), "location", "locations"),
+        collapse_comma(locations),
+        collapse_comma(dep_types, truncate_at = Inf)
+      )
+    }
+    stop(msg, call. = FALSE)
+  }
+}
