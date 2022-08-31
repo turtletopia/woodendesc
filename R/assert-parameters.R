@@ -14,11 +14,13 @@ assert_param_repos <- function(value) {
   assert_string(value, "repos")
   assert_not_empty(value, "repos")
   assert_no_NA(value, "repos")
+  assert_unique(value, "repos")
 }
 
 assert_param_packages <- function(value) {
   assert_string(value, "packages")
   assert_no_NA(value, "packages")
+  assert_unique(value, "packages")
 }
 
 assert_param_runiverse <- function(value) {
@@ -31,6 +33,7 @@ assert_param_paths <- function(value) {
   assert_string(value, "paths")
   assert_not_empty(value, "paths")
   assert_no_NA(value, "paths")
+  assert_unique(value, "paths")
   assert_all_or_paths(value, "paths")
 }
 

@@ -31,7 +31,21 @@ assert_logical <- function(object, label) {
   }
 }
 
-# MISSING VALUES ----
+# PROPERTIES ----
+assert_unique <- function(object, label) {
+  if (anyDuplicated(object) > 0) {
+    locations <- which(duplicated(object))
+    msg <- sprintf(
+      c("`%1$s` must not contain duplicate values.\n",
+        "(i) Duplicates found at %2$s: %3$s"),
+      label,
+      ngettext(length(locations), "location", "locations"),
+      collapse_comma(locations)
+    )
+    stop(msg, call. = FALSE)
+  }
+}
+
 assert_no_NA <- function(object, label) {
   if (anyNA(object)) {
     locations <- which(is.na(object))

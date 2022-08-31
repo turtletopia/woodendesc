@@ -83,6 +83,14 @@ test_param_repos <- function(tested_function, ...) {
       fixed = TRUE
     )
   })
+
+  test_that("`repos` must be unique", {
+    expect_error(
+      tested_function(repos = c("h", letters), ...),
+      "`repos` must not contain duplicate values.",
+      fixed = TRUE
+    )
+  })
 }
 
 test_param_packages <- function(tested_function, ...) {
@@ -101,6 +109,14 @@ test_param_packages <- function(tested_function, ...) {
     expect_error(
       tested_function(packages = c(letters, NA_character_), ...),
       "`packages` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`packages` must be unique", {
+    expect_error(
+      tested_function(packages = c("h", letters), ...),
+      "`packages` must not contain duplicate values.",
       fixed = TRUE
     )
   })
@@ -196,6 +212,14 @@ test_param_paths <- function(tested_function, ...) {
     expect_error(
       tested_function(paths = c("all", letters), ...),
       "`paths` must not contain both \"all\" and paths.",
+      fixed = TRUE
+    )
+  })
+
+  test_that("`paths` must be unique", {
+    expect_error(
+      tested_function(paths = c("h", letters), ...),
+      "`paths` must not contain duplicate values.",
       fixed = TRUE
     )
   })
