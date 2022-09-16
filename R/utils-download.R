@@ -39,17 +39,25 @@ paginate <- function(url, ..., .per_page = 100) {
 }
 
 #' @importFrom httr GET content
-download_safely <- function(url, ...) {
+download_safely <- function(url, ..., on_status = list()) {
   response <- GET(url)
-  stop_for_download_fail(response, url)
+  stop_for_download_fail(response, url, on_status)
   content(response, ...)
 }
 
-#' @importFrom httr stop_for_status
-stop_for_download_fail <- function(response, url) {
-  # Raise an exception when status code is 400 or higher
-  stop_for_status(
-    response,
-    task = paste0("download data from ", extract_core_url(url))
-  )
+#' @importFrom httr stop_for_status status_code
+stop_for_download_fail <- function(response, url, on_status = list()) {
+  response_status <- as.character(status_code(response))
+
+  if (response_status %in% names(on_status)) {
+    # Trigger a custom handler
+    # Could potentially take response as a parameter
+    on_status[[response_status]]()
+  } else {
+    # Raise an exception when status code is 400 or higher
+    stop_for_status(
+      response,
+      task = paste0("download data from ", extract_core_url(url))
+    )
+  }
 }
