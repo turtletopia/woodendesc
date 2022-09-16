@@ -21,7 +21,9 @@ test_that("tidyverse universe has ggplot2 package", {
 test_that("if a universe doesn't exist, returns an empty character vector with a warning", {
   vcr::use_cassette("nonexistent-packages", {
     expect_warning(
-      nonexistent_packages <- wood_runiverse_packages("nonexistent_universe")
+      nonexistent_packages <- wood_runiverse_packages("nonexistent_universe"),
+      "Received package list is empty.",
+      fixed = TRUE
     )
   })
   expect_equal(nonexistent_packages, character())

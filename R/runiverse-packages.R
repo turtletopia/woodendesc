@@ -29,7 +29,12 @@ runiverse_packages_cache <- function(universe = "ropensci") {
     packages <- download_safely(url)
     unlist(packages, recursive = FALSE)
   }, .if_null = {
-    warning("received list of packages is empty; does this universe exist?", call. = FALSE)
+    msg <- sprintf(
+      c("Received package list is empty.\n",
+        "(i) Universe `%1$s` may not exist"),
+      universe
+    )
+    warning(msg, call. = FALSE)
     character()
   }, "packages", "runiverse", universe)
 }
