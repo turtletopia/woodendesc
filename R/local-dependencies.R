@@ -29,10 +29,16 @@ wood_local_dependencies <- function(package, paths = .libPaths()[1]) {
   desc_path <- Find(
     file.exists, file.path(paths, package, "DESCRIPTION")
   )
-  # If none found, Find() returns NULL
-  if (is.null(desc_path))
-    stop("package not found in the specified paths", call. = FALSE)
+
+  validate_local_package(package, desc_path)
 
   desc <- read_dcf(read_char(desc_path))[[package]]
   extract_dependencies(desc)
+}
+
+validate_local_package <- function(package, path) {
+  # If none found, Find() returns NULL
+  if (is.null(path)) {
+    stopf("Can't find package `%1$s` in the specified paths.", package)
+  }
 }
