@@ -83,6 +83,22 @@ assert_all_or_paths <- function(object, label) {
   }
 }
 
+assert_dirs_exist <- function(object, label) {
+  # Skip test for "all" keyword
+  if (!identical(object, "all")) {
+    missing_dirs <- which(!dir.exists(object))
+    if (any(missing_dirs)) {
+      stopf(
+        c("`%1$s` must contain only valid paths.\n",
+          "(i) Invalid paths found at %2$s: %3$s\n"),
+        label,
+        ngettext(length(missing_dirs), "location", "locations"),
+        collapse_comma(missing_dirs)
+      )
+    }
+  }
+}
+
 assert_keyword_or_release <- function(object, label) {
   if (!object %in% c("release", "devel") &&
       !grepl("^\\d+\\.\\d+$", object, perl = TRUE)) {

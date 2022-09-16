@@ -35,6 +35,7 @@ assert_param_paths <- function(value) {
   assert_no_NA(value, "paths")
   assert_unique(value, "paths")
   assert_all_or_paths(value, "paths")
+  assert_dirs_exist(value, "paths")
 }
 
 assert_param_bioc_release <- function(value) {

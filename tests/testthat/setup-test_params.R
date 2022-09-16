@@ -223,6 +223,14 @@ test_param_paths <- function(tested_function, ...) {
       fixed = TRUE
     )
   })
+
+  test_that("`paths` cannot contain non-existent directories", {
+    expect_error(
+      tested_function(paths = c("inst", "nonexistent"), ...),
+      "`paths` must contain only valid paths.",
+      fixed = TRUE
+    )
+  })
 }
 
 test_param_bioc_release <- function(tested_function, ...) {
