@@ -1,0 +1,28 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/desc?start_key=%22fakepackage%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: nginx/1.4.6 (Ubuntu)
+      date: Wed, 31 Aug 2022 22:55:27 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "fakmct": { "version": "0.1.0", "title": "Fuzzy Adaptive Resonance
+        Theory K-Means Clustering Technique" } }'
+  recorded_at: 2022-08-31 22:51:36 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -1,0 +1,43 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/cran/fakepackage/0.1.0/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      connection: keep-alive
+      content-length: '14'
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-type: text/plain; charset=utf-8
+      x-github-request-id: ED62:C612:4765F6:4EC463:6324F468
+      accept-ranges: bytes
+      date: Fri, 16 Sep 2022 22:10:48 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21021-AMS
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1663366248.093391,VS0,VE149
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 9b0a17953fd04adb58956c45a845cb228af9f4bf
+      expires: Fri, 16 Sep 2022 22:15:48 GMT
+      source-age: '0'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '404: Not Found'
+  recorded_at: 2022-09-16 22:10:48 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
