@@ -24,5 +24,5 @@ wood_local_packages <- function(paths = .libPaths()[1]) {
 }
 
 match_local_paths_args <- function(paths) {
-  if (length(paths) == 1 && paths == "all") .libPaths() else paths
+  if (identical(paths, "all")) .libPaths() else paths
 }
