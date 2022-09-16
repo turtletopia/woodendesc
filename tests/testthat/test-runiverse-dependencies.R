@@ -14,6 +14,10 @@ test_param_runiverse(wood_runiverse_dependencies, package = "ggplot2")
 
 vcr::use_cassette("fakepackage-runiverse-deps", {
   test_that("raises an exception if package not available", {
-    expect_error(wood_runiverse_dependencies("fakepackage", "turtletopia"))
+    expect_error(
+      wood_runiverse_dependencies("fakepackage", "turtletopia"),
+      "Can't find package `fakepackage` in universe `turtletopia`.",
+      fixed = TRUE
+    )
   })
 })

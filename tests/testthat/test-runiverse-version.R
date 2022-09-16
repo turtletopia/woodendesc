@@ -14,8 +14,12 @@ test_cache(
 test_param_package(wood_runiverse_version, universe = "turtletopia")
 test_param_runiverse(wood_runiverse_version, package = "versionsort")
 
-test_that("raises an exception if package not available", {
-  vcr::use_cassette("runiverse-fakepackage-version", {
-    expect_error(wood_runiverse_version("fakepackage", "turtletopia"))
+vcr::use_cassette("runiverse-fakepackage-version", {
+  test_that("raises an exception if package not available", {
+    expect_error(
+      wood_runiverse_dependencies("fakepackage", "turtletopia"),
+      "Can't find package `fakepackage` in universe `turtletopia`.",
+      fixed = TRUE
+    )
   })
 })
