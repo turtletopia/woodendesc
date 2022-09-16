@@ -25,8 +25,7 @@ wood_url_dependencies <- function(package, repository) {
 
   desc <- url_PACKAGES_cache(repository)[[package]]
 
-  if (is.null(desc))
-    stop("package not found in the specified URL", call. = FALSE)
+  validate_package_url(desc, package, repository)
 
   extract_dependencies(desc)
 }

@@ -22,8 +22,13 @@ wood_url_version <- function(package, repository) {
 
   desc <- url_PACKAGES_cache(repository)[[package]]
 
-  if (is.null(desc))
-    stop("package not found in the specified URL", call. = FALSE)
+  validate_package_url(desc, package, repository)
 
   desc[["Version"]]
+}
+
+validate_package_url <- function(desc, package, repository) {
+  if (is.null(desc)) {
+    stopf("Can't find package `%1$s` on repository %2$s.", package, repository)
+  }
 }

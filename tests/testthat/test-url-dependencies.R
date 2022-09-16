@@ -18,7 +18,9 @@ test_param_package(wood_url_dependencies, repository = "http://www.omegahat.net/
 test_param_url_repo(wood_url_dependencies, package = "RGraphicsDevice")
 
 test_that("raises an exception if package not available", {
-  expect_error(wood_url_dependencies(
-    "fakepackage", "http://www.omegahat.net/R"
-  ))
+  expect_error(
+    wood_url_dependencies("fakepackage", "http://www.omegahat.net/R"),
+    "Can't find package `fakepackage` on repository http://www.omegahat.net/R.",
+    fixed = TRUE
+  )
 })
