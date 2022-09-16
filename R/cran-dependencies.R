@@ -48,13 +48,7 @@ cran_dependencies_cache <- function(package, version) {
   with_cache({
     url <- raw_github_url("cran", package, version, "DESCRIPTION")
     desc <- download_safely(url, on_status = list(
-      `404` = function() {
-        msg <- sprintf(
-          "Can't find package `%1$s` on CRAN.",
-          package
-        )
-        stop(msg, call. = FALSE)
-      }
+      `404` = function() stopf("Can't find package `%1$s` on CRAN.", package)
     ))
     read_dcf(desc)[[package]]
   }, "dependencies", "CRAN", package, version)

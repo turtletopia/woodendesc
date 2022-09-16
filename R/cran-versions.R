@@ -56,10 +56,6 @@ cran_versions_cache <- function(package) {
 
 validate_cran_package <- function(package, desc) {
   if (is.null(desc[[package]])) {
-    msg <- sprintf(
-      "Can't find package `%1$s` on CRAN.",
-      package
-    )
-    stop(msg, call. = FALSE)
+    stopf("Can't find package `%1$s` on CRAN.", package)
   }
 }

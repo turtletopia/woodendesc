@@ -28,12 +28,10 @@ wood_bioc_version <- function(package, release = "release") {
   desc <- bioc_PACKAGES_cache(release)[[package]]
 
   if (is.null(desc)) {
-    msg <- sprintf(
+    stopf(
       "Can't find package `%1$s` in Bioconductor release `%2$s`.",
-      package,
-      release
+      package, release
     )
-    stop(msg, call. = FALSE)
   }
 
   desc[["Version"]]
