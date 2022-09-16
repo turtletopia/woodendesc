@@ -31,6 +31,20 @@ vcr::use_cassette("deepdep-deps-latest", {
 
 vcr::use_cassette("fakepackage-cran-deps", {
   test_that("raises an exception if package not available", {
-    expect_error(wood_cran_dependencies("fakepackage"))
+    expect_error(
+      wood_cran_dependencies("fakepackage"),
+      "Can't find package `fakepackage` on CRAN.",
+      fixed = TRUE
+    )
+  })
+})
+
+vcr::use_cassette("fakepackage-cran-deps-2", {
+  test_that("raises an exception if version not available", {
+    expect_error(
+      wood_cran_dependencies("fakepackage", version = "0.1.0"),
+      "Can't find package `fakepackage` on CRAN.",
+      fixed = TRUE
+    )
   })
 })
