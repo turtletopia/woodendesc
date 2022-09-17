@@ -37,11 +37,7 @@ github_packages_cache <- function(user) {
   with_cache({
     url <- github_url("users", user, "repos")
     paginate(url, on_status = list(
-      `403` = function() stopf(c(
-        "Exceeded GitHub API limit of 60 queries per hour.\n",
-        "(i) Authentication will increase your limit.\n",
-        "(i) Start an issue to show us there's a demand for a higher limit."
-      )),
+      `403` = stopf_gh_rate_limit,
       `404` = function() stopf("Can't find user `%1$s` on GitHub.", user)
     ))
   }, "repos", "github", user)
