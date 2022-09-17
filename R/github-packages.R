@@ -4,8 +4,7 @@
 #' selected account. They are returned as a vector of strings, each element
 #' being a repository (and in most cases, package) name.
 #'
-#' @param user \code{character(1)}\cr
-#'  Name of a user or organization.
+#' @template gh-user
 #' @param include_forks \code{logical(1)}\cr
 #'  Whether to include packages forked from other accounts.
 #'
