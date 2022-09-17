@@ -19,3 +19,13 @@ test_that("several packages make the list", {
 test_that("non-packages are omitted", {
   expect_no_match(turtletopia_packages, "^universe$")
 })
+
+vcr::use_cassette("gh-fakeuser-packages", {
+  test_that("if user doesn't exist, an exception is raised", {
+    expect_error(
+      wood_github_packages("TheUserThatDoesNotExist"),
+      "Can't find user `TheUserThatDoesNotExist` on GitHub.",
+      fixed = TRUE
+    )
+  })
+})
