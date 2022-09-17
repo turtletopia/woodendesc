@@ -1,3 +1,23 @@
+#' List GitHub tags for a repository
+#'
+#' @description This function queries GitHub for a list of tags for a given
+#' repository (indicated by a combination of package name and username). Each
+#' element is a tag, which need not be identical or even related to version code
+#' of the package at the given time.
+#'
+#' @template package
+#' @template gh-user
+#'
+#' @return A character vector of repository tags.
+#'
+#' @examples
+#' \donttest{
+#' wood_github_tags("gglgbtq", "turtletopia")
+#' # Sometimes there are no tags (yet?)
+#' wood_github_tags("ggpizza", "turtletopia")
+#' }
+#'
+#' @family github
 #' @export
 wood_github_tags <- function(package, user) {
   assert_param_package(package)
