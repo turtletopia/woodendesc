@@ -53,7 +53,3 @@ cran_dependencies_cache <- function(package, version) {
     read_dcf(desc)[[package]]
   }, "dependencies", "CRAN", package, version)
 }
-
-match_version_cran <- function(package, version) {
-  if (version == "latest") wood_cran_latest(package) else version
-}

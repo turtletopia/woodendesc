@@ -53,9 +53,3 @@ cran_versions_cache <- function(package) {
   # Return value
   version_codes
 }
-
-validate_cran_package <- function(package, desc) {
-  if (is.null(desc[[package]])) {
-    stopf("Can't find package `%1$s` on CRAN.", package)
-  }
-}

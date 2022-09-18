@@ -22,7 +22,3 @@ wood_local_packages <- function(paths = .libPaths()[1]) {
   paths <- match_local_paths_args(paths)
   unique(list.dirs(paths, full.names = FALSE, recursive = FALSE))
 }
-
-match_local_paths_args <- function(paths) {
-  if (identical(paths, "all")) .libPaths() else paths
-}
