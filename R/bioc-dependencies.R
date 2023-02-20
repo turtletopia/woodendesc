@@ -31,6 +31,7 @@ wood_bioc_dependencies <- function(package, release = "release") {
 
   desc <- bioc_PACKAGES_cache(release)[[package]]
 
+  # TODO: extract as validate_bioc_package()
   if (is.null(desc)) {
     stopf(
       "Can't find package `%1$s` in Bioconductor release `%2$s`.",

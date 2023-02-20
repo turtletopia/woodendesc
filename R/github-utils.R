@@ -15,3 +15,36 @@ is_github_R_repo <- function(repo) {
 is_fork <- function(repo) {
   repo[["fork"]]
 }
+
+guess_default_branch <- function(user, package, ...) {
+  url <- raw_github_url(user, package)
+
+  # First check if cache with default branch data exists
+  branch <- with_cache({}, "repos", "github", user)[[package]][["default_branch"]]
+
+  if (is.null(branch)) {
+    branch <- with_cache({}, "repo", "github", user, package)[["default_branch"]]
+  }
+
+  # If cache found, download data from that branch
+  if (!is.null(branch)) {
+    return(download_safely(paste(url, branch, ..., sep = "/")))
+  }
+
+  # Try master and main branch names
+  try({
+    return(download_safely(paste(url, "master", ..., sep = "/")))
+  }, silent = TRUE)
+
+  try({
+    return(download_safely(paste(url, "main", ..., sep = "/")))
+  }, silent = TRUE)
+
+  # If failed, download data with default branch name
+  repo_data <- with_cache({
+    download_safely(github_url("repos", user, package))
+  }, "repo", "github", user, package)
+  branch <- repo_data[["default_branch"]]
+
+  download_safely(paste(url, branch, ..., sep = "/"))
+}
