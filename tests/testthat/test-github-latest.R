@@ -9,7 +9,8 @@ vcr::use_cassette("gglgbtq-latest", {
 # TESTS ----
 test_version(gglgbtq_latest)
 test_cache(wood_github_latest, gglgbtq_latest, "gglgbtq", "turtletopia")
-test_param_package(wood_github_latest)
+test_param_package(wood_github_latest, user = "turtletopia")
+test_param_gh_user(wood_github_latest, package = "gglgbtq")
 
 vcr::use_cassette("fakepackage-gh-latest", {
   test_that("raises an exception if package not available", {
