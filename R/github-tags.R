@@ -11,7 +11,7 @@
 #' @return A character vector of repository tags.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' wood_github_tags("gglgbtq", "turtletopia")
 #' # Sometimes there are no tags (yet?)
 #' wood_github_tags("ggpizza", "turtletopia")

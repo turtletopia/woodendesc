@@ -10,7 +10,7 @@
 #' @return A character vector of version codes.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Latest version code is returned
 #' wood_github_latest("gglgbtq", "turtletopia")
 #'

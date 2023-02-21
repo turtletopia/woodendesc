@@ -11,7 +11,7 @@
 #' @return A character vector of available packages.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' wood_github_packages("turtletopia")
 #' # I moved most my packages to turtletopia
 #' wood_github_packages("ErdaradunGaztea", include_forks = TRUE)
