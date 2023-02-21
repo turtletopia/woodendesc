@@ -31,7 +31,8 @@ wood_github_packages("ErdaradunGaztea", include_forks = TRUE)
 }
 \seealso{
 Functions for GitHub:
-\code{\link{wood_github_tags}()}
+\code{\link{wood_github_tags}()},
+\code{\link{wood_github_versions}()}
 
 Functions that query available packages:
 \code{\link{wood_bioc_packages}()},
