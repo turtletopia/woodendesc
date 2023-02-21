@@ -9,7 +9,7 @@
 #' @return A character vector of version codes.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' wood_github_versions("versionsort", "turtletopia")
 #' }
 #'
