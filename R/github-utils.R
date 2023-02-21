@@ -42,7 +42,13 @@ guess_default_branch <- function(user, package, ...) {
 
   # If failed, download data with default branch name
   repo_data <- with_cache({
-    download_safely(github_url("repos", user, package))
+    url <- github_url("repos", user, package)
+    content <- download_safely(url, on_status = list(
+      `403` = stopf_gh_rate_limit,
+      `404` = function() stopf(
+        "Can't find repository `%1$s/%2$s` on Github.", user, package
+      )
+    ))
   }, "repo", "github", user, package)
   branch <- repo_data[["default_branch"]]
 
