@@ -31,6 +31,21 @@ test_version <- function(version) {
   })
 }
 
+test_versions <- function(versions) {
+  test_that("returns a vector of strings", {
+    expect_vector(versions,
+                  ptype = character())
+  })
+
+  test_that("returned vector of strings is not empty", {
+    expect_gt(length(versions), 0)
+  })
+
+  test_that("all returned strings are valid version codes", {
+    expect_version_code(versions)
+  })
+}
+
 test_dependencies <- function(deps) {
   test_that("returns a data frame with package, version & type columns", {
     expect_vector(deps,

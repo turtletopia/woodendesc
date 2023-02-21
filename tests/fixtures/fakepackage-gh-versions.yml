@@ -1,0 +1,51 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/turtletopia/fakepackage/tags
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      server: GitHub.com
+      date: Tue, 21 Feb 2023 21:11:40 GMT
+      content-type: application/json; charset=utf-8
+      x-github-media-type: github.v3
+      x-github-api-version-selected: '2022-11-28'
+      access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP,
+        X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+      access-control-allow-origin: '*'
+      strict-transport-security: max-age=31536000; includeSubdomains; preload
+      x-frame-options: deny
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin
+      content-security-policy: default-src 'none'
+      vary: Accept-Encoding, Accept, X-Requested-With
+      content-encoding: gzip
+      x-ratelimit-limit: '60'
+      x-ratelimit-remaining: '54'
+      x-ratelimit-reset: '1677016235'
+      x-ratelimit-resource: core
+      x-ratelimit-used: '6'
+      content-length: '123'
+      x-github-request-id: 97FF:C4E0:18E4D7B:194BB07:63F5338C
+    body:
+      encoding: UTF-8
+      file: no
+      string: |
+        {
+          "message": "Not Found",
+          "documentation_url": "https://docs.github.com/rest/reference/repos#list-repository-tags"
+        }
+  recorded_at: 2023-02-21 21:11:39 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
