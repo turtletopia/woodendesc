@@ -31,6 +31,7 @@ wood_github_packages("ErdaradunGaztea", include_forks = TRUE)
 }
 \seealso{
 Functions for GitHub:
+\code{\link{wood_github_latest}()},
 \code{\link{wood_github_tags}()},
 \code{\link{wood_github_versions}()}
 
