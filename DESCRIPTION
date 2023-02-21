@@ -19,6 +19,7 @@ Imports:
     httr,
     versionsort (>= 1.1.0)
 Suggests: 
+    covr,
     httptest,
     testthat (>= 3.0.0),
     usethis,
