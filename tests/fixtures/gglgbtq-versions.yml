@@ -15,7 +15,7 @@ http_interactions:
       message: 'Success: (200) OK'
     headers:
       server: GitHub.com
-      date: Tue, 21 Feb 2023 21:11:39 GMT
+      date: Wed, 22 Feb 2023 09:42:42 GMT
       content-type: application/json; charset=utf-8
       cache-control: public, max-age=60, s-maxage=60
       vary: Accept, Accept-Encoding, Accept, X-Requested-With
@@ -36,13 +36,13 @@ http_interactions:
       content-security-policy: default-src 'none'
       content-encoding: gzip
       x-ratelimit-limit: '60'
-      x-ratelimit-remaining: '55'
-      x-ratelimit-reset: '1677016235'
+      x-ratelimit-remaining: '58'
+      x-ratelimit-reset: '1677062435'
       x-ratelimit-resource: core
-      x-ratelimit-used: '5'
+      x-ratelimit-used: '2'
       accept-ranges: bytes
       content-length: '313'
-      x-github-request-id: 97FF:C4E0:18E4B04:194B847:63F5338B
+      x-github-request-id: 97FD:871F:379EA9D:388F27F:63F5E391
     body:
       encoding: UTF-8
       file: no
@@ -69,7 +69,7 @@ http_interactions:
             "node_id": "REF_kwDOHxvnhLByZWZzL3RhZ3MvdjAuMS4w"
           }
         ]
-  recorded_at: 2023-02-21 21:11:38 GMT
+  recorded_at: 2023-02-22 09:42:40 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -96,19 +96,19 @@ http_interactions:
       x-content-type-options: nosniff
       x-frame-options: deny
       x-xss-protection: 1; mode=block
-      x-github-request-id: 6FA0:133B0:876CE5:8F019C:63F5338B
+      x-github-request-id: 6F46:CDBC:4C6F83:54FC61:63F5E392
       content-encoding: gzip
       accept-ranges: bytes
-      date: Tue, 21 Feb 2023 21:11:39 GMT
+      date: Wed, 22 Feb 2023 09:42:42 GMT
       via: 1.1 varnish
-      x-served-by: cache-ams21048-AMS
+      x-served-by: cache-ams21038-AMS
       x-cache: MISS
       x-cache-hits: '0'
-      x-timer: S1677013900.518778,VS0,VE194
+      x-timer: S1677058962.342379,VS0,VE201
       vary: Authorization,Accept-Encoding,Origin
       access-control-allow-origin: '*'
-      x-fastly-request-id: e0b5f8b1f3db38f0edc65707979e5a00ef61da78
-      expires: Tue, 21 Feb 2023 21:16:39 GMT
+      x-fastly-request-id: 18da2d1f8dd2afd008b52b28150b84dd1ce9a778
+      expires: Wed, 22 Feb 2023 09:47:42 GMT
       source-age: '0'
     body:
       encoding: UTF-8
@@ -123,7 +123,7 @@ http_interactions:
         7.1.2\nConfig/testthat/edition: 3\nURL: https://github.com/turtletopia/gglgbtq,\n
         \   https://turtletopia.github.io/gglgbtq/\nLanguage: en-US\nVignetteBuilder:
         knitr\n"
-  recorded_at: 2023-02-21 21:11:38 GMT
+  recorded_at: 2023-02-22 09:42:40 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -150,19 +150,19 @@ http_interactions:
       x-content-type-options: nosniff
       x-frame-options: deny
       x-xss-protection: 1; mode=block
-      x-github-request-id: 3C5A:6C61:4A5603:4E8B6D:63F5338B
+      x-github-request-id: C410:133AD:461CD3:4E983B:63F5E392
       content-encoding: gzip
       accept-ranges: bytes
-      date: Tue, 21 Feb 2023 21:11:40 GMT
+      date: Wed, 22 Feb 2023 09:42:42 GMT
       via: 1.1 varnish
-      x-served-by: cache-ams21048-AMS
+      x-served-by: cache-ams21038-AMS
       x-cache: MISS
       x-cache-hits: '0'
-      x-timer: S1677013900.808048,VS0,VE198
+      x-timer: S1677058963.614728,VS0,VE195
       vary: Authorization,Accept-Encoding,Origin
       access-control-allow-origin: '*'
-      x-fastly-request-id: 96570b187ed5085a788e0fae7a5d4f6ce8fcfa55
-      expires: Tue, 21 Feb 2023 21:16:40 GMT
+      x-fastly-request-id: e62b0e2694550b5bd5bd2c206caf3c2b074f7174
+      expires: Wed, 22 Feb 2023 09:47:42 GMT
       source-age: '0'
     body:
       encoding: UTF-8
@@ -175,5 +175,5 @@ http_interactions:
         \n    spelling,\n    testthat (>= 3.0.0)\nLicense: GPL (>= 3)\nEncoding: UTF-8\nRoxygen:
         list(markdown = TRUE)\nRoxygenNote: 7.1.2\nConfig/testthat/edition: 3\nURL:
         https://github.com/turtletopia/gglgbtq\nLanguage: en-US\n"
-  recorded_at: 2023-02-21 21:11:38 GMT
+  recorded_at: 2023-02-22 09:42:40 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
