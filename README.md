@@ -68,11 +68,11 @@ package (dependency of woodendesc):
 
 ``` r
 wood_local_dependencies("digest")
-#>           package version     type
-#> 1               R   3.3.0  Depends
-#> 2           utils    <NA>  Imports
-#> 3        tinytest    <NA> Suggests
-#> 4 simplermarkdown    <NA> Suggests
+#> <dependencies>
+#>   Depends:     R (>= 3.3.0)
+#>   Imports:     utils
+#>   Suggests:    tinytest
+#>   Suggests:    simplermarkdown
 ```
 
 Note that some repositories store more than just one version of a
@@ -136,24 +136,20 @@ wood_dependencies(
   c("versionsort", "gglgbtq"),
   repos = c("local#all", "runiverse@turtletopia", "cran")
 )
-#> $versionsort
-#>    package version     type
-#> 1     covr    <NA> Suggests
-#> 2 spelling    <NA> Suggests
-#> 3 testthat   3.0.0 Suggests
+#> <woodendesc dependency list [2]>
+#>  <versionsort dependencies>
+#>   Suggests:    covr
+#>   Suggests:    spelling
+#>   Suggests:    testthat (>= 3.0.0)
 #> 
-#> $gglgbtq
-#>     package version     type
-#> 1   ggplot2    <NA>  Imports
-#> 2  graphics    <NA>  Imports
-#> 3 grDevices    <NA>  Imports
-#> 4     knitr    <NA> Suggests
-#> 5 rmarkdown    <NA> Suggests
-#> 6  spelling    <NA> Suggests
-#> 7  testthat   3.0.0 Suggests
-#> 
-#> attr(,"class")
-#> [1] "wood_dep_list" "list"
+#>  <gglgbtq dependencies>
+#>   Imports:     ggplot2
+#>   Imports:     graphics
+#>   Imports:     grDevices
+#>   Suggests:    knitr
+#>   Suggests:    rmarkdown
+#>   Suggests:    spelling
+#>   Suggests:    testthat (>= 3.0.0)
 ```
 
 And if you ever need to clear cache, simply call:
