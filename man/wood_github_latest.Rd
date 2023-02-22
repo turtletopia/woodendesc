@@ -34,6 +34,7 @@ versionsort::ver_latest(codes)
 }
 \seealso{
 Functions for GitHub:
+\code{\link{wood_github_dependencies}()},
 \code{\link{wood_github_packages}()},
 \code{\link{wood_github_tags}()},
 \code{\link{wood_github_versions}()}

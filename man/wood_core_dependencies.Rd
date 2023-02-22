@@ -37,6 +37,7 @@ Functions that query package dependencies:
 \code{\link{wood_bioc_dependencies}()},
 \code{\link{wood_cran_dependencies}()},
 \code{\link{wood_dependencies}()},
+\code{\link{wood_github_dependencies}()},
 \code{\link{wood_local_dependencies}()},
 \code{\link{wood_runiverse_dependencies}()},
 \code{\link{wood_url_dependencies}()}

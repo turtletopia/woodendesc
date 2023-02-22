@@ -26,12 +26,6 @@ wood_github_latest <- function(package, user) {
   assert_param_package(package)
   assert_param_gh_user(user)
 
-  github_latest_cache(package, user)
-}
-
-github_latest_cache <- function(package, user) {
-  ret <- with_cache({
-    guess_default_branch(user, package, "DESCRIPTION")
-  }, "DESCRIPTION", "github", user, package)
-  read_dcf_one_value(ret, "Version")
+  desc <- github_description_cache(package, user, "latest")
+  read_dcf_one_value(desc, "Version")
 }

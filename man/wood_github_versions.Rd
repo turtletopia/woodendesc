@@ -28,6 +28,7 @@ wood_github_versions("versionsort", "turtletopia")
 }
 \seealso{
 Functions for GitHub:
+\code{\link{wood_github_dependencies}()},
 \code{\link{wood_github_latest}()},
 \code{\link{wood_github_packages}()},
 \code{\link{wood_github_tags}()}
