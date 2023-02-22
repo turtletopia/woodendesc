@@ -18,3 +18,8 @@ print.wood_dep_list <- function(x, ...) {
     cat("\n")
   }
 }
+
+#' @export
+summary.wood_dep_list <- function(object, ...) {
+  lapply(object, summary)
+}

@@ -31,3 +31,33 @@ print.wood_deps <- function(x, ..., package = NULL) {
     cat("\n")
   }
 }
+
+#' @export
+summary.wood_deps <- function(object, ...) {
+  structure(
+    data.frame(
+      type = .DEPENDENCY_TYPES,
+      count = vapply(.DEPENDENCY_TYPES, function(dep_type) {
+        sum(object[["type"]] == dep_type)
+      }, integer(1), USE.NAMES = FALSE)
+    ),
+    class = c("wood_deps_summary", "data.frame")
+  )
+}
+
+#' @export
+print.wood_deps_summary <- function(x, ...) {
+  # Header
+  cat("<summary of dependencies>\n")
+
+  # Body
+  max_count_length <- nchar(max(x[["count"]]))
+  for (i in seq_len(nrow(x))) {
+    if (x[[i, "count"]] > 0) {
+      # Create sprintf pattern based on max count length
+      pattern <- paste0(" - %1$", max_count_length, "i %2$s\n")
+      # ...and use this pattern
+      cat(sprintf(pattern, x[[i, "count"]], x[[i, "type"]]))
+    }
+  }
+}

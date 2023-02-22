@@ -1,6 +1,8 @@
+.DEPENDENCY_TYPES <- c("Depends", "Imports", "Suggests", "LinkingTo", "Enhances")
+
 extract_dependencies <- function(desc, parser = parse_dependencies) {
   deps <- lapply(
-    c("Depends", "Imports", "Suggests", "LinkingTo", "Enhances"),
+    .DEPENDENCY_TYPES,
     function(dep_type) {
       d <- desc[[dep_type]]
       if (!is.null(d) && !(length(d) == 1 && is.na(d)))
