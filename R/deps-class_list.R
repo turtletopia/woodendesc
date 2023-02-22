@@ -9,3 +9,12 @@ as_wood_dep_list <- function(object) {
     class = c("wood_dep_list", class(object))
   )
 }
+
+#' @export
+print.wood_dep_list <- function(x, ...) {
+  cat(sprintf("<woodendesc dependency list [%s]>\n", length(x)))
+  for (pkg in names(x)) {
+    print(x[[pkg]], package = pkg)
+    cat("\n")
+  }
+}
