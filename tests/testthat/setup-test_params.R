@@ -333,6 +333,35 @@ test_param_include_forks <- function(tested_function, ...) {
   })
 }
 
+test_param_tag <- function(tested_function, ...) {
+  test_that("`tag` must be a character vector", {
+    expect_error(
+      tested_function(tag = 1, ...),
+      "`tag` must be a character vector, not .*"
+    )
+    expect_error(
+      tested_function(tag = list(), ...),
+      "`tag` must be a character vector, not .*"
+    )
+  })
+
+  test_that("`tag` must have length 1", {
+    expect_error(
+      tested_function(tag = letters, ...),
+      sprintf("`tag` must have length 1, not %i.", length(letters)),
+      fixed = TRUE
+    )
+  })
+
+  test_that("`tag` must not be NA", {
+    expect_error(
+      tested_function(tag = NA_character_, ...),
+      "`tag` must not contain NAs.",
+      fixed = TRUE
+    )
+  })
+}
+
 test_param_which_deps <- function(tested_function, ...) {
   test_that("`which` must be a character vector", {
     expect_error(

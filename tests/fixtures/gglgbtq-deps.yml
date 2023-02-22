@@ -1,0 +1,53 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/gglgbtq/v0.1.0/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '413'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"c73bcd981e013fdf79aa122ccc75880d6d5dcc9b48cef34a653c0f0bea5c5fd8"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: C410:133AD:461CD3:4E983B:63F5E392
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Wed, 22 Feb 2023 10:14:38 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21076-AMS
+      x-cache: HIT
+      x-cache-hits: '1'
+      x-timer: S1677060879.751506,VS0,VE187
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 7e826616d34c41c9953c76b29f121a9affdb883c
+      expires: Wed, 22 Feb 2023 10:19:38 GMT
+      source-age: '0'
+    body:
+      encoding: UTF-8
+      file: no
+      string: "Package: gglgbtq\nType: Package\nTitle: Show Pride on 'ggplot2' Plots\nVersion:
+        0.1.0\nDate: 2022-08-06\nAuthors@R: c(person(\"Laura\", \"Bakala\",\n             email
+        = \"erdaradun.gaztea@gmail.com\",\n             role = c(\"cre\", \"aut\",
+        \"cph\")))\nDescription: Provides multiple palettes based on pride flags with
+        tailored themes.\nImports: \n    ggplot2,\n    graphics,\n    grDevices\nSuggests:
+        \n    spelling,\n    testthat (>= 3.0.0)\nLicense: GPL (>= 3)\nEncoding: UTF-8\nRoxygen:
+        list(markdown = TRUE)\nRoxygenNote: 7.1.2\nConfig/testthat/edition: 3\nURL:
+        https://github.com/turtletopia/gglgbtq\nLanguage: en-US\n"
+  recorded_at: 2023-02-22 10:14:36 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

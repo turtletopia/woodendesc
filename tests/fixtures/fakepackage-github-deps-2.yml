@@ -1,0 +1,43 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/gglgbtq/v0.0.0/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      connection: keep-alive
+      content-length: '14'
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-type: text/plain; charset=utf-8
+      x-github-request-id: 26A8:82CF:510D57:59DF7F:63F5EAF8
+      accept-ranges: bytes
+      date: Wed, 22 Feb 2023 10:14:41 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21076-AMS
+      x-cache: HIT
+      x-cache-hits: '1'
+      x-timer: S1677060881.029763,VS0,VE1
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 48c8f0f2df59ec7ffa5afe856207da8c933dfc2b
+      expires: Wed, 22 Feb 2023 10:19:41 GMT
+      source-age: '24'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '404: Not Found'
+  recorded_at: 2023-02-22 10:14:38 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

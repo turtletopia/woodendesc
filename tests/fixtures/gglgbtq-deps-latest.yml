@@ -1,0 +1,109 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/gglgbtq/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '479'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"1c5c0fa8b7aa3e391db4b97ec553bd95942c5e79a5c12e1718c524abaa6e900b"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: 3AEE:0BA3:331C92:36D299:63F5E39A
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Wed, 22 Feb 2023 10:18:28 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21076-AMS
+      x-cache: HIT
+      x-cache-hits: '2'
+      x-timer: S1677061109.986383,VS0,VE0
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 55fbb26ed8197c2ce1273af456a681c8ba8b24cc
+      expires: Wed, 22 Feb 2023 10:23:28 GMT
+      source-age: '229'
+    body:
+      encoding: UTF-8
+      file: no
+      string: "Package: gglgbtq\nType: Package\nTitle: Show Pride on 'ggplot2' Plots\nVersion:
+        0.1.1\nDate: 2022-11-01\nAuthors@R: c(person(\"Laura\", \"Bakala\",\n             email
+        = \"erdaradun.gaztea@gmail.com\",\n             role = c(\"cre\", \"aut\",
+        \"cph\"),\n             comment = c(ORCID = \"0000-0002-3213-2484\")))\nDescription:
+        Provides multiple palettes based on pride flags with tailored themes.\nImports:
+        \n    ggplot2,\n    graphics,\n    grDevices\nSuggests: \n    knitr,\n    rmarkdown,\n
+        \   spelling,\n    testthat (>= 3.0.0)\nLicense: GPL (>= 3)\nEncoding: UTF-8\nRoxygen:
+        list(markdown = TRUE)\nRoxygenNote: 7.1.2\nConfig/testthat/edition: 3\nURL:
+        https://github.com/turtletopia/gglgbtq,\n    https://turtletopia.github.io/gglgbtq/\nLanguage:
+        en-US\nVignetteBuilder: knitr\n"
+  recorded_at: 2023-02-22 10:18:26 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/gglgbtq/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '479'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"1c5c0fa8b7aa3e391db4b97ec553bd95942c5e79a5c12e1718c524abaa6e900b"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: 3AEE:0BA3:331C92:36D299:63F5E39A
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Wed, 22 Feb 2023 10:18:29 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21076-AMS
+      x-cache: HIT
+      x-cache-hits: '3'
+      x-timer: S1677061109.090816,VS0,VE0
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 3a9d5a80f528aa4cc68cacf66f860aec7b124ee1
+      expires: Wed, 22 Feb 2023 10:23:29 GMT
+      source-age: '229'
+    body:
+      encoding: UTF-8
+      file: no
+      string: "Package: gglgbtq\nType: Package\nTitle: Show Pride on 'ggplot2' Plots\nVersion:
+        0.1.1\nDate: 2022-11-01\nAuthors@R: c(person(\"Laura\", \"Bakala\",\n             email
+        = \"erdaradun.gaztea@gmail.com\",\n             role = c(\"cre\", \"aut\",
+        \"cph\"),\n             comment = c(ORCID = \"0000-0002-3213-2484\")))\nDescription:
+        Provides multiple palettes based on pride flags with tailored themes.\nImports:
+        \n    ggplot2,\n    graphics,\n    grDevices\nSuggests: \n    knitr,\n    rmarkdown,\n
+        \   spelling,\n    testthat (>= 3.0.0)\nLicense: GPL (>= 3)\nEncoding: UTF-8\nRoxygen:
+        list(markdown = TRUE)\nRoxygenNote: 7.1.2\nConfig/testthat/edition: 3\nURL:
+        https://github.com/turtletopia/gglgbtq,\n    https://turtletopia.github.io/gglgbtq/\nLanguage:
+        en-US\nVignetteBuilder: knitr\n"
+  recorded_at: 2023-02-22 10:18:26 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

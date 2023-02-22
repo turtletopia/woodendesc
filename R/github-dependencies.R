@@ -45,9 +45,10 @@ github_description_cache <- function(package, user, tag) {
       url <- raw_github_url(user, package, tag, "DESCRIPTION")
       content <- download_safely(url, on_status = list(
         `403` = stopf_gh_rate_limit,
-        `404` = function() stopf(
-          "Can't find DESCRIPTION file in `%1$s/%2$s` repository on Github.", user, package
-        )
+        `404` = function() stopf(c(
+          "Can't find DESCRIPTION file in `%1$s/%2$s` repository on Github.\n",
+          "(i) Is `%3$s` a valid tag?"
+        ), user, package, tag)
       ))
     }, "DESCRIPTION", "github", user, package, tag)
   }
