@@ -1,4 +1,6 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # woodendesc
 
 <!-- badges: start -->
@@ -13,7 +15,7 @@ status](https://www.r-pkg.org/badges/version-last-release/woodendesc)](https://C
 coverage](https://codecov.io/gh/turtletopia/woodendesc/branch/master/graph/badge.svg)](https://codecov.io/gh/turtletopia/woodendesc?branch=master)
 <!-- badges: end -->
 
-woodendesc strives to provide an unified API to query any R repository
+{woodendesc} strives to provide an unified API to query any R repository
 for the following data:
 
 -   list of available packages,
@@ -38,178 +40,121 @@ devtools::install_github("turtletopia/woodendesc")
 ## How to use woodendesc?
 
 Each repository has its dedicated functions for listing available
-packages, package version, and package dependencies:
+packages, package version, and package dependencies.
+
+A list of available packages is returned as a character vector. An
+example call returning a list of CRAN packages:
 
 ``` r
 library(woodendesc)
-
 # Too many packages to list them all
-wood_bioc_packages() |> head()
+all_cran_pkgs <- wood_cran_packages()
+head(all_cran_pkgs, 10)
+#>  [1] "A3"          "AATtools"    "ABACUS"      "abbreviate"  "abbyyR"     
+#>  [6] "abc"         "abc.data"    "ABC.RAP"     "abcADM"      "ABCanalysis"
 ```
 
-    ## [1] "a4"          "a4Base"      "a4Classif"   "a4Core"      "a4Preproc"  
-    ## [6] "a4Reporting"
+An available package version is returned as a single code. An example
+call checking the current version of Biobase package on Bioconductor:
 
 ``` r
 wood_bioc_version("Biobase")
+#> [1] "2.58.0"
 ```
 
-    ## [1] "2.58.0"
+Dependencies of a package are returned as a data frame with the same set
+of columns for all calls. An example call for locally installed digest
+package (dependency of woodendesc):
 
 ``` r
-wood_bioc_dependencies("Biobase")
+wood_local_dependencies("digest")
+#>           package version     type
+#> 1               R   3.3.0  Depends
+#> 2           utils    <NA>  Imports
+#> 3        tinytest    <NA> Suggests
+#> 4 simplermarkdown    <NA> Suggests
 ```
 
-    ##         package version     type
-    ## 1             R    2.10  Depends
-    ## 2  BiocGenerics  0.27.1  Depends
-    ## 3         utils    <NA>  Depends
-    ## 4       methods    <NA>  Imports
-    ## 5         tools    <NA> Suggests
-    ## 6     tkWidgets    <NA> Suggests
-    ## 7           ALL    <NA> Suggests
-    ## 8         RUnit    <NA> Suggests
-    ## 9    golubEsets    <NA> Suggests
-    ## 10    BiocStyle    <NA> Suggests
-    ## 11        knitr    <NA> Suggests
-
-Sometimes a repository may contain multiple versions of the same
-package, this is signified by pluralizing `_version` in function name,
-as in CRAN:
+Note that some repositories store more than just one version of a
+package (e.g. CRAN and Github). These cases can be distinguished by
+pluralized `_versions` function name component and they return all
+version codes instead; a character vector of any length. This is how it
+works for gglgbtq on Github:
 
 ``` r
-wood_cran_versions("versionsort")
+wood_github_versions("gglgbtq", "turtletopia")
+#> [1] "0.1.1" "0.1.0"
 ```
 
-    ## [1] "1.0.0" "1.1.0"
-
-The other functions can query R-universe, local libraries or base R
-packages:
+If a single version code is needed, there’s a counterpart that selects
+the latest version only. The current version of aurrera on Github is:
 
 ``` r
-wood_runiverse_version("woodendesc", universe = "turtletopia")
+wood_github_latest("aurrera", "turtletopia")
+#> [1] "0.1.0"
 ```
-
-    ## [1] "0.1.0"
-
-``` r
-wood_local_dependencies("httr", paths = "all")
-```
-
-    ##      package version     type
-    ## 1          R     3.2  Depends
-    ## 2       curl   3.0.0  Imports
-    ## 3   jsonlite    <NA>  Imports
-    ## 4       mime    <NA>  Imports
-    ## 5    openssl     0.8  Imports
-    ## 6         R6    <NA>  Imports
-    ## 7       covr    <NA> Suggests
-    ## 8     httpuv    <NA> Suggests
-    ## 9       jpeg    <NA> Suggests
-    ## 10     knitr    <NA> Suggests
-    ## 11       png    <NA> Suggests
-    ## 12     readr    <NA> Suggests
-    ## 13 rmarkdown    <NA> Suggests
-    ## 14  testthat   0.8.0 Suggests
-    ## 15      xml2    <NA> Suggests
-
-``` r
-wood_core_packages()
-```
-
-    ##  [1] "base"      "compiler"  "datasets"  "graphics"  "grDevices" "grid"     
-    ##  [7] "methods"   "parallel"  "splines"   "stats"     "stats4"    "tcltk"    
-    ## [13] "tools"     "utils"
-
-And if none of the above satisfies your use case, there are default
-`_url_` functions:
-
-``` r
-wood_url_packages("https://colinfay.me")
-```
-
-    ##  [1] "craneur"        "jekyllthat"     "tidystringdist" "attempt"       
-    ##  [5] "rpinterest"     "rgeoapi"        "proustr"        "languagelayeR" 
-    ##  [9] "fryingpane"     "dockerfiler"    "devaddins"
-
-``` r
-wood_url_version("XML", "http://www.omegahat.net/R")
-```
-
-    ## [1] "3.99-0"
-
-``` r
-wood_url_dependencies("XML", "http://www.omegahat.net/R")
-```
-
-    ##   package version     type
-    ## 1       R   1.2.0  Depends
-    ## 2   utils    <NA>  Depends
-    ## 3 methods    <NA>  Imports
-    ## 4  bitops    <NA> Suggests
-    ## 5   RCurl    <NA> Suggests
 
 Last, but not least, there are three functions for searching through
 multiple repositories and collecting the results. Read the documentation
 for details on how to specify `repos` parameter.
 
+`wood_packages()` collects available packages from the specified
+repositories and returns unique elements:
+
 ``` r
-# These functions collect data from all repositories and return unique elements
 wood_packages(repos = c("core", "https://colinfay.me"))
+#>  [1] "attempt"        "base"           "compiler"       "craneur"       
+#>  [5] "datasets"       "devaddins"      "dockerfiler"    "fryingpane"    
+#>  [9] "graphics"       "grDevices"      "grid"           "jekyllthat"    
+#> [13] "languagelayeR"  "methods"        "parallel"       "proustr"       
+#> [17] "rgeoapi"        "rpinterest"     "splines"        "stats"         
+#> [21] "stats4"         "tcltk"          "tidystringdist" "tools"         
+#> [25] "utils"
 ```
 
-    ##  [1] "attempt"        "base"           "compiler"       "craneur"       
-    ##  [5] "datasets"       "devaddins"      "dockerfiler"    "fryingpane"    
-    ##  [9] "graphics"       "grDevices"      "grid"           "jekyllthat"    
-    ## [13] "languagelayeR"  "methods"        "parallel"       "proustr"       
-    ## [17] "rgeoapi"        "rpinterest"     "splines"        "stats"         
-    ## [21] "stats4"         "tcltk"          "tidystringdist" "tools"         
-    ## [25] "utils"
+`wood_versions()` returns all package versions available on at least one
+of the specified repositories; may take more than one package:
 
 ``` r
-# wood_versions() and wood_dependencies() can take multiple packages
 wood_versions(
-  c("versionsort", "woodendesc"),
-  c("local#all", "runiverse@turtletopia", "cran")
+  c("aurrera", "woodendesc"),
+  repos = c("local#all", "runiverse@turtletopia", "cran")
 )
+#> $aurrera
+#> [1] "0.1.0"
+#> 
+#> $woodendesc
+#> [1] "0.1.0"
 ```
 
-    ## $versionsort
-    ## [1] "1.0.0" "1.1.0"
-    ## 
-    ## $woodendesc
-    ## [1] "0.1.0"
+`wood_dependencies()` returns a list of package dependencies, a data
+frame for each package specified; the first working repository is used
+for each package, as the dependencies are not supposed to be summable:
 
 ``` r
-# This one returns the first working occurence instead
 wood_dependencies(
-  c("versionsort", "woodendesc"),
-  c("local#all", "runiverse@turtletopia", "cran")
+  c("versionsort", "gglgbtq"),
+  repos = c("local#all", "runiverse@turtletopia", "cran")
 )
+#> $versionsort
+#>    package version     type
+#> 1     covr    <NA> Suggests
+#> 2 spelling    <NA> Suggests
+#> 3 testthat   3.0.0 Suggests
+#> 
+#> $gglgbtq
+#>     package version     type
+#> 1   ggplot2    <NA>  Imports
+#> 2  graphics    <NA>  Imports
+#> 3 grDevices    <NA>  Imports
+#> 4     knitr    <NA> Suggests
+#> 5 rmarkdown    <NA> Suggests
+#> 6  spelling    <NA> Suggests
+#> 7  testthat   3.0.0 Suggests
+#> 
+#> attr(,"class")
+#> [1] "wood_dep_list" "list"
 ```
-
-    ## $versionsort
-    ##    package version     type
-    ## 1     covr    <NA> Suggests
-    ## 2 spelling    <NA> Suggests
-    ## 3 testthat   3.0.0 Suggests
-    ## 
-    ## $woodendesc
-    ##        package version     type
-    ## 1            R   3.5.0  Depends
-    ## 2       digest    <NA>  Imports
-    ## 3         httr    <NA>  Imports
-    ## 4  versionsort   1.1.0  Imports
-    ## 5         covr    <NA> Suggests
-    ## 6     httptest    <NA> Suggests
-    ## 7     testthat   3.0.0 Suggests
-    ## 8      usethis    <NA> Suggests
-    ## 9          vcr    <NA> Suggests
-    ## 10       withr    <NA> Suggests
-    ## 11        xml2    <NA> Suggests
-    ## 
-    ## attr(,"class")
-    ## [1] "wood_dep_list" "list"
 
 And if you ever need to clear cache, simply call:
 

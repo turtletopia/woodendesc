@@ -2,6 +2,18 @@
 output: github_document
 ---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "90%"
+)
+library(woodendesc)
+```
+
 # woodendesc
 
 <!-- badges: start -->
@@ -12,7 +24,7 @@ output: github_document
 [![Codecov test coverage](https://codecov.io/gh/turtletopia/woodendesc/branch/master/graph/badge.svg)](https://codecov.io/gh/turtletopia/woodendesc?branch=master)
 <!-- badges: end -->
 
-woodendesc strives to provide an unified API to query any R repository for the following data:
+{woodendesc} strives to provide an unified API to query any R repository for the following data:
 
 * list of available packages,
 * version code of any selected package,
@@ -22,7 +34,7 @@ The package tries to cache as much as possible and reuse existing cache wherever
 
 ## Installation
 
-```{r eval = FALSE}
+```{r install, eval=FALSE}
 # Install the development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("turtletopia/woodendesc")
@@ -30,53 +42,64 @@ devtools::install_github("turtletopia/woodendesc")
 
 ## How to use woodendesc?
 
-Each repository has its dedicated functions for listing available packages, package version, and package dependencies:
+Each repository has its dedicated functions for listing available packages, package version, and package dependencies.
 
-```{r bioc_funcs}
+A list of available packages is returned as a character vector. An example call returning a list of CRAN packages:
+
+```{r demo_cran_pkgs, cache=TRUE}
 library(woodendesc)
-
 # Too many packages to list them all
-wood_bioc_packages() |> head()
+all_cran_pkgs <- wood_cran_packages()
+head(all_cran_pkgs, 10)
+```
+
+An available package version is returned as a single code. An example call checking the current version of Biobase package on Bioconductor:
+
+```{r demo_bioc_version, cache=TRUE}
 wood_bioc_version("Biobase")
-wood_bioc_dependencies("Biobase")
 ```
 
-Sometimes a repository may contain multiple versions of the same package, this is signified by pluralizing `_version` in function name, as in CRAN:
+Dependencies of a package are returned as a data frame with the same set of columns for all calls. An example call for locally installed digest package (dependency of woodendesc):
 
-```{r cran_versions}
-wood_cran_versions("versionsort")
+```{r demo_local_deps, cache=TRUE}
+wood_local_dependencies("digest")
 ```
 
-The other functions can query R-universe, local libraries or base R packages:
+Note that some repositories store more than just one version of a package (e.g. CRAN and Github). These cases can be distinguished by pluralized `_versions` function name component and they return all version codes instead; a character vector of any length. This is how it works for gglgbtq on Github:
 
-```{r other_funcs}
-wood_runiverse_version("woodendesc", universe = "turtletopia")
-wood_local_dependencies("httr", paths = "all")
-wood_core_packages()
+```{r demo_gh_versions, cache=TRUE}
+wood_github_versions("gglgbtq", "turtletopia")
 ```
 
-And if none of the above satisfies your use case, there are default `_url_` functions:
+If a single version code is needed, there's a counterpart that selects the latest version only. The current version of aurrera on Github is:
 
-```{r url_funcs}
-wood_url_packages("https://colinfay.me")
-wood_url_version("XML", "http://www.omegahat.net/R")
-wood_url_dependencies("XML", "http://www.omegahat.net/R")
+```{r demo_gh_latest, cache=TRUE}
+wood_github_latest("aurrera", "turtletopia")
 ```
 
 Last, but not least, there are three functions for searching through multiple repositories and collecting the results. Read the documentation for details on how to specify `repos` parameter.
 
-```{r wood_funcs}
-# These functions collect data from all repositories and return unique elements
+`wood_packages()` collects available packages from the specified repositories and returns unique elements:
+
+```{r demo_wood_packages, cache=TRUE}
 wood_packages(repos = c("core", "https://colinfay.me"))
-# wood_versions() and wood_dependencies() can take multiple packages
+```
+
+`wood_versions()` returns all package versions available on at least one of the specified repositories; may take more than one package:
+
+```{r demo_wood_versions, cache=TRUE}
 wood_versions(
-  c("versionsort", "woodendesc"),
-  c("local#all", "runiverse@turtletopia", "cran")
+  c("aurrera", "woodendesc"),
+  repos = c("local#all", "runiverse@turtletopia", "cran")
 )
-# This one returns the first working occurence instead
+```
+
+`wood_dependencies()` returns a list of package dependencies, a data frame for each package specified; the first working repository is used for each package, as the dependencies are not supposed to be summable:
+
+```{r demo_wood_deps, cache=TRUE}
 wood_dependencies(
-  c("versionsort", "woodendesc"),
-  c("local#all", "runiverse@turtletopia", "cran")
+  c("versionsort", "gglgbtq"),
+  repos = c("local#all", "runiverse@turtletopia", "cran")
 )
 ```
 
