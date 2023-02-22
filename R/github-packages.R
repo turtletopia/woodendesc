@@ -5,7 +5,7 @@
 #' being a repository (and in most cases, package) name.
 #'
 #' @template gh-user
-#' @param include_forks \code{logical(1)}\cr
+#' @param include_forks `logical(1)`\cr
 #'  Whether to include packages forked from other accounts.
 #'
 #' @return A character vector of available packages.

@@ -7,7 +7,7 @@
 wood_clear_cache()
 }
 \value{
-An integer code, invisibly, the same as in \code{\link[base]{unlink}}.
+An integer code, invisibly, the same as in \code{\link[base:unlink]{base::unlink()}}.
 }
 \description{
 Remove all \pkg{woodendesc}-related cached files.

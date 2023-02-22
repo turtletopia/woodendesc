@@ -12,10 +12,8 @@
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
 #' @examples
-#' \donttest{
 #' wood_local_dependencies("woodendesc")
 #' wood_local_dependencies("httr", paths = "all")
-#' }
 #'
 #' @family local
 #' @family dependencies

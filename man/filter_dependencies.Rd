@@ -16,7 +16,7 @@ filter_dependencies(object, which = "strong")
 \method{filter_dependencies}{`NULL`}(object, which = "strong")
 }
 \arguments{
-\item{object}{\code{wood_deps || wood_dep_list}\cr
+\item{object}{\code{wood_deps() || wood_dep_list()}\cr
 Dependencies to filter.}
 
 \item{which}{\code{character()}\cr
@@ -25,7 +25,7 @@ A vector listing the types of dependencies, a subset of
 Character string \code{"all"} is shorthand for that vector, character string
 \code{"most"}for the same vector without \code{"Enhances"}, character string
 \code{"strong"} (default) for the first three elements of that vector. The same
-convention as in \code{\link[tools]{package_dependencies}()}.}
+convention as in \code{\link[tools:package_dependencies]{tools::package_dependencies()}}.}
 }
 \value{
 Object of the same class as \code{object} parameter, but with filtered

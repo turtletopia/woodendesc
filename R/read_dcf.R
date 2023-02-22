@@ -3,7 +3,7 @@
 #' @description Takes a single string with newlines and returns a list of lists
 #' for each package.
 #'
-#' @param object \code{character(1)}\cr
+#' @param object `character(1)`\cr
 #'  Contents of a file to parse in a form of a single string.
 #'
 #' @return A list with one element for each package; each element being a list
@@ -39,9 +39,9 @@ read_dcf <- function(object) {
 #' @description Scans a string in search of certain field, then extracts all
 #' encountered values.
 #'
-#' @param object \code{character(1)}\cr
+#' @param object `character(1)`\cr
 #'  Contents of a file to parse in a form of a single string.
-#' @param field \code{character(1)}\cr
+#' @param field `character(1)`\cr
 #'  Name of a field to look for.
 #'
 #' @return A character vector, each element being an extracted value.
@@ -69,9 +69,9 @@ read_dcf_all_values <- function(object, field) {
 #' @description Scans a string in search of certain field, then extracts the
 #' first encountered value.
 #'
-#' @param object \code{character(1)}\cr
+#' @param object `character(1)`\cr
 #'  Contents of a file to parse in a form of a single string.
-#' @param field \code{character(1)}\cr
+#' @param field `character(1)`\cr
 #'  Name of a field to look for.
 #'
 #' @return A single string with an extracted value.

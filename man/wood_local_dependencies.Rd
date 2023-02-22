@@ -27,10 +27,8 @@ This function extracts dependencies of the selected package,
 searching through specified library paths.
 }
 \examples{
-\donttest{
 wood_local_dependencies("woodendesc")
 wood_local_dependencies("httr", paths = "all")
-}
 
 }
 \seealso{

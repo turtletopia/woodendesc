@@ -9,9 +9,7 @@
 #' @return A character vector of version codes.
 #'
 #' @examples
-#' \donttest{
 #' wood_local_versions("httr")
-#' }
 #'
 #' @family local
 #' @family versions

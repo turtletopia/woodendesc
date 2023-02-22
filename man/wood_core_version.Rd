@@ -12,15 +12,13 @@ Name of a package to query for.}
 }
 \value{
 A single string with a version code. Should be equal to the R version
-(\code{\link[base]{getRversion}()}).
+(\code{\link[base:numeric_version]{base::getRversion()}}).
 }
 \description{
 This function checks the version of the selected core R package.
 }
 \examples{
-\donttest{
 wood_core_version("graphics")
-}
 
 }
 \seealso{

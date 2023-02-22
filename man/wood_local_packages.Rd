@@ -19,10 +19,8 @@ This function searches for installed packages inside specified
 library paths.
 }
 \examples{
-\donttest{
 wood_local_packages()
 wood_local_packages("all")
-}
 
 }
 \seealso{

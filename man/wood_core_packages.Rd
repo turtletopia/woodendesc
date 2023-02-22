@@ -13,9 +13,7 @@ A character vector of available packages.
 This function returns the list of base R packages.
 }
 \examples{
-\donttest{
 wood_core_packages()
-}
 
 }
 \seealso{

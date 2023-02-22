@@ -5,12 +5,10 @@
 #' @template package
 #'
 #' @return A single string with a version code. Should be equal to the R version
-#' (\code{\link[base]{getRversion}()}).
+#' ([base::getRversion()]).
 #'
 #' @examples
-#' \donttest{
 #' wood_core_version("graphics")
-#' }
 #'
 #' @family core
 #' @family versions

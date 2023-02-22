@@ -8,10 +8,8 @@
 #' @return A character vector of available packages.
 #'
 #' @examples
-#' \donttest{
 #' wood_local_packages()
 #' wood_local_packages("all")
-#' }
 #'
 #' @family local
 #' @family packages

@@ -11,9 +11,7 @@
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
 #' @examples
-#' \donttest{
 #' wood_core_dependencies("tcltk")
-#' }
 #'
 #' @family core
 #' @family dependencies

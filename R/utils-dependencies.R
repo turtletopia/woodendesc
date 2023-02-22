@@ -4,7 +4,7 @@
 #' `data.frame` with additional info about "origin" package, i.e. which package
 #' has this dependency.
 #'
-#' @param object \code{wood_dep_list}\cr
+#' @param object `wood_dep_list()`\cr
 #'  A list of dependencies to compress.
 #'
 #' @return A `data.frame` object similar to these returned by `_dependencies`
@@ -38,15 +38,15 @@ squash.wood_dep_list <- function(object) {
 #' @description This function removes all dependencies that are not one of the
 #' specified types.
 #'
-#' @param object \code{wood_deps || wood_dep_list}\cr
+#' @param object `wood_deps() || wood_dep_list()`\cr
 #'  Dependencies to filter.
-#' @param which \code{character()}\cr
+#' @param which `character()`\cr
 #'  A vector listing the types of dependencies, a subset of
-#'  \code{c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")}.
+#'  `c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")`.
 #'  Character string `"all"` is shorthand for that vector, character string
 #'  `"most"`for the same vector without `"Enhances"`, character string
 #'  `"strong"` (default) for the first three elements of that vector. The same
-#'  convention as in \code{\link[tools]{package_dependencies}()}.
+#'  convention as in [tools::package_dependencies()].
 #'
 #' @return Object of the same class as `object` parameter, but with filtered
 #' dependencies.

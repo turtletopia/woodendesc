@@ -5,9 +5,7 @@
 #' @return A character vector of available packages.
 #'
 #' @examples
-#' \donttest{
 #' wood_core_packages()
-#' }
 #'
 #' @family core
 #' @family packages

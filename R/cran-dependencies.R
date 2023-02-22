@@ -4,7 +4,7 @@
 #' version of a selected package. By default, it queries the latest version.
 #'
 #' @template package
-#' @param version \code{character(1)}\cr
+#' @param version `character(1)`\cr
 #'  A version code without leading `"v"`, e.g. `"1.6.0"`.
 #'
 #' @return A data frame with three columns, all in string format:

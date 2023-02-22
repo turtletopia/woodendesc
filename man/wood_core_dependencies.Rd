@@ -23,9 +23,7 @@ This function collects the dependencies of the selected core R
 package.
 }
 \examples{
-\donttest{
 wood_core_dependencies("tcltk")
-}
 
 }
 \seealso{

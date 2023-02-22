@@ -3,9 +3,9 @@
 #' @description Creates an URL to the selected universe and the selected API
 #' within this universe.
 #'
-#' @param universe \code{character(1)}\cr
+#' @param universe `character(1)`\cr
 #'  Name of a universe within R-universe, e.g. "ropensci".
-#' @param ... \code{character(1)}\cr
+#' @param ... `character(1)`\cr
 #'  Components of the URL path, to be separated by slashes.
 #'
 #' @return A single string with an URL address to selected universe.
@@ -21,9 +21,9 @@ runiverse_url <- function(universe, ...) {
 #' parameters translated to an URL list. The list should be named. In case of
 #' an empty list, parameters are simply not appended to the core URL.
 #'
-#' @param ... \code{character(1)}\cr
+#' @param ... `character(1)`\cr
 #'  Components of the URL path, to be separated by slashes.
-#' @param params \code{list}\cr
+#' @param params `list()`\cr
 #'  Parameters to URL call in form of key:value named list.
 #'
 #' @return A single string with an URL address to specified METACRAN API.
@@ -38,7 +38,7 @@ crandb_url <- function(..., params = list()) {
 #'
 #' @description Creates an URL to the selected CRAN API.
 #'
-#' @param ... \code{character(1)}\cr
+#' @param ... `character(1)`\cr
 #'  Components of the URL path, to be separated by slashes.
 #'
 #' @return A single string with an URL address to selected API.
@@ -60,7 +60,7 @@ github_url <- function(..., params = list()) {
 #'
 #' @description Creates an URL to the selected Bioconductor API.
 #'
-#' @param ... \code{character(1)}\cr
+#' @param ... `character(1)`\cr
 #'  Components of the URL path, to be separated by slashes.
 #'
 #' @return A single string with an URL address to selected API.

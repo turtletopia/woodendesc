@@ -22,9 +22,7 @@ This function searches for installed package versions inside
 specified library paths.
 }
 \examples{
-\donttest{
 wood_local_versions("httr")
-}
 
 }
 \seealso{

@@ -10,7 +10,7 @@ squash(object)
 \method{squash}{wood_dep_list}(object)
 }
 \arguments{
-\item{object}{\code{wood_dep_list}\cr
+\item{object}{\code{wood_dep_list()}\cr
 A list of dependencies to compress.}
 }
 \value{

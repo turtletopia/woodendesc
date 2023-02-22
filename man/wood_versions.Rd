@@ -20,8 +20,8 @@ with a valid Bioconductor release code or one of \code{"release"}, \code{"devel"
 \item \code{"runiverse@universe"}, meaning R-universe, where \code{universe} should be
 replaced with a valid universe name (e.g. \code{turtletopia});
 \item \code{"local#index"}, meaning a local library, where \code{index} should be replaced
-with an integer index of a library in \code{\link[base]{.libPaths}()} or
-an \code{all} keyword;
+with an integer index of a library in \code{\link[base:libPaths]{base::.libPaths()}} or an \code{all}
+keyword;
 \item a URL if none of the above is matched.
 }}
 }
