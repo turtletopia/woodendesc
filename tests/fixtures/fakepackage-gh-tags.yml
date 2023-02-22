@@ -1,0 +1,135 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/fakepackage/master/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      connection: keep-alive
+      content-length: '14'
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-type: text/plain; charset=utf-8
+      x-github-request-id: 3F6E:3394:482087:4CDB59:63F5EFDA
+      accept-ranges: bytes
+      date: Wed, 22 Feb 2023 10:35:07 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21048-AMS
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1677062107.915503,VS0,VE130
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 470afbbf34d955ba6ddc147345804f0b01e61462
+      expires: Wed, 22 Feb 2023 10:40:07 GMT
+      source-age: '0'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '404: Not Found'
+  recorded_at: 2023-02-22 10:35:05 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/turtletopia/fakepackage/main/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      connection: keep-alive
+      content-length: '14'
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-type: text/plain; charset=utf-8
+      x-github-request-id: FFF0:16BE:A17F2F:ABCC13:63F5EFDB
+      accept-ranges: bytes
+      date: Wed, 22 Feb 2023 10:35:07 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21048-AMS
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1677062107.093305,VS0,VE139
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: 6481b183d1b2621d48815409a4cfe4a5bc9c10df
+      expires: Wed, 22 Feb 2023 10:40:07 GMT
+      source-age: '0'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '404: Not Found'
+  recorded_at: 2023-02-22 10:35:05 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://api.github.com/repos/turtletopia/fakepackage
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 404
+      category: Client error
+      reason: Not Found
+      message: 'Client error: (404) Not Found'
+    headers:
+      server: GitHub.com
+      date: Wed, 22 Feb 2023 10:35:07 GMT
+      content-type: application/json; charset=utf-8
+      x-github-media-type: github.v3
+      x-github-api-version-selected: '2022-11-28'
+      access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP,
+        X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+      access-control-allow-origin: '*'
+      strict-transport-security: max-age=31536000; includeSubdomains; preload
+      x-frame-options: deny
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin
+      content-security-policy: default-src 'none'
+      vary: Accept-Encoding, Accept, X-Requested-With
+      content-encoding: gzip
+      x-ratelimit-limit: '60'
+      x-ratelimit-remaining: '49'
+      x-ratelimit-reset: '1677062435'
+      x-ratelimit-resource: core
+      x-ratelimit-used: '11'
+      content-length: '121'
+      x-github-request-id: 97AE:5C19:3C70566:3D6D814:63F5EFDB
+    body:
+      encoding: UTF-8
+      file: no
+      string: |
+        {
+          "message": "Not Found",
+          "documentation_url": "https://docs.github.com/rest/reference/repos#get-a-repository"
+        }
+  recorded_at: 2023-02-22 10:35:05 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

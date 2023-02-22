@@ -1,0 +1,73 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/turtletopia/gglgbtq/tags
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      server: GitHub.com
+      date: Wed, 22 Feb 2023 10:35:06 GMT
+      content-type: application/json; charset=utf-8
+      cache-control: public, max-age=60, s-maxage=60
+      vary: Accept, Accept-Encoding, Accept, X-Requested-With
+      etag: W/"447ca4a6aef34d890c59af926b399df89b33894fe9692767dcd2c7b22bde1685"
+      last-modified: Mon, 06 Feb 2023 17:51:46 GMT
+      x-github-media-type: github.v3
+      x-github-api-version-selected: '2022-11-28'
+      access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP,
+        X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+      access-control-allow-origin: '*'
+      strict-transport-security: max-age=31536000; includeSubdomains; preload
+      x-frame-options: deny
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin
+      content-security-policy: default-src 'none'
+      content-encoding: gzip
+      x-ratelimit-limit: '60'
+      x-ratelimit-remaining: '50'
+      x-ratelimit-reset: '1677062435'
+      x-ratelimit-resource: core
+      x-ratelimit-used: '10'
+      accept-ranges: bytes
+      content-length: '313'
+      x-github-request-id: 97AE:5C19:3C7017C:3D6D3E5:63F5EFDA
+    body:
+      encoding: UTF-8
+      file: no
+      string: |
+        [
+          {
+            "name": "v0.1.1",
+            "zipball_url": "https://api.github.com/repos/turtletopia/gglgbtq/zipball/refs/tags/v0.1.1",
+            "tarball_url": "https://api.github.com/repos/turtletopia/gglgbtq/tarball/refs/tags/v0.1.1",
+            "commit": {
+              "sha": "db030fdc470f3d46cfadeb659452ea46ce063ee3",
+              "url": "https://api.github.com/repos/turtletopia/gglgbtq/commits/db030fdc470f3d46cfadeb659452ea46ce063ee3"
+            },
+            "node_id": "REF_kwDOHxvnhLByZWZzL3RhZ3MvdjAuMS4x"
+          },
+          {
+            "name": "v0.1.0",
+            "zipball_url": "https://api.github.com/repos/turtletopia/gglgbtq/zipball/refs/tags/v0.1.0",
+            "tarball_url": "https://api.github.com/repos/turtletopia/gglgbtq/tarball/refs/tags/v0.1.0",
+            "commit": {
+              "sha": "28e87153c0214ef360620566416225e3be4d3c81",
+              "url": "https://api.github.com/repos/turtletopia/gglgbtq/commits/28e87153c0214ef360620566416225e3be4d3c81"
+            },
+            "node_id": "REF_kwDOHxvnhLByZWZzL3RhZ3MvdjAuMS4w"
+          }
+        ]
+  recorded_at: 2023-02-22 10:35:04 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -46,6 +46,17 @@ test_versions <- function(versions) {
   })
 }
 
+test_tags <- function(tags) {
+  test_that("returns a vector of strings", {
+    expect_vector(tags,
+                  ptype = character())
+  })
+
+  test_that("returned vector of strings is not empty", {
+    expect_gt(length(tags), 0)
+  })
+}
+
 test_dependencies <- function(deps) {
   test_that("returns a data frame with package, version & type columns", {
     expect_vector(deps,
