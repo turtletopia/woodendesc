@@ -7,6 +7,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version-last-release/woodendesc)](https://CRAN.R-project.org/package=woodendesc)
+[![R-universe](https://turtletopia.r-universe.dev/badges/woodendesc)](https://turtletopia.r-universe.dev)
 [![R-CMD-check](https://github.com/turtletopia/woodendesc/workflows/R-CMD-check/badge.svg)](https://github.com/turtletopia/woodendesc/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/turtletopia/woodendesc/branch/master/graph/badge.svg)](https://codecov.io/gh/turtletopia/woodendesc?branch=master)
@@ -53,22 +54,24 @@ wood_bioc_packages() |> head()
 wood_bioc_version("Biobase")
 ```
 
-    ## [1] "2.56.0"
+    ## [1] "2.58.0"
 
 ``` r
 wood_bioc_dependencies("Biobase")
 ```
 
-    ##        package version     type
-    ## 1            R    2.10  Depends
-    ## 2 BiocGenerics  0.27.1  Depends
-    ## 3        utils    <NA>  Depends
-    ## 4      methods    <NA>  Imports
-    ## 5        tools    <NA> Suggests
-    ## 6    tkWidgets    <NA> Suggests
-    ## 7          ALL    <NA> Suggests
-    ## 8        RUnit    <NA> Suggests
-    ## 9   golubEsets    <NA> Suggests
+    ##         package version     type
+    ## 1             R    2.10  Depends
+    ## 2  BiocGenerics  0.27.1  Depends
+    ## 3         utils    <NA>  Depends
+    ## 4       methods    <NA>  Imports
+    ## 5         tools    <NA> Suggests
+    ## 6     tkWidgets    <NA> Suggests
+    ## 7           ALL    <NA> Suggests
+    ## 8         RUnit    <NA> Suggests
+    ## 9    golubEsets    <NA> Suggests
+    ## 10    BiocStyle    <NA> Suggests
+    ## 11        knitr    <NA> Suggests
 
 Sometimes a repository may contain multiple versions of the same
 package, this is signified by pluralizing `_version` in function name,
@@ -197,12 +200,16 @@ wood_dependencies(
     ## 2       digest    <NA>  Imports
     ## 3         httr    <NA>  Imports
     ## 4  versionsort   1.1.0  Imports
-    ## 5     httptest    <NA> Suggests
-    ## 6     testthat   3.0.0 Suggests
-    ## 7      usethis    <NA> Suggests
-    ## 8          vcr    <NA> Suggests
-    ## 9        withr    <NA> Suggests
-    ## 10        xml2    <NA> Suggests
+    ## 5         covr    <NA> Suggests
+    ## 6     httptest    <NA> Suggests
+    ## 7     testthat   3.0.0 Suggests
+    ## 8      usethis    <NA> Suggests
+    ## 9          vcr    <NA> Suggests
+    ## 10       withr    <NA> Suggests
+    ## 11        xml2    <NA> Suggests
+    ## 
+    ## attr(,"class")
+    ## [1] "wood_dep_list" "list"
 
 And if you ever need to clear cache, simply call:
 
