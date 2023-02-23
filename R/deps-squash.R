@@ -30,5 +30,7 @@ squash.wood_dep_list <- function(object) {
   # Add origin column
   deps <- mapply(cbind, origin = names(deps), deps, SIMPLIFY = FALSE)
   # Merge data frames
-  as_wood_dep_squashed(do.call(rbind, c(deps, make.row.names = FALSE)))
+  as_wood_dep_squashed(do.call(
+    rbind, c(deps, make.row.names = FALSE, stringsAsFactors = FALSE)
+  ))
 }
