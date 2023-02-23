@@ -114,11 +114,10 @@ assert_keyword_or_release <- function(object, label) {
 }
 
 assert_keyword_or_dep_type <- function(object, label) {
-  dep_types <- c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")
   keywords <- c("all", "most", "strong")
 
-  if (any(!object %in% c(dep_types, keywords))) {
-    locations <- which(!object %in% c(dep_types, keywords))
+  if (any(!object %in% c(.DEPENDENCY_TYPES, keywords))) {
+    locations <- which(!object %in% c(.DEPENDENCY_TYPES, keywords))
     stopf(
       c("`%1$s` must contain valid dependency types.\n",
         "(i) Found illegal strings at %2$s: %3$s\n",
@@ -127,7 +126,7 @@ assert_keyword_or_dep_type <- function(object, label) {
       label,
       ngettext(length(locations), "location", "locations"),
       collapse_comma(locations),
-      collapse_comma(dep_types, truncate_at = Inf),
+      collapse_comma(.DEPENDENCY_TYPES, truncate_at = Inf),
       collapse_comma(keywords, truncate_at = Inf)
     )
   }
@@ -141,7 +140,7 @@ assert_keyword_or_dep_type <- function(object, label) {
       label,
       ngettext(length(locations), "location", "locations"),
       collapse_comma(locations),
-      collapse_comma(dep_types, truncate_at = Inf)
+      collapse_comma(.DEPENDENCY_TYPES, truncate_at = Inf)
     )
   }
 }

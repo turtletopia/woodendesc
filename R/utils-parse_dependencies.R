@@ -1,4 +1,4 @@
-.DEPENDENCY_TYPES <- c("Depends", "Imports", "Suggests", "LinkingTo", "Enhances")
+.DEPENDENCY_TYPES <- c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")
 
 extract_dependencies <- function(desc, parser = parse_dependencies) {
   deps <- lapply(

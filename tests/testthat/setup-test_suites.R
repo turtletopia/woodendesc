@@ -69,7 +69,12 @@ test_dependencies <- function(deps) {
   })
 
   test_that("returned 'package' column contains package names", {
-    expect_pkg_name(deps[["package"]])
+    pkgs <- deps[["package"]]
+    if (length(pkgs) == 0) {
+      expect_equal(pkgs, character())
+    } else {
+      expect_pkg_name(pkgs)
+    }
   })
 
   test_that("returned 'version' column contains version codes or NA values", {

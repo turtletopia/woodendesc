@@ -51,11 +51,9 @@ filter_dependencies.NULL <- function(object, which = "strong") { NULL }
 match_dep_type <- function(which) {
   assert_param_which_deps(which)
 
-  dep_types <- c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")
-
-  if (identical(which, "all")) return(dep_types)
-  if (identical(which, "most")) return(dep_types[1:4])
-  if (identical(which, "strong")) return(dep_types[1:3])
+  if (identical(which, "all")) return(.DEPENDENCY_TYPES)
+  if (identical(which, "most")) return(.DEPENDENCY_TYPES[1:4])
+  if (identical(which, "strong")) return(.DEPENDENCY_TYPES[1:3])
 
   which
 }
