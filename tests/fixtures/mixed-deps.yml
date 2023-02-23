@@ -1,0 +1,237 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/desc?start_key=%22versionsort%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 23 Feb 2023 18:09:12 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cf-cache-status: DYNAMIC
+      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OqQB2li4dB6ztP0Der%2FW9j2gfEnpOL8IcIBPsQO0kdzIjOnAlt4R3tFdjqOVPL9KsNKqUw4IE6%2Bbu%2FU6%2FledcQp4bTpVbm08o38y4Ws%2BwevSrBGVr29NSnjQyEM9HRndYX%2Bxwalwb8LATpBiDivS"}],"group":"cf-nel","max_age":604800}'
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server: cloudflare
+      cf-ray: 79e1e945880134e6-WAW
+      content-encoding: gzip
+      alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "versionsort": { "version": "1.1.0", "title": "Sort and Order Version
+        Codes" } }'
+  recorded_at: 2023-02-23 18:09:13 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/cran/versionsort/1.1.0/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '456'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"22758dbeef163a456a11700485d080c3e9ad54380c07871ad1c5b6b4a472409a"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: 44E8:3394:BDADBD:C97648:63F7ABC8
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Thu, 23 Feb 2023 18:09:13 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21037-AMS
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1677175753.890083,VS0,VE244
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: d689bda1ae22c3016db83ea537f27f1a2dedce5e
+      expires: Thu, 23 Feb 2023 18:14:13 GMT
+      source-age: '0'
+    body:
+      encoding: UTF-8
+      file: no
+      string: |
+        Package: versionsort
+        Type: Package
+        Title: Sort and Order Version Codes
+        Version: 1.1.0
+        Date: 2022-03-23
+        Authors@R: c(person("Laura", "Bakala",
+                     email = "erdaradun.gaztea@gmail.com",
+                     role = c("cre", "aut", "cph")))
+        Description: A lightweight package for sorting version codes in various forms. No strong dependencies guaranteed.
+        License: GPL (>= 3)
+        Encoding: UTF-8
+        RoxygenNote: 7.1.2
+        Suggests: covr, spelling, testthat (>= 3.0.0)
+        Config/testthat/edition: 3
+        Language: en-US
+        NeedsCompilation: no
+        Packaged: 2022-03-25 00:14:57 UTC; erdar
+        Author: Laura Bakala [cre, aut, cph]
+        Maintainer: Laura Bakala <erdaradun.gaztea@gmail.com>
+        Repository: CRAN
+        Date/Publication: 2022-03-25 08:10:02 UTC
+  recorded_at: 2023-02-23 18:09:13 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/desc?start_key=%22gglgbtq%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 23 Feb 2023 18:09:13 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cf-cache-status: DYNAMIC
+      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VCkeqhLLEkMr9KXKCx%2Bd8%2FAbo6XWpNAWh1VQ8LmU1c7GQLXakX3XpQ0RxHbW2VXu2VnmW%2BGBR2jQL7khBC1Eo719p7fA8POYHW0Y1%2FTkJpW3zSuc9vavHAZPcXbPD8Z9YLppwBZun7%2Byd31PyYaB"}],"group":"cf-nel","max_age":604800}'
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server: cloudflare
+      cf-ray: 79e1e9499d5e34e6-WAW
+      content-encoding: gzip
+      alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "gglgbtq": { "version": "0.1.1", "title": "Show Pride on ''ggplot2''
+        Plots" } }'
+  recorded_at: 2023-02-23 18:09:13 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/cran/gglgbtq/0.1.1/DESCRIPTION
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      connection: keep-alive
+      content-length: '577'
+      cache-control: max-age=300
+      content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+      content-type: text/plain; charset=utf-8
+      etag: W/"b850a4283b88b8380089f0b499cfbac1ffabaea64a58da9d5508e9880d1599fc"
+      strict-transport-security: max-age=31536000
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      x-github-request-id: 7398:3C7E:104BED0:11527C3:63F7ABC9
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Thu, 23 Feb 2023 18:09:13 GMT
+      via: 1.1 varnish
+      x-served-by: cache-ams21037-AMS
+      x-cache: MISS
+      x-cache-hits: '0'
+      x-timer: S1677175753.425168,VS0,VE202
+      vary: Authorization,Accept-Encoding,Origin
+      access-control-allow-origin: '*'
+      x-fastly-request-id: e4b92ed2a899f5ff16482ca570d1c5475721ccd0
+      expires: Thu, 23 Feb 2023 18:14:13 GMT
+      source-age: '0'
+    body:
+      encoding: UTF-8
+      file: no
+      string: |
+        Package: gglgbtq
+        Type: Package
+        Title: Show Pride on 'ggplot2' Plots
+        Version: 0.1.1
+        Date: 2022-11-01
+        Authors@R: c(person("Laura", "Bakala",
+                     email = "erdaradun.gaztea@gmail.com",
+                     role = c("cre", "aut", "cph"),
+                     comment = c(ORCID = "0000-0002-3213-2484")))
+        Description: Provides multiple palettes based on pride flags with tailored themes.
+        Imports: ggplot2, graphics, grDevices
+        Suggests: knitr, rmarkdown, spelling, testthat (>= 3.0.0)
+        License: GPL (>= 3)
+        Encoding: UTF-8
+        RoxygenNote: 7.1.2
+        Config/testthat/edition: 3
+        URL: https://github.com/turtletopia/gglgbtq,
+                https://turtletopia.github.io/gglgbtq/
+        Language: en-US
+        VignetteBuilder: knitr
+        NeedsCompilation: no
+        Packaged: 2022-11-01 10:14:44 UTC; erdar
+        Author: Laura Bakala [cre, aut, cph] (<https://orcid.org/0000-0002-3213-2484>)
+        Maintainer: Laura Bakala <erdaradun.gaztea@gmail.com>
+        Repository: CRAN
+        Date/Publication: 2022-11-01 10:40:16 UTC
+  recorded_at: 2023-02-23 18:09:13 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/desc?start_key=%22woodendesc%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 23 Feb 2023 18:09:14 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cf-cache-status: DYNAMIC
+      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7OOWsQt91L38wyRqJRGosbZ2VOr4saXGFFO6sXEE9UXSXlAa%2Fo7Uf3mCSI6E3eZjBrs%2BQmjDdJLxEnD7Fzvl7zwQnat6t1WLbiwTACxHccPzqH6YzaR3zfVBZSEDGhpvccI%2Bu894nVPKiO9FLtky"}],"group":"cf-nel","max_age":604800}'
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server: cloudflare
+      cf-ray: 79e1e94c794534e6-WAW
+      content-encoding: gzip
+      alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "WoodSimulatR": { "version": "0.6.0", "title": "Generate Simulated
+        Sawn Timber Strength Grading Data" } }'
+  recorded_at: 2023-02-23 18:09:13 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

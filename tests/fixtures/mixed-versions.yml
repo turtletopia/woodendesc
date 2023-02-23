@@ -1,0 +1,163 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/allall?start_key=%22versionsort%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 23 Feb 2023 18:05:23 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cf-cache-status: DYNAMIC
+      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5JJTJTqbmhx0Ft2W6342AzBU7ilJESbHCUtYqcojXwijeF1RdTU%2FeHLgO53Sk8sS8bHAX9DaV%2B4pRJAQqmInLEsz8Jb%2BsMJRPVHO6asWuBJmvwr5a%2Bd7iYrrwguPnO1%2BUJlgUzwRQTVr2dAIqwRo"}],"group":"cf-nel","max_age":604800}'
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server: cloudflare
+      cf-ray: 79e1e3ae7ca53494-WAW
+      content-encoding: gzip
+      alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "versionsort":{"_id":"versionsort","_rev":"4-8cdc90cab1973a872f958efa5feba696","name":"versionsort","versions":{"1.0.0":{"Package":"versionsort","Type":"Package","Title":"Sort
+        and Order Version Codes","Version":"1.0.0","Date":"2021-12-15","Authors@R":"c(person(\"Laura\",
+        \"Bakala\",\u000aemail = \"erdaradun.gaztea@gmail.com\",\u000arole = c(\"cre\",
+        \"aut\", \"cph\")))","Description":"A lightweight package for sorting version
+        codes in various forms. No strong dependencies guaranteed.","License":"GPL
+        (>= 3)","Encoding":"UTF-8","RoxygenNote":"7.1.2","Suggests":{"covr":"*","spelling":"*","testthat":">=
+        3.0.0"},"Config/testthat/edition":"3","Language":"en-US","NeedsCompilation":"no","Packaged":"2021-12-15
+        19:09:45 UTC; matib","Author":"Laura Bakala [cre, aut, cph]","Maintainer":"Laura
+        Bakala <erdaradun.gaztea@gmail.com>","Repository":"CRAN","Date/Publication":"2021-12-15
+        20:00:02 UTC","crandb_file_date":"2021-12-15 21:32:25","MD5sum":"d384c2227624ff6a97294a413980a823","date":"2021-12-15T19:00:02+00:00","releases":[]},"1.1.0":{"Package":"versionsort","Type":"Package","Title":"Sort
+        and Order Version Codes","Version":"1.1.0","Date":"2022-03-23","Authors@R":"c(person(\"Laura\",
+        \"Bakala\",\u000aemail = \"erdaradun.gaztea@gmail.com\",\u000arole = c(\"cre\",
+        \"aut\", \"cph\")))","Description":"A lightweight package for sorting version
+        codes in various forms. No strong dependencies guaranteed.","License":"GPL
+        (>= 3)","Encoding":"UTF-8","RoxygenNote":"7.1.2","Suggests":{"covr":"*","spelling":"*","testthat":">=
+        3.0.0"},"Config/testthat/edition":"3","Language":"en-US","NeedsCompilation":"no","Packaged":"2022-03-25
+        00:14:57 UTC; erdar","Author":"Laura Bakala [cre, aut, cph]","Maintainer":"Laura
+        Bakala <erdaradun.gaztea@gmail.com>","Repository":"CRAN","Date/Publication":"2022-03-25
+        08:10:02 UTC","crandb_file_date":"2022-03-25 10:20:35","MD5sum":"634bfff6a502f107a2cebbe19dbc839e","date":"2022-03-25T07:10:02+00:00","releases":[]}},"timeline":{"1.0.0":"2021-12-15T19:00:02+00:00","1.1.0":"2022-03-25T07:10:02+00:00"},"latest":"1.1.0","title":"Sort
+        and Order Version Codes"} }'
+  recorded_at: 2023-02-23 18:05:23 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/allall?start_key=%22gglgbtq%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 23 Feb 2023 18:05:23 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cf-cache-status: DYNAMIC
+      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=P4wVVmikDeGSjNdt3xRCLKjDnpAYTOFPbGpYBU7vkwUSCC2P3%2BrySTM0Jx3eoaMf2%2BqFfKSaWDJNVtV%2FAwZfLLc3Iw7FqVeJATd6btxZnIkaez2dfXPz29fqI4OMiMd3cx7j05N8w5Z9UgmMa2Db"}],"group":"cf-nel","max_age":604800}'
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server: cloudflare
+      cf-ray: 79e1e3b00ec73494-WAW
+      content-encoding: gzip
+      alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "gglgbtq":{"_id":"gglgbtq","_rev":"4-b375fafc009132745eb7ec2a71bb19bd","name":"gglgbtq","versions":{"0.1.0":{"Package":"gglgbtq","Type":"Package","Title":"Show
+        Pride on ''ggplot2'' Plots","Version":"0.1.0","Date":"2022-08-06","Authors@R":"c(person(\"Laura\",
+        \"Bakala\",\u000aemail = \"erdaradun.gaztea@gmail.com\",\u000arole = c(\"cre\",
+        \"aut\", \"cph\")))","Description":"Provides multiple palettes based on pride
+        flags with tailored themes.","Imports":{"ggplot2":"*","graphics":"*","grDevices":"*"},"Suggests":{"spelling":"*","testthat":">=
+        3.0.0"},"License":"GPL (>= 3)","Encoding":"UTF-8","RoxygenNote":"7.1.2","Config/testthat/edition":"3","URL":"https://github.com/turtletopia/gglgbtq","Language":"en-US","NeedsCompilation":"no","Packaged":"2022-08-14
+        08:37:36 UTC; matib","Author":"Laura Bakala [cre, aut, cph]","Maintainer":"Laura
+        Bakala <erdaradun.gaztea@gmail.com>","Repository":"CRAN","Date/Publication":"2022-08-16
+        09:00:05 UTC","crandb_file_date":"2022-08-16 10:20:46","MD5sum":"e2b4de3d1bc0aac26f888c276db2595e","date":"2022-08-16T08:00:05+00:00","releases":[]},"0.1.1":{"Package":"gglgbtq","Type":"Package","Title":"Show
+        Pride on ''ggplot2'' Plots","Version":"0.1.1","Date":"2022-11-01","Authors@R":"c(person(\"Laura\",
+        \"Bakala\",\u000aemail = \"erdaradun.gaztea@gmail.com\",\u000arole = c(\"cre\",
+        \"aut\", \"cph\"),\u000acomment = c(ORCID = \"0000-0002-3213-2484\")))","Description":"Provides
+        multiple palettes based on pride flags with tailored themes.","Imports":{"ggplot2":"*","graphics":"*","grDevices":"*"},"Suggests":{"knitr":"*","rmarkdown":"*","spelling":"*","testthat":">=
+        3.0.0"},"License":"GPL (>= 3)","Encoding":"UTF-8","RoxygenNote":"7.1.2","Config/testthat/edition":"3","URL":"https://github.com/turtletopia/gglgbtq,\u000ahttps://turtletopia.github.io/gglgbtq/","Language":"en-US","VignetteBuilder":"knitr","NeedsCompilation":"no","Packaged":"2022-11-01
+        10:14:44 UTC; erdar","Author":"Laura Bakala [cre, aut, cph] (<https://orcid.org/0000-0002-3213-2484>)","Maintainer":"Laura
+        Bakala <erdaradun.gaztea@gmail.com>","Repository":"CRAN","Date/Publication":"2022-11-01
+        10:40:16 UTC","crandb_file_date":"2022-11-01 11:32:38","MD5sum":"0cdd7ec4d254321f8d73a5ac829d5ffd","date":"2022-11-01T09:40:16+00:00","releases":[]}},"timeline":{"0.1.0":"2022-08-16T08:00:05+00:00","0.1.1":"2022-11-01T09:40:16+00:00"},"latest":"0.1.1","title":"Show
+        Pride on ''ggplot2'' Plots"} }'
+  recorded_at: 2023-02-23 18:05:23 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: http://crandb.r-pkg.org/-/allall?start_key=%22woodendesc%22&limit=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 23 Feb 2023 18:05:24 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cf-cache-status: DYNAMIC
+      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iHcXMAiy3JwITAtQ9ZOx%2BpVkloW7mDDmJDnkfM70BJDZihHieOYmweiSQ29JlwCVuu5fTI65JjDcdwTBGLAEi%2BdUWbxx2Ll0aDb0%2B3TyJkmyIKvblzFhDWdMFNAEnHbgodT3dgJiO%2Buaq8hXCpd9"}],"group":"cf-nel","max_age":604800}'
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server: cloudflare
+      cf-ray: 79e1e3b1482b3494-WAW
+      content-encoding: gzip
+      alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{ "WoodSimulatR":{"_id":"WoodSimulatR","_rev":"6-4ebafa769f075c55887310175646be4c","name":"WoodSimulatR","versions":{"0.5.0":{"Package":"WoodSimulatR","Title":"Generate
+        Simulated Sawn Timber Strength Grading Data","Version":"0.5.0","Authors@R":"c(\u000aperson(\"Andreas\",
+        \"Weidenhiller\", email = \"a.weidenhiller@holzforschung.at\", role = c(\"cre\",
+        \"aut\"),\u000acomment = c(ORCID = \"0000-0003-0938-2159\")),\u000aperson(\"Anton\",
+        \"Wegscheider\", email = \"a.wegscheider@holzforschung.at\", role = c(\"aut\"))\u000a)","Description":"Tools
+        for generating simulated sawn timber\u000astrength grading data with a main
+        focus on statistical simulation based on\u000acovariance matrices. Simulation
+        data\u000afor Norway spruce sawn timber from Austria and reference values
+        of means and\u000astandard deviations of grade determining properties from
+        literature\u000afor a number of European countries are provided, as well.","License":"MIT
+        + file LICENSE","Imports":{"scales":"*","stats":"*","dplyr":"*","rlang":">=
+        0.4.6","purrr":"*","tibble":"*","tidyr":"*"},"Encoding":"UTF-8","LazyData":"true","Language":"en-GB","RoxygenNote":"7.1.1","Suggests":{"ggplot2":"*","knitr":"*","magrittr":"*","pander":"*","rmarkdown":"*","testthat":"*","tidyselect":"*","utf8":"*"},"VignetteBuilder":"knitr","Depends":{"R":">=
+        2.10"},"NeedsCompilation":"no","Packaged":"2020-11-05 11:54:29 UTC; Weidenhiller","Author":"Andreas
+        Weidenhiller [cre, aut]\u000a(<https://orcid.org/0000-0003-0938-2159>),\u000aAnton
+        Wegscheider [aut]","Maintainer":"Andreas Weidenhiller <a.weidenhiller@holzforschung.at>","Repository":"CRAN","Date/Publication":"2020-11-10
+        10:10:05 UTC","crandb_file_date":"2020-11-10 11:26:53","MD5sum":"2e594ef127e5ce9070f4897d470a2d13","date":"2020-11-10T09:10:05+00:00","releases":[]},"0.6.0":{"Package":"WoodSimulatR","Title":"Generate
+        Simulated Sawn Timber Strength Grading Data","Version":"0.6.0","Date":"2022-06-09","Authors@R":"c(\u000aperson(\"Andreas\",
+        \"Weidenhiller\", email = \"a.weidenhiller@holzforschung.at\", role = c(\"cre\",
+        \"aut\"),\u000acomment = c(ORCID = \"0000-0003-0938-2159\")),\u000aperson(\"Anton\",
+        \"Wegscheider\", email = \"a.wegscheider@holzforschung.at\", role = c(\"aut\"))\u000a)","Description":"Tools
+        for generating simulated sawn timber\u000astrength grading data with a main
+        focus on statistical simulation based on\u000acovariance matrices. Simulation
+        data\u000afor Norway spruce sawn timber from Austria and reference values
+        of means and\u000astandard deviations of grade determining properties from
+        literature\u000afor a number of European countries are provided, as well.","License":"MIT
+        + file LICENSE","Imports":{"stats":"*","dplyr":"*","rlang":">= 0.4.6","purrr":"*","tibble":"*","tidyselect":"*","tidyr":"*"},"Encoding":"UTF-8","LazyData":"true","Language":"en-GB","RoxygenNote":"7.2.0","Config/testthat/edition":"3","Suggests":{"ggplot2":"*","knitr":"*","magrittr":"*","pander":"*","rmarkdown":"*","scales":"*","testthat":"*","utf8":"*"},"VignetteBuilder":"knitr","Depends":{"R":">=
+        2.10"},"NeedsCompilation":"no","Packaged":"2022-06-14 06:27:55 UTC; Weidenhiller","Author":"Andreas
+        Weidenhiller [cre, aut]\u000a(<https://orcid.org/0000-0003-0938-2159>),\u000aAnton
+        Wegscheider [aut]","Maintainer":"Andreas Weidenhiller <a.weidenhiller@holzforschung.at>","Repository":"CRAN","Date/Publication":"2022-06-20
+        06:40:07 UTC","crandb_file_date":"2022-06-20 08:02:44","MD5sum":"cfec6664a027a8810005ae9c22840c42","date":"2022-06-20T05:40:07+00:00","releases":[]}},"timeline":{"0.5.0":"2020-11-10T09:10:05+00:00","0.6.0":"2022-06-20T05:40:07+00:00"},"latest":"0.6.0","title":"Generate
+        Simulated Sawn Timber Strength Grading Data"} }'
+  recorded_at: 2023-02-23 18:05:23 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
