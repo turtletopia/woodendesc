@@ -51,7 +51,7 @@ print.wood_deps_summary <- function(x, ...) {
   cat("<summary of dependencies>\n")
 
   # Body
-  max_count_length <- nchar(max(x[["count"]]))
+  max_count_length <- max(nchar(x[["count"]]))
   for (i in seq_len(nrow(x))) {
     if (x[[i, "count"]] > 0) {
       # Create sprintf pattern based on max count length
