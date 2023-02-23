@@ -134,3 +134,15 @@ test_squashed <- function(deps) {
     expect_dependency_type(deps[["type"]])
   })
 }
+
+test_list_of <- function(object, names, test) {
+  test_that("returns an object with list structure", {
+    expect_type(object, "list")
+  })
+
+  test_that("each element is named after parameter value", {
+    expect_named(object, names)
+  })
+
+  lapply(object, test)
+}
