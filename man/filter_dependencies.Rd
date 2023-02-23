@@ -3,6 +3,7 @@
 \name{filter_dependencies}
 \alias{filter_dependencies}
 \alias{filter_dependencies.wood_deps}
+\alias{filter_dependencies.wood_dep_squashed}
 \alias{filter_dependencies.wood_dep_list}
 \alias{filter_dependencies.NULL}
 \title{Filter dependencies by type}
@@ -10,6 +11,8 @@
 filter_dependencies(object, which = "strong")
 
 \method{filter_dependencies}{wood_deps}(object, which = "strong")
+
+\method{filter_dependencies}{wood_dep_squashed}(object, which = "strong")
 
 \method{filter_dependencies}{wood_dep_list}(object, which = "strong")
 

@@ -17,6 +17,7 @@ test_param_which_deps(filter_dependencies, object = empty_deps)
 lapply(filter_dependencies(mixed_deps, "strong"), function(deps) {
   test_dependencies(deps)
 })
+test_squashed(filter_dependencies(squash(mixed_deps), "strong"))
 
 test_that("if no dependencies matching a filter, an empty `wood_deps` object is returned", {
   expect_equal(

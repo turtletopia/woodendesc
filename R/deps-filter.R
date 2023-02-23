@@ -40,6 +40,13 @@ filter_dependencies.wood_deps <- function(object, which = "strong") {
 
 #' @rdname filter_dependencies
 #' @export
+filter_dependencies.wood_dep_squashed <- function(object, which = "strong") {
+  dep_types <- match_dep_type(which)
+  object[object[["type"]] %in% dep_types, ]
+}
+
+#' @rdname filter_dependencies
+#' @export
 filter_dependencies.wood_dep_list <- function(object, which = "strong") {
   as_wood_dep_list(lapply(object, filter_dependencies, which = which))
 }

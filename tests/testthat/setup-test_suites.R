@@ -90,3 +90,47 @@ test_dependencies <- function(deps) {
     expect_dependency_type(deps[["type"]])
   })
 }
+
+test_squashed <- function(deps) {
+  test_that("returns a data frame with origin, package, version & type columns", {
+    expect_vector(deps,
+                  ptype = as_wood_dep_squashed(data.frame(
+                    origin = character(),
+                    package = character(),
+                    version = character(),
+                    type = character(),
+                    stringsAsFactors = FALSE
+                  )))
+  })
+
+  test_that("returned 'origin' column contains package names", {
+    pkgs <- deps[["origin"]]
+    if (length(pkgs) == 0) {
+      expect_equal(pkgs, character())
+    } else {
+      expect_pkg_name(pkgs)
+    }
+  })
+
+  test_that("returned 'package' column contains package names", {
+    pkgs <- deps[["package"]]
+    if (length(pkgs) == 0) {
+      expect_equal(pkgs, character())
+    } else {
+      expect_pkg_name(pkgs)
+    }
+  })
+
+  test_that("returned 'version' column contains version codes or NA values", {
+    versions <- omit_na(deps[["version"]])
+    if (length(versions) == 0) {
+      expect_equal(versions, character())
+    } else {
+      expect_version_code(versions)
+    }
+  })
+
+  test_that("returned 'type' column contains dependency types", {
+    expect_dependency_type(deps[["type"]])
+  })
+}
