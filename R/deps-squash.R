@@ -28,7 +28,9 @@ squash.wood_dep_list <- function(object) {
   deps <- object[!vapply(object, is.null, logical(1))]
   deps <- deps[vapply(deps, nrow, numeric(1)) > 0]
   # Add origin column
-  deps <- mapply(cbind, origin = names(deps), deps, SIMPLIFY = FALSE)
+  deps <- mapply(
+    cbind, origin = names(deps), deps, SIMPLIFY = FALSE, stringsAsFactors = FALSE
+  )
   # Merge data frames
   as_wood_dep_squashed(do.call(
     rbind, c(deps, make.row.names = FALSE, stringsAsFactors = FALSE)
