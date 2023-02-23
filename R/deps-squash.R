@@ -26,7 +26,7 @@ squash <- function(object) {
 squash.wood_dep_list <- function(object) {
   # Filter out empty and NULL dependencies
   deps <- object[!vapply(object, is.null, logical(1))]
-  deps <- deps[lengths(deps) > 0]
+  deps <- deps[vapply(deps, nrow, numeric(1)) > 0]
   # Add origin column
   deps <- mapply(cbind, origin = names(deps), deps, SIMPLIFY = FALSE)
   # Merge data frames
