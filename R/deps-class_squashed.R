@@ -10,7 +10,7 @@ as_wood_dep_squashed <- function(df) {
 }
 
 #' @export
-print.wood_dep_squashed <- function(x, ..., package = NULL) {
+print.wood_dep_squashed <- function(x, ...) {
   # Header
   cat("<squashed dependencies>\n")
 
@@ -35,4 +35,14 @@ print.wood_dep_squashed <- function(x, ..., package = NULL) {
     }
     cat("\n")
   }
+}
+
+#' @export
+summary.wood_dep_squashed <- function(object, ...) {
+  # Revert squash()
+  object <- split(object[, -1], object[["origin"]])
+  object <- lapply(object, as_wood_deps)
+  object <- as_wood_dep_list(object)
+  # Call summary of wood_dep_list()
+  summary(object)
 }
