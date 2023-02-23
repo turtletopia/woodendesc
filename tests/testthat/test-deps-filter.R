@@ -7,7 +7,8 @@ mixed_deps <- wood_dependencies(
 empty_deps <- as_wood_deps(data.frame(
   package = character(),
   version = character(),
-  type = character()
+  type = character(),
+  stringsAsFactors = FALSE
 ))
 
 # TESTS ----
