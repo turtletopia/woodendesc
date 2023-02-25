@@ -10,11 +10,14 @@ interpret_repos <- function(repos, context) {
     if (grepl("^bioc", l_repo, perl = TRUE)) {
       return(interpret_bioc(l_repo, context))
     }
-    if (grepl("^local", l_repo, perl = TRUE)) {
-      return(interpret_local(l_repo, context))
+    if (grepl("^github", l_repo, perl = TRUE)) {
+      return(interpret_github(repo, context))
     }
     if (grepl("^runiverse", l_repo, perl = TRUE)) {
       return(interpret_runiverse(l_repo, context))
+    }
+    if (grepl("^local", l_repo, perl = TRUE)) {
+      return(interpret_local(l_repo, context))
     }
     query_maker("url", context, repository = repo)
   })
@@ -26,6 +29,18 @@ interpret_bioc <- function(repo, context) {
   add_parameter(ret, param, "release")
 }
 
+interpret_github <- function(repo, context) {
+  ret <- query_maker("github", context)
+  param <- regmatches(repo, regexpr("(?<=github/).+", repo, ignore.case = TRUE, perl = TRUE))
+  add_parameter(ret, param, "user")
+}
+
+interpret_runiverse <- function(repo, context) {
+  ret <- query_maker("runiverse", context)
+  param <- regmatches(repo, regexpr("(?<=runiverse@).+", repo, perl = TRUE))
+  add_parameter(ret, param, "universe")
+}
+
 interpret_local <- function(repo, context) {
   if (grepl("local#all", repo, fixed = TRUE)) {
     return(query_maker("local", context, paths = "all"))
@@ -35,12 +50,6 @@ interpret_local <- function(repo, context) {
   param <- regmatches(repo, regexpr("(?<=local#)\\d+", repo, perl = TRUE))
   add_parameter(ret, param, "paths",
                 function(index) .libPaths()[as.integer(index)])
-}
-
-interpret_runiverse <- function(repo, context) {
-  ret <- query_maker("runiverse", context)
-  param <- regmatches(repo, regexpr("(?<=runiverse@).+", repo, perl = TRUE))
-  add_parameter(ret, param, "universe")
 }
 
 find_function <- function(type, context) {

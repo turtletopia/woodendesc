@@ -52,6 +52,21 @@ test_that("'local' accepts an index after #", {
   )
 })
 
+# GitHub ----
+test_that("'github' is a valid repo name", {
+  expect_equal(
+    interpret_repos("github", "version")[[1]],
+    query_maker("github", "version")
+  )
+})
+
+test_that("'github' accepts a username after /", {
+  expect_equal(
+    interpret_repos("github/ErdaradunGaztea", "version")[[1]],
+    query_maker("github", "version", user = "ErdaradunGaztea")
+  )
+})
+
 # R-universe ----
 test_that("'runiverse' is a valid repo name", {
   expect_equal(
