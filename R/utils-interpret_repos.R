@@ -43,19 +43,50 @@ interpret_runiverse <- function(repo, context) {
   add_parameter(ret, param, "universe")
 }
 
-#' @importFrom utils getFromNamespace
 find_function <- function(type, context) {
-  func <- NULL
-
-  try({
-    func <- getFromNamespace(paste("wood", type, context, sep = "_"), "woodendesc")
-  }, silent = TRUE)
-
-  if (is.null(func)) {
-    # Pluralize context
-    context <- paste0(context, "s")
-    func <- getFromNamespace(paste("wood", type, context, sep = "_"), "woodendesc")
-  }
-
-  func
+  switch(
+    type,
+    cran = switch(
+      context,
+      packages = wood_cran_packages,
+      version = wood_cran_versions,
+      dependencies = wood_cran_dependencies
+    ),
+    bioc = switch(
+      context,
+      packages = wood_bioc_packages,
+      version = wood_bioc_version,
+      dependencies = wood_bioc_dependencies
+    ),
+    github = switch(
+      context,
+      packages = wood_github_packages,
+      version = wood_github_versions,
+      dependencies = wood_github_dependencies
+    ),
+    runiverse = switch(
+      context,
+      packages = wood_runiverse_packages,
+      version = wood_runiverse_version,
+      dependencies = wood_runiverse_dependencies
+    ),
+    url = switch(
+      context,
+      packages = wood_url_packages,
+      version = wood_url_version,
+      dependencies = wood_url_dependencies
+    ),
+    local = switch(
+      context,
+      packages = wood_local_packages,
+      version = wood_local_versions,
+      dependencies = wood_local_dependencies
+    ),
+    core = switch(
+      context,
+      packages = wood_core_packages,
+      version = wood_core_version,
+      dependencies = wood_core_dependencies
+    )
+  )
 }
