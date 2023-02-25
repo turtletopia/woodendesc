@@ -41,9 +41,9 @@
     </div>
 
     <div class="section level2">
-      <h2 id="all-functions">All functions<a class="anchor" aria-label="anchor" href="#all-functions"></a></h2>
+      <h2 id="high-level-wrappers">High-level wrappers<a class="anchor" aria-label="anchor" href="#high-level-wrappers"></a></h2>
       
-      
+      <p class="section-desc"></p><p>Functions that take a vector of repositories to query.</p>
 
       
     </div><div id="" class="section level2">
@@ -53,65 +53,37 @@
 
       <dl><dt>
           
-          <code><a href="filter_dependencies.html">filter_dependencies</a></code> <code><a href="filter_dependencies.html">filter_dependencies.wood_deps</a></code> <code><a href="filter_dependencies.html">filter_dependencies.wood_dep_squashed</a></code> <code><a href="filter_dependencies.html">filter_dependencies.wood_dep_list</a></code> <code><a href="filter_dependencies.html">filter_dependencies.NULL</a></code> 
+          <code><a href="wood_packages.html">wood_packages()</a></code> 
         </dt>
-        <dd>Filter dependencies by type</dd>
+        <dd>Collect available packages from multiple repositories</dd>
       </dl><dl><dt>
           
-          <code><a href="squash.html">squash()</a></code> 
+          <code><a href="wood_versions.html">wood_versions()</a></code> 
         </dt>
-        <dd>Compress dependencies of multiple packages</dd>
+        <dd>Collect all package versions from multiple repositories</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_bioc_dependencies.html">wood_bioc_dependencies()</a></code> 
+          <code><a href="wood_dependencies.html">wood_dependencies()</a></code> 
         </dt>
-        <dd>Get dependencies of a package in Bioconductor</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_bioc_packages.html">wood_bioc_packages()</a></code> 
-        </dt>
-        <dd>List available packages in Bioconductor</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_bioc_releases.html">wood_bioc_releases()</a></code> 
-        </dt>
-        <dd>List Bioconductor releases</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_bioc_version.html">wood_bioc_version()</a></code> 
-        </dt>
-        <dd>Get available package version in Bioconductor</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_clear_cache.html">wood_clear_cache()</a></code> 
-        </dt>
-        <dd>Clear cache</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_core_dependencies.html">wood_core_dependencies()</a></code> 
-        </dt>
-        <dd>Get dependencies of a core R package</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_core_packages.html">wood_core_packages()</a></code> 
-        </dt>
-        <dd>List core R packages</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_core_version.html">wood_core_version()</a></code> 
-        </dt>
-        <dd>Get current version of a core R package</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_cran_dependencies.html">wood_cran_dependencies()</a></code> 
-        </dt>
-        <dd>Get dependencies of a package on CRAN</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_cran_latest.html">wood_cran_latest()</a></code> 
-        </dt>
-        <dd>Get latest package version on CRAN</dd>
-      </dl><dl><dt>
+        <dd>Find dependencies from multiple repositories</dd>
+      </dl></div><div class="section level2">
+      <h2 id="functions-specialized-by-repository-type">Functions specialized by repository type<a class="anchor" aria-label="anchor" href="#functions-specialized-by-repository-type"></a></h2>
+      
+      <p class="section-desc"></p><p>Functions specialized to query a single repository type with custom cache systems.</p>
+
+      
+    </div><div class="section level2">
+      
+      <h3 id="cran">CRAN<a class="anchor" aria-label="anchor" href="#cran"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
           
           <code><a href="wood_cran_packages.html">wood_cran_packages()</a></code> 
         </dt>
@@ -123,29 +95,61 @@
         <dd>Get all package versions on CRAN</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_dependencies.html">wood_dependencies()</a></code> 
+          <code><a href="wood_cran_latest.html">wood_cran_latest()</a></code> 
         </dt>
-        <dd>Find dependencies from multiple repositories</dd>
+        <dd>Get latest package version on CRAN</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_github_dependencies.html">wood_github_dependencies()</a></code> 
+          <code><a href="wood_cran_dependencies.html">wood_cran_dependencies()</a></code> 
         </dt>
-        <dd>Get dependencies of a package on GitHub</dd>
+        <dd>Get dependencies of a package on CRAN</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="bioconductor">Bioconductor<a class="anchor" aria-label="anchor" href="#bioconductor"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="wood_bioc_packages.html">wood_bioc_packages()</a></code> 
+        </dt>
+        <dd>List available packages in Bioconductor</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_github_latest.html">wood_github_latest()</a></code> 
+          <code><a href="wood_bioc_version.html">wood_bioc_version()</a></code> 
         </dt>
-        <dd>Get current package version on GitHub</dd>
+        <dd>Get available package version in Bioconductor</dd>
       </dl><dl><dt>
+          
+          <code><a href="wood_bioc_dependencies.html">wood_bioc_dependencies()</a></code> 
+        </dt>
+        <dd>Get dependencies of a package in Bioconductor</dd>
+      </dl><dl><dt>
+          
+          <code><a href="wood_bioc_releases.html">wood_bioc_releases()</a></code> 
+        </dt>
+        <dd>List Bioconductor releases</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="github">GitHub<a class="anchor" aria-label="anchor" href="#github"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
           
           <code><a href="wood_github_packages.html">wood_github_packages()</a></code> 
         </dt>
         <dd>List available package on a Github account</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_github_tags.html">wood_github_tags()</a></code> 
-        </dt>
-        <dd>List GitHub tags for a repository</dd>
       </dl><dl><dt>
           
           <code><a href="wood_github_versions.html">wood_github_versions()</a></code> 
@@ -153,30 +157,31 @@
         <dd>Get all tagged package versions on GitHub</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_local_dependencies.html">wood_local_dependencies()</a></code> 
+          <code><a href="wood_github_latest.html">wood_github_latest()</a></code> 
         </dt>
-        <dd>Get dependencies of locally available package</dd>
+        <dd>Get current package version on GitHub</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_local_packages.html">wood_local_packages()</a></code> 
+          <code><a href="wood_github_tags.html">wood_github_tags()</a></code> 
         </dt>
-        <dd>List locally available packages</dd>
+        <dd>List GitHub tags for a repository</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_local_versions.html">wood_local_versions()</a></code> 
+          <code><a href="wood_github_dependencies.html">wood_github_dependencies()</a></code> 
         </dt>
-        <dd>Get locally available package versions</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_packages.html">wood_packages()</a></code> 
-        </dt>
-        <dd>Collect available packages from multiple repositories</dd>
-      </dl><dl><dt>
-          
-          <code><a href="wood_runiverse_dependencies.html">wood_runiverse_dependencies()</a></code> 
-        </dt>
-        <dd>Get dependencies of a package in one of R universes</dd>
-      </dl><dl><dt>
+        <dd>Get dependencies of a package on GitHub</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="r-universe">R-universe<a class="anchor" aria-label="anchor" href="#r-universe"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
           
           <code><a href="wood_runiverse_packages.html">wood_runiverse_packages()</a></code> 
         </dt>
@@ -188,10 +193,21 @@
         <dd>Get current package version in one of R universes</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_url_dependencies.html">wood_url_dependencies()</a></code> 
+          <code><a href="wood_runiverse_dependencies.html">wood_runiverse_dependencies()</a></code> 
         </dt>
-        <dd>Get dependencies of a package in any repository</dd>
-      </dl><dl><dt>
+        <dd>Get dependencies of a package in one of R universes</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="any-url">Any URL<a class="anchor" aria-label="anchor" href="#any-url"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
           
           <code><a href="wood_url_packages.html">wood_url_packages()</a></code> 
         </dt>
@@ -203,11 +219,90 @@
         <dd>Get current package version in any repository</dd>
       </dl><dl><dt>
           
-          <code><a href="wood_versions.html">wood_versions()</a></code> 
+          <code><a href="wood_url_dependencies.html">wood_url_dependencies()</a></code> 
         </dt>
-        <dd>Collect all package versions from multiple repositories</dd>
+        <dd>Get dependencies of a package in any repository</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="local-libraries">Local libraries<a class="anchor" aria-label="anchor" href="#local-libraries"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="wood_local_packages.html">wood_local_packages()</a></code> 
+        </dt>
+        <dd>List locally available packages</dd>
+      </dl><dl><dt>
+          
+          <code><a href="wood_local_versions.html">wood_local_versions()</a></code> 
+        </dt>
+        <dd>Get locally available package versions</dd>
+      </dl><dl><dt>
+          
+          <code><a href="wood_local_dependencies.html">wood_local_dependencies()</a></code> 
+        </dt>
+        <dd>Get dependencies of locally available package</dd>
+      </dl></div><div class="section level2">
+      
+      <h3 id="core-packages">Core packages<a class="anchor" aria-label="anchor" href="#core-packages"></a></h3>
+      
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="wood_core_packages.html">wood_core_packages()</a></code> 
+        </dt>
+        <dd>List core R packages</dd>
+      </dl><dl><dt>
+          
+          <code><a href="wood_core_version.html">wood_core_version()</a></code> 
+        </dt>
+        <dd>Get current version of a core R package</dd>
+      </dl><dl><dt>
+          
+          <code><a href="wood_core_dependencies.html">wood_core_dependencies()</a></code> 
+        </dt>
+        <dd>Get dependencies of a core R package</dd>
+      </dl></div><div class="section level2">
+      <h2 id="other-functions">Other functions<a class="anchor" aria-label="anchor" href="#other-functions"></a></h2>
+      
+      <p class="section-desc"></p><p>Functions that do not query anything, but help use woodendesc in some other way.</p>
+
+      
+    </div><div id="" class="section level2">
+      
+      
+      
+
+      <dl><dt>
+          
+          <code><a href="wood_clear_cache.html">wood_clear_cache()</a></code> 
+        </dt>
+        <dd>Clear cache</dd>
+      </dl><dl><dt>
+          
+          <code><a href="filter_dependencies.html">filter_dependencies</a></code> <code><a href="filter_dependencies.html">filter_dependencies.wood_deps</a></code> <code><a href="filter_dependencies.html">filter_dependencies.wood_dep_squashed</a></code> <code><a href="filter_dependencies.html">filter_dependencies.wood_dep_list</a></code> <code><a href="filter_dependencies.html">filter_dependencies.NULL</a></code> 
+        </dt>
+        <dd>Filter dependencies by type</dd>
+      </dl><dl><dt>
+          
+          <code><a href="squash.html">squash()</a></code> 
+        </dt>
+        <dd>Compress dependencies of multiple packages</dd>
       </dl></div>
-  </main></div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">
