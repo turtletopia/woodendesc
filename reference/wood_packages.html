@@ -61,12 +61,14 @@ available packages and collects the unique occurrences.</p>
 A vector of repositories to query. The following values are available:</p><ul><li><p><code>"cran"</code>, meaning CRAN;</p></li>
 <li><p><code>"bioc@release"</code>, meaning Bioconductor, where <code>release</code> should be replaced
 with a valid Bioconductor release code or one of <code>"release"</code>, <code>"devel"</code>;</p></li>
-<li><p><code>"core"</code>, meaning base R packages;</p></li>
+<li><p><code>"github/user"</code>, meaning GitHub, where <code>user</code> should be replaced with a
+valid user or organization name (e.g. <code>turtletopia</code>);</p></li>
 <li><p><code>"runiverse@universe"</code>, meaning R-universe, where <code>universe</code> should be
 replaced with a valid universe name (e.g. <code>turtletopia</code>);</p></li>
 <li><p><code>"local#index"</code>, meaning a local library, where <code>index</code> should be replaced
 with an integer index of a library in <code><a href="https://rdrr.io/r/base/libPaths.html" class="external-link">base::.libPaths()</a></code> or an <code>all</code>
 keyword;</p></li>
+<li><p><code>"core"</code>, meaning base R packages;</p></li>
 <li><p>a URL if none of the above is matched.</p></li>
 </ul></dd>
 
