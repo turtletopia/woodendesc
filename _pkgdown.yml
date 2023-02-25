@@ -25,7 +25,7 @@ reference:
 - subtitle: Bioconductor
   contents:
   - wood_bioc_packages
-  - wood_bioc_versions
+  - wood_bioc_version
   - wood_bioc_dependencies
   - wood_bioc_releases
 
