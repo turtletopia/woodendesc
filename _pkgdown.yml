@@ -2,3 +2,69 @@ url: https://turtletopia.github.io/woodendesc/
 template:
   bootstrap: 5
 
+reference:
+- title: High-level wrappers
+  desc: >
+    Functions that take a vector of repositories to query.
+  contents:
+  - wood_packages
+  - wood_versions
+  - wood_dependencies
+
+- title: Functions specialized by repository type
+  desc: >
+    Functions specialized to query a single repository type with custom cache systems.
+
+- subtitle: CRAN
+  contents:
+  - wood_cran_packages
+  - wood_cran_versions
+  - wood_cran_latest
+  - wood_cran_dependencies
+
+- subtitle: Bioconductor
+  contents:
+  - wood_bioc_packages
+  - wood_bioc_versions
+  - wood_bioc_dependencies
+  - wood_bioc_releases
+
+- subtitle: GitHub
+  contents:
+  - wood_github_packages
+  - wood_github_versions
+  - wood_github_latest
+  - wood_github_tags
+  - wood_github_dependencies
+
+- subtitle: R-universe
+  contents:
+  - wood_runiverse_packages
+  - wood_runiverse_version
+  - wood_runiverse_dependencies
+
+- subtitle: Any URL
+  contents:
+  - wood_url_packages
+  - wood_url_version
+  - wood_url_dependencies
+
+- subtitle: Local libraries
+  contents:
+  - wood_local_packages
+  - wood_local_versions
+  - wood_local_dependencies
+
+- subtitle: Core packages
+  contents:
+  - wood_core_packages
+  - wood_core_version
+  - wood_core_dependencies
+
+- title: Other functions
+  desc: >
+    Functions that do not query anything, but help use woodendesc in some other way.
+  contents:
+  - wood_clear_cache
+  - filter_dependencies
+  - squash
