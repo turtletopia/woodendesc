@@ -23,3 +23,18 @@ test_that("packages with no deps are omitted", {
     c("httr", "digest")
   )
 })
+
+test_that("empty deps returned if only empty and NULL entries provided", {
+  expect_equal(
+    squash(wood_dependencies(c("aix", "compiler"), repos = "core")),
+    as_wood_dep_squashed(
+      data.frame(
+        origin = character(),
+        package = character(),
+        version = character(),
+        type = character(),
+        stringsAsFactors = FALSE
+      )
+    )
+  )
+})

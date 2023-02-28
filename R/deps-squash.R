@@ -33,7 +33,8 @@ squash.wood_dep_list <- function(object) {
       origin = character(),
       package = character(),
       version = character(),
-      type = character()
+      type = character(),
+      stringsAsFactors = FALSE
     )
   } else {
     # Add origin column
