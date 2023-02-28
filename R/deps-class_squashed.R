@@ -14,6 +14,9 @@ print.wood_dep_squashed <- function(x, ...) {
   # Header
   cat("<squashed dependencies>\n")
 
+  if (nrow(x) == 0) {
+    return()
+  }
   # Body
   max_origin_length <- max(nchar(x[["origin"]])) + 2
   for (i in seq_len(nrow(x))) {

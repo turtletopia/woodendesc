@@ -27,12 +27,23 @@ squash.wood_dep_list <- function(object) {
   # Filter out empty and NULL dependencies
   deps <- object[!vapply(object, is.null, logical(1))]
   deps <- deps[vapply(deps, nrow, numeric(1)) > 0]
-  # Add origin column
-  deps <- mapply(
-    cbind, origin = names(deps), deps, SIMPLIFY = FALSE, stringsAsFactors = FALSE
-  )
+
+  if (length(deps) == 0) {
+    deps <- data.frame(
+      origin = character(),
+      package = character(),
+      version = character(),
+      type = character()
+    )
+  } else {
+    # Add origin column
+    deps <- mapply(
+      cbind, origin = names(deps), deps, SIMPLIFY = FALSE, stringsAsFactors = FALSE
+    )
+    deps <- do.call(
+      rbind, c(deps, make.row.names = FALSE, stringsAsFactors = FALSE)
+    )
+  }
   # Merge data frames
-  as_wood_dep_squashed(do.call(
-    rbind, c(deps, make.row.names = FALSE, stringsAsFactors = FALSE)
-  ))
+  as_wood_dep_squashed(deps)
 }
