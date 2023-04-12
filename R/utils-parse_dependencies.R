@@ -11,7 +11,16 @@ extract_dependencies <- function(desc, parser = parse_dependencies) {
               stringsAsFactors = FALSE)
     }
   )
-  ret <- do.call(rbind, c(deps, stringsAsFactors = FALSE))
+  if (any(lengths(deps)) > 0) {
+    ret <- do.call(rbind, c(deps, stringsAsFactors = FALSE))
+  } else {
+    ret <- data.frame(
+      package = character(),
+      version = character(),
+      type = character(),
+      stringsAsFactors = FALSE
+    )
+  }
   as_wood_deps(ret)
 }
 
