@@ -10,6 +10,7 @@ as_wood_dep_list <- function(object) {
   )
 }
 
+# nocov start
 #' @export
 print.wood_dep_list <- function(x, ...) {
   cat(sprintf("<woodendesc dependency list [%s]>\n", length(x)))
@@ -23,3 +24,4 @@ print.wood_dep_list <- function(x, ...) {
 summary.wood_dep_list <- function(object, ...) {
   lapply(object, summary)
 }
+# nocov end

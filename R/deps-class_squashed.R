@@ -9,6 +9,7 @@ as_wood_dep_squashed <- function(df) {
   )
 }
 
+# nocov start
 #' @export
 print.wood_dep_squashed <- function(x, ...) {
   # Header
@@ -49,3 +50,4 @@ summary.wood_dep_squashed <- function(object, ...) {
   # Call summary of wood_dep_list()
   summary(object)
 }
+# nocov end

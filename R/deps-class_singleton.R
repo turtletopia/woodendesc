@@ -9,6 +9,7 @@ as_wood_deps <- function(df) {
   )
 }
 
+# nocov start
 #' @export
 print.wood_deps <- function(x, ..., package = NULL) {
   # Header
@@ -61,3 +62,4 @@ print.wood_deps_summary <- function(x, ...) {
     }
   }
 }
+# nocov end
