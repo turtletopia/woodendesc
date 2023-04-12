@@ -3,8 +3,10 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^README\.Rmd$
+^README_cache$
 ^codecov\.yml$
 ^\.covrignore$
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^cran-comments\.md$
