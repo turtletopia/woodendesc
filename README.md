@@ -5,14 +5,12 @@
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version-last-release/woodendesc)](https://CRAN.R-project.org/package=woodendesc)
 [![R-universe](https://turtletopia.r-universe.dev/badges/woodendesc)](https://turtletopia.r-universe.dev)
 [![R-CMD-check](https://github.com/turtletopia/woodendesc/workflows/R-CMD-check/badge.svg)](https://github.com/turtletopia/woodendesc/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/turtletopia/woodendesc/branch/master/graph/badge.svg)](https://codecov.io/gh/turtletopia/woodendesc?branch=master)
+coverage](https://codecov.io/gh/turtletopia/woodendesc/branch/master/graph/badge.svg)](https://app.codecov.io/gh/turtletopia/woodendesc?branch=master)
 <!-- badges: end -->
 
 {woodendesc} strives to provide an unified API to query any R repository
@@ -32,6 +30,8 @@ releases of Bioconductor).
 ## Installation
 
 ``` r
+# Install from CRAN
+install.packages("woodendesc")
 # Install the development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("turtletopia/woodendesc")
