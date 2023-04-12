@@ -2,7 +2,7 @@ Package: woodendesc
 Type: Package
 Title: Query Any R Repository for Available Packages and Their Dependencies
 Version: 0.1.0
-Date: 2022-04-08
+Date: 2023-04-12
 Authors@R: c(person("Laura", "Bakala",
              email = "erdaradun.gaztea@gmail.com",
              role = c("cre", "aut", "cph"),
