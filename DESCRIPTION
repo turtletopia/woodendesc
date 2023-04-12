@@ -1,6 +1,6 @@
 Package: woodendesc
 Type: Package
-Title: Query Any R Repository for Available Packages and Their Dependencies
+Title: Find Packages and Their Dependencies in Any R Repository
 Version: 0.1.0
 Date: 2023-04-12
 Authors@R: c(person("Laura", "Bakala",
