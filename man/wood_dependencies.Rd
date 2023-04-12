@@ -45,7 +45,7 @@ of the selected packages and returns the first working occurence.
 wood_dependencies("stats", "core")
 # Multiple packages are also possible:
 wood_dependencies(
-  c("ggplot2", "Biostrings", "woodendesc"),
+  c("tibble", "Biostrings", "woodendesc"),
   repos = c("runiverse@turtletopia", "cran", "bioc@1.5")
 )
 # By default, only CRAN is queried:

@@ -7,7 +7,7 @@
 #'
 #' @examples
 #' \donttest{
-#' wood_cran_packages()
+#' head(wood_cran_packages())
 #' }
 #'
 #' @family cran

@@ -14,8 +14,8 @@
 #'
 #' @examples
 #' \donttest{
-#' wood_cran_dependencies("ggplot2")
-#' wood_cran_dependencies("deepdep", version = "0.2.1")
+#' wood_cran_dependencies("deepdep")
+#' wood_cran_dependencies("ggplot2", version = "3.4.0")
 #' }
 #'
 #' @family cran

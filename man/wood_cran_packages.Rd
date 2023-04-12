@@ -15,7 +15,7 @@ They are returned as a vector of strings, each element being a package name.
 }
 \examples{
 \donttest{
-wood_cran_packages()
+head(wood_cran_packages())
 }
 
 }
