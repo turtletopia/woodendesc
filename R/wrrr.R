@@ -29,18 +29,20 @@ install_prompt <- function(pkg, use_case = "access some functions") {
       c("yes", "no", "no and don't ask me anymore"),
       title = paste0("To ", use_case, ", you should install '", pkg, "' available on CRAN. Install?")
     )
-    switch(response,
-           tryCatch(install.packages(pkg),
-                    finally = {
-                      if (!is_pkg_installed(pkg))
-                        warning("There was an error during an attempt to install '", pkg, "'.", call. = FALSE)
-                    }),
-           message("You cannot access full functionality of this package without having installed '", pkg, "' first. "),
-           {
-             options(setNames(list(TRUE), paste0(pkg, "_suppress_prompt")))
-             cat("Ok, but you cannot access full functionality of this package without having installed '", pkg, "' first.",
-                 sep = "")
-           },
-           message("You cannot access full functionality of this package without having installed '", pkg, "' first. "))
+    switch(
+      response,
+      tryCatch(
+        install.packages(pkg),
+        finally = {
+          if (!is_pkg_installed(pkg)) {
+            warning("There was an error during an attempt to install '", pkg, "'.", call. = FALSE)
+          }
+        }),
+      message("You cannot access full functionality of this package without having installed '", pkg, "' first."),
+      {
+        options(setNames(list(TRUE), paste0(pkg, "_suppress_prompt")))
+        message("Ok, but you cannot access full functionality of this package without having installed '", pkg, "' first.")
+      },
+      message("You cannot access full functionality of this package without having installed '", pkg, "' first."))
   }
 }
