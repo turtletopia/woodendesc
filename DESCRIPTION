@@ -6,7 +6,11 @@ Date: 2023-04-17
 Authors@R: c(person("Laura", "Bakala",
              email = "erdaradun.gaztea@gmail.com",
              role = c("cre", "aut", "cph"),
-             comment = c(ORCID = "0000-0002-3213-2484")))
+             comment = c(ORCID = "0000-0002-3213-2484")),
+             person("Dominik", "Rafacz",
+             email = "dominikrafacz@gmail.com",
+             role = c("ctb"),
+             comment = c(ORCID = "0000-0003-0925-1909")))
 Description: Simplifies getting the available packages, their version codes and dependencies from any 'R' repository. Uses extensive caching for repeated queries.
 License: GPL (>= 3)
 Encoding: UTF-8
