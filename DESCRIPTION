@@ -1,13 +1,13 @@
 Package: woodendesc
 Type: Package
-Title: Find Packages and Their Dependencies in Any R Repository
+Title: Find Packages and Their Dependencies in Any 'R' Repository
 Version: 0.1.0
-Date: 2023-04-12
+Date: 2023-04-17
 Authors@R: c(person("Laura", "Bakala",
              email = "erdaradun.gaztea@gmail.com",
              role = c("cre", "aut", "cph"),
              comment = c(ORCID = "0000-0002-3213-2484")))
-Description: Get the available packages and their version codes as well as their dependencies from any R repository with unified API. Uses extensive caching for repeated queries.
+Description: Simplifies getting the available packages, their version codes and dependencies from any 'R' repository. Uses extensive caching for repeated queries.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
