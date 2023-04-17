@@ -25,6 +25,10 @@ is_pkg_installed <- function(pkg) {
 #' @importFrom stats setNames
 install_prompt <- function(pkg, use_case = "access some functions") {
   if (!getOption(paste0(pkg, "_suppress_prompt"), default = FALSE)) {
+    msg_cant_access <- sprintf(
+      "You cannot access full functionality of this package without having installed '%s' first.",
+      pkg
+    )
     response <- menu(
       c("yes", "no", "no and don't ask me anymore"),
       title = paste0("To ", use_case, ", you should install '", pkg, "' available on CRAN. Install?")
@@ -38,11 +42,8 @@ install_prompt <- function(pkg, use_case = "access some functions") {
             warning("There was an error during an attempt to install '", pkg, "'.", call. = FALSE)
           }
         }),
-      message("You cannot access full functionality of this package without having installed '", pkg, "' first."),
-      {
-        options(setNames(list(TRUE), paste0(pkg, "_suppress_prompt")))
-        message("Ok, but you cannot access full functionality of this package without having installed '", pkg, "' first.")
-      },
-      message("You cannot access full functionality of this package without having installed '", pkg, "' first."))
+      message(msg_cant_access),
+      options(setNames(list(TRUE), paste0(pkg, "_suppress_prompt"))),
+      message(msg_cant_access))
   }
 }
