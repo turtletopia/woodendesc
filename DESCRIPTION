@@ -1,7 +1,7 @@
 Package: woodendesc
 Type: Package
 Title: Find Packages and Their Dependencies in Any 'R' Repository
-Version: 0.1.0
+Version: 0.1.0.9000
 Date: 2023-04-17
 Authors@R: c(person("Laura", "Bakala",
              email = "erdaradun.gaztea@gmail.com",
