@@ -4,7 +4,7 @@
 #' tagged commit of a repo. By default, it queries the latest commit instead.
 #'
 #' @template package
-#' @template gh-user
+#' @template git-user
 #' @param tag `character(1)`\cr
 #'  Tag of a commit on GitHub or `"latest"` for the latest (possibly untagged)
 #'  commit.
@@ -25,7 +25,7 @@
 #' @export
 wood_github_dependencies <- function(package, user, tag = "latest") {
   assert_param_package(package)
-  assert_param_gh_user(user)
+  assert_param_git_user(user)
   assert_param_tag(tag)
 
   desc <- github_description_cache(package, user, tag)

@@ -4,7 +4,7 @@
 #' selected account. They are returned as a vector of strings, each element
 #' being a repository (and in most cases, package) name.
 #'
-#' @template gh-user
+#' @template git-user
 #' @param include_forks `logical(1)`\cr
 #'  Whether to include packages forked from other accounts.
 #'
@@ -21,7 +21,7 @@
 #' @family packages
 #' @export
 wood_github_packages <- function(user, include_forks = FALSE) {
-  assert_param_gh_user(user)
+  assert_param_git_user(user)
   assert_param_include_forks(include_forks)
 
   repos <- github_packages_cache(user)

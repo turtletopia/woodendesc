@@ -4,7 +4,7 @@
 #' versions. To get the latest available version, see [wood_github_latest()].
 #'
 #' @template package
-#' @template gh-user
+#' @template git-user
 #'
 #' @return A character vector of version codes.
 #'
@@ -18,7 +18,7 @@
 #' @export
 wood_github_versions <- function(package, user) {
   assert_param_package(package)
-  assert_param_gh_user(user)
+  assert_param_git_user(user)
 
   github_versions_cache(package, user)
 }

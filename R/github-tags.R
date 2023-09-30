@@ -6,7 +6,7 @@
 #' of the package at the given time.
 #'
 #' @template package
-#' @template gh-user
+#' @template git-user
 #'
 #' @return A character vector of repository tags.
 #'
@@ -21,7 +21,7 @@
 #' @export
 wood_github_tags <- function(package, user) {
   assert_param_package(package)
-  assert_param_gh_user(user)
+  assert_param_git_user(user)
 
   github_tags_cache(package, user)
 }
