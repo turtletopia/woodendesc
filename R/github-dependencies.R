@@ -36,7 +36,7 @@ wood_github_dependencies <- function(package, user, tag = "latest") {
 github_description_cache <- function(package, user, tag) {
   if (tag == "latest") {
     ret <- with_cache({
-      content <- guess_default_branch(user, package, "DESCRIPTION")
+      content <- guess_default_branch_gh(user, package, "DESCRIPTION")
       list(exists = TRUE, content = content)
     }, "DESCRIPTION", "github", user, package)
     ret[["content"]]
