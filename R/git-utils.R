@@ -1,5 +1,6 @@
-guess_default_branch <- function(site, user, package, ...,
-                                 branches = c("master", "main")) {
+guess_default_branch <- function(
+    site, user, package, ..., branches = c("master", "main")
+) {
   url_generator <- switch(
     site,
     github = raw_github_url,
