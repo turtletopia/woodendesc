@@ -18,7 +18,7 @@ A character vector of version codes.
 }
 \description{
 This function queries GitHub for the code of the current package
-versions. This may reference a non-tagged commit; for the analysis of tagged
+version. This may reference a non-tagged commit; for the analysis of tagged
 commits only, see \code{\link[=wood_github_versions]{wood_github_versions()}}.
 }
 \examples{
@@ -45,6 +45,7 @@ Functions that query package versions:
 \code{\link{wood_cran_latest}()},
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_github_versions}()},
+\code{\link{wood_gitlab_latest}()},
 \code{\link{wood_local_versions}()},
 \code{\link{wood_runiverse_version}()},
 \code{\link{wood_url_version}()},

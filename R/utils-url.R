@@ -56,6 +56,12 @@ github_url <- function(..., params = list()) {
   append_url_params(paste("https://api.github.com", ..., sep = "/"), params)
 }
 
+gitlab_url <- function(..., params = list()) {
+  append_url_params(paste("https://gitlab.com", ..., sep = "/"), params)
+}
+
+# "https://gitlab.com/api/v4"
+
 #' Get Bioconductor URL
 #'
 #' @description Creates an URL to the selected Bioconductor API.
