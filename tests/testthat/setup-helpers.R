@@ -36,6 +36,7 @@ expect_no_error <- function(object) {
 }
 
 expect_cache <- function(tested_function, expected, ...) {
+  # TODO: use httptest2
   skip_if_not_installed("httptest")
 
   # TODO: simplify once httptest::expect_no_request() works with httr again

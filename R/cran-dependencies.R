@@ -46,10 +46,18 @@ cran_descriptions_cache <- function(package) {
 
 cran_dependencies_cache <- function(package, version) {
   with_cache({
-    url <- raw_github_url("cran", package, version, "DESCRIPTION")
-    desc <- download_safely(url, on_status = list(
-      `404` = function() stopf("Can't find package `%1$s` on CRAN.", package)
-    ))
+    desc <- rlang::try_fetch({
+      httr2::request("https://raw.githubusercontent.com") |>
+        httr2::req_url_path_append("cran", package, version, "DESCRIPTION") |>
+        httr2::req_perform() |>
+        httr2::resp_body_string()
+    }, httr2_http_404 = function(cnd) {
+      rlang::abort(
+        sprintf("Can't find package `%1$s` or version `%2$s` on CRAN.", package, version),
+        parent = cnd
+      )
+    })
+
     read_dcf(desc)[[package]]
   }, "dependencies", "CRAN", package, version)
 }

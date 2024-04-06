@@ -23,8 +23,19 @@ wood_cran_latest <- function(package) {
 
 cran_latest_cache <- function(package) {
   with_cache({
-    url <- crandb_url("-", "desc", params = list(start_key = package, limit = 1))
-    desc <- download_safely(url)
+    desc <- rlang::try_fetch({
+      httr2::request("http://crandb.r-pkg.org") |>
+        httr2::req_url_path_append("-", "desc") |>
+        httr2::req_url_query(start_key = sprintf("\"%s\"", package), limit = 1) |>
+        httr2::req_perform() |>
+        httr2::resp_body_json()
+    }, httr2_http_404 = function(cnd) {
+      rlang::abort(
+        sprintf("Can't find package `%1$s` on CRAN.", package, version),
+        parent = cnd
+      )
+    })
+
     validate_cran_package(package, desc)
 
     desc[[package]][["version"]]

@@ -15,39 +15,6 @@ runiverse_url <- function(universe, ...) {
   paste(paste0("https://", universe, ".r-universe.dev"), ..., sep = "/")
 }
 
-#' Get CRANDB URL
-#'
-#' @description Creates an URL to the selected METACRAN API with specified
-#' parameters translated to an URL list. The list should be named. In case of
-#' an empty list, parameters are simply not appended to the core URL.
-#'
-#' @param ... `character(1)`\cr
-#'  Components of the URL path, to be separated by slashes.
-#' @param params `list()`\cr
-#'  Parameters to URL call in form of key:value named list.
-#'
-#' @return A single string with an URL address to specified METACRAN API.
-#'
-#' @importFrom utils URLencode
-#' @noRd
-crandb_url <- function(..., params = list()) {
-  append_url_params(paste("http://crandb.r-pkg.org", ..., sep = "/"), params)
-}
-
-#' Get CRAN URL
-#'
-#' @description Creates an URL to the selected CRAN API.
-#'
-#' @param ... `character(1)`\cr
-#'  Components of the URL path, to be separated by slashes.
-#'
-#' @return A single string with an URL address to selected API.
-#'
-#' @noRd
-cran_url <- function(...) {
-  paste("https://CRAN.R-project.org", ..., sep = "/")
-}
-
 raw_github_url <- function(...) {
   paste("https://raw.githubusercontent.com", ..., sep = "/")
 }
@@ -70,7 +37,6 @@ bioc_url <- function(...) {
   paste("https://bioconductor.org", ..., sep = "/")
 }
 
-#' @importFrom versionsort ver_latest
 bioc_release_url <- function(release = "release", ...) {
   if (release %in% c("release", "devel")) {
     # Early return for special release names
@@ -84,10 +50,11 @@ bioc_release_url <- function(release = "release", ...) {
     }
   }
 
-  if (ver_latest(c(release, "1.8")) == release) {
+  # TODO: replace with ver_later_than() or sth like that
+  if (versionsort::ver_latest(c(release, "1.8")) == release) {
     # Release at least 1.8
     bioc_url("packages", release, "bioc", ...)
-  } else if (ver_latest(c(release, "1.5")) == release) {
+  } else if (versionsort::ver_latest(c(release, "1.5")) == release) {
     # Releases between 1.5 and 1.7 had different order of URL components
     bioc_url("packages", "bioc", release, ...)
   } else {

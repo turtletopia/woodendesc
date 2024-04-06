@@ -104,33 +104,9 @@ test_that("bioc_release_url() allows keywords for release", {
   )
 })
 
-# CRAN URL ----
-test_that("crandb_url() returns a single string", {
-  expect_vector(crandb_url("-"),
-                ptype = character(),
-                size = 1)
-  expect_vector(crandb_url("-", "allall"),
-                ptype = character(),
-                size = 1)
-  expect_vector(crandb_url("-", "allall", params = list(start_key = "deepdep", limit = 1)),
-                ptype = character(),
-                size = 1)
-})
-
-test_that("crandb_url() separates API with slashes", {
-  expect_match(
-    crandb_url("-", "allall"),
-    "/-/allall",
-    fixed = TRUE
-  )
-})
-
 # EXTRACTING CORE URL ----
 test_that("extract_core_url() returns a single string", {
   expect_vector(extract_core_url(runiverse_url("ropensci")),
-                ptype = character(),
-                size = 1)
-  expect_vector(extract_core_url(crandb_url("-", "desc", params = list(limit = 1))),
                 ptype = character(),
                 size = 1)
 })

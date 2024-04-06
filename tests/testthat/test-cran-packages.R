@@ -1,9 +1,8 @@
-skip_if_not_installed("vcr")
-skip("Decompression issue")
+skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-vcr::use_cassette("cran-packages", {
+with_mock_dir("cran-packages", {
   cran_packages <- wood_cran_packages()
 })
 

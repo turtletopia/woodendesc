@@ -1,8 +1,8 @@
-skip_if_not_installed("vcr")
+skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-vcr::use_cassette("versionsort-versions", {
+with_mock_dir("versionsort-versions", {
   versionsort_versions <- wood_cran_versions("versionsort")
 })
 
@@ -20,7 +20,7 @@ test_that("use cache even if expired, but latest version hasn't changed yet", {
   Sys.sleep(1.1)
   # TODO: simplify once httptest::expect_no_request() works with httr again
   # Create latest version cache to avoid having a request being made
-  vcr::use_cassette("versionsort-latest-2", {
+  with_mock_dir("versionsort-latest-2", {
     wood_cran_latest("versionsort")
   })
   expect_cache(wood_cran_versions, versionsort_versions, "versionsort")

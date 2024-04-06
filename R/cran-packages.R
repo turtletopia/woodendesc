@@ -19,21 +19,11 @@ wood_cran_packages <- function() {
 
 cran_packages_cache <- function() {
   with_cache({
-    url <- cran_url("src", "contrib", "PACKAGES.gz")
-
-    if (getRversion() >= "4.0.0") {
-      packages_dcf <- download_dcf(url)
-      packages <- read_dcf_all_values(packages_dcf, "Package")
-    } else {
-      # memDecompress handles gzip since R 4.0.0
-      raw_response <- download_safely(url, as = "raw")
-      file <- tempfile()
-      writeBin(raw_response, file)
-      packages <- read.dcf(file)[, "Package"]
-
-      unlink(file)
-    }
-
-    packages
+    packages_dcf <- httr2::request("https://CRAN.R-project.org") |>
+      httr2::req_url_path_append("src", "contrib", "PACKAGES.gz") |>
+      httr2::req_perform() |>
+      httr2::resp_body_raw() |>
+      memDecompress(type = "gzip", asChar = TRUE) |>
+      read_dcf_all_values("Package")
   }, "packages", "cran")
 }
