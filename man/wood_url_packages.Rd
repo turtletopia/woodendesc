@@ -21,9 +21,9 @@ or \verb{/src/contrib/PACKAGES.gz} file.
 }
 \examples{
 \donttest{
-wood_url_packages("http://www.omegahat.net/R")
+wood_url_packages("https://colinfay.me")
 # Trailing slashes are removed
-wood_url_packages("http://www.omegahat.net/R/")
+wood_url_packages("https://colinfay.me/")
 }
 
 }

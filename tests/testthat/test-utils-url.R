@@ -123,26 +123,6 @@ test_that("if no parameters given, core url is the same as input", {
 })
 
 # TRAILING SLASH ----
-test_that("remove_trailing_slash() returns a single string", {
-  expect_vector(remove_trailing_slash(runiverse_url("ropensci")),
-                ptype = character(),
-                size = 1)
-  expect_vector(remove_trailing_slash("https://cynkra.r-universe.dev/"),
-                ptype = character(),
-                size = 1)
-})
-
-test_that("a trailing slash is removed if present", {
-  test_url <- remove_trailing_slash("https://test.org/")
-  expect_no_match(test_url, "/$")
-  expect_match(test_url, "https://test.org", fixed = TRUE)
-})
-
-test_that("if no trailing slash, url returned is the same as input", {
-  test_url <- "https://test.org"
-  expect_equal(remove_trailing_slash(test_url), test_url)
-})
-
 test_that("add_trailing_slash() returns a single string", {
   expect_vector(add_trailing_slash(runiverse_url("ropensci")),
                 ptype = character(),

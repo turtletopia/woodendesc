@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' \donttest{
-#' wood_url_dependencies("XML", repository = "http://www.omegahat.net/R")
+#' wood_url_dependencies("tidystringdist", repository = "https://colinfay.me")
 #' }
 #'
 #' @family url

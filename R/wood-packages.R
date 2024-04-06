@@ -11,7 +11,7 @@
 #' \donttest{
 #' # head() used due to the number of packages in there
 #' head(wood_packages(c("local#all", "bioc@1.7", "cran", "core")))
-#' wood_packages(c("http://www.omegahat.net/R", "runiverse@turtletopia"))
+#' wood_packages(c("https://colinfay.me", "runiverse@turtletopia"))
 #' # By default, only CRAN is queried:
 #' head(wood_packages())
 #' }

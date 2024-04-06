@@ -1,29 +1,25 @@
-download_repo_data <- function(url) {
-  dcf_data <- NULL
-
-  if (getRversion() >= "4.0.0") {
-    packages_url <- paste(url, "PACKAGES.gz", sep = "/")
-    try({
-      # PACKAGES.gz may be unavailable sometimes
-      dcf_data <- download_dcf(packages_url)
-    }, silent = TRUE)
-  }
-
-  if (is.null(dcf_data)) {
+download_repo_data <- function(req) {
+  dcf_data <- rlang::try_fetch({
+    # PACKAGES.gz may be unavailable sometimes
+    req |>
+      httr2::req_url_path_append("PACKAGES.gz") |>
+      httr2::req_perform() |>
+      httr2::resp_body_raw() |>
+      memDecompress(type = "gzip", asChar = TRUE)
+  }, error = function(cnd) {
     # Use non-gzipped PACKAGES file (it's much larger)
-    packages_url <- paste(url, "PACKAGES", sep = "/")
-    dcf_data <- download_dcf(packages_url, compression = "none")
-  }
+    req |>
+      httr2::req_url_path_append("PACKAGES") |>
+      httr2::req_perform() |>
+      httr2::resp_body_raw() |>
+      memDecompress(type = "none", asChar = TRUE)
+  })
 
   read_dcf(dcf_data)
 }
 
-download_dcf <- function(url, compression = "gzip") {
-  raw_response <- download_safely(url, as = "raw")
-  memDecompress(raw_response, type = compression, asChar = TRUE)
-}
-
 paginate <- function(url, ..., .per_page = 100) {
+  # TODO: use httr2::req_perform_iterative()
   ret <- list()
   page <- 1
   while (TRUE) {

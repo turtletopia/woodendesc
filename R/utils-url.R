@@ -55,6 +55,7 @@ bioc_release_url <- function(release = "release", ...) {
     # Release at least 1.8
     bioc_url("packages", release, "bioc", ...)
   } else if (versionsort::ver_latest(c(release, "1.5")) == release) {
+    # TODO: releases 1.5-1.7 seem to not be available anymore
     # Releases between 1.5 and 1.7 had different order of URL components
     bioc_url("packages", "bioc", release, ...)
   } else {
@@ -83,10 +84,6 @@ append_url_params <- function(url, params) {
 
 extract_core_url <- function(url) {
   sub("\\?.*", "", url)
-}
-
-remove_trailing_slash <- function(url) {
-  gsub("/$", "", url)
 }
 
 add_trailing_slash <- function(url) {

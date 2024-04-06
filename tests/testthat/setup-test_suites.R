@@ -1,4 +1,5 @@
 test_cache <- function(tested_function, expected_value, ...) {
+  # TODO: pass expression as first parameter
   test_that("if possible, reads from cache", {
     expect_cache(tested_function, expected_value, ...)
   })

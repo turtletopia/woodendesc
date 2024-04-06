@@ -19,7 +19,6 @@ RoxygenNote: 7.2.3
 Depends:
     R (>= 4.1.0)
 Imports: 
-    digest,
     httr,
     httr2,
     rlang,

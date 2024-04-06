@@ -11,9 +11,9 @@
 #'
 #' @examples
 #' \donttest{
-#' wood_url_packages("http://www.omegahat.net/R")
+#' wood_url_packages("https://colinfay.me")
 #' # Trailing slashes are removed
-#' wood_url_packages("http://www.omegahat.net/R/")
+#' wood_url_packages("https://colinfay.me/")
 #' }
 #'
 #' @family url
@@ -22,17 +22,18 @@
 wood_url_packages <- function(repository) {
   assert_param_url_repo(repository)
 
-  packages <- vapply(
-    url_PACKAGES_cache(repository), `[[`, character(1), "Package"
-  )
-  unique(packages)
+  url_PACKAGES_cache(repository) |>
+    vapply(function(x) { x[["Package"]] }, character(1)) |>
+    unique()
 }
 
-#' @importFrom digest digest
 url_PACKAGES_cache <- function(repository) {
-  repository <- remove_trailing_slash(repository)
+  # TODO: should we allow setting a different URL path?
+  req <- httr2::request(repository) |>
+    httr2::req_url_path_append("src", "contrib")
 
+  # Note that we can't hash() `repository` because it may contain trailing slash which doesn't affect actual URL
   with_cache({
-    download_repo_data(paste(repository, "src", "contrib", sep = "/"))
-  }, "PACKAGES", digest(repository))
+    download_repo_data(req)
+  }, "PACKAGES", rlang::hash(req))
 }

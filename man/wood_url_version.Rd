@@ -22,7 +22,7 @@ current version of the selected package.
 }
 \examples{
 \donttest{
-wood_url_version("XML", repository = "http://www.omegahat.net/R")
+wood_url_version("dockerfiler", repository = "https://colinfay.me")
 }
 
 }

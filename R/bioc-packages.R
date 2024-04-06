@@ -36,8 +36,8 @@ wood_bioc_packages <- function(release = "release") {
 
 bioc_PACKAGES_cache <- function(release = "release") {
   with_cache({
-    download_repo_data(bioc_release_url(
-      release = release, "src", "contrib"
-    ))
+    bioc_release_url(release = release, "src", "contrib") |>
+      httr2::request() |>
+      download_repo_data()
   }, "PACKAGES", "bioc", release)
 }
