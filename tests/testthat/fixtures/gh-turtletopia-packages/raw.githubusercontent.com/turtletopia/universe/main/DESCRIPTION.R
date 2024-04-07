@@ -1,0 +1,17 @@
+structure(list(method = "GET", url = "https://raw.githubusercontent.com/turtletopia/universe/main/DESCRIPTION", 
+    status_code = 404L, headers = structure(list(Connection = "keep-alive", 
+        `Content-Length` = "14", `Content-Security-Policy` = "default-src 'none'; style-src 'unsafe-inline'; sandbox", 
+        `Strict-Transport-Security` = "max-age=31536000", `X-Content-Type-Options` = "nosniff", 
+        `X-Frame-Options` = "deny", `X-XSS-Protection` = "1; mode=block", 
+        `Content-Type` = "text/plain; charset=utf-8", `X-GitHub-Request-Id` = "9BCC:35B2D7:47DCFBC:4B1796E:6612BD63", 
+        `Accept-Ranges` = "bytes", Date = "Sun, 07 Apr 2024 15:36:03 GMT", 
+        Via = "1.1 varnish", `X-Served-By` = "cache-ams21057-AMS", 
+        `X-Cache` = "MISS", `X-Cache-Hits` = "0", `X-Timer` = "S1712504164.789607,VS0,VE166", 
+        Vary = "Authorization,Accept-Encoding,Origin", `Access-Control-Allow-Origin` = "*", 
+        `Cross-Origin-Resource-Policy` = "cross-origin", `X-Fastly-Request-ID` = "65c632aadd0aa52e226288d3d48413a67a647d1a", 
+        Expires = "Sun, 07 Apr 2024 15:41:03 GMT", `Source-Age` = "0"), class = "httr2_headers"), 
+    body = charToRaw("404: Not Found"), request = structure(list(
+        url = "https://raw.githubusercontent.com/turtletopia/universe/main/DESCRIPTION", 
+        method = NULL, headers = list(), body = NULL, fields = list(), 
+        options = list(), policies = list()), class = "httr2_request"), 
+    cache = new.env(parent = emptyenv())), class = "httr2_response")

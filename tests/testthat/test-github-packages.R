@@ -1,8 +1,8 @@
-skip_if_not_installed("vcr")
+skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-vcr::use_cassette("gh-turtletopia-packages", {
+with_mock_dir("gh-turtletopia-packages", {
   turtletopia_packages <- wood_github_packages("turtletopia")
 })
 
@@ -20,12 +20,11 @@ test_that("non-packages are omitted", {
   expect_no_match(turtletopia_packages, "^universe$")
 })
 
-vcr::use_cassette("gh-fakeuser-packages", {
-  test_that("if user doesn't exist, an exception is raised", {
-    expect_error(
-      wood_github_packages("TheUserThatDoesNotExist"),
-      "Can't find user `TheUserThatDoesNotExist` on GitHub.",
-      fixed = TRUE
-    )
-  })
+skip_if_offline()
+test_that("if user doesn't exist, an exception is raised", {
+  expect_error(
+    wood_github_packages("TheUserThatDoesNotExist"),
+    "Can't find user `TheUserThatDoesNotExist` on GitHub.",
+    fixed = TRUE
+  )
 })

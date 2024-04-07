@@ -34,10 +34,23 @@ wood_github_packages <- function(user, include_forks = FALSE) {
 
 github_packages_cache <- function(user) {
   with_cache({
-    url <- github_url("users", user, "repos")
-    paginate(url, on_status = list(
-      `403` = stopf_gh_rate_limit,
-      `404` = function() stopf("Can't find user `%1$s` on GitHub.", user)
-    ))
+    rlang::try_fetch({
+      httr2::request("https://api.github.com") |>
+        httr2::req_url_path_append("users", user, "repos") |>
+        httr2::req_url_query(per_page = 100) |>
+        httr2::req_perform_iterative(
+          next_req = httr2::iterate_with_link_url(rel = "next"),
+          # There isn't much point in returning incomplete data
+          on_error = "stop"
+        ) |>
+        httr2::resps_data(httr2::resp_body_json)
+    }, httr2_http_403 = function(cnd) {
+      abort_gh_rate_limit(cnd)
+    }, httr2_http_404 = function(cnd) {
+      rlang::abort(
+        sprintf("Can't find user `%1$s` on GitHub.", user),
+        parent = cnd
+      )
+    })
   }, "repos", "github", user)
 }

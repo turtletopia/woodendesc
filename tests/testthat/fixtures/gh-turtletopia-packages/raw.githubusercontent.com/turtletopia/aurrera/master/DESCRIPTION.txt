@@ -1,0 +1,24 @@
+Package: aurrera
+Type: Package
+Title: Wrap an Interable in a Progress Bar
+Version: 0.1.0
+Date: 2022-05-11
+Authors@R: c(person("Laura", "Bakala",
+             email = "erdaradun.gaztea@gmail.com",
+             role = c("cre", "aut", "cph"),
+             comment = c(ORCID = "0000-0002-3213-2484")))
+Description: Allows a simple creation of progress bars by wrapping the iterated object in 'pb()'.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    covr,
+    foreach,
+    gmp,
+    parallel,
+    plyr,
+    purrr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+URL: https://github.com/turtletopia/aurrera

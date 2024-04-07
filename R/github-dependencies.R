@@ -36,20 +36,27 @@ wood_github_dependencies <- function(package, user, tag = "latest") {
 github_description_cache <- function(package, user, tag) {
   if (tag == "latest") {
     ret <- with_cache({
-      content <- guess_default_branch_gh(user, package, "DESCRIPTION")
+      content <- guess_default_branch_gh(user, package, "DESCRIPTION") |>
+        httr2::resp_body_string()
       list(exists = TRUE, content = content)
     }, "DESCRIPTION", "github", user, package)
     ret[["content"]]
   } else {
     with_cache({
-      url <- raw_github_url(user, package, tag, "DESCRIPTION")
-      content <- download_safely(url, on_status = list(
-        `403` = stopf_gh_rate_limit,
-        `404` = function() stopf(c(
-          "Can't find DESCRIPTION file in `%1$s/%2$s` repository on Github.\n",
-          "(i) Is `%3$s` a valid tag?"
-        ), user, package, tag)
-      ))
+      rlang::try_fetch({
+        httr2::request("https://raw.githubusercontent.com") |>
+          httr2::req_url_path_append(user, package, tag, "DESCRIPTION") |>
+          httr2::req_perform() |>
+          httr2::resp_body_string()
+      }, httr2_http_403 = function(cnd) {
+        abort_gh_rate_limit(cnd)
+      }, httr2_http_404 = function(cnd) {
+        rlang::abort(
+          c(sprintf("Can't find DESCRIPTION file in `%1$s/%2$s` repository on Github.", user, package),
+            "i" = sprintf("Is `%1$s` a valid tag?", tag)),
+          parent = cnd
+        )
+      })
     }, "DESCRIPTION", "github", user, package, tag)
   }
 }
