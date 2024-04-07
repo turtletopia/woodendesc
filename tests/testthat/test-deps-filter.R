@@ -1,7 +1,7 @@
 # SETUP ----
 woodendesc_deps <- wood_local_dependencies("woodendesc")
 mixed_deps <- wood_dependencies(
-  c("httr", "digest", "versionsort"),
+  c("httr2", "rlang", "versionsort"),
   repos = "local#all"
 )
 empty_deps <- as_wood_deps(data.frame(

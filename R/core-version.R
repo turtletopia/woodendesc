@@ -12,12 +12,11 @@
 #'
 #' @family core
 #' @family versions
-#' @importFrom utils installed.packages
 #' @export
 wood_core_version <- function(package) {
   assert_param_package(package)
 
-  core_pkgs <- installed.packages(priority = "base")
+  core_pkgs <- utils::installed.packages(priority = "base")
   validate_core_package(package, core_pkgs)
 
   core_pkgs[package, "Version"]

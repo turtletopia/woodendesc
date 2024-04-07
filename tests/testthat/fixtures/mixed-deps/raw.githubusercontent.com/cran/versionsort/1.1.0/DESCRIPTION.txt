@@ -1,0 +1,21 @@
+Package: versionsort
+Type: Package
+Title: Sort and Order Version Codes
+Version: 1.1.0
+Date: 2022-03-23
+Authors@R: c(person("Laura", "Bakala",
+             email = "erdaradun.gaztea@gmail.com",
+             role = c("cre", "aut", "cph")))
+Description: A lightweight package for sorting version codes in various forms. No strong dependencies guaranteed.
+License: GPL (>= 3)
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+Suggests: covr, spelling, testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Language: en-US
+NeedsCompilation: no
+Packaged: 2022-03-25 00:14:57 UTC; erdar
+Author: Laura Bakala [cre, aut, cph]
+Maintainer: Laura Bakala <erdaradun.gaztea@gmail.com>
+Repository: CRAN
+Date/Publication: 2022-03-25 08:10:02 UTC

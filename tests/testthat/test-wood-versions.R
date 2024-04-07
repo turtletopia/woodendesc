@@ -1,9 +1,9 @@
-skip_if_not_installed("vcr")
+skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
 pkgs <- c("versionsort", "gglgbtq", "woodendesc")
-vcr::use_cassette("mixed-versions", {
+with_mock_dir("mixed-versions", {
   mixed_versions <- wood_versions(pkgs, repos = c("local#all", "cran"))
 })
 

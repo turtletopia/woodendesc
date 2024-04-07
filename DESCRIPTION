@@ -20,7 +20,8 @@ Depends:
     R (>= 4.1.0)
 Imports: 
     httr2 (>= 1.0.0),
-    rlang,
+    rlang (>= 1.0.0),
+    utils,
     versionsort (>= 1.1.0)
 Suggests: 
     covr,

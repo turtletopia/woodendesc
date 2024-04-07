@@ -22,7 +22,7 @@ This function searches for installed package versions inside
 specified library paths.
 }
 \examples{
-wood_local_versions("httr")
+wood_local_versions("httr2")
 
 }
 \seealso{
