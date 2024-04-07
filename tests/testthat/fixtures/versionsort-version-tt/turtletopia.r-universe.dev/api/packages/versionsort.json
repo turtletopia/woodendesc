@@ -1,0 +1,229 @@
+{
+    "Package": "versionsort",
+    "Type": "Package",
+    "Title": "Sort and Order Version Codes",
+    "Version": "1.1.0",
+    "Date": "2022-03-23",
+    "Authors@R": "c(person(\"Laura\", \"Bakala\",\nemail = \"erdaradun.gaztea@gmail.com\",\nrole = c(\"cre\", \"aut\", \"cph\")))",
+    "Description": "A lightweight package for sorting version codes in various\nforms. No strong dependencies guaranteed.",
+    "License": "GPL (>= 3)",
+    "Encoding": "UTF-8",
+    "Roxygen": "list(markdown = TRUE)",
+    "RoxygenNote": "7.1.2",
+    "URL": "https://github.com/turtletopia/versionsort",
+    "Config/testthat/edition": "3",
+    "Language": "en-US",
+    "Repository": "https://turtletopia.r-universe.dev",
+    "RemoteUrl": "https://github.com/turtletopia/versionsort",
+    "RemoteRef": "HEAD",
+    "RemoteSha": "2303d4c02b42e2727722e743339281c76a4d505e",
+    "NeedsCompilation": "no",
+    "Packaged": {
+        "Date": "2024-04-05 04:55:50 UTC",
+        "User": "root"
+    },
+    "Author": "Laura Bakala [cre, aut, cph]",
+    "Maintainer": "Laura Bakala <erdaradun.gaztea@gmail.com>",
+    "MD5sum": "8d87b9d87b5f278e2c94b0f55470d77d",
+    "_user": "turtletopia",
+    "_type": "src",
+    "_file": "versionsort_1.1.0.tar.gz",
+    "_fileid": "8d87b9d87b5f278e2c94b0f55470d77d",
+    "_filesize": 81829,
+    "_created": "2024-04-05T04:55:50.000Z",
+    "_published": "2024-04-05T05:00:43.589Z",
+    "_upstream": "https://github.com/turtletopia/versionsort",
+    "_commit": {
+        "id": "2303d4c02b42e2727722e743339281c76a4d505e",
+        "author": "Laura <erdaradun.gaztea+github@gmail.com>",
+        "committer": "Laura <erdaradun.gaztea+github@gmail.com>",
+        "message": "add lint workflow\n\n",
+        "time": 1652709089
+    },
+    "_maintainer": {
+        "name": "Laura Bakala",
+        "email": "erdaradun.gaztea@gmail.com",
+        "login": "erdaradungaztea"
+    },
+    "_distro": "jammy",
+    "_host": "GitHub-Actions",
+    "_status": "success",
+    "_pkgdocs": "skipped",
+    "_winbinary": "success",
+    "_macbinary": "success",
+    "_wasmbinary": "success",
+    "_buildurl": "https://github.com/r-universe/turtletopia/actions/runs/8565170787",
+    "_registered": true,
+    "_dependencies": [
+        {
+            "package": "covr",
+            "role": "Suggests"
+        },
+        {
+            "package": "spelling",
+            "role": "Suggests"
+        },
+        {
+            "package": "testthat",
+            "version": ">= 3.0.0",
+            "role": "Suggests"
+        }
+    ],
+    "_owner": "turtletopia",
+    "_selfowned": true,
+    "_usedby": 0,
+    "_updates": [
+
+    ],
+    "_tags": [
+
+    ],
+    "_topics": [
+        "natural-sort",
+        "version-code"
+    ],
+    "_organization": true,
+    "_stars": 5,
+    "_contributions": {
+        "erdaradungaztea": 56
+    },
+    "_devurl": "https://github.com/turtletopia/versionsort",
+    "_assets": [
+        "extra/citation.cff",
+        "extra/contents.json",
+        "extra/NEWS.html",
+        "extra/NEWS.txt",
+        "extra/versionsort.html",
+        "manual.pdf",
+        "readme.html",
+        "readme.md"
+    ],
+    "_homeurl": "https://github.com/turtletopia/versionsort",
+    "_realowner": "turtletopia",
+    "_cranurl": true,
+    "_releases": [
+        {
+            "version": "1.0.0",
+            "date": "2021-12-15"
+        },
+        {
+            "version": "1.1.0",
+            "date": "2022-03-25"
+        }
+    ],
+    "_exports": [
+        "ver_latest",
+        "ver_oldest",
+        "ver_order",
+        "ver_sort"
+    ],
+    "_help": [
+        {
+            "page": "ver_latest",
+            "title": "Find the latest version code",
+            "topics": [
+                "ver_latest"
+            ]
+        },
+        {
+            "page": "ver_oldest",
+            "title": "Find the oldest version code",
+            "topics": [
+                "ver_oldest"
+            ]
+        },
+        {
+            "page": "ver_order",
+            "title": "Order version codes",
+            "topics": [
+                "ver_order"
+            ]
+        },
+        {
+            "page": "ver_sort",
+            "title": "Sort version codes",
+            "topics": [
+                "ver_sort"
+            ]
+        }
+    ],
+    "_readme": "https://github.com/turtletopia/versionsort/raw/HEAD/README.md",
+    "_rundeps": [
+
+    ],
+    "_score": 2.041392685158225,
+    "_indexed": true,
+    "_binaries": [
+        {
+            "r": "4.3.3",
+            "os": "linux",
+            "version": "1.1.0",
+            "date": "2024-04-05T04:55:50.000Z",
+            "distro": "jammy",
+            "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+            "fileid": "fed325ead9e54ace1b039dcfdb931ea2",
+            "status": "success",
+            "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/8565170787"
+        },
+        {
+            "r": "4.3.3",
+            "os": "mac",
+            "version": "1.1.0",
+            "date": "2024-04-05T04:59:32.000Z",
+            "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+            "fileid": "c8f243c0dc717c91a7b63d9df9ab8844",
+            "status": "success",
+            "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/8565170787"
+        },
+        {
+            "r": "4.4.0",
+            "os": "mac",
+            "version": "1.1.0",
+            "date": "2024-04-05T04:59:48.000Z",
+            "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+            "fileid": "360cad0012be6e491a77245e7bc96fe0",
+            "status": "success",
+            "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/8565170787"
+        },
+        {
+            "r": "4.3.3",
+            "os": "wasm",
+            "version": "1.1.0",
+            "date": "2024-04-05T04:57:21.000Z",
+            "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+            "fileid": "3018e158bbd9333e1940b24f9b63020f",
+            "status": "success",
+            "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/8565170787"
+        },
+        {
+            "r": "4.5.0",
+            "os": "win",
+            "version": "1.1.0",
+            "date": "2024-04-05T04:57:07.000Z",
+            "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+            "fileid": "2b7310b4d205535936180ff67968e032",
+            "status": "success",
+            "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/8565170787"
+        },
+        {
+            "r": "4.3.3",
+            "os": "win",
+            "version": "1.1.0",
+            "date": "2024-04-05T04:57:26.000Z",
+            "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+            "fileid": "90f8fbf38754bd205ad33e5cae8489b9",
+            "status": "success",
+            "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/8565170787"
+        },
+        {
+            "r": "4.4.0",
+            "os": "win",
+            "version": "1.1.0",
+            "date": "2024-04-05T04:57:06.000Z",
+            "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+            "fileid": "a0dd4a3a21cbcbe44faace4508e2320e",
+            "status": "success",
+            "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/8565170787"
+        }
+    ]
+}
