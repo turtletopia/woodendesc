@@ -3,7 +3,7 @@ wood_clear_cache()
 
 # SETUP ----
 pkgs <- c("versionsort", "gglgbtq", "woodendesc")
-with_mock_dir("mixed-versions", {
+with_mock_dir("2", {
   mixed_versions <- wood_versions(pkgs, repos = c("local#all", "cran"))
 })
 

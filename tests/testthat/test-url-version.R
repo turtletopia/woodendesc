@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("colinfay-packages", {
+with_mock_dir("x", {
   dockerfiler_version <- wood_url_version("dockerfiler", "https://colinfay.me")
 })
 

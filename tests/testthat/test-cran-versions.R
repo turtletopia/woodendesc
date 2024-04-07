@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("versionsort-versions", {
+with_mock_dir("l", {
   versionsort_versions <- wood_cran_versions("versionsort")
 })
 
@@ -20,12 +20,13 @@ test_that("use cache even if expired, but latest version hasn't changed yet", {
   Sys.sleep(1.1)
 
   # Create latest version cache to avoid having a request being made
-  with_mock_dir("versionsort-latest-2", {
+  with_mock_dir("m", {
     wood_cran_latest("versionsort")
   })
   expect_cache(wood_cran_versions, versionsort_versions, "versionsort")
 })
 
+skip_if_offline()
 test_that("raises an exception if package not available", {
   expect_error(
     wood_cran_versions("fakepackage"),

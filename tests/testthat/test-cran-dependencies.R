@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("deepdep-deps", {
+with_mock_dir("h", {
   deepdep_deps <- wood_cran_dependencies("deepdep", version = "0.2.0")
 })
 
@@ -20,7 +20,7 @@ test_that("uses cache from wood_cran_versions() if available", {
                version = "0.2.0")
 })
 
-with_mock_dir("deepdep-deps-latest", {
+with_mock_dir("i", {
   test_that("version = 'latest' is an alias to latest package version", {
     expect_equal(
       wood_cran_dependencies("deepdep", "latest"),

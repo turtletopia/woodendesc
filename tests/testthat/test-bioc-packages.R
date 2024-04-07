@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("bioc-packages", {
+with_mock_dir("c", {
   bioc_packages <- wood_bioc_packages()
 })
 
@@ -16,7 +16,7 @@ test_that("there's a Biostrings package in the list", {
 })
 
 test_that("works with older releases", {
-  with_mock_dir("bioc-packages-old", {
+  with_mock_dir("d", {
     bioc_packages_old <- wood_bioc_packages(release = "1.8")
   })
   expect_subset(c("affy", "Biostrings", "impute", "RMAGEML"), bioc_packages_old)

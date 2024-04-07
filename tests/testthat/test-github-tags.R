@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("gglgbtq-tags", {
+with_mock_dir("s", {
   gglgbtq_tags <- wood_github_tags("gglgbtq", "turtletopia")
 })
 

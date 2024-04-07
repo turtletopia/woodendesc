@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("cran-packages", {
+with_mock_dir("k", {
   cran_packages <- wood_cran_packages()
 })
 

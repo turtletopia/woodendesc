@@ -1,10 +1,12 @@
 skip_if_not_installed("httptest2")
+# This one is skipped when offline for two reasons:
+# 1. Mocked responses form too long paths even if fully compressed
+# 2. turtletopia/.github repository is treated as a hidden directory, an it's not allowed there
+skip_if_offline()
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("gh-turtletopia-packages", {
-  turtletopia_packages <- wood_github_packages("turtletopia")
-})
+turtletopia_packages <- wood_github_packages("turtletopia")
 
 # TESTS ----
 test_packages(turtletopia_packages)
@@ -20,7 +22,6 @@ test_that("non-packages are omitted", {
   expect_no_match(turtletopia_packages, "^universe$")
 })
 
-skip_if_offline()
 test_that("if user doesn't exist, an exception is raised", {
   expect_error(
     wood_github_packages("TheUserThatDoesNotExist"),

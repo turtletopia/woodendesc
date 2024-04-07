@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("gglgbtq-versions", {
+with_mock_dir("t", {
   gglgbtq_versions <- wood_github_versions("gglgbtq", "turtletopia")
 })
 

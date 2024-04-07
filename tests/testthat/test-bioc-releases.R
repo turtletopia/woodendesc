@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("bioc-releases", {
+with_mock_dir("e", {
   bioc_releases <- wood_bioc_releases()
 })
 

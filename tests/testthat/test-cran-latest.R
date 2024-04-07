@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("versionsort-latest", {
+with_mock_dir("j", {
   versionsort_latest <- wood_cran_latest("versionsort")
 })
 

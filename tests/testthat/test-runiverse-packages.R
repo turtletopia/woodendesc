@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("tidyverse-packages", {
+with_mock_dir("v", {
   tidyverse_packages <- wood_runiverse_packages("tidyverse")
 })
 

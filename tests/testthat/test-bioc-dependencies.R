@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("Biostrings-deps", {
+with_mock_dir("a", {
   Biostrings_deps <- wood_bioc_dependencies("Biostrings")
 })
 
@@ -20,7 +20,7 @@ test_that("raises an exception if package not available", {
   )
 })
 
-with_mock_dir("Biostrings-deps-old", {
+with_mock_dir("b", {
   test_that("correctly retrieves data from older releases", {
     expect_equal(
       wood_bioc_dependencies("Biostrings", release = "1.8"),

@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("versionsort-version-tt", {
+with_mock_dir("w", {
   versionsort_version <- wood_runiverse_version("versionsort", "turtletopia")
 })
 
