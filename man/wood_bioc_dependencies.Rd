@@ -34,7 +34,7 @@ wood_bioc_dependencies("Biostrings")
 wood_bioc_dependencies("Biostrings", "devel")
 # And what about dependencies in the past?
 wood_bioc_dependencies("Biostrings", "2.10")
-wood_bioc_dependencies("Biostrings", "1.5")
+wood_bioc_dependencies("Biostrings", "1.8")
 }
 
 }

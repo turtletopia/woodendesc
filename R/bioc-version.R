@@ -14,8 +14,8 @@
 #'
 #' # What's coming next?
 #' wood_bioc_version("Biostrings", release = "devel")
-#' # Can query releases as old as 1.5:
-#' wood_bioc_version("Biostrings", release = "1.5")
+#' # Can query releases as old as 1.8:
+#' wood_bioc_version("Biostrings", release = "1.8")
 #' }
 #'
 #' @family bioc
@@ -24,15 +24,11 @@
 wood_bioc_version <- function(package, release = "release") {
   assert_param_package(package)
   assert_param_bioc_release(release)
+  validate_bioc_release(release)
 
   desc <- bioc_PACKAGES_cache(release)[[package]]
 
-  if (is.null(desc)) {
-    stopf(
-      "Can't find package `%1$s` in Bioconductor release `%2$s`.",
-      package, release
-    )
-  }
+  validate_bioc_package(desc, package, release)
 
   desc[["Version"]]
 }

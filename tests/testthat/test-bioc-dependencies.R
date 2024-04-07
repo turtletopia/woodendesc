@@ -1,11 +1,10 @@
-skip_if_not_installed("vcr")
+skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-# Re-record on older R versions since it queries for PACKAGES without .gz
-vcr::use_cassette("Biostrings-deps", {
+with_mock_dir("Biostrings-deps", {
   Biostrings_deps <- wood_bioc_dependencies("Biostrings")
-}, record = "new_episodes")
+})
 
 # TESTS ----
 test_dependencies(Biostrings_deps)
@@ -21,18 +20,16 @@ test_that("raises an exception if package not available", {
   )
 })
 
-vcr::use_cassette("Biostrings-deps-old", {
+with_mock_dir("Biostrings-deps-old", {
   test_that("correctly retrieves data from older releases", {
-    Biostrings_deps_old <- wood_bioc_dependencies("Biostrings", release = "1.5")
-
     expect_equal(
-      Biostrings_deps_old,
+      wood_bioc_dependencies("Biostrings", release = "1.8"),
       as_wood_deps(data.frame(
-        package = "R",
-        version = "1.8.0",
-        type = "Depends",
+        package = c("R", "methods", "hgu95av2probe", "CelegansGenome.ce2"),
+        version = c("2.3.0", NA_character_, NA_character_, NA_character_),
+        type = c("Depends", "Depends", "Suggests", "Suggests"),
         stringsAsFactors = FALSE
       ))
     )
   })
-}, record = "new_episodes")
+})

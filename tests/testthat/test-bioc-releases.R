@@ -1,10 +1,10 @@
-skip_if_not_installed("vcr")
+skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-vcr::use_cassette("bioc-releases", {
+with_mock_dir("bioc-releases", {
   bioc_releases <- wood_bioc_releases()
-}, record = "new_episodes")
+})
 
 # TESTS ----
 test_that("returns a vector of strings", {

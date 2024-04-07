@@ -29,8 +29,8 @@ head(wood_bioc_packages("release"))
 head(wood_bioc_packages("devel"))
 # Previous versions can be queried as well:
 head(wood_bioc_packages("3.9"))
-# The oldest available version is 1.5:
-wood_bioc_packages("1.5")
+# The oldest available version is 1.8:
+wood_bioc_packages("1.8")
 }
 
 }

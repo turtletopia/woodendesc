@@ -6,51 +6,6 @@ github_url <- function(..., params = list()) {
   append_url_params(paste("https://api.github.com", ..., sep = "/"), params)
 }
 
-#' Get Bioconductor URL
-#'
-#' @description Creates an URL to the selected Bioconductor API.
-#'
-#' @param ... `character(1)`\cr
-#'  Components of the URL path, to be separated by slashes.
-#'
-#' @return A single string with an URL address to selected API.
-#'
-#' @noRd
-bioc_url <- function(...) {
-  paste("https://bioconductor.org", ..., sep = "/")
-}
-
-bioc_release_url <- function(release = "release", ...) {
-  if (release %in% c("release", "devel")) {
-    # Early return for special release names
-    return(bioc_url("packages", release, "bioc", ...))
-  }
-
-  if (is_pkg_installed("xml2")) {
-    # Perform precise check only if xml2 installed
-    if (!release %in% wood_bioc_releases()) {
-      stopf("Bioconductor release %1$s does not exist.", release)
-    }
-  }
-
-  # TODO: replace with ver_later_than() or sth like that
-  if (versionsort::ver_latest(c(release, "1.8")) == release) {
-    # Release at least 1.8
-    bioc_url("packages", release, "bioc", ...)
-  } else if (versionsort::ver_latest(c(release, "1.5")) == release) {
-    # TODO: releases 1.5-1.7 seem to not be available anymore
-    # Releases between 1.5 and 1.7 had different order of URL components
-    bioc_url("packages", "bioc", release, ...)
-  } else {
-    stopf(
-      c("`release` must be at least 1.5.\n",
-        "(i) You've provided release code %1$s\n",
-        "(i) Releases older than 1.5 are not supported"),
-      release
-    )
-  }
-}
-
 append_url_params <- function(url, params) {
   # Add nothing if no parameters passed
   if (length(params) == 0) return(url)
@@ -67,8 +22,4 @@ append_url_params <- function(url, params) {
 
 extract_core_url <- function(url) {
   sub("\\?.*", "", url)
-}
-
-add_trailing_slash <- function(url) {
-  gsub("(?<=[^/])$", "/", url, perl = TRUE)
 }
