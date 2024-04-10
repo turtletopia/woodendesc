@@ -3,6 +3,7 @@ skip_if_not_installed("httptest2")
 # 1. Mocked responses form too long paths even if fully compressed
 # 2. turtletopia/.github repository is treated as a hidden directory, an it's not allowed there
 skip_if_offline()
+skip_if(over_gh_limit(), "Github rate limit not sufficient")
 wood_clear_cache()
 
 # SETUP ----

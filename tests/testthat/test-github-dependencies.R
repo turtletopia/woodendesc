@@ -1,4 +1,5 @@
 skip_if_not_installed("httptest2")
+skip_if(over_gh_limit(), "Github rate limit not sufficient")
 wood_clear_cache()
 
 # SETUP ----
