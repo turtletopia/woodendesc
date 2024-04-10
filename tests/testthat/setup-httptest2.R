@@ -4,7 +4,7 @@ if (requireNamespace("httptest2", quietly = TRUE)) {
 
 with_mock_dir <- function(dir, expr) {
   httptest2::with_mock_dir(
-    file.path("f", dir),
+    file.path("..", "fx", dir),
     expr
   )
 }
