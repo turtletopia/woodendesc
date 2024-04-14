@@ -8,7 +8,7 @@ with_mock_dir("u", {
 
 # TESTS ----
 test_dependencies(ggplot2_deps)
-test_cache(wood_runiverse_dependencies, ggplot2_deps, "ggplot2", "tidyverse")
+test_cache({ wood_runiverse_dependencies("ggplot2", "tidyverse") }, ggplot2_deps)
 test_param_package(wood_runiverse_dependencies, universe = "tidyverse")
 test_param_runiverse(wood_runiverse_dependencies, package = "ggplot2")
 

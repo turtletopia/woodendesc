@@ -8,7 +8,7 @@ with_mock_dir("l", {
 
 # TESTS ----
 test_versions(versionsort_versions)
-test_cache(wood_cran_versions, versionsort_versions, "versionsort")
+test_cache({ wood_cran_versions("versionsort") }, versionsort_versions)
 test_param_package(wood_cran_versions)
 
 test_that("versionsort versions contain some of the published version codes", {
@@ -23,7 +23,7 @@ test_that("use cache even if expired, but latest version hasn't changed yet", {
   with_mock_dir("m", {
     wood_cran_latest("versionsort")
   })
-  expect_cache(wood_cran_versions, versionsort_versions, "versionsort")
+  expect_cache({ wood_cran_versions("versionsort") }, versionsort_versions)
 })
 
 skip_if_offline()

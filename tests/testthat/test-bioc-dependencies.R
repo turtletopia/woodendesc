@@ -8,7 +8,7 @@ with_mock_dir("a", {
 
 # TESTS ----
 test_dependencies(Biostrings_deps)
-test_cache(wood_bioc_dependencies, Biostrings_deps, "Biostrings")
+test_cache({ wood_bioc_dependencies("Biostrings") }, Biostrings_deps)
 test_param_package(wood_bioc_dependencies)
 test_param_bioc_release(wood_bioc_dependencies, package = "Biostrings")
 

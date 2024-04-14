@@ -8,7 +8,7 @@ with_mock_dir("y", {
 
 # TESTS ----
 test_packages(cynkra_packages)
-test_cache(wood_url_packages, cynkra_packages, "https://cynkra.r-universe.dev")
+test_cache({ wood_url_packages("https://cynkra.r-universe.dev") }, cynkra_packages)
 test_param_url_repo(wood_url_packages)
 
 test_that("Cynkra repository has cynkrathis package", {
@@ -22,5 +22,5 @@ with_mock_dir("x", {
 })
 
 test_that("trailing slash url and without one share the same cache", {
-  expect_cache(wood_url_packages, cynkra_packages, "https://cynkra.r-universe.dev/")
+  expect_cache({ wood_url_packages("https://cynkra.r-universe.dev/") }, cynkra_packages)
 })

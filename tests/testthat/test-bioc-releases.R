@@ -24,6 +24,4 @@ test_that("bioc releases contain some of the published release codes", {
   expect_subset(c("1.0", "1.9", "2.13", "3.2", "3.14"), bioc_releases)
 })
 
-test_that("if possible, reads from cache", {
-  expect_cache(wood_bioc_releases, bioc_releases)
-})
+test_cache({ wood_bioc_releases() }, bioc_releases)

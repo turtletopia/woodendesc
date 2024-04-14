@@ -8,7 +8,7 @@ with_mock_dir("l0", {
 
 # TESTS ----
 test_dependencies(rock_deps)
-test_cache(wood_gitlab_dependencies, rock_deps, "rock", "r-packages", tag = "0.6.0")
+test_cache({ wood_gitlab_dependencies("rock", "r-packages", tag = "0.6.0") }, rock_deps)
 test_param_package(wood_gitlab_dependencies, user = "r-packages")
 test_param_gh_user(wood_gitlab_dependencies, package = "rock")
 test_param_tag(wood_gitlab_dependencies, package = "rock", user = "r-packages")
@@ -31,10 +31,10 @@ with_mock_dir("l2", {
     )
     wood_clear_cache()
     wood_gitlab_latest("rock", "r-packages")
-    expect_cache(wood_gitlab_dependencies, rock_deps_latest,
-                 package = "rock",
-                 user = "r-packages",
-                 tag = "latest")
+    expect_cache(
+      { wood_gitlab_dependencies(package = "rock", user = "r-packages", tag = "latest") },
+      rock_deps_latest
+    )
   })
 })
 

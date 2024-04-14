@@ -8,7 +8,7 @@ with_mock_dir("x", {
 
 # TESTS ----
 test_dependencies(dockerfiler_deps)
-test_cache(wood_url_dependencies, dockerfiler_deps, "dockerfiler", "https://colinfay.me")
+test_cache({ wood_url_dependencies("dockerfiler", "https://colinfay.me") }, dockerfiler_deps)
 test_param_package(wood_url_dependencies, repository = "https://colinfay.me")
 test_param_url_repo(wood_url_dependencies, package = "dockerfiler")
 

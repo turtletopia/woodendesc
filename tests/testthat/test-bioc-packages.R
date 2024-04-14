@@ -8,7 +8,7 @@ with_mock_dir("c", {
 
 # TESTS ----
 test_packages(bioc_packages)
-test_cache(wood_bioc_packages, bioc_packages)
+test_cache({ wood_bioc_packages() }, bioc_packages)
 test_param_bioc_release(wood_bioc_packages)
 
 test_that("there's a Biostrings package in the list", {

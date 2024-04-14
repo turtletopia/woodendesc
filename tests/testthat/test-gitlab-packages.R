@@ -8,7 +8,7 @@ with_mock_dir("l4", {
 
 # TESTS ----
 test_packages(r_packages_packages)
-test_cache(wood_gitlab_packages, r_packages_packages, user = "r-packages")
+test_cache({ wood_gitlab_packages(user = "r-packages") }, r_packages_packages)
 test_param_gh_user(wood_gitlab_packages)
 test_param_include_forks(wood_gitlab_packages, user = "r-packages")
 

@@ -8,7 +8,7 @@ with_mock_dir("j", {
 
 # TESTS ----
 test_version(versionsort_latest)
-test_cache(wood_cran_latest, versionsort_latest, "versionsort")
+test_cache({ wood_cran_latest("versionsort") }, versionsort_latest)
 test_param_package(wood_cran_latest)
 
 skip_if_offline()

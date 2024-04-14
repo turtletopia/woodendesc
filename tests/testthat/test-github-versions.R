@@ -9,7 +9,7 @@ with_mock_dir("t", {
 
 # TESTS ----
 test_versions(gglgbtq_versions)
-test_cache(wood_github_versions, gglgbtq_versions, "gglgbtq", "turtletopia")
+test_cache({ wood_github_versions("gglgbtq", "turtletopia") }, gglgbtq_versions)
 test_param_package(wood_github_versions, user = "turtletopia")
 test_param_gh_user(wood_github_versions, package = "gglgbtq")
 
