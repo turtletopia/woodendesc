@@ -9,8 +9,8 @@ with_mock_dir("x", {
 # TESTS ----
 test_version(dockerfiler_version)
 test_cache({ wood_url_version("dockerfiler", "https://colinfay.me") }, dockerfiler_version)
-test_param_package(wood_url_version, repository = "https://colinfay.me")
-test_param_url_repo(wood_url_version, package = "dockerfiler")
+test_param_package(wood_url_version(package = "dockerfiler", repository = "https://colinfay.me"))
+test_param_url_repo(wood_url_version(package = "dockerfiler", repository = "https://colinfay.me"))
 
 skip_if_offline()
 test_that("raises an exception if package not available", {

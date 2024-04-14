@@ -9,8 +9,8 @@ with_mock_dir("w", {
 # TESTS ----
 test_version(versionsort_version)
 test_cache({ wood_runiverse_version("versionsort", "turtletopia") }, versionsort_version)
-test_param_package(wood_runiverse_version, universe = "turtletopia")
-test_param_runiverse(wood_runiverse_version, package = "versionsort")
+test_param_package(wood_runiverse_version(package = "versionsort", universe = "turtletopia"))
+test_param_runiverse(wood_runiverse_version(package = "versionsort", universe = "turtletopia"))
 
 test_that("raises an exception if package not available", {
   expect_error(

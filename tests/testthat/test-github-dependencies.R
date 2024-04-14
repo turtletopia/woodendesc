@@ -10,9 +10,9 @@ with_mock_dir("n", {
 # TESTS ----
 test_dependencies(gglgbtq_deps)
 test_cache({ wood_github_dependencies("gglgbtq", "turtletopia", tag = "v0.1.0") }, gglgbtq_deps)
-test_param_package(wood_github_dependencies, user = "turtletopia")
-test_param_gh_user(wood_github_dependencies, package = "gglgbtq")
-test_param_tag(wood_github_dependencies, package = "gglgbtq", user = "turtletopia")
+test_param_package(wood_github_dependencies(package = "gglgbtq", user = "turtletopia"))
+test_param_gh_user(wood_github_dependencies(package = "gglgbtq", user = "turtletopia"))
+test_param_tag(wood_github_dependencies(package = "gglgbtq", user = "turtletopia"))
 
 with_mock_dir("o", {
   test_that("uses cache from wood_github_versions() if available if not latest commit", {

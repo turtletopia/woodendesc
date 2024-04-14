@@ -9,8 +9,8 @@ with_mock_dir("h", {
 # TESTS ----
 test_dependencies(deepdep_deps)
 test_cache({ wood_cran_dependencies("deepdep", version = "0.2.0") }, deepdep_deps)
-test_param_package(wood_cran_dependencies, version = "0.2.0")
-test_param_version(wood_cran_dependencies, package = "deepdep")
+test_param_package(wood_cran_dependencies(package = "deepdep", version = "0.2.0"))
+test_param_version(wood_cran_dependencies(package = "deepdep", version = "0.2.0"))
 
 test_that("uses cache from wood_cran_versions() if available", {
   wood_clear_cache()

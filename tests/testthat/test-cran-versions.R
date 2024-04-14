@@ -9,7 +9,7 @@ with_mock_dir("l", {
 # TESTS ----
 test_versions(versionsort_versions)
 test_cache({ wood_cran_versions("versionsort") }, versionsort_versions)
-test_param_package(wood_cran_versions)
+test_param_package(wood_cran_versions(package = "versionsort"))
 
 test_that("versionsort versions contain some of the published version codes", {
   expect_subset(c("1.0.0", "1.1.0"), versionsort_versions)

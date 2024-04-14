@@ -9,8 +9,8 @@ with_mock_dir("l4", {
 # TESTS ----
 test_packages(r_packages_packages)
 test_cache({ wood_gitlab_packages(user = "r-packages") }, r_packages_packages)
-test_param_gh_user(wood_gitlab_packages)
-test_param_include_forks(wood_gitlab_packages, user = "r-packages")
+test_param_gh_user(wood_gitlab_packages(user = "r-packages"))
+test_param_include_forks(wood_gitlab_packages(user = "r-packages"))
 
 test_that("several packages make the list", {
   expect_subset(c("rock", "limonaid", "preregr"), r_packages_packages)

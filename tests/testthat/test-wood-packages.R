@@ -12,7 +12,7 @@ with_mock_dir("1", {
 
 # TESTS ----
 test_packages(packages)
-test_param_repos(wood_packages)
+test_param_repos(wood_packages())
 
 test_that("uppercase in URL is preserved", {
   expect_not_empty(colinfay_packages)

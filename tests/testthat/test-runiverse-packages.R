@@ -9,7 +9,7 @@ with_mock_dir("v", {
 # TESTS ----
 test_packages(tidyverse_packages)
 test_cache({ wood_runiverse_packages(universe = "tidyverse") }, tidyverse_packages)
-test_param_runiverse(wood_runiverse_packages)
+test_param_runiverse(wood_runiverse_packages(universe = "tidyverse"))
 
 test_that("tidyverse universe has ggplot2 package", {
   expect_subset("ggplot2", tidyverse_packages)

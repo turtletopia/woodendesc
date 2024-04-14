@@ -10,8 +10,8 @@ with_mock_dir("q", {
 # TESTS ----
 test_version(gglgbtq_latest)
 test_cache({ wood_github_latest("gglgbtq", "turtletopia") }, gglgbtq_latest)
-test_param_package(wood_github_latest, user = "turtletopia")
-test_param_gh_user(wood_github_latest, package = "gglgbtq")
+test_param_package(wood_github_latest(package = "gglgbtq", user = "turtletopia"))
+test_param_gh_user(wood_github_latest(package = "gglgbtq", user = "turtletopia"))
 
 skip_if_offline()
 test_that("raises an exception if package not available", {

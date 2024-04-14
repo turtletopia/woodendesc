@@ -9,8 +9,8 @@ with_mock_dir("l3", {
 # TESTS ----
 test_version(rock_latest)
 test_cache({ wood_gitlab_latest("rock", "r-packages") }, rock_latest)
-test_param_package(wood_gitlab_latest, user = "r-packages")
-test_param_gh_user(wood_gitlab_latest, package = "rock")
+test_param_package(wood_gitlab_latest(package = "rock", user = "r-packages"))
+test_param_gh_user(wood_gitlab_latest(package = "rock", user = "r-packages"))
 
 skip_if_offline()
 test_that("raises an exception if package not available", {

@@ -9,8 +9,8 @@ with_mock_dir("z", {
 
 # TESTS ----
 test_list_of(mixed_deps, pkgs, test_dependencies)
-test_param_packages(wood_dependencies)
-test_param_repos(wood_dependencies, packages = c("versionsort", "gglgbtq"))
+test_param_packages(wood_dependencies(packages = c("versionsort", "gglgbtq")))
+test_param_repos(wood_dependencies(packages = c("versionsort", "gglgbtq")))
 
 test_that("returns a 'wood_dep_list' object", {
   expect_s3_class(mixed_deps, "wood_dep_list")

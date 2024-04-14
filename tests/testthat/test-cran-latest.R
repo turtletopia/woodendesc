@@ -9,7 +9,7 @@ with_mock_dir("j", {
 # TESTS ----
 test_version(versionsort_latest)
 test_cache({ wood_cran_latest("versionsort") }, versionsort_latest)
-test_param_package(wood_cran_latest)
+test_param_package(wood_cran_latest(package = "versionsort"))
 
 skip_if_offline()
 test_that("raises an exception if package not available", {

@@ -9,8 +9,8 @@ with_mock_dir("f", {
 # TESTS ----
 test_version(affy_version)
 test_cache({ wood_bioc_version("affy") }, affy_version)
-test_param_package(wood_bioc_version)
-test_param_bioc_release(wood_bioc_version, package = "affy")
+test_param_package(wood_bioc_version(package = "affy"))
+test_param_bioc_release(wood_bioc_version(package = "affy"))
 
 with_mock_dir("g", {
   test_that("correctly retrieves data from older releases", {
