@@ -26,6 +26,8 @@ Imports:
 Suggests: 
     covr,
     httptest2,
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0),
     usethis,
     withr,
@@ -33,3 +35,4 @@ Suggests:
 Config/testthat/edition: 3
 URL: https://github.com/turtletopia/woodendesc,
     https://turtletopia.github.io/woodendesc/
+VignetteBuilder: knitr

@@ -1,0 +1,65 @@
+---
+title: "Analysing GitHub"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysing GitHub}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(woodendesc)
+```
+
+GitHub is a site offering Git version control system. It's the most popular website for hosting open-source R packages, including this one. A wide set of metadata is available.
+
+## Packages
+
+A user or an organization may be (and in most cases is) an owner of several repositories. Not all repositories are R packages, thus the repository character is approximated by the presence of a `DESCRIPTION` file, one of very few required files for R packages, in the root folder.
+
+```{r github_packages, cache=TRUE}
+wood_github_packages("turtletopia")
+```
+
+By default, forks of other repositories are not listed, but this setting can be changed using `include_forks` parameter:
+
+```{r github_packages_w_forks, cache=TRUE}
+wood_github_packages("ErdaradunGaztea", include_forks = TRUE)
+```
+
+## Available tags
+
+GitHub allows referencing to certain commits through specifying tags associated with them. To list all tags available for a given repository the user should use `wood_github_tags()`. Note that some repositories may not have any tags defined, in which case an empty character vector would be returned.
+
+```{r github_tags, cache=TRUE}
+wood_github_tags("gglgbtq", "turtletopia")
+```
+
+## Available package versions
+
+Repository tags do not have to follow the specific guidelines of version codes. To extract package version codes associated with each GitHub tag the user should use `wood_github_versions()`. This extracts the data from the `DESCRIPTION` file corresponding to each tagged commit.
+
+```{r github_versions, cache=TRUE}
+wood_github_versions("versionsort", "turtletopia")
+```
+
+## Latest package version
+
+To query the latest package version, i.e. the one that'd be installed by calling `remotes::install_github()`, the user should use `wood_github_latest()`. This function queries GitHub for the version code associated with the latest commit to the default branch of the specified repository. Note that this commit may be untagged, in which case the returned version code may not be among the ones listed by `wood_github_versions()`.
+
+```{r github_latest, cache=TRUE}
+wood_github_latest("gglgbtq", "turtletopia")
+```
+
+## Package dependencies
+
+To list package dependencies the user should use `wood_github_dependencies()`. This function extracts dependencies from the `DESCRIPTION` file. By default the latest commit is queried (the same behaviour can be obtained using `tag = "latest"` parameter) but it is possible to list dependencies for any tagged version.
+
+```{r github_deps, cache=TRUE}
+wood_github_dependencies("gglgbtq", "turtletopia")
+wood_github_dependencies("versionsort", "turtletopia", tag = "v1.0.0")
+```
