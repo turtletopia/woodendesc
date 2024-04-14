@@ -1,0 +1,58 @@
+---
+title: "Analysing CRAN"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysing CRAN}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(woodendesc)
+```
+
+Every R programmer knows CRAN -- _the_ repository for R packages. It has strict guidelines for submitted packages and stores all previously submitted versions, so the submission cycle cannot be too short (as opposed to commits in version control systems).
+
+## Packages
+
+There are more than 20'000 packages on CRAN already (numbers as per April 2024). To list them all within the woodendesc framework the user should use `wood_cran_packages()`.
+
+```{r cran_packages, cache=TRUE}
+wood_cran_packages() |>
+  # There are way to many packages to simply show them all
+  print(max = 15)
+```
+
+## Available package versions
+
+To list all package versions submitted and accepted to CRAN the user should use `wood_cran_versions()`.
+
+```{r cran_versions, cache=TRUE}
+wood_cran_versions("versionsort")
+```
+
+## Latest package version
+
+To query the latest package version, i.e. the one that'd be installed by calling `install.packages()`, the user should use `wood_cran_latest()`. The returned value is equivalent to selecting the latest version from `wood_cran_versions()`.
+
+```{r cran_latest, cache=TRUE}
+wood_cran_latest("versionsort")
+```
+
+```{r cran_latest_eq, cache=TRUE}
+wood_cran_versions("versionsort") |>
+  versionsort::ver_latest()
+```
+
+## Package dependencies
+
+To list package dependencies the user should use `wood_cran_dependencies()`. This function extracts dependencies from the `DESCRIPTION` file. By default the latest version is inspected (the same behaviour can be obtained using `version = "latest"` parameter) but it is possible to list dependencies for any previous version as well.
+
+```{r github_deps, cache=TRUE}
+wood_cran_dependencies("deepdep")
+wood_cran_dependencies("deepdep", version = "0.2.0")
+```
