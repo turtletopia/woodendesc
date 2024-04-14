@@ -16,7 +16,7 @@ is_github_R_repo <- function(repo) {
   ret[["exists"]]
 }
 
-is_fork <- function(repo) {
+is_github_fork <- function(repo) {
   repo[["fork"]]
 }
 

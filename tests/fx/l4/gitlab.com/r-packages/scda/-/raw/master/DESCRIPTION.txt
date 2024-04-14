@@ -1,0 +1,42 @@
+Package: scda
+Title: Analysing Single Case Data
+Version: 0.3.2
+Authors@R: c(
+    person(given = "Peter",
+           family = "Verboon",
+           role = c("aut","cre"),
+           email = "peter.verboon@ou.nl",
+           comment = c(ORCID = "0000-0001-8656-0890")),    
+           person(given = "Gjalt-Jorn Ygram",
+           family = "Peters",
+           role = c("aut"),
+           email = "gjalt-jorn@behaviorchange.eu",
+           comment = c(ORCID = "0000-0002-0336-9589")))
+Description: Single Case Designs often require different analyses techniques
+             than designs with multiple participants. This package contains a
+             number of such functions.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+Imports: 
+    ggplot2 (>= 3.1.1),
+    MASS (>= 7.3.50),
+    minpack.lm (>= 1.2.1),
+    ufs (>= 0.2.0),
+    DataCombine,
+    Matrix,
+    pander,
+    nlme,
+    lme4,
+    scdhlm,
+    jmvcore,
+    lmerTest,
+    multilevel,
+    stats,
+    viridis
+Suggests: 
+    testthat
+Depends: 
+    R (>= 2.10)

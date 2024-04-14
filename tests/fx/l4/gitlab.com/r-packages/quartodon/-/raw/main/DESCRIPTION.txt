@@ -1,0 +1,27 @@
+Package: quartodon
+Title: Extract and Post 'Mastodon' Threads From Text Files
+Version: 0.1.1
+Depends: R (>= 3.6.0)
+Imports:
+    httr (>= 1.4),
+    rtoot (>= 0.2)
+Suggests:
+    knitr,
+    rmarkdown,
+    rstudioapi (>= 0.13)
+Authors@R: 
+    c(person(given = "Gjalt-Jorn Ygram",
+             family = "Peters",
+             role = c("aut", "cre"),
+             email = "quartodon@opens.science",
+             comment = c(ORCID = "0000-0002-0336-9589")))
+Description: To compose 'Mastodon' posts, a plain text file can be used. Given
+    the functionality offered by packages such as 'quarto', 'blogdown', and
+    'distill', it makes sense to compose toot threads as blog posts. The
+    'quartodon' package allows you to extract the toots from such blog posts
+    and then post them to Mastodon as a thread.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+VignetteBuilder: knitr

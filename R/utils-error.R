@@ -10,3 +10,10 @@ abort_gh_rate_limit <- function(cnd) {
     parent = cnd
   )
 }
+
+abort_gl_rate_limit <- function(cnd) {
+  rlang::abort(
+    "Exceeded GitLab API limit.",
+    parent = cnd
+  )
+}

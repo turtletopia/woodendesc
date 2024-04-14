@@ -1,0 +1,26 @@
+Package: comma
+Title: Contribution Matrix Mapping
+Version: 0.0.1
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+Imports: openxlsx (>= 4.2)
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    googlesheets4,
+    haven,
+    knitr,
+    readxl,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    writexl,
+    XLConnect
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)
+LazyData: true

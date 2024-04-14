@@ -29,6 +29,7 @@ Functions that query available packages:
 \code{\link{wood_bioc_packages}()},
 \code{\link{wood_core_packages}()},
 \code{\link{wood_github_packages}()},
+\code{\link{wood_gitlab_packages}()},
 \code{\link{wood_local_packages}()},
 \code{\link{wood_packages}()},
 \code{\link{wood_runiverse_packages}()},

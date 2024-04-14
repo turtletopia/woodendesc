@@ -26,7 +26,7 @@ wood_github_packages <- function(user, include_forks = FALSE) {
 
   repos <- github_packages_cache(user)
   if (!include_forks) {
-    repos <- Filter(Negate(is_fork), repos)
+    repos <- Filter(Negate(is_github_fork), repos)
   }
   repos <- Filter(is_github_R_repo, repos)
   vapply(repos, `[[`, character(1), "name")

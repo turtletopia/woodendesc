@@ -1,0 +1,26 @@
+Package: md4e
+Title: Markdown for Education
+Version: 0.0.1
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Its simple separation of content and styling
+             makes Markdown well-suited for development of
+             course material. Including R chunks allows
+             directly producing plots and tables, and the
+             support for math expressions enables including
+             equations. Markdown for Education preprocesses
+             (R) Markdown files and exports them to HTML
+             to be imported into a Learning Management System,
+             also offering functionality for itembank
+             production.
+License: GPL-3
+Import: kableExtra (>= 1.3),
+        knitr (>= 1.3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

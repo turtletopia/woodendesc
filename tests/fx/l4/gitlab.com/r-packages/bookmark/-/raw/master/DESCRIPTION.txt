@@ -1,0 +1,34 @@
+Package: bookmark
+Title: Extract and process embedded data in R Markdown and Quarto files
+Version: 0.1.0
+Authors@R:
+    c(person(given = "Gjalt-Jorn",
+             family = "Peters",
+             role = c("aut", "cre"),
+             email = "bookmark@opens.science",
+             comment = c(ORCID = "0000-0002-0336-9589")),
+      person(given = "Bram",
+             family = "Duyx",
+             role = c("ctb"),
+             # email = "first.last@example.com",
+             comment = c(ORCID = "0000-0002-8879-5391")))
+Description: It is often useful to embed data in R Markdown or Quarto files and
+    apply functions to that data, replacing the data with the function results.
+    The 'bookmark' package implements a way of doing this.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports:
+    data.tree (>= 1.0),
+    yaml (>= 2.3)
+Suggests:
+    bookdown (>= 0.26),
+    knitr,
+    quarto (>= 1.2),
+    rmarkdown,
+    rstudioapi,
+    testthat (>= 3.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
