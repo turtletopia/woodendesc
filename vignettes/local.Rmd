@@ -1,0 +1,45 @@
+---
+title: "Analysing local libraries"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysing local libraries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(woodendesc)
+```
+
+While most installations take place in the default library, users are able to specify custom library paths for each installed package. Thus the task of collecting metadata for all locally available packages is slightly less trivial, especially if the user wishes to take into consideration only a subset of locally existing libraries.
+
+
+
+
+## Packages
+
+To list all core packages within the woodendesc framework, i.e. the ones shown by `installed.packages(priority = "base")`, the user should use `wood_core_packages()`.
+
+```{r core_packages, cache=TRUE}
+wood_core_packages()
+```
+
+## Available package versions
+
+In general, all core packages follow the same rule when it comes to determining their version codes: they use the same version code as R itself. Nevertheless, should the user wish to access this data anyways, the woodendesc framework provides `wood_core_version()` function.
+
+```{r core_version, cache=TRUE}
+wood_core_version("graphics")
+```
+
+## Package dependencies
+
+To list package dependencies the user should use `wood_core_dependencies()`. Expect all "Imports" to be core packages only, as it would make no sense for a core package to depend on something else.
+
+```{r github_deps, cache=TRUE}
+wood_core_dependencies("stats")
+```
