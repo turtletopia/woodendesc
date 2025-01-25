@@ -17,9 +17,6 @@ library(woodendesc)
 
 While most installations take place in the default library, users are able to specify custom library paths for each installed package. Thus the task of collecting metadata for all locally available packages is slightly less trivial, especially if the user wishes to take into consideration only a subset of locally existing libraries.
 
-
-
-
 ## Packages
 
 To list all core packages within the woodendesc framework, i.e. the ones shown by `installed.packages(priority = "base")`, the user should use `wood_core_packages()`.

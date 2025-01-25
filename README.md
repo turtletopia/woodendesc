@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# woodendesc <a href="https://turtletopia.github.io/woodendesc/"><img src="man/figures/logo.png" align="right" height="138" /></a>
+# woodendesc <a href="https://turtletopia.github.io/woodendesc/"><img src="man/figures/logo.svg" align="right" height="139" /></a>
 
 <!-- badges: start -->
 
@@ -50,9 +50,8 @@ library(woodendesc)
 # Too many packages to list them all
 all_cran_pkgs <- wood_cran_packages()
 head(all_cran_pkgs, 10)
-#>  [1] "A3"            "AalenJohansen" "AATtools"      "ABACUS"       
-#>  [5] "abbreviate"    "abbyyR"        "abc"           "abc.data"     
-#>  [9] "ABC.RAP"       "ABCanalysis"
+#>  [1] "A3"          "AATtools"    "ABACUS"      "abbreviate"  "abbyyR"     
+#>  [6] "abc"         "abc.data"    "ABC.RAP"     "abcADM"      "ABCanalysis"
 ```
 
 An available package version is returned as a single code. An example
