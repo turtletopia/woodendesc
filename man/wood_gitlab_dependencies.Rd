@@ -39,7 +39,9 @@ wood_gitlab_dependencies("rock", "r-packages", tag = "0.6.3")
 \seealso{
 Functions for GitLab:
 \code{\link{wood_gitlab_latest}()},
-\code{\link{wood_gitlab_packages}()}
+\code{\link{wood_gitlab_packages}()},
+\code{\link{wood_gitlab_tags}()},
+\code{\link{wood_gitlab_versions}()}
 
 Functions that query package dependencies:
 \code{\link{wood_bioc_dependencies}()},

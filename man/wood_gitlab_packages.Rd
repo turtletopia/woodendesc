@@ -33,7 +33,9 @@ wood_gitlab_packages("matherion")
 \seealso{
 Functions for GitLab:
 \code{\link{wood_gitlab_dependencies}()},
-\code{\link{wood_gitlab_latest}()}
+\code{\link{wood_gitlab_latest}()},
+\code{\link{wood_gitlab_tags}()},
+\code{\link{wood_gitlab_versions}()}
 
 Functions that query available packages:
 \code{\link{wood_bioc_packages}()},
