@@ -27,7 +27,7 @@ wood_gitlab_packages("r-packages")
 
 By default, forks of other repositories are not listed, but this setting can be changed using `include_forks` parameter:
 
-```{r gitlab_packages_w_forks, cache=TRUE}
+```{r gitlab_forks, cache=TRUE}
 wood_gitlab_packages("r-packages", include_forks = TRUE)
 ```
 

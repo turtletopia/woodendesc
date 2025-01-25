@@ -27,7 +27,7 @@ wood_github_packages("turtletopia")
 
 By default, forks of other repositories are not listed, but this setting can be changed using `include_forks` parameter:
 
-```{r github_packages_w_forks, cache=TRUE}
+```{r github_forks, cache=TRUE}
 wood_github_packages("ErdaradunGaztea", include_forks = TRUE)
 ```
 
