@@ -52,7 +52,7 @@ wood_cran_versions("versionsort") |>
 
 To list package dependencies the user should use `wood_cran_dependencies()`. This function extracts dependencies from the `DESCRIPTION` file. By default the latest version is inspected (the same behaviour can be obtained using `version = "latest"` parameter) but it is possible to list dependencies for any previous version as well.
 
-```{r github_deps, cache=TRUE}
+```{r cran_deps, cache=TRUE}
 wood_cran_dependencies("deepdep")
 wood_cran_dependencies("deepdep", version = "0.2.0")
 ```
