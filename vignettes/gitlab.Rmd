@@ -33,11 +33,19 @@ wood_gitlab_packages("r-packages", include_forks = TRUE)
 
 ## Available tags
 
-<!-- TODO: wood_gitlab_tags() -->
+GitLab allows referencing to certain commits through specifying tags associated with them. To list all tags available for a given repository the user should use `wood_gitlab_tags()`. Note that some repositories may not have any tags defined, in which case an empty character vector would be returned.
+
+```{r gitlab_tags, cache=TRUE}
+wood_gitlab_tags("rock", "r-packages")
+```
 
 ## Available package versions
 
-<!-- TODO: wood_gitlab_versions() -->
+Repository tags do not have to follow the specific guidelines of version codes. To extract package version codes associated with each GitLab tag the user should use `wood_gitlab_versions()`. This extracts the data from the `DESCRIPTION` file corresponding to each tagged commit.
+
+```{r gitlab_versions, cache=TRUE}
+wood_gitlab_versions("rock", "r-packages")
+```
 
 ## Latest package version
 
