@@ -13,16 +13,16 @@ test_param_package(wood_gitlab_dependencies(package = "rock", user = "r-packages
 test_param_gh_user(wood_gitlab_dependencies(package = "rock", user = "r-packages"))
 test_param_tag(wood_gitlab_dependencies(package = "rock", user = "r-packages"))
 
-# with_mock_dir("l1", {
-#   test_that("uses cache from wood_gitlab_versions() if available if not latest commit", {
-#     wood_clear_cache()
-#     wood_gitlab_versions("rock", "r-packages")
-#     expect_cache(wood_gitlab_dependencies, rock_deps,
-#                  package = "rock",
-#                  user = "r-packages",
-#                  tag = "0.6.0")
-#   })
-# })
+with_mock_dir("l1", {
+  test_that("uses cache from wood_gitlab_versions() if available if not latest commit", {
+    wood_clear_cache()
+    wood_gitlab_versions("rock", "r-packages")
+    expect_cache(
+      { wood_gitlab_dependencies(package = "rock", user = "r-packages", tag = "0.6.0") },
+      rock_deps
+    )
+  })
+})
 
 with_mock_dir("l2", {
   test_that("uses cache from wood_gitlab_latest() if available if latest commit", {

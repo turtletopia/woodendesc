@@ -35,7 +35,7 @@ gitlab_tags_cache <- function(package, user) {
       abort_gl_rate_limit(cnd)
     }, httr2_http_404 = function(cnd) {
       rlang::abort(
-        sprintf("Can't find user or group `%1$s` on GitLab.", user),
+        sprintf("Can't find repository `%1$s/%2$s` on GitLab.", user, package),
         parent = cnd
       )
     })

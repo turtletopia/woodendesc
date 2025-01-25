@@ -1,0 +1,40 @@
+Package: limonaid
+Title: Working with 'LimeSurvey' Surveys and Responses
+Version: 0.1.4
+Authors@R: 
+    c(person(given = "Gjalt-Jorn",
+             family = "Peters",
+             role = c("aut", "cre"),
+             email = "gjalt-jorn@behaviorchange.eu",
+             comment = c(ORCID = "0000-0002-0336-9589")),
+      person(given = "Andrew",
+             family = "Heiss",
+             role = "aut",
+             email = "andrew@andrewheiss.com",
+             comment = c(ORCID = "0000-0002-3948-3914")))
+Maintainer: Gjalt-Jorn Peters <gjalt-jorn@behaviorchange.eu>
+License: GPL (>= 3)
+Description: 'LimeSurvey' is Free/Libre Open Source Software for
+  the development and administrations of online studies, using
+  sophisticated tailoring capabilities to support multiple study
+  designs (see <https://www.limesurvey.org>). This package supports
+  programmatic creation of surveys that can then be imported into
+  'LimeSurvey', as well as user friendly import of responses from
+  'LimeSurvey' studies.
+Encoding: UTF-8
+LazyData: true
+URL: https://r-packages.gitlab.io/limonaid
+BugReports: https://gitlab.com/r-packages/limonaid/-/issues
+RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)
+Imports:
+  httr (>= 1.4),
+  jsonlite (>= 1.7),
+  R6 (>= 2.4)
+Suggests: 
+  ggplot2,
+  ggrepel,
+  knitr,
+  parallel,
+  sticky,
+  testthat
