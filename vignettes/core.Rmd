@@ -37,6 +37,6 @@ wood_core_version("graphics")
 
 To list package dependencies the user should use `wood_core_dependencies()`. Expect all "Imports" to be core packages only, as it would make no sense for a core package to depend on something else.
 
-```{r github_deps, cache=TRUE}
+```{r core_deps, cache=TRUE}
 wood_core_dependencies("stats")
 ```
