@@ -23,7 +23,7 @@ To list all packages installed to a selected library (or libraries) the user sho
 
 ```{r local_packages, cache=TRUE}
 wood_local_packages() |>
-  head(n = 10)
+  print(max = 10)
 ```
 
 ## Available package versions

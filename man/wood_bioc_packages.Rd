@@ -21,14 +21,14 @@ Bioconductor 1.5.
 }
 \examples{
 \donttest{
-head(wood_bioc_packages())
+print(wood_bioc_packages(), max = 15)
 # is the same as
-head(wood_bioc_packages("release"))
+print(wood_bioc_packages("release"), max = 15)
 
 # A glimpse in the future:
-head(wood_bioc_packages("devel"))
+print(wood_bioc_packages("devel"), max = 15)
 # Previous versions can be queried as well:
-head(wood_bioc_packages("3.9"))
+print(wood_bioc_packages("3.9"), max = 15)
 # The oldest available version is 1.8:
 wood_bioc_packages("1.8")
 }

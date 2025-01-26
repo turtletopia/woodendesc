@@ -25,7 +25,7 @@ To list all core packages within the woodendesc framework, i.e. the ones shown b
 wood_core_packages()
 ```
 
-## Available package versions
+## Available package version
 
 In general, all core packages follow the same rule when it comes to determining their version codes: they use the same version code as R itself. Nevertheless, should the user wish to access this data anyways, the woodendesc framework provides `wood_core_version()` function.
 

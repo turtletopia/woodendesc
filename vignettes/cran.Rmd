@@ -19,7 +19,7 @@ Every R programmer knows CRAN -- _the_ repository for R packages. It has strict 
 
 ## Packages
 
-There are more than 20'000 packages on CRAN already (numbers as per April 2024). To list them all within the woodendesc framework the user should use `wood_cran_packages()`.
+There are more than 20'000 packages on CRAN already (numbers as of January 2025). To list them all within the woodendesc framework the user should use `wood_cran_packages()`.
 
 ```{r cran_packages, cache=TRUE}
 wood_cran_packages() |>

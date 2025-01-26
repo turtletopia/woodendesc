@@ -7,7 +7,7 @@
 #'
 #' @examples
 #' \donttest{
-#' head(wood_cran_packages())
+#' print(wood_cran_packages(), max = 15)
 #' }
 #'
 #' @family cran

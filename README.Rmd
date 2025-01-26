@@ -51,7 +51,7 @@ A list of available packages is returned as a character vector. An example call 
 library(woodendesc)
 # Too many packages to list them all
 all_cran_pkgs <- wood_cran_packages()
-head(all_cran_pkgs, 10)
+print(all_cran_pkgs, max = 10)
 ```
 
 An available package version is returned as a single code. An example call checking the current version of Biobase package on Bioconductor:

@@ -9,11 +9,10 @@
 #'
 #' @examples
 #' \donttest{
-#' # head() used due to the number of packages in there
-#' head(wood_packages(c("local#all", "bioc@1.7", "cran", "core")))
+#' print(wood_packages(c("local#all", "bioc@1.7", "cran", "core")), max = 15)
 #' wood_packages(c("https://colinfay.me", "runiverse@turtletopia"))
 #' # By default, only CRAN is queried:
-#' head(wood_packages())
+#' print(wood_packages(), max = 15)
 #' }
 #'
 #' @family wood
