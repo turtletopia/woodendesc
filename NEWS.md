@@ -1,4 +1,4 @@
-# woodendesc (development version)
+# woodendesc 0.2.0
 
 * Reimplemented the code, replacing {httr} with {httr2}.
 * Updated code to reflect API changes in Bioconductor and R-universe.
