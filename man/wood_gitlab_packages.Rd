@@ -22,12 +22,13 @@ selected account. They are returned as a vector of strings, each element
 being a repository (and in most cases, package) name.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-wood_gitlab_packages("r-packages")
-# The function takes care of differentiating
-# between users and groups internally
-wood_gitlab_packages("matherion")
-\dontshow{\}) # examplesIf}
+if (interactive()) {
+  wood_gitlab_packages("r-packages")
+  # The function takes care of differentiating
+  # between users and groups internally
+  wood_gitlab_packages("matherion")
+}
+
 }
 \seealso{
 Functions for GitLab:

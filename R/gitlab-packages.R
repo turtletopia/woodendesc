@@ -10,11 +10,13 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
-#' wood_gitlab_packages("r-packages")
-#' # The function takes care of differentiating
-#' # between users and groups internally
-#' wood_gitlab_packages("matherion")
+#' @examples
+#' if (interactive()) {
+#'   wood_gitlab_packages("r-packages")
+#'   # The function takes care of differentiating
+#'   # between users and groups internally
+#'   wood_gitlab_packages("matherion")
+#' }
 #'
 #' @family gitlab
 #' @family packages

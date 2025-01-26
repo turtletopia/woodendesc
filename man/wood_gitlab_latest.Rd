@@ -22,14 +22,15 @@ version. This may reference a non-tagged commit; for the analysis of tagged
 commits only, see \code{\link[=wood_gitlab_versions]{wood_gitlab_versions()}}.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-# Latest version code is returned
-wood_gitlab_latest("rock", "r-packages")
+if (interactive()) {
+  # Latest version code is returned
+  wood_gitlab_latest("rock", "r-packages")
 
-# To get the latest *tagged* version code instead, use:
-codes <- wood_gitlab_versions("rock", "r-packages")
-versionsort::ver_latest(codes)
-\dontshow{\}) # examplesIf}
+  # To get the latest *tagged* version code instead, use:
+  wood_gitlab_versions("rock", "r-packages") |>
+    versionsort::ver_latest()
+}
+
 }
 \seealso{
 Functions for GitLab:

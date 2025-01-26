@@ -8,8 +8,10 @@
 #'
 #' @return A character vector of version codes.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
-#' wood_gitlab_versions("rock", "r-packages")
+#' @examples
+#' if (interactive()) {
+#'   wood_gitlab_versions("rock", "r-packages")
+#' }
 #'
 #' @family gitlab
 #' @family versions
