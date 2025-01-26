@@ -25,7 +25,7 @@ Each universe has separate package list, so the user should specify the relevant
 wood_runiverse_packages(universe = "turtletopia")
 ```
 
-## Available package versions
+## Available package version
 
 Since R-universe works by pointing to the latest commit on the main branch, there's always one version of a package; to extract it the user should use `wood_runiverse_version()`.
 

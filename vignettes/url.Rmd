@@ -1,0 +1,42 @@
+---
+title: "Analysing any URL"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysing any URL}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(woodendesc)
+```
+
+Other than all the explicitly supported repositories (CRAN, Bioconductor, etc.), locally set up repositories can also be analysed using {woodendesc}. The requirement is they must contain the `PACKAGES` file (or `PACKAGES.gz`, its compressed counterpart) under `/src/contrib` path; the file should effectively be a concatenation of relevant attributes from all `DESCRIPTION` files of the packages the repository contains.
+
+## Packages
+
+To list all available packages the user should use `wood_url_packages()`.
+
+```{r packages, cache=TRUE}
+wood_url_packages("https://colinfay.me")
+```
+
+## Available package version
+
+The structure of `PACKAGES` file allows only one version to be stored, so `wood_url_version()` may only return this one version.
+
+```{r version, cache=TRUE}
+wood_url_version("dockerfiler", repository = "https://colinfay.me")
+```
+
+## Package dependencies
+
+The `PACKAGES` file is supposed to contain dependency data as well.
+
+```{r deps, cache=TRUE}
+wood_url_dependencies("tidystringdist", repository = "https://colinfay.me")
+```
