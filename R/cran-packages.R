@@ -5,10 +5,8 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' print(wood_cran_packages(), max = 15)
-#' }
 #'
 #' @family cran
 #' @family packages

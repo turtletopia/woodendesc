@@ -41,7 +41,7 @@ This function queries the selected repositories for dependencies
 of the selected packages and returns the first working occurence.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_dependencies("stats", "core")
 # Multiple packages are also possible:
 wood_dependencies(
@@ -50,8 +50,7 @@ wood_dependencies(
 )
 # By default, only CRAN is queried:
 wood_dependencies("versionsort")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for all repositories:

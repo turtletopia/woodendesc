@@ -5,10 +5,8 @@
 #'
 #' @return A character vector, where each element is a Bioconductor release.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_bioc_releases()
-#' }
 #'
 #' @family bioc
 #' @export

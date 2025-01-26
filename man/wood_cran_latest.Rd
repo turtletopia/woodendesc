@@ -18,10 +18,9 @@ This function queries CRAN for the code of the latest version
 of the selected package.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_cran_latest("versionsort")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for CRAN:

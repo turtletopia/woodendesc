@@ -7,13 +7,11 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' print(wood_packages(c("local#all", "bioc@1.7", "cran", "core")), max = 15)
 #' wood_packages(c("https://colinfay.me", "runiverse@turtletopia"))
 #' # By default, only CRAN is queried:
 #' print(wood_packages(), max = 15)
-#' }
 #'
 #' @family wood
 #' @family packages

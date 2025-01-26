@@ -8,10 +8,8 @@
 #'
 #' @return A character vector of version codes.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_github_versions("versionsort", "turtletopia")
-#' }
 #'
 #' @family github
 #' @family versions

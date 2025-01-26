@@ -30,11 +30,10 @@ This function queries GitHub for dependencies of the selected
 tagged commit of a repo. By default, it queries the latest commit instead.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_github_dependencies("gglgbtq", "turtletopia")
 wood_github_dependencies("versionsort", "turtletopia", tag = "v1.0.0")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for GitHub:

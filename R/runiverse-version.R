@@ -8,11 +8,9 @@
 #'
 #' @return A single string with a version code.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_runiverse_version("targets")
 #' wood_runiverse_version("ggplot2", universe = "tidyverse")
-#' }
 #'
 #' @family runiverse
 #' @family versions

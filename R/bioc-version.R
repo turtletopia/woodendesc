@@ -8,15 +8,13 @@
 #'
 #' @return A single string with a version code.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_bioc_version("Biostrings")
 #'
 #' # What's coming next?
 #' wood_bioc_version("Biostrings", release = "devel")
 #' # Can query releases as old as 1.8:
 #' wood_bioc_version("Biostrings", release = "1.8")
-#' }
 #'
 #' @family bioc
 #' @family versions

@@ -30,11 +30,10 @@ This function queries GitLab for dependencies of the selected
 tagged commit of a repo. By default, it queries the latest commit instead.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_gitlab_dependencies("limonaid", "r-packages")
 wood_gitlab_dependencies("rock", "r-packages", tag = "0.6.3")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for GitLab:

@@ -7,10 +7,8 @@
 #'
 #' @return A character vector of version codes.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_cran_versions("versionsort")
-#' }
 #'
 #' @family cran
 #' @family versions

@@ -21,11 +21,10 @@ This function queries the selected universe for the code of the
 current version of the selected package.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_runiverse_version("targets")
 wood_runiverse_version("ggplot2", universe = "tidyverse")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for R-universe:

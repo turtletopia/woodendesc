@@ -27,7 +27,7 @@ This function queries Bioconductor for dependencies of the
 selected package for given Bioconductor release.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_bioc_dependencies("Biostrings")
 
 # Will dependencies change?
@@ -35,8 +35,7 @@ wood_bioc_dependencies("Biostrings", "devel")
 # And what about dependencies in the past?
 wood_bioc_dependencies("Biostrings", "2.10")
 wood_bioc_dependencies("Biostrings", "1.8")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for Bioconductor:

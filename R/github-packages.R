@@ -10,12 +10,10 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_github_packages("turtletopia")
 #' # I moved most my packages to turtletopia
 #' wood_github_packages("ErdaradunGaztea", include_forks = TRUE)
-#' }
 #'
 #' @family github
 #' @family packages

@@ -9,15 +9,13 @@
 #'
 #' @return A character vector of version codes.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' # Latest version code is returned
 #' wood_gitlab_latest("rock", "r-packages")
 #'
 #' # To get the latest *tagged* version code instead, use:
 #' codes <- wood_gitlab_versions("rock", "r-packages")
 #' versionsort::ver_latest(codes)
-#' }
 #'
 #' @family gitlab
 #' @family versions

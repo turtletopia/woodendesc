@@ -32,13 +32,12 @@ This function queries the selected repositories for the
 available packages and collects the unique occurrences.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 print(wood_packages(c("local#all", "bioc@1.7", "cran", "core")), max = 15)
 wood_packages(c("https://colinfay.me", "runiverse@turtletopia"))
 # By default, only CRAN is queried:
 print(wood_packages(), max = 15)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for all repositories:

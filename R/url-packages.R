@@ -9,12 +9,10 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_url_packages("https://colinfay.me")
 #' # Trailing slashes are removed
 #' wood_url_packages("https://colinfay.me/")
-#' }
 #'
 #' @family url
 #' @family packages

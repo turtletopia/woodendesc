@@ -8,8 +8,7 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' print(wood_bioc_packages(), max = 15)
 #' # is the same as
 #' print(wood_bioc_packages("release"), max = 15)
@@ -20,7 +19,6 @@
 #' print(wood_bioc_packages("3.9"), max = 15)
 #' # The oldest available version is 1.8:
 #' wood_bioc_packages("1.8")
-#' }
 #'
 #' @family bioc
 #' @family packages

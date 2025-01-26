@@ -9,8 +9,7 @@
 #' @return A list named after queried packages, each element being a character
 #' vector of version codes.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_versions("woodendesc", c("local#all", "runiverse@turtletopia"))
 #' # Multiple packages are also possible:
 #' wood_versions(
@@ -19,7 +18,6 @@
 #' )
 #' # By default, only CRAN is queried:
 #' wood_versions("versionsort")
-#' }
 #'
 #' @family wood
 #' @family versions

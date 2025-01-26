@@ -8,11 +8,9 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_runiverse_packages()
 #' wood_runiverse_packages("tidyverse")
-#' }
 #'
 #' @family runiverse
 #' @family packages

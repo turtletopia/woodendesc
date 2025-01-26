@@ -26,11 +26,10 @@ This function queries CRAN for dependencies of the selected
 version of a selected package. By default, it queries the latest version.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_cran_dependencies("deepdep")
 wood_cran_dependencies("ggplot2", version = "3.4.0")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for CRAN:

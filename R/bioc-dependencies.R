@@ -11,8 +11,7 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_bioc_dependencies("Biostrings")
 #'
 #' # Will dependencies change?
@@ -20,7 +19,6 @@
 #' # And what about dependencies in the past?
 #' wood_bioc_dependencies("Biostrings", "2.10")
 #' wood_bioc_dependencies("Biostrings", "1.8")
-#' }
 #'
 #' @family bioc
 #' @family dependencies

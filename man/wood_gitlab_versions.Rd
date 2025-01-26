@@ -21,10 +21,9 @@ This function queries GitLab for the codes of all tagged package
 versions. To get the latest available version, see \code{\link[=wood_gitlab_latest]{wood_gitlab_latest()}}.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_gitlab_versions("rock", "r-packages")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for GitLab:

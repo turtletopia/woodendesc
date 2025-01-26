@@ -23,12 +23,11 @@ element is a tag, which need not be identical or even related to version code
 of the package at the given time.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_github_tags("gglgbtq", "turtletopia")
 # Sometimes there are no tags (yet?)
 wood_github_tags("ggpizza", "turtletopia")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for GitHub:

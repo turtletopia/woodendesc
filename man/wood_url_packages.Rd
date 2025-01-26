@@ -20,12 +20,11 @@ being a package name. The data is retrieved from \verb{/src/contrib/PACKAGES}
 or \verb{/src/contrib/PACKAGES.gz} file.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_url_packages("https://colinfay.me")
 # Trailing slashes are removed
 wood_url_packages("https://colinfay.me/")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for any URL:

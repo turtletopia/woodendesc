@@ -11,11 +11,9 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_runiverse_dependencies("targets")
 #' wood_runiverse_dependencies("ggplot2", universe = "tidyverse")
-#' }
 #'
 #' @family runiverse
 #' @family dependencies
