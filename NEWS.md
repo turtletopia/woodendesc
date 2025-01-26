@@ -2,6 +2,7 @@
 
 * Reimplemented the code, replacing {httr} with {httr2}.
 * Updated code to reflect API changes in Bioconductor and R-universe.
+* Added support for GitLab.
 * Bioconductor data for releases 1.5-1.7 is no longer available.
 * Dropped support for older R versions (< 4.1.0) because they increased maintenance complexity significantly.
 
