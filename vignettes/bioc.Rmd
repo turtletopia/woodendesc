@@ -1,0 +1,53 @@
+---
+title: "Analysing Bioconductor"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysing Bioconductor}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(woodendesc)
+```
+
+Bioconductor is an R package repository specialised in bioinformatics, as the name suggests. One unusual thing about it is its concept of periodic releases; each Bioconductor release contains a collection of packages in set versions.
+
+## Packages
+
+First Bioconductor releases didn't have that many packages; for example, Bioconductor 1.8 had `r length(wood_bioc_packages("1.8"))` packages. Now (as of January 2025), the number of packages is more than 2000, which is about 1/10th of what CRAN contains.
+
+```{r bioc_packages, cache=TRUE}
+wood_bioc_packages() |>
+  # There isn't enough space to list 2000+ packages.
+  print(max = 15)
+```
+
+## Available package version
+
+As mentioned earlier, each Bioconductor release has a single package version associated with it. To check version for any supported Bioconductor release the user should use `wood_bioc_version()`.
+
+```{r bioc_versions, cache=TRUE}
+wood_bioc_version("Biobase", release = "2.10")
+```
+
+## Package dependencies
+
+To list package dependencies the user should use `wood_bioc_dependencies()`. This function extracts dependencies from the `DESCRIPTION` file. By default the package from the latest Bioconductor release is inspected (the same behaviour can be obtained using `release = "release"` parameter) but any release starting from 1.8 is supported, as long as the package was included in said release.
+
+```{r bioc_deps, cache=TRUE}
+wood_bioc_dependencies("Biobase")
+wood_bioc_dependencies("Biobase", release = "2.10")
+```
+
+## Bioconductor releases
+
+The `release` parameter of all the other Bioconductor functions accepts any valid Bioconductor release code, as well as `"release"` and `"devel"` for the current and the upcoming release respectively. To get the list of all named releases (including releases 1.0 through 1.7, which are not supported yet due to their data not being available) the user should use `wood_bioc_releases()`.
+
+```{r bioc_releases, cache=TRUE}
+wood_bioc_releases()
+```
