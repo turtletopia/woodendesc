@@ -1,7 +1,7 @@
 # SETUP ----
 woodendesc_deps <- wood_local_dependencies("woodendesc")
 mixed_deps <- wood_dependencies(
-  c("httr", "digest", "versionsort"),
+  c("httr2", "rlang", "versionsort"),
   repos = "local#all"
 )
 empty_deps <- as_wood_deps(data.frame(
@@ -13,7 +13,7 @@ empty_deps <- as_wood_deps(data.frame(
 
 # TESTS ----
 test_dependencies(filter_dependencies(woodendesc_deps, "strong"))
-test_param_which_deps(filter_dependencies, object = empty_deps)
+test_param_which_deps(filter_dependencies(object = empty_deps))
 lapply(filter_dependencies(mixed_deps, "strong"), function(deps) {
   test_dependencies(deps)
 })

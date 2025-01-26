@@ -21,10 +21,9 @@ This function queries any online repository for the code of the
 current version of the selected package.
 }
 \examples{
-\donttest{
-wood_url_version("XML", repository = "http://www.omegahat.net/R")
-}
-
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+wood_url_version("dockerfiler", repository = "https://colinfay.me")
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for any URL:
@@ -38,6 +37,8 @@ Functions that query package versions:
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_github_latest}()},
 \code{\link{wood_github_versions}()},
+\code{\link{wood_gitlab_latest}()},
+\code{\link{wood_gitlab_versions}()},
 \code{\link{wood_local_versions}()},
 \code{\link{wood_runiverse_version}()},
 \code{\link{wood_versions}()}

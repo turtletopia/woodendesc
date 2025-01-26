@@ -9,8 +9,7 @@
 #' @return A list named after queried packages, each element being a character
 #' vector of version codes.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_versions("woodendesc", c("local#all", "runiverse@turtletopia"))
 #' # Multiple packages are also possible:
 #' wood_versions(
@@ -19,11 +18,9 @@
 #' )
 #' # By default, only CRAN is queried:
 #' wood_versions("versionsort")
-#' }
 #'
 #' @family wood
 #' @family versions
-#' @importFrom versionsort ver_sort
 #' @export
 wood_versions <- function(packages, repos = "cran") {
   assert_param_packages(packages)
@@ -32,7 +29,7 @@ wood_versions <- function(packages, repos = "cran") {
   query_makers <- interpret_repos(repos, context = "version")
 
   ret <- lapply(packages, function(package) {
-    ver_sort(collect_repos(query_makers, package = package))
+    versionsort::ver_sort(collect_repos(query_makers, package = package))
   })
   names(ret) <- packages
   ret

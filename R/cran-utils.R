@@ -4,6 +4,8 @@ match_version_cran <- function(package, version) {
 
 validate_cran_package <- function(package, desc) {
   if (is.null(desc[[package]])) {
-    stopf("Can't find package `%1$s` on CRAN.", package)
+    rlang::abort(
+      sprintf("Can't find package `%1$s` on CRAN.", package)
+    )
   }
 }

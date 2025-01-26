@@ -32,14 +32,12 @@ This function queries the selected repositories for the
 available packages and collects the unique occurrences.
 }
 \examples{
-\donttest{
-# head() used due to the number of packages in there
-head(wood_packages(c("local#all", "bioc@1.7", "cran", "core")))
-wood_packages(c("http://www.omegahat.net/R", "runiverse@turtletopia"))
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+print(wood_packages(c("local#all", "bioc@1.7", "cran", "core")), max = 15)
+wood_packages(c("https://colinfay.me", "runiverse@turtletopia"))
 # By default, only CRAN is queried:
-head(wood_packages())
-}
-
+print(wood_packages(), max = 15)
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for all repositories:
@@ -51,6 +49,7 @@ Functions that query available packages:
 \code{\link{wood_core_packages}()},
 \code{\link{wood_cran_packages}()},
 \code{\link{wood_github_packages}()},
+\code{\link{wood_gitlab_packages}()},
 \code{\link{wood_local_packages}()},
 \code{\link{wood_runiverse_packages}()},
 \code{\link{wood_url_packages}()}

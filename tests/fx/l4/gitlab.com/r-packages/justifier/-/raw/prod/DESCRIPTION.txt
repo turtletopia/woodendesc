@@ -1,0 +1,46 @@
+Package: justifier
+Title: Human and Machine-Readable Justifications and Justified Decisions Based on 'YAML'
+Version: 0.2.6
+Authors@R: c(
+    person(given = "Gjalt-Jorn",
+           family = "Peters",
+           role = c("aut", "cre"),
+           email = "justifier@opens.science",
+           comment = c(ORCID = "0000-0002-0336-9589")),
+    person(given = "Szilvia",
+           family = "Zorgo",
+           role = c("ctb"),
+           comment = c(ORCID = "0000-0002-6916-2097")))
+Maintainer: Gjalt-Jorn Peters <justifier@opens.science>
+Description: Leverages the 'yum' package to
+             implement a 'YAML' ('YAML Ain't Markup Language', a human
+             friendly standard for data serialization; see <https:yaml.org>)
+             standard for documenting justifications, such as for decisions
+             taken during the planning, execution and analysis of a study
+             or during the development of a behavior change intervention
+             as illustrated by Marques & Peters (2019)
+             <doi:10.17605/osf.io/ndxha>. These justifications are both
+             human- and machine-readable, facilitating efficient extraction
+             and organisation.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+URL: https://r-packages.gitlab.io/justifier
+BugReports: https://gitlab.com/r-packages/justifier/-/issues
+Imports: 
+    data.tree (>= 0.7.8),
+    DiagrammeR (>= 1.0.0),
+    DiagrammeRsvg (>= 0.1),
+    purrr (>= 0.3.0),
+    yaml (>= 2.2.0),
+    yum (>= 0.0.1)
+Suggests: 
+    covr,
+    here,
+    jsonlite (>= 1.7),
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2

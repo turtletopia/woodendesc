@@ -22,7 +22,7 @@ This function searches for installed package versions inside
 specified library paths.
 }
 \examples{
-wood_local_versions("httr")
+wood_local_versions("httr2")
 
 }
 \seealso{
@@ -37,6 +37,8 @@ Functions that query package versions:
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_github_latest}()},
 \code{\link{wood_github_versions}()},
+\code{\link{wood_gitlab_latest}()},
+\code{\link{wood_gitlab_versions}()},
 \code{\link{wood_runiverse_version}()},
 \code{\link{wood_url_version}()},
 \code{\link{wood_versions}()}

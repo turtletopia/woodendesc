@@ -8,11 +8,9 @@
 #'
 #' @return A single string with a version code.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_runiverse_version("targets")
 #' wood_runiverse_version("ggplot2", universe = "tidyverse")
-#' }
 #'
 #' @family runiverse
 #' @family versions
@@ -21,20 +19,28 @@ wood_runiverse_version <- function(package, universe = "ropensci") {
   assert_param_package(package)
   assert_param_runiverse(universe)
 
+  # TODO: use runiverse_packages_cache() output if possible
   runiverse_description_cache(package, universe)[["version"]]
 }
 
 runiverse_description_cache <- function(package, universe = "ropensci") {
   with_cache({
-    url <- runiverse_url(universe, "packages", package, "any", "src")
-    desc <- download_safely(url)
-
-    validate_runiverse_description(desc, package, universe)
+    desc <- rlang::try_fetch({
+      httr2::request(sprintf("https://%s.r-universe.dev", universe)) |>
+        httr2::req_url_path_append("api", "packages", package) |>
+        httr2::req_perform() |>
+        httr2::resp_body_json()
+    }, httr2_http_404 = function(cnd) {
+      rlang::abort(
+        sprintf("Can't find package `%1$s` in universe `%2$s`.", package, universe),
+        parent = cnd
+      )
+    })
 
     # Save selected description fields
     list(
-      version = desc[[1]][["Version"]],
-      deps = c(desc[[1]][["_hard_deps"]], desc[[1]][["_soft_deps"]])
+      version = desc[["Version"]],
+      deps = desc[["_dependencies"]]
     )
   }, "description", "runiverse", universe, package)
 }

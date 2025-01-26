@@ -1,26 +1,22 @@
-skip_if_not_installed("vcr")
+skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-# Re-record on older R versions since it queries for PACKAGES without .gz
-vcr::use_cassette("RDG-deps", {
-  RGD_deps <- wood_url_dependencies(
-    "RGraphicsDevice", "http://www.omegahat.net/R"
-  )
-}, record = "new_episodes")
+with_mock_dir("x", {
+  dockerfiler_deps <- wood_url_dependencies("dockerfiler", "https://colinfay.me")
+})
 
 # TESTS ----
-test_dependencies(RGD_deps)
-test_cache(
-  wood_url_dependencies, RGD_deps, "RGraphicsDevice", "http://www.omegahat.net/R"
-)
-test_param_package(wood_url_dependencies, repository = "http://www.omegahat.net/R")
-test_param_url_repo(wood_url_dependencies, package = "RGraphicsDevice")
+test_dependencies(dockerfiler_deps)
+test_cache({ wood_url_dependencies("dockerfiler", "https://colinfay.me") }, dockerfiler_deps)
+test_param_package(wood_url_dependencies(package = "dockerfiler", repository = "https://colinfay.me"))
+test_param_url_repo(wood_url_dependencies(package = "dockerfiler", repository = "https://colinfay.me"))
 
+skip_if_offline()
 test_that("raises an exception if package not available", {
   expect_error(
-    wood_url_dependencies("fakepackage", "http://www.omegahat.net/R"),
-    "Can't find package `fakepackage` on repository http://www.omegahat.net/R.",
+    wood_url_dependencies("fakepackage", "https://colinfay.me"),
+    "Can't find package `fakepackage` on repository https://colinfay.me.",
     fixed = TRUE
   )
 })

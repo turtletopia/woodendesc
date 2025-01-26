@@ -1,5 +1,5 @@
 # SETUP ----
-mixed_pkgs <- c("httr", "digest", "versionsort")
+mixed_pkgs <- c("httr2", "rlang", "versionsort")
 unmixed_deps <- wood_dependencies(mixed_pkgs, repos = "local#all")
 mixed_deps <- squash(unmixed_deps)
 
@@ -20,7 +20,7 @@ test_that("'package' column is a concatenation of 'package' columns in dep list"
 test_that("packages with no deps are omitted", {
   expect_setequal(
     unique(squash(filter_dependencies(unmixed_deps, "strong"))[["origin"]]),
-    c("httr", "digest")
+    c("httr2", "rlang")
   )
 })
 

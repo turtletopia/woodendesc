@@ -19,11 +19,10 @@ available packages. They are returned as a vector of strings, each element
 being a package name.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_runiverse_packages()
 wood_runiverse_packages("tidyverse")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for R-universe:
@@ -35,6 +34,7 @@ Functions that query available packages:
 \code{\link{wood_core_packages}()},
 \code{\link{wood_cran_packages}()},
 \code{\link{wood_github_packages}()},
+\code{\link{wood_gitlab_packages}()},
 \code{\link{wood_local_packages}()},
 \code{\link{wood_packages}()},
 \code{\link{wood_url_packages}()}

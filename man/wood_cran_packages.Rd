@@ -14,10 +14,9 @@ This function queries CRAN for a list of available packages.
 They are returned as a vector of strings, each element being a package name.
 }
 \examples{
-\donttest{
-head(wood_cran_packages())
-}
-
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+print(wood_cran_packages(), max = 15)
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for CRAN:
@@ -29,6 +28,7 @@ Functions that query available packages:
 \code{\link{wood_bioc_packages}()},
 \code{\link{wood_core_packages}()},
 \code{\link{wood_github_packages}()},
+\code{\link{wood_gitlab_packages}()},
 \code{\link{wood_local_packages}()},
 \code{\link{wood_packages}()},
 \code{\link{wood_runiverse_packages}()},

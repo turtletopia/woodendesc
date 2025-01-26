@@ -20,12 +20,11 @@ being a package name. The data is retrieved from \verb{/src/contrib/PACKAGES}
 or \verb{/src/contrib/PACKAGES.gz} file.
 }
 \examples{
-\donttest{
-wood_url_packages("http://www.omegahat.net/R")
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+wood_url_packages("https://colinfay.me")
 # Trailing slashes are removed
-wood_url_packages("http://www.omegahat.net/R/")
-}
-
+wood_url_packages("https://colinfay.me/")
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for any URL:
@@ -37,6 +36,7 @@ Functions that query available packages:
 \code{\link{wood_core_packages}()},
 \code{\link{wood_cran_packages}()},
 \code{\link{wood_github_packages}()},
+\code{\link{wood_gitlab_packages}()},
 \code{\link{wood_local_packages}()},
 \code{\link{wood_packages}()},
 \code{\link{wood_runiverse_packages}()}

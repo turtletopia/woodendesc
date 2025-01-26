@@ -36,7 +36,7 @@ This function queries the selected repositories for version
 codes of the selected packages and collects the unique occurences.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_versions("woodendesc", c("local#all", "runiverse@turtletopia"))
 # Multiple packages are also possible:
 wood_versions(
@@ -45,8 +45,7 @@ wood_versions(
 )
 # By default, only CRAN is queried:
 wood_versions("versionsort")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for all repositories:
@@ -60,6 +59,8 @@ Functions that query package versions:
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_github_latest}()},
 \code{\link{wood_github_versions}()},
+\code{\link{wood_gitlab_latest}()},
+\code{\link{wood_gitlab_versions}()},
 \code{\link{wood_local_versions}()},
 \code{\link{wood_runiverse_version}()},
 \code{\link{wood_url_version}()}

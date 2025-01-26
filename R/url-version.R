@@ -8,10 +8,8 @@
 #'
 #' @return A single string with a version code.
 #'
-#' @examples
-#' \donttest{
-#' wood_url_version("XML", repository = "http://www.omegahat.net/R")
-#' }
+#' @examplesIf !woodendesc:::is_cran_check()
+#' wood_url_version("dockerfiler", repository = "https://colinfay.me")
 #'
 #' @family url
 #' @family versions

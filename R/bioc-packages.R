@@ -8,36 +8,34 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examples
-#' \donttest{
-#' head(wood_bioc_packages())
+#' @examplesIf !woodendesc:::is_cran_check()
+#' print(wood_bioc_packages(), max = 15)
 #' # is the same as
-#' head(wood_bioc_packages("release"))
+#' print(wood_bioc_packages("release"), max = 15)
 #'
 #' # A glimpse in the future:
-#' head(wood_bioc_packages("devel"))
+#' print(wood_bioc_packages("devel"), max = 15)
 #' # Previous versions can be queried as well:
-#' head(wood_bioc_packages("3.9"))
-#' # The oldest available version is 1.5:
-#' wood_bioc_packages("1.5")
-#' }
+#' print(wood_bioc_packages("3.9"), max = 15)
+#' # The oldest available version is 1.8:
+#' wood_bioc_packages("1.8")
 #'
 #' @family bioc
 #' @family packages
 #' @export
 wood_bioc_packages <- function(release = "release") {
   assert_param_bioc_release(release)
+  validate_bioc_release(release)
 
-  packages <- vapply(
-    bioc_PACKAGES_cache(release), `[[`, character(1), "Package"
-  )
-  unique(packages)
+  bioc_PACKAGES_cache(release = release) |>
+    vapply(function(x) { x[["Package"]] }, character(1)) |>
+    unique()
 }
 
 bioc_PACKAGES_cache <- function(release = "release") {
   with_cache({
-    download_repo_data(bioc_release_url(
-      release = release, "src", "contrib"
-    ))
+    httr2::request("https://bioconductor.org") |>
+      httr2::req_url_path_append("packages", release, "bioc", "src", "contrib") |>
+      download_repo_data()
   }, "PACKAGES", "bioc", release)
 }

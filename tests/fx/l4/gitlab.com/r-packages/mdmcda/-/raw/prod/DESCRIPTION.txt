@@ -1,0 +1,36 @@
+Package: mdmcda
+Title: Multi Decision Multi Criteria Decision Analysis
+Version: 0.1.1
+Authors@R: 
+    person(given = "Gjalt-Jorn Ygram",
+           family = "Peters",
+           role = c("aut", "cre"),
+           email = "gjalt-jorn@behaviorchange.eu",
+           comment = c(ORCID = "0000-0002-0336-9589"))
+Maintainer: Gjalt-Jorn Ygram Peters <gjalt-jorn@behaviorchange.eu>
+License: GPL (>= 3)
+Description: Complex decisions can be hard to oversee. To assist in
+    such efforts, Multi Criteria Decision Analysis (MCDA) has been developed.
+    This package implements functionality for Multi Decision Multi Criteria
+    Decision Analysis (MDMCA). This is a form of MCDA to select a scenario: a
+    a specific configuration of selected alternatives within a set of
+    decision. A common use case is comparing substance policies, where each
+    policy (scenario) is defined as a series of selected alternatives for
+    a set of policy instruments (decisions).
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    rmarkdown
+Imports:
+    DiagrammeR (>= 1.0.6),
+    DiagrammeRsvg (>= 0.1),
+    ggplot2 (>= 3.3),
+    ggrepel (>= 0.8),
+    ggtext (>= 0.1),
+    justifier (>= 0.0.1),
+    kableExtra (>= 1.1.0),
+    knitr (>= 1.22),
+    openxlsx (>= 4.1),
+    yum (>= 0.0.1)
+VignetteBuilder: knitr
+RoxygenNote: 7.1.1

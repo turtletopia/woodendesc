@@ -20,19 +20,18 @@ packages. Current and previous releases can be queried, up to
 Bioconductor 1.5.
 }
 \examples{
-\donttest{
-head(wood_bioc_packages())
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+print(wood_bioc_packages(), max = 15)
 # is the same as
-head(wood_bioc_packages("release"))
+print(wood_bioc_packages("release"), max = 15)
 
 # A glimpse in the future:
-head(wood_bioc_packages("devel"))
+print(wood_bioc_packages("devel"), max = 15)
 # Previous versions can be queried as well:
-head(wood_bioc_packages("3.9"))
-# The oldest available version is 1.5:
-wood_bioc_packages("1.5")
-}
-
+print(wood_bioc_packages("3.9"), max = 15)
+# The oldest available version is 1.8:
+wood_bioc_packages("1.8")
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for Bioconductor:
@@ -44,6 +43,7 @@ Functions that query available packages:
 \code{\link{wood_core_packages}()},
 \code{\link{wood_cran_packages}()},
 \code{\link{wood_github_packages}()},
+\code{\link{wood_gitlab_packages}()},
 \code{\link{wood_local_packages}()},
 \code{\link{wood_packages}()},
 \code{\link{wood_runiverse_packages}()},

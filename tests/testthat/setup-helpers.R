@@ -35,15 +35,13 @@ expect_no_error <- function(object) {
   expect_error(object, regexp = NA)
 }
 
-expect_cache <- function(tested_function, expected, ...) {
-  skip_if_not_installed("httptest")
-
-  # TODO: simplify once httptest::expect_no_request() works with httr again
+expect_cache <- function(expression, expected) {
   # If the function reads from cache, it means that it will work offline
-  expect_no_error({
-    httptest::without_internet(
-      result_from_cache <- tested_function(...)
-    )
+  httptest2::without_internet({
+    httptest2::expect_no_request({
+      result_from_cache <- force(expression)
+    })
+
+    expect_identical(result_from_cache, expected)
   })
-  expect_identical(result_from_cache, expected)
 }

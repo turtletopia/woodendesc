@@ -15,12 +15,11 @@
 #'
 #' @family core
 #' @family dependencies
-#' @importFrom utils installed.packages
 #' @export
 wood_core_dependencies <- function(package) {
   assert_param_package(package)
 
-  core_pkgs <- installed.packages(priority = "base")
+  core_pkgs <- utils::installed.packages(priority = "base")
   validate_core_package(package, core_pkgs)
 
   extract_dependencies(core_pkgs[package, ])

@@ -8,11 +8,9 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_runiverse_packages()
 #' wood_runiverse_packages("tidyverse")
-#' }
 #'
 #' @family runiverse
 #' @family packages
@@ -24,17 +22,24 @@ wood_runiverse_packages <- function(universe = "ropensci") {
 }
 
 runiverse_packages_cache <- function(universe = "ropensci") {
-  with_cache({
-    url <- runiverse_url(universe, "packages")
-    packages <- download_safely(url)
-    unlist(packages, recursive = FALSE)
-  }, .if_null = {
-    msg <- sprintf(
-      c("Received package list is empty.\n",
-        "(i) Universe `%1$s` may not exist"),
-      universe
-    )
-    warning(msg, call. = FALSE)
-    character()
+  packages <- with_cache({
+    httr2::request(sprintf("https://%s.r-universe.dev", universe)) |>
+      httr2::req_url_path_append("api", "packages") |>
+      httr2::req_error(
+        is_error = function(resp) {
+          resp |>
+            httr2::resp_body_json() |>
+            identical(list())
+        },
+        body = function(resp) {
+          c("x" = "Received package list is empty.",
+            "*" = sprintf("Does universe `%1$s` exist?", universe))
+        }
+      ) |>
+      httr2::req_perform() |>
+      httr2::resp_body_json()
   }, "packages", "runiverse", universe)
+
+  packages |>
+    vapply(function(x) { x[["Package"]] }, character(1))
 }

@@ -9,7 +9,7 @@
 #' @return A character vector of version codes.
 #'
 #' @examples
-#' wood_local_versions("httr")
+#' wood_local_versions("httr2")
 #'
 #' @family local
 #' @family versions

@@ -11,11 +11,9 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_runiverse_dependencies("targets")
 #' wood_runiverse_dependencies("ggplot2", universe = "tidyverse")
-#' }
 #'
 #' @family runiverse
 #' @family dependencies
@@ -24,6 +22,7 @@ wood_runiverse_dependencies <- function(package, universe = "ropensci") {
   assert_param_package(package)
   assert_param_runiverse(universe)
 
+  # TODO: use runiverse_packages_cache() output if possible
   desc <- runiverse_description_cache(package, universe)
   ret <- data.frame(
     package = vapply(desc[["deps"]], `[[`, character(1), "package"),

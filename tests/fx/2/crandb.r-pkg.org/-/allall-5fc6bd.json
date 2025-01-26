@@ -1,0 +1,90 @@
+{
+    "gglgbtq": {
+        "_id": "gglgbtq",
+        "_rev": "4-b375fafc009132745eb7ec2a71bb19bd",
+        "name": "gglgbtq",
+        "versions": {
+            "0.1.0": {
+                "Package": "gglgbtq",
+                "Type": "Package",
+                "Title": "Show Pride on 'ggplot2' Plots",
+                "Version": "0.1.0",
+                "Date": "2022-08-06",
+                "Authors@R": "c(person(\"Laura\", \"Bakala\",\nemail = \"erdaradun.gaztea@gmail.com\",\nrole = c(\"cre\", \"aut\", \"cph\")))",
+                "Description": "Provides multiple palettes based on pride flags with tailored themes.",
+                "Imports": {
+                    "ggplot2": "*",
+                    "graphics": "*",
+                    "grDevices": "*"
+                },
+                "Suggests": {
+                    "spelling": "*",
+                    "testthat": ">= 3.0.0"
+                },
+                "License": "GPL (>= 3)",
+                "Encoding": "UTF-8",
+                "RoxygenNote": "7.1.2",
+                "Config/testthat/edition": "3",
+                "URL": "https://github.com/turtletopia/gglgbtq",
+                "Language": "en-US",
+                "NeedsCompilation": "no",
+                "Packaged": "2022-08-14 08:37:36 UTC; matib",
+                "Author": "Laura Bakala [cre, aut, cph]",
+                "Maintainer": "Laura Bakala <erdaradun.gaztea@gmail.com>",
+                "Repository": "CRAN",
+                "Date/Publication": "2022-08-16 09:00:05 UTC",
+                "crandb_file_date": "2022-08-16 10:20:46",
+                "MD5sum": "e2b4de3d1bc0aac26f888c276db2595e",
+                "date": "2022-08-16T08:00:05+00:00",
+                "releases": [
+
+                ]
+            },
+            "0.1.1": {
+                "Package": "gglgbtq",
+                "Type": "Package",
+                "Title": "Show Pride on 'ggplot2' Plots",
+                "Version": "0.1.1",
+                "Date": "2022-11-01",
+                "Authors@R": "c(person(\"Laura\", \"Bakala\",\nemail = \"erdaradun.gaztea@gmail.com\",\nrole = c(\"cre\", \"aut\", \"cph\"),\ncomment = c(ORCID = \"0000-0002-3213-2484\")))",
+                "Description": "Provides multiple palettes based on pride flags with tailored themes.",
+                "Imports": {
+                    "ggplot2": "*",
+                    "graphics": "*",
+                    "grDevices": "*"
+                },
+                "Suggests": {
+                    "knitr": "*",
+                    "rmarkdown": "*",
+                    "spelling": "*",
+                    "testthat": ">= 3.0.0"
+                },
+                "License": "GPL (>= 3)",
+                "Encoding": "UTF-8",
+                "RoxygenNote": "7.1.2",
+                "Config/testthat/edition": "3",
+                "URL": "https://github.com/turtletopia/gglgbtq,\nhttps://turtletopia.github.io/gglgbtq/",
+                "Language": "en-US",
+                "VignetteBuilder": "knitr",
+                "NeedsCompilation": "no",
+                "Packaged": "2022-11-01 10:14:44 UTC; erdar",
+                "Author": "Laura Bakala [cre, aut, cph] (<https://orcid.org/0000-0002-3213-2484>)",
+                "Maintainer": "Laura Bakala <erdaradun.gaztea@gmail.com>",
+                "Repository": "CRAN",
+                "Date/Publication": "2022-11-01 10:40:16 UTC",
+                "crandb_file_date": "2022-11-01 11:32:38",
+                "MD5sum": "0cdd7ec4d254321f8d73a5ac829d5ffd",
+                "date": "2022-11-01T09:40:16+00:00",
+                "releases": [
+
+                ]
+            }
+        },
+        "timeline": {
+            "0.1.0": "2022-08-16T08:00:05+00:00",
+            "0.1.1": "2022-11-01T09:40:16+00:00"
+        },
+        "latest": "0.1.1",
+        "title": "Show Pride on 'ggplot2' Plots"
+    }
+}

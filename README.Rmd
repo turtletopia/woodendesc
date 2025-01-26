@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 library(woodendesc)
 ```
 
-# woodendesc <a href="https://turtletopia.github.io/woodendesc/"><img src="man/figures/logo.png" align="right" height="138" /></a>
+# woodendesc <a href="https://turtletopia.github.io/woodendesc/"><img src="man/figures/logo.svg" align="right" height="139" /></a>
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version-last-release/woodendesc)](https://CRAN.R-project.org/package=woodendesc)
@@ -51,7 +51,7 @@ A list of available packages is returned as a character vector. An example call 
 library(woodendesc)
 # Too many packages to list them all
 all_cran_pkgs <- wood_cran_packages()
-head(all_cran_pkgs, 10)
+print(all_cran_pkgs, max = 10)
 ```
 
 An available package version is returned as a single code. An example call checking the current version of Biobase package on Bioconductor:

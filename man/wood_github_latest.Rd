@@ -18,19 +18,18 @@ A character vector of version codes.
 }
 \description{
 This function queries GitHub for the code of the current package
-versions. This may reference a non-tagged commit; for the analysis of tagged
+version. This may reference a non-tagged commit; for the analysis of tagged
 commits only, see \code{\link[=wood_github_versions]{wood_github_versions()}}.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Latest version code is returned
 wood_github_latest("gglgbtq", "turtletopia")
 
 # To get the latest *tagged* version code instead, use:
 codes <- wood_github_versions("gglgbtq", "turtletopia")
 versionsort::ver_latest(codes)
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for GitHub:
@@ -45,6 +44,8 @@ Functions that query package versions:
 \code{\link{wood_cran_latest}()},
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_github_versions}()},
+\code{\link{wood_gitlab_latest}()},
+\code{\link{wood_gitlab_versions}()},
 \code{\link{wood_local_versions}()},
 \code{\link{wood_runiverse_version}()},
 \code{\link{wood_url_version}()},

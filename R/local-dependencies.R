@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' wood_local_dependencies("woodendesc")
-#' wood_local_dependencies("httr", paths = "all")
+#' wood_local_dependencies("httr2", paths = "all")
 #'
 #' @family local
 #' @family dependencies

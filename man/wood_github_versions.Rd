@@ -21,10 +21,9 @@ This function queries GitHub for the codes of all tagged package
 versions. To get the latest available version, see \code{\link[=wood_github_latest]{wood_github_latest()}}.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_github_versions("versionsort", "turtletopia")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for GitHub:
@@ -39,6 +38,8 @@ Functions that query package versions:
 \code{\link{wood_cran_latest}()},
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_github_latest}()},
+\code{\link{wood_gitlab_latest}()},
+\code{\link{wood_gitlab_versions}()},
 \code{\link{wood_local_versions}()},
 \code{\link{wood_runiverse_version}()},
 \code{\link{wood_url_version}()},

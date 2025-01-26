@@ -18,10 +18,9 @@ This function queries CRAN for the code of the latest version
 of the selected package.
 }
 \examples{
-\donttest{
+\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_cran_latest("versionsort")
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Functions for CRAN:
@@ -35,6 +34,8 @@ Functions that query package versions:
 \code{\link{wood_cran_versions}()},
 \code{\link{wood_github_latest}()},
 \code{\link{wood_github_versions}()},
+\code{\link{wood_gitlab_latest}()},
+\code{\link{wood_gitlab_versions}()},
 \code{\link{wood_local_versions}()},
 \code{\link{wood_runiverse_version}()},
 \code{\link{wood_url_version}()},

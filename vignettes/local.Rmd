@@ -1,0 +1,43 @@
+---
+title: "Analysing local libraries"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysing local libraries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(woodendesc)
+```
+
+While most installations take place in the default library, users are able to specify custom library paths for each installed package. Thus the task of collecting metadata for all locally available packages is slightly less trivial, especially if the user wishes to take into consideration only a subset of locally existing libraries. In any case, the key function to remember is `.libPaths()` as it provides the user with paths of the currently attached libraries.
+
+## Packages
+
+To list all packages installed to a selected library (or libraries) the user should use `wood_local_packages()`.
+
+```{r local_packages, cache=TRUE}
+wood_local_packages() |>
+  print(max = 10)
+```
+
+## Available package versions
+
+To list all versions of a package installed to selected libraries the user should use `wood_local_versions()`. Note that the "versions" are plural, as it is possible to install more than one version of a package, each to a different library.
+
+```{r local_versions, cache=TRUE}
+wood_local_versions("versionsort", paths = "all")
+```
+
+## Package dependencies
+
+To list package dependencies the user should use `wood_local_dependencies()`. Hopefully all Imports are installed too!
+
+```{r local_deps, cache=TRUE}
+wood_local_dependencies("versionsort", paths = "all")
+```

@@ -5,27 +5,24 @@
 #'
 #' @return A character vector, where each element is a Bioconductor release.
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_bioc_releases()
-#' }
 #'
 #' @family bioc
 #' @export
 wood_bioc_releases <- function() {
-  if (!require_packages("xml2", "list Bioconductor release codes")) {
-    stopf("xml2 package is required to list Bioconductor release codes.")
-  }
+  rlang::check_installed("xml2", "to list Bioconductor release codes.")
 
   bioc_releases_cache()
 }
 
 bioc_releases_cache <- function() {
   with_cache({
-    response <- download_safely(
-      add_trailing_slash(bioc_url("about", "release-announcements")),
-      encoding = "UTF-8"
-    )
-    extract_bioc_releases(response)
+    httr2::request("https://bioconductor.org") |>
+      httr2::req_url_path_append("about", "release-announcements") |>
+      httr2::req_perform() |>
+      httr2::resp_body_html(encoding = "UTF-8") |>
+      xml2::xml_find_all("/html/body/main//table/tbody/tr/td[1]") |>
+      xml2::xml_text()
   }, "releases", "bioc")
 }

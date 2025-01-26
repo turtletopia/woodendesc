@@ -1,0 +1,42 @@
+---
+title: "Analysing R-universe"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysing R-universe}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(woodendesc)
+```
+
+R-universe is a platform by rOpenSci that provides an alternative way of creating package ecosystems. It tracks specified packages on GitHub/GitLab and creates a "universe" containing packages, builds, vignettes, accessible API... That's why we opened [our own turtleverse](https://turtletopia.r-universe.dev/packages).
+
+## Packages
+
+Each universe has separate package list, so the user should specify the relevant universe through the `universe` parameter.
+
+```{r packages, cache=TRUE}
+wood_runiverse_packages(universe = "turtletopia")
+```
+
+## Available package version
+
+Since R-universe works by pointing to the latest commit on the main branch, there's always one version of a package; to extract it the user should use `wood_runiverse_version()`.
+
+```{r version, cache=TRUE}
+wood_runiverse_version("gglgbtq", universe = "turtletopia")
+```
+
+## Package dependencies
+
+R-universe API is actually nice enough to return dependency data, but they still have to be parsed before returning.
+
+```{r deps, cache=TRUE}
+wood_runiverse_dependencies("gglgbtq", universe = "turtletopia")
+```

@@ -1,23 +1,21 @@
-skip_if_not_installed("vcr")
+skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-vcr::use_cassette("ggplot2-deps-tt", {
+with_mock_dir("u", {
   ggplot2_deps <- wood_runiverse_dependencies("ggplot2", "tidyverse")
 })
 
 # TESTS ----
 test_dependencies(ggplot2_deps)
-test_cache(wood_runiverse_dependencies, ggplot2_deps, "ggplot2", "tidyverse")
-test_param_package(wood_runiverse_dependencies, universe = "tidyverse")
-test_param_runiverse(wood_runiverse_dependencies, package = "ggplot2")
+test_cache({ wood_runiverse_dependencies("ggplot2", "tidyverse") }, ggplot2_deps)
+test_param_package(wood_runiverse_dependencies(package = "ggplot2", universe = "tidyverse"))
+test_param_runiverse(wood_runiverse_dependencies(package = "ggplot2", universe = "tidyverse"))
 
-vcr::use_cassette("fakepackage-runiverse-deps", {
-  test_that("raises an exception if package not available", {
-    expect_error(
-      wood_runiverse_dependencies("fakepackage", "turtletopia"),
-      "Can't find package `fakepackage` in universe `turtletopia`.",
-      fixed = TRUE
-    )
-  })
+test_that("raises an exception if package not available", {
+  expect_error(
+    wood_runiverse_dependencies("fakepackage", "turtletopia"),
+    "Can't find package `fakepackage` in universe `turtletopia`.",
+    fixed = TRUE
+  )
 })

@@ -1,0 +1,524 @@
+[
+    {
+        "name": "v0.8.1",
+        "message": "Version 0.8.1",
+        "target": "23a9338a2a1540c6ea097a21ef2c9825e4319c09",
+        "commit": {
+            "id": "1d0b08a628b5ecb2d4e717ea067b77761f2736f2",
+            "short_id": "1d0b08a6",
+            "created_at": "2024-01-21T11:00:08.000+01:00",
+            "parent_ids": [
+                "4b15a529b841bb9dc2e79e9cb8596db4e5f74953"
+            ],
+            "title": "small fix in example",
+            "message": "small fix in example\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2024-01-21T11:00:08.000+01:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2024-01-21T11:00:08.000+01:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/1d0b08a628b5ecb2d4e717ea067b77761f2736f2"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": "2024-01-21T18:03:19.000Z"
+    },
+    {
+        "name": "v0.7.1",
+        "message": "Version 0.7.1",
+        "target": "35352da46e47f927051d78168e5cd4dd1f0e4df4",
+        "commit": {
+            "id": "e02fd6974df28d6c444c3a9557e0dc4227f9d3ee",
+            "short_id": "e02fd697",
+            "created_at": "2023-01-06T14:25:29.000+01:00",
+            "parent_ids": [
+                "7e92f37aca24b3110ca481c2de136d6829484fe4"
+            ],
+            "title": "Implemented a work-around for when the recursion in rbind_df_list() throws a C stack error.",
+            "message": "Implemented a work-around for when the recursion in rbind_df_list() throws a C stack error.\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2023-01-06T14:25:29.000+01:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2023-01-06T14:25:29.000+01:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/e02fd6974df28d6c444c3a9557e0dc4227f9d3ee"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": "2023-01-06T13:25:39.000Z"
+    },
+    {
+        "name": "v0.7.0",
+        "message": "Version 0.7.0",
+        "target": "d8ac06ad47d8dfca0b0da9dabf3a668a6c737810",
+        "commit": {
+            "id": "7e92f37aca24b3110ca481c2de136d6829484fe4",
+            "short_id": "7e92f37a",
+            "created_at": "2023-01-06T13:47:58.000+01:00",
+            "parent_ids": [
+                "8ea1bdff28521d40b4a09be65e6219af40e3a9a2"
+            ],
+            "title": "version to 0.7.0 - change to utterance split regex to allow sentences to end with a closing parenthesis",
+            "message": "version to 0.7.0 - change to utterance split regex to allow sentences to end with a closing parenthesis\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2023-01-06T13:47:58.000+01:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2023-01-06T13:47:58.000+01:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/7e92f37aca24b3110ca481c2de136d6829484fe4"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": "2023-01-06T12:48:16.000Z"
+    },
+    {
+        "name": "0.6.7",
+        "message": "Version 0.6.7",
+        "target": "a85c878b57d2157e53d2768eb2fcedab5f1e0da5",
+        "commit": {
+            "id": "4a2039bc21fb2e58d2e18ae8397e343e6bbf048f",
+            "short_id": "4a2039bc",
+            "created_at": "2022-12-12T19:48:04.000+00:00",
+            "parent_ids": [
+                "48d59d0d775d006debc0d54d959b96139b57e77c",
+                "d1c85d0acb3a04e6459614b2ca9de90a4cf7b5c3"
+            ],
+            "title": "Merge branch 'dev' into 'prod'",
+            "message": "Merge branch 'dev' into 'prod'\n\nVersion 0.6.7\n\nSee merge request r-packages/rock!46",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-12-12T19:48:04.000+00:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-12-12T19:48:04.000+00:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/4a2039bc21fb2e58d2e18ae8397e343e6bbf048f"
+        },
+        "release": {
+            "tag_name": "0.6.7",
+            "description": ""
+        },
+        "protected": false,
+        "created_at": "2022-12-12T19:48:32.000Z"
+    },
+    {
+        "name": "0.6.6",
+        "message": "Version 0.6.6",
+        "target": "203d9f2cd606b00da84f6502d9d3caa48d45a74b",
+        "commit": {
+            "id": "48d59d0d775d006debc0d54d959b96139b57e77c",
+            "short_id": "48d59d0d",
+            "created_at": "2022-12-12T19:23:06.000+00:00",
+            "parent_ids": [
+                "bd2f3c0d3a028f8089c212c5a4f3095ec195a764",
+                "28ab14029fe29f4bef3ee3ff84a60184bfb978d7"
+            ],
+            "title": "Merge branch 'dev' into 'prod'",
+            "message": "Merge branch 'dev' into 'prod'\n\nVersion 0.6.6\n\nSee merge request r-packages/rock!45",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-12-12T19:23:06.000+00:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-12-12T19:23:06.000+00:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/48d59d0d775d006debc0d54d959b96139b57e77c"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": "2022-12-12T19:31:52.000Z"
+    },
+    {
+        "name": "0.6.5",
+        "message": "Version 0.6.5",
+        "target": "71547164eed01ab59b7df4dafcb376a5040d4aae",
+        "commit": {
+            "id": "bd2f3c0d3a028f8089c212c5a4f3095ec195a764",
+            "short_id": "bd2f3c0d",
+            "created_at": "2022-12-11T21:17:21.000+00:00",
+            "parent_ids": [
+                "81fce37c54bcd0619c9534e9238a84bb610fdb7f",
+                "8fb1d06e19b6b9f8689f0291a5e7e7e85cc6f10a"
+            ],
+            "title": "Merge branch 'dev' into 'prod'",
+            "message": "Merge branch 'dev' into 'prod'\n\nVersion 0.6.5\n\nSee merge request r-packages/rock!44",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-12-11T21:17:21.000+00:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-12-11T21:17:21.000+00:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/bd2f3c0d3a028f8089c212c5a4f3095ec195a764"
+        },
+        "release": {
+            "tag_name": "0.6.5",
+            "description": ""
+        },
+        "protected": false,
+        "created_at": "2022-12-11T21:20:18.000Z"
+    },
+    {
+        "name": "0.6.4",
+        "message": "Version 0.6.4",
+        "target": "694fea5cbe32ef88f705071a99c98e9c007657e0",
+        "commit": {
+            "id": "81fce37c54bcd0619c9534e9238a84bb610fdb7f",
+            "short_id": "81fce37c",
+            "created_at": "2022-12-11T20:59:31.000+00:00",
+            "parent_ids": [
+                "f624455386a00aa70af444a6a45a8e659b58a302",
+                "999f4028e0c27e1b9a7070475bd5048a19ed3543"
+            ],
+            "title": "Merge branch 'dev' into 'prod'",
+            "message": "Merge branch 'dev' into 'prod'\n\nVersion 0.6.4\n\nSee merge request r-packages/rock!43",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-12-11T20:59:31.000+00:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-12-11T20:59:31.000+00:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/81fce37c54bcd0619c9534e9238a84bb610fdb7f"
+        },
+        "release": {
+            "tag_name": "0.6.4",
+            "description": ""
+        },
+        "protected": false,
+        "created_at": "2022-12-11T21:02:03.000Z"
+    },
+    {
+        "name": "0.6.3",
+        "message": "Version 0.6.3",
+        "target": "b56c8e2635d7ef035c653be7c6e52800e8b04155",
+        "commit": {
+            "id": "f624455386a00aa70af444a6a45a8e659b58a302",
+            "short_id": "f6244553",
+            "created_at": "2022-12-11T20:43:42.000+00:00",
+            "parent_ids": [
+                "f4a6876d71972ef95d96530b55cfb2915bd11b46",
+                "074a15af546119398ad603a8a9c13c99d5956115"
+            ],
+            "title": "Merge branch 'dev' into 'prod'",
+            "message": "Merge branch 'dev' into 'prod'\n\nVersion 0.6.3\n\nSee merge request r-packages/rock!42",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-12-11T20:43:42.000+00:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-12-11T20:43:42.000+00:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/f624455386a00aa70af444a6a45a8e659b58a302"
+        },
+        "release": {
+            "tag_name": "0.6.3",
+            "description": ""
+        },
+        "protected": false,
+        "created_at": "2022-12-11T20:48:02.000Z"
+    },
+    {
+        "name": "0.6.0",
+        "message": "",
+        "target": "f4a6876d71972ef95d96530b55cfb2915bd11b46",
+        "commit": {
+            "id": "f4a6876d71972ef95d96530b55cfb2915bd11b46",
+            "short_id": "f4a6876d",
+            "created_at": "2022-12-11T00:52:46.000+00:00",
+            "parent_ids": [
+                "fa7f631eeb2fda23475e2796a6f5133138c8fb7f",
+                "341adcdd790d015a2d61fbc1ee52fd321259354e"
+            ],
+            "title": "Merge branch 'dev' into 'prod'",
+            "message": "Merge branch 'dev' into 'prod'\n\nPushed 0.6.0 to CRAN\n\nSee merge request r-packages/rock!41",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-12-11T00:52:46.000+00:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-12-11T00:52:46.000+00:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/f4a6876d71972ef95d96530b55cfb2915bd11b46"
+        },
+        "release": {
+            "tag_name": "0.6.0",
+            "description": "Version 0.6.0"
+        },
+        "protected": false,
+        "created_at": null
+    },
+    {
+        "name": "v0.5.7",
+        "message": "Version 0.5.7",
+        "target": "912102a3c12be5dae9cf0ad3da84a42e1dc9d0fa",
+        "commit": {
+            "id": "bf9fa39f03b85c5756cd154867a9a01c310268d5",
+            "short_id": "bf9fa39f",
+            "created_at": "2022-07-04T14:06:01.000+02:00",
+            "parent_ids": [
+                "3cf10c6f8e62305ecafdee8fbd2afb440fe26b7f"
+            ],
+            "title": "added write_source()",
+            "message": "added write_source()\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-07-04T14:06:01.000+02:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-07-04T14:06:01.000+02:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/bf9fa39f03b85c5756cd154867a9a01c310268d5"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": "2022-07-04T12:06:17.000Z"
+    },
+    {
+        "name": "v0.5.5",
+        "message": "Version 0.5.5",
+        "target": "6a1fbbf0f0d3a410a0e85ce0b87308c514d38a90",
+        "commit": {
+            "id": "63aac2e50043c0e908863b4b5f4e69e5e0945262",
+            "short_id": "63aac2e5",
+            "created_at": "2022-06-08T21:36:22.000+02:00",
+            "parent_ids": [
+                "d4b921f97149dc39517996b4014b297eb11a6372"
+            ],
+            "title": "hopefuly fixed CRAN issue",
+            "message": "hopefuly fixed CRAN issue\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-06-08T21:36:22.000+02:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-06-08T21:36:22.000+02:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/63aac2e50043c0e908863b4b5f4e69e5e0945262"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": "2022-06-08T20:20:09.000Z"
+    },
+    {
+        "name": "0.5.5",
+        "message": "",
+        "target": "63aac2e50043c0e908863b4b5f4e69e5e0945262",
+        "commit": {
+            "id": "63aac2e50043c0e908863b4b5f4e69e5e0945262",
+            "short_id": "63aac2e5",
+            "created_at": "2022-06-08T21:36:22.000+02:00",
+            "parent_ids": [
+                "d4b921f97149dc39517996b4014b297eb11a6372"
+            ],
+            "title": "hopefuly fixed CRAN issue",
+            "message": "hopefuly fixed CRAN issue\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-06-08T21:36:22.000+02:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-06-08T21:36:22.000+02:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/63aac2e50043c0e908863b4b5f4e69e5e0945262"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": null
+    },
+    {
+        "name": "v0.5.4",
+        "message": "Version 0.5.4",
+        "target": "d733cc1f03f7adb0ea06f1de1aa7542a67a3a5d9",
+        "commit": {
+            "id": "96d1453ba1814b93899b7efe4da98ee5f2166391",
+            "short_id": "96d1453b",
+            "created_at": "2022-04-29T21:33:19.000+00:00",
+            "parent_ids": [
+                "a7494fe2a20b8ca47941678e95cd2ff5bd732a4a",
+                "d4b921f97149dc39517996b4014b297eb11a6372"
+            ],
+            "title": "Merge branch 'dev' into 'prod'",
+            "message": "Merge branch 'dev' into 'prod'\n\nadded donttest to checkpkgs\n\nSee merge request r-packages/rock!37",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2022-04-29T21:33:19.000+00:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2022-04-29T21:33:19.000+00:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/96d1453ba1814b93899b7efe4da98ee5f2166391"
+        },
+        "release": {
+            "tag_name": "v0.5.4",
+            "description": "- Fixed issue #21\r\n- Added functionality for processing Qualitative Network Approach codes (`[[from->to||type||weight]]`, with optional weight bit)\r\n- Improved cognitive interview heatmap\r\n- Started on RPE functionality"
+        },
+        "protected": false,
+        "created_at": "2022-04-29T21:37:37.000Z"
+    },
+    {
+        "name": "v0.5.1",
+        "message": "Version 0.5.1",
+        "target": "7951cdf647d4f3d227458cbb84645de603948611",
+        "commit": {
+            "id": "be5c89e7199f94a070a9be2fe0ef078779e9a3ef",
+            "short_id": "be5c89e7",
+            "created_at": "2021-10-31T19:46:08.000+01:00",
+            "parent_ids": [
+                "5da5f1c92d58dcfdc16d717bb7789ceaef6494b6"
+            ],
+            "title": "Version 0.5.1",
+            "message": "Version 0.5.1\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2021-10-31T19:46:08.000+01:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2021-10-31T19:46:08.000+01:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/be5c89e7199f94a070a9be2fe0ef078779e9a3ef"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": "2021-10-31T18:46:24.000Z"
+    },
+    {
+        "name": "v0.5.0",
+        "message": "Version 0.5.0",
+        "target": "069d7907bf1d8c5046bb166951b28827acdeb092",
+        "commit": {
+            "id": "f576e2a5484e73fe0c81920296531dbd113a90bb",
+            "short_id": "f576e2a5",
+            "created_at": "2021-10-31T19:20:04.000+01:00",
+            "parent_ids": [
+                "2e7b044963a940ab71cfd2007d1f24e709d870a3"
+            ],
+            "title": "rerendered pkgdown",
+            "message": "rerendered pkgdown\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2021-10-31T19:20:04.000+01:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2021-10-31T19:20:04.000+01:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/f576e2a5484e73fe0c81920296531dbd113a90bb"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": "2021-10-31T18:21:31.000Z"
+    },
+    {
+        "name": "0.4.3",
+        "message": "",
+        "target": "3c29203e34630df21c3d1e7d67e1d77f1615377b",
+        "commit": {
+            "id": "3c29203e34630df21c3d1e7d67e1d77f1615377b",
+            "short_id": "3c29203e",
+            "created_at": "2021-05-22T23:16:31.000+02:00",
+            "parent_ids": [
+                "e8f56fd035f5aa0b3fc9de7ae9944ad94d37afe1",
+                "030144320506790c606ba91d85bfc300c5e9dc0a"
+            ],
+            "title": "Merge branch 'dev' into prod",
+            "message": "Merge branch 'dev' into prod\n",
+            "author_name": "Gjalt-Jorn Peters",
+            "author_email": "gjalt-jorn@behaviorchange.eu",
+            "authored_date": "2021-05-22T23:16:31.000+02:00",
+            "committer_name": "Gjalt-Jorn Peters",
+            "committer_email": "gjalt-jorn@behaviorchange.eu",
+            "committed_date": "2021-05-22T23:16:31.000+02:00",
+            "trailers": {
+
+            },
+            "extended_trailers": {
+
+            },
+            "web_url": "https://gitlab.com/r-packages/rock/-/commit/3c29203e34630df21c3d1e7d67e1d77f1615377b"
+        },
+        "release": null,
+        "protected": false,
+        "created_at": null
+    }
+]

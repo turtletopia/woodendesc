@@ -29,6 +29,12 @@ reference:
   - wood_bioc_dependencies
   - wood_bioc_releases
 
+- subtitle: R-universe
+  contents:
+  - wood_runiverse_packages
+  - wood_runiverse_version
+  - wood_runiverse_dependencies
+
 - subtitle: GitHub
   contents:
   - wood_github_packages
@@ -37,11 +43,13 @@ reference:
   - wood_github_tags
   - wood_github_dependencies
 
-- subtitle: R-universe
+- subtitle: GitLab
   contents:
-  - wood_runiverse_packages
-  - wood_runiverse_version
-  - wood_runiverse_dependencies
+  - wood_gitlab_packages
+  - wood_gitlab_versions
+  - wood_gitlab_latest
+  - wood_gitlab_tags
+  - wood_gitlab_dependencies
 
 - subtitle: Any URL
   contents:

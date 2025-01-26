@@ -84,7 +84,7 @@ test_that("'runiverse' accepts a universe after @", {
 
 # URL ----
 test_that("everything else is interpreted as a URL", {
-  url <- "http://www.omegahat.net/R"
+  url <- "https://colinfay.me"
   expect_equal(
     interpret_repos(url, "version")[[1]],
     query_maker("url", "version", repository = url)

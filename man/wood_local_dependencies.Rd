@@ -28,7 +28,7 @@ searching through specified library paths.
 }
 \examples{
 wood_local_dependencies("woodendesc")
-wood_local_dependencies("httr", paths = "all")
+wood_local_dependencies("httr2", paths = "all")
 
 }
 \seealso{
@@ -42,6 +42,7 @@ Functions that query package dependencies:
 \code{\link{wood_cran_dependencies}()},
 \code{\link{wood_dependencies}()},
 \code{\link{wood_github_dependencies}()},
+\code{\link{wood_gitlab_dependencies}()},
 \code{\link{wood_runiverse_dependencies}()},
 \code{\link{wood_url_dependencies}()}
 }

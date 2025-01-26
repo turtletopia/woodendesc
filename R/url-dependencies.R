@@ -11,10 +11,8 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examples
-#' \donttest{
-#' wood_url_dependencies("XML", repository = "http://www.omegahat.net/R")
-#' }
+#' @examplesIf !woodendesc:::is_cran_check()
+#' wood_url_dependencies("tidystringdist", repository = "https://colinfay.me")
 #'
 #' @family url
 #' @family dependencies

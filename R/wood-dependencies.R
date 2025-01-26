@@ -12,8 +12,7 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf !woodendesc:::is_cran_check()
 #' wood_dependencies("stats", "core")
 #' # Multiple packages are also possible:
 #' wood_dependencies(
@@ -22,7 +21,6 @@
 #' )
 #' # By default, only CRAN is queried:
 #' wood_dependencies("versionsort")
-#' }
 #'
 #' @family wood
 #' @family dependencies
