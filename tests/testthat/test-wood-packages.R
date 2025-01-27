@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("0", {
+httptest2::with_mock_api({
   packages <- wood_packages(repos = c("local#all", "cran", "bioc@1.8"))
 })
 
