@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("l3", {
+httptest2::with_mock_api({
   rock_latest <- wood_gitlab_latest("rock", "r-packages")
 })
 

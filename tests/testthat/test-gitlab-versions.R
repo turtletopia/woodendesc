@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("l6", {
+httptest2::with_mock_api({
   limonaid_versions <- wood_gitlab_versions("limonaid", "r-packages")
 })
 

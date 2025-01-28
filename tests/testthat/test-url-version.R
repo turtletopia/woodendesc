@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("x", {
+httptest2::with_mock_api({
   dockerfiler_version <- wood_url_version("dockerfiler", "https://colinfay.me")
 })
 

@@ -2,15 +2,15 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("a", {
-  Biostrings_deps <- wood_bioc_dependencies("Biostrings")
+httptest2::with_mock_api({
+  a4_deps <- wood_bioc_dependencies("a4")
 })
 
 # TESTS ----
-test_dependencies(Biostrings_deps)
-test_cache({ wood_bioc_dependencies("Biostrings") }, Biostrings_deps)
-test_param_package(wood_bioc_dependencies(package = "Biostrings"))
-test_param_bioc_release(wood_bioc_dependencies(package = "Biostrings"))
+test_dependencies(a4_deps)
+test_cache({ wood_bioc_dependencies("a4") }, a4_deps)
+test_param_package(wood_bioc_dependencies(package = "a4"))
+test_param_bioc_release(wood_bioc_dependencies(package = "a4"))
 
 test_that("raises an exception if package not available", {
   expect_error(
@@ -20,7 +20,7 @@ test_that("raises an exception if package not available", {
   )
 })
 
-with_mock_dir("b", {
+httptest2::with_mock_api({
   test_that("correctly retrieves data from older releases", {
     expect_equal(
       wood_bioc_dependencies("Biostrings", release = "1.8"),

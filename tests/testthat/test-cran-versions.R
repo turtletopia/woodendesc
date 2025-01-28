@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("l", {
+httptest2::with_mock_api({
   versionsort_versions <- wood_cran_versions("versionsort")
 })
 
@@ -20,7 +20,7 @@ test_that("use cache even if expired, but latest version hasn't changed yet", {
   Sys.sleep(1.1)
 
   # Create latest version cache to avoid having a request being made
-  with_mock_dir("m", {
+  httptest2::with_mock_api({
     wood_cran_latest("versionsort")
   })
   expect_cache({ wood_cran_versions("versionsort") }, versionsort_versions)

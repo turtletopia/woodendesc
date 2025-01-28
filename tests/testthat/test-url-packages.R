@@ -2,7 +2,7 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("y", {
+httptest2::with_mock_api({
   cynkra_packages <- wood_url_packages("https://cynkra.r-universe.dev")
 })
 
@@ -15,7 +15,7 @@ test_that("Cynkra repository has cynkrathis package", {
   expect_subset("cynkrathis", cynkra_packages)
 })
 
-with_mock_dir("x", {
+httptest2::with_mock_api({
   test_that("url_packages() uses PACKAGES if PACKAGES.gz is not available", {
     expect_no_error(wood_url_packages("https://colinfay.me"))
   })

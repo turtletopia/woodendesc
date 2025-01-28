@@ -2,17 +2,17 @@ skip_if_not_installed("httptest2")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("f", {
-  affy_version <- wood_bioc_version("affy")
+httptest2::with_mock_api({
+  a4_version <- wood_bioc_version("a4")
 })
 
 # TESTS ----
-test_version(affy_version)
-test_cache({ wood_bioc_version("affy") }, affy_version)
-test_param_package(wood_bioc_version(package = "affy"))
-test_param_bioc_release(wood_bioc_version(package = "affy"))
+test_version(a4_version)
+test_cache({ wood_bioc_version("a4") }, a4_version)
+test_param_package(wood_bioc_version(package = "a4"))
+test_param_bioc_release(wood_bioc_version(package = "a4"))
 
-with_mock_dir("g", {
+httptest2::with_mock_api({
   test_that("correctly retrieves data from older releases", {
     expect_equal(
       wood_bioc_version("affy", release = "1.8"),

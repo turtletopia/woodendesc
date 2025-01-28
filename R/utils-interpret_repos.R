@@ -10,11 +10,14 @@ interpret_repos <- function(repos, context) {
     if (grepl("^bioc", l_repo, perl = TRUE)) {
       return(interpret_bioc(l_repo, context))
     }
+    if (grepl("^runiverse", l_repo, perl = TRUE)) {
+      return(interpret_runiverse(l_repo, context))
+    }
     if (grepl("^github", l_repo, perl = TRUE)) {
       return(interpret_github(repo, context))
     }
-    if (grepl("^runiverse", l_repo, perl = TRUE)) {
-      return(interpret_runiverse(l_repo, context))
+    if (grepl("^gitlab", l_repo, perl = TRUE)) {
+      return(interpret_gitlab(repo, context))
     }
     if (grepl("^local", l_repo, perl = TRUE)) {
       return(interpret_local(l_repo, context))
@@ -32,6 +35,12 @@ interpret_bioc <- function(repo, context) {
 interpret_github <- function(repo, context) {
   ret <- query_maker("github", context)
   param <- regmatches(repo, regexpr("(?<=github/).+", repo, ignore.case = TRUE, perl = TRUE))
+  add_parameter(ret, param, "user")
+}
+
+interpret_gitlab <- function(repo, context) {
+  ret <- query_maker("gitlab", context)
+  param <- regmatches(repo, regexpr("(?<=gitlab/).+", repo, ignore.case = TRUE, perl = TRUE))
   add_parameter(ret, param, "user")
 }
 
@@ -67,17 +76,23 @@ find_function <- function(type, context) {
       version = wood_bioc_version,
       dependencies = wood_bioc_dependencies
     ),
+    runiverse = switch(
+      context,
+      packages = wood_runiverse_packages,
+      version = wood_runiverse_version,
+      dependencies = wood_runiverse_dependencies
+    ),
     github = switch(
       context,
       packages = wood_github_packages,
       version = wood_github_versions,
       dependencies = wood_github_dependencies
     ),
-    runiverse = switch(
+    gitlab = switch(
       context,
-      packages = wood_runiverse_packages,
-      version = wood_runiverse_version,
-      dependencies = wood_runiverse_dependencies
+      packages = wood_gitlab_packages,
+      version = wood_gitlab_versions,
+      dependencies = wood_gitlab_dependencies
     ),
     url = switch(
       context,
