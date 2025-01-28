@@ -9,7 +9,7 @@ available packages and collects the unique occurrences."><meta property="og:imag
 
     <a class="navbar-brand me-2" href="../index.html">woodendesc</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,10 +64,12 @@ available packages and collects the unique occurrences.</p>
 A vector of repositories to query. The following values are available:</p><ul><li><p><code>"cran"</code>, meaning CRAN;</p></li>
 <li><p><code>"bioc@release"</code>, meaning Bioconductor, where <code>release</code> should be replaced
 with a valid Bioconductor release code or one of <code>"release"</code>, <code>"devel"</code>;</p></li>
-<li><p><code>"github/user"</code>, meaning GitHub, where <code>user</code> should be replaced with a
-valid user or organization name (e.g. <code>turtletopia</code>);</p></li>
 <li><p><code>"runiverse@universe"</code>, meaning R-universe, where <code>universe</code> should be
 replaced with a valid universe name (e.g. <code>turtletopia</code>);</p></li>
+<li><p><code>"github/user"</code>, meaning GitHub, where <code>user</code> should be replaced with a
+valid user or organization name (e.g. <code>turtletopia</code>);</p></li>
+<li><p><code>"gitlab/user"</code>, meaning GitLab, where <code>user</code> should be replaced with a
+valid user or group name (e.g. <code>r-packages</code>);</p></li>
 <li><p><code>"local#index"</code>, meaning a local library, where <code>index</code> should be replaced
 with an integer index of a library in <code><a href="https://rdrr.io/r/base/libPaths.html" class="external-link">base::.libPaths()</a></code> or an <code>all</code>
 keyword;</p></li>
@@ -102,7 +104,7 @@ keyword;</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "A3"           "AATtools"     "ABACUS"       "ABC.RAP"      "ABCanalysis" </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [6] "ABCoptim"     "ABHgenotypeR" "ABM"          "ABPS"         "ABRSQOL"     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [11] "ABSurvTDC"    "ACA"          "ACDm"         "ACE.CoCo"     "ACEP"        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [ reached getOption("max.print") -- omitted 21927 entries ]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [ reached getOption("max.print") -- omitted 21938 entries ]</span>
 <span class="r-in"><span><span class="fu">wood_packages</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://colinfay.me"</span>, <span class="st">"runiverse@turtletopia"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "attempt"        "aurrera"        "craneur"        "deepdep"       </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [5] "devaddins"      "dockerfiler"    "fryingpane"     "gglgbtq"       </span>
@@ -114,7 +116,7 @@ keyword;</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "A3"           "AATtools"     "ABACUS"       "ABC.RAP"      "ABCanalysis" </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [6] "ABCoptim"     "ABHgenotypeR" "ABM"          "ABPS"         "ABRSQOL"     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [11] "ABSurvTDC"    "ACA"          "ACDm"         "ACE.CoCo"     "ACEP"        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [ reached getOption("max.print") -- omitted 21910 entries ]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [ reached getOption("max.print") -- omitted 21921 entries ]</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

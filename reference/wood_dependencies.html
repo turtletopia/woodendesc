@@ -9,7 +9,7 @@ of the selected packages and returns the first working occurence."><meta propert
 
     <a class="navbar-brand me-2" href="../index.html">woodendesc</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,10 +69,12 @@ Names of the packages to query for.</p></dd>
 A vector of repositories to query. The following values are available:</p><ul><li><p><code>"cran"</code>, meaning CRAN;</p></li>
 <li><p><code>"bioc@release"</code>, meaning Bioconductor, where <code>release</code> should be replaced
 with a valid Bioconductor release code or one of <code>"release"</code>, <code>"devel"</code>;</p></li>
-<li><p><code>"github/user"</code>, meaning GitHub, where <code>user</code> should be replaced with a
-valid user or organization name (e.g. <code>turtletopia</code>);</p></li>
 <li><p><code>"runiverse@universe"</code>, meaning R-universe, where <code>universe</code> should be
 replaced with a valid universe name (e.g. <code>turtletopia</code>);</p></li>
+<li><p><code>"github/user"</code>, meaning GitHub, where <code>user</code> should be replaced with a
+valid user or organization name (e.g. <code>turtletopia</code>);</p></li>
+<li><p><code>"gitlab/user"</code>, meaning GitLab, where <code>user</code> should be replaced with a
+valid user or group name (e.g. <code>r-packages</code>);</p></li>
 <li><p><code>"local#index"</code>, meaning a local library, where <code>index</code> should be replaced
 with an integer index of a library in <code><a href="https://rdrr.io/r/base/libPaths.html" class="external-link">base::.libPaths()</a></code> or an <code>all</code>
 keyword;</p></li>
@@ -173,15 +175,17 @@ with three columns, all in string format:</p><ul><li><p><code>package</code> (pa
 <span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  &lt;woodendesc dependencies&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Depends:     R (&gt;= 3.5.0)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Imports:     digest</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Imports:     httr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Depends:     R (&gt;= 4.1.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Imports:     httr2 (&gt;= 1.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Imports:     rlang (&gt;= 1.0.0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Imports:     utils</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Imports:     versionsort (&gt;= 1.1.0)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    covr</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    httptest</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    httptest2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    knitr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    rmarkdown</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    testthat (&gt;= 3.0.0)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    usethis</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    vcr</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    withr</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Suggests:    xml2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
