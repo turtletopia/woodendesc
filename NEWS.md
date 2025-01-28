@@ -1,4 +1,7 @@
-# woodendesc (development version)
+# woodendesc 0.2.1
+
+* Fixed GitLab being missing as an option for `wood_packages()`, `wood_dependencies()`, and `wood_versions()`.
+* Modified tests to avoid storing whole CRAN package list _twice_.
 
 # woodendesc 0.2.0
 
