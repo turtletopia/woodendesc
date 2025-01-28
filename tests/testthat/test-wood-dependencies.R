@@ -3,7 +3,7 @@ wood_clear_cache()
 
 # SETUP ----
 pkgs <- c("versionsort", "gglgbtq", "woodendesc")
-with_mock_dir("z", {
+httptest2::with_mock_api({
   mixed_deps <- wood_dependencies(pkgs, repos = c("cran", "local#all"))
 })
 

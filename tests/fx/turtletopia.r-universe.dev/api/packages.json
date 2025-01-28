@@ -1,0 +1,2781 @@
+[
+    {
+        "Package": "woodendesc",
+        "Type": "Package",
+        "Title": "Find Packages and Their Dependencies in Any 'R' Repository",
+        "Version": "0.2.0",
+        "Date": "2025-01-26",
+        "Authors@R": "c(person(\"Laura\", \"Bakala\",\nemail = \"erdaradun.gaztea@gmail.com\",\nrole = c(\"cre\", \"aut\", \"cph\"),\ncomment = c(ORCID = \"0000-0002-3213-2484\")),\nperson(\"Dominik\", \"Rafacz\",\nemail = \"dominikrafacz@gmail.com\",\nrole = c(\"ctb\"),\ncomment = c(ORCID = \"0000-0003-0925-1909\")))",
+        "Description": "Simplifies getting the available packages, their version\ncodes and dependencies from any 'R' repository. Uses extensive\ncaching for repeated queries.",
+        "License": "GPL (>= 3)",
+        "Encoding": "UTF-8",
+        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "7.3.2",
+        "Config/testthat/edition": "3",
+        "URL": "https://github.com/turtletopia/woodendesc,\nhttps://turtletopia.github.io/woodendesc/",
+        "VignetteBuilder": "knitr",
+        "Config/pak/sysreqs": "libssl-dev",
+        "Repository": "https://turtletopia.r-universe.dev",
+        "RemoteUrl": "https://github.com/turtletopia/woodendesc",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+        "NeedsCompilation": "no",
+        "Packaged": {
+            "Date": "2025-01-26 19:16:53 UTC",
+            "User": "root"
+        },
+        "Author": "Laura Bakala [cre, aut, cph] (<https://orcid.org/0000-0002-3213-2484>),\nDominik Rafacz [ctb] (<https://orcid.org/0000-0003-0925-1909>)",
+        "Maintainer": "Laura Bakala <erdaradun.gaztea@gmail.com>",
+        "MD5sum": "a9c131fb6c4be4a3aa20abe095209f87",
+        "_user": "turtletopia",
+        "_type": "src",
+        "_file": "woodendesc_0.2.0.tar.gz",
+        "_fileid": "aa211d7a4970c552e77c7260016245f85004b73ef7a775ea8f2cdecd2888ec31",
+        "_filesize": 6158997,
+        "_sha256": "aa211d7a4970c552e77c7260016245f85004b73ef7a775ea8f2cdecd2888ec31",
+        "_created": "2025-01-26T19:16:53.000Z",
+        "_published": "2025-01-26T19:20:25.346Z",
+        "_upstream": "https://github.com/turtletopia/woodendesc",
+        "_commit": {
+            "id": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+            "author": "Laura <erdaradun.gaztea+github@gmail.com>",
+            "committer": "Laura <erdaradun.gaztea+github@gmail.com>",
+            "message": "add favicons\n",
+            "time": 1737915599
+        },
+        "_maintainer": {
+            "name": "Laura Bakala",
+            "email": "erdaradun.gaztea@gmail.com",
+            "login": "erdaradungaztea",
+            "uuid": 32573962,
+            "orcid": "0000-0002-3213-2484"
+        },
+        "_distro": "noble",
+        "_host": "GitHub-Actions",
+        "_status": "success",
+        "_pkgdocs": "skipped",
+        "_winbinary": "success",
+        "_macbinary": "success",
+        "_wasmbinary": "success",
+        "_linuxdevel": "success",
+        "_windevel": "success",
+        "_buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503",
+        "_registered": true,
+        "_dependencies": [
+            {
+                "package": "R",
+                "version": ">= 4.1.0",
+                "role": "Depends"
+            },
+            {
+                "package": "httr2",
+                "version": ">= 1.0.0",
+                "role": "Imports"
+            },
+            {
+                "package": "rlang",
+                "version": ">= 1.0.0",
+                "role": "Imports"
+            },
+            {
+                "package": "utils",
+                "role": "Imports"
+            },
+            {
+                "package": "versionsort",
+                "version": ">= 1.1.0",
+                "role": "Imports"
+            },
+            {
+                "package": "covr",
+                "role": "Suggests"
+            },
+            {
+                "package": "httptest2",
+                "role": "Suggests"
+            },
+            {
+                "package": "knitr",
+                "role": "Suggests"
+            },
+            {
+                "package": "rmarkdown",
+                "role": "Suggests"
+            },
+            {
+                "package": "testthat",
+                "version": ">= 3.0.0",
+                "role": "Suggests"
+            },
+            {
+                "package": "usethis",
+                "role": "Suggests"
+            },
+            {
+                "package": "withr",
+                "role": "Suggests"
+            },
+            {
+                "package": "xml2",
+                "role": "Suggests"
+            }
+        ],
+        "_owner": "turtletopia",
+        "_selfowned": true,
+        "_usedby": 0,
+        "_updates": [
+            {
+                "week": "2025-04",
+                "n": 2
+            }
+        ],
+        "_tags": [
+
+        ],
+        "_topics": [
+            "available-packages",
+            "available-versions",
+            "dependencies",
+            "unified-api"
+        ],
+        "_stars": 5,
+        "_contributions": {
+            "erdaradungaztea": 509,
+            "dominikrafacz": 1
+        },
+        "_userbio": {
+            "uuid": 103829938,
+            "type": "organization",
+            "name": "turtletopia"
+        },
+        "_downloads": {
+            "count": 13,
+            "source": "https://cranlogs.r-pkg.org/downloads/total/last-month/woodendesc"
+        },
+        "_devurl": "https://github.com/turtletopia/woodendesc",
+        "_pkgdown": "https://turtletopia.github.io/woodendesc/",
+        "_rbuild": "4.4.2",
+        "_assets": [
+            "extra/citation.cff",
+            "extra/citation.html",
+            "extra/citation.json",
+            "extra/citation.txt",
+            "extra/contents.json",
+            "extra/NEWS.html",
+            "extra/NEWS.txt",
+            "extra/readme.html",
+            "extra/readme.md",
+            "extra/woodendesc.html",
+            "manual.pdf"
+        ],
+        "_cranurl": false,
+        "_releases": [
+            {
+                "version": "0.1.0",
+                "date": "2023-04-18"
+            }
+        ],
+        "_exports": [
+            "filter_dependencies",
+            "squash",
+            "wood_bioc_dependencies",
+            "wood_bioc_packages",
+            "wood_bioc_releases",
+            "wood_bioc_version",
+            "wood_clear_cache",
+            "wood_core_dependencies",
+            "wood_core_packages",
+            "wood_core_version",
+            "wood_cran_dependencies",
+            "wood_cran_latest",
+            "wood_cran_packages",
+            "wood_cran_versions",
+            "wood_dependencies",
+            "wood_github_dependencies",
+            "wood_github_latest",
+            "wood_github_packages",
+            "wood_github_tags",
+            "wood_github_versions",
+            "wood_gitlab_dependencies",
+            "wood_gitlab_latest",
+            "wood_gitlab_packages",
+            "wood_gitlab_tags",
+            "wood_gitlab_versions",
+            "wood_local_dependencies",
+            "wood_local_packages",
+            "wood_local_versions",
+            "wood_packages",
+            "wood_runiverse_dependencies",
+            "wood_runiverse_packages",
+            "wood_runiverse_version",
+            "wood_url_dependencies",
+            "wood_url_packages",
+            "wood_url_version",
+            "wood_versions"
+        ],
+        "_help": [
+            {
+                "page": "filter_dependencies",
+                "title": "Filter dependencies by type",
+                "topics": [
+                    "filter_dependencies",
+                    "filter_dependencies.NULL",
+                    "filter_dependencies.wood_deps",
+                    "filter_dependencies.wood_dep_list",
+                    "filter_dependencies.wood_dep_squashed"
+                ]
+            },
+            {
+                "page": "squash",
+                "title": "Compress dependencies of multiple packages",
+                "topics": [
+                    "squash",
+                    "squash.wood_dep_list"
+                ]
+            },
+            {
+                "page": "wood_bioc_dependencies",
+                "title": "Get dependencies of a package in Bioconductor",
+                "topics": [
+                    "wood_bioc_dependencies"
+                ]
+            },
+            {
+                "page": "wood_bioc_packages",
+                "title": "List available packages in Bioconductor",
+                "topics": [
+                    "wood_bioc_packages"
+                ]
+            },
+            {
+                "page": "wood_bioc_releases",
+                "title": "List Bioconductor releases",
+                "topics": [
+                    "wood_bioc_releases"
+                ]
+            },
+            {
+                "page": "wood_bioc_version",
+                "title": "Get available package version in Bioconductor",
+                "topics": [
+                    "wood_bioc_version"
+                ]
+            },
+            {
+                "page": "wood_clear_cache",
+                "title": "Clear cache",
+                "topics": [
+                    "wood_clear_cache"
+                ]
+            },
+            {
+                "page": "wood_core_dependencies",
+                "title": "Get dependencies of a core R package",
+                "topics": [
+                    "wood_core_dependencies"
+                ]
+            },
+            {
+                "page": "wood_core_packages",
+                "title": "List core R packages",
+                "topics": [
+                    "wood_core_packages"
+                ]
+            },
+            {
+                "page": "wood_core_version",
+                "title": "Get current version of a core R package",
+                "topics": [
+                    "wood_core_version"
+                ]
+            },
+            {
+                "page": "wood_cran_dependencies",
+                "title": "Get dependencies of a package on CRAN",
+                "topics": [
+                    "wood_cran_dependencies"
+                ]
+            },
+            {
+                "page": "wood_cran_latest",
+                "title": "Get latest package version on CRAN",
+                "topics": [
+                    "wood_cran_latest"
+                ]
+            },
+            {
+                "page": "wood_cran_packages",
+                "title": "List available packages on CRAN",
+                "topics": [
+                    "wood_cran_packages"
+                ]
+            },
+            {
+                "page": "wood_cran_versions",
+                "title": "Get all package versions on CRAN",
+                "topics": [
+                    "wood_cran_versions"
+                ]
+            },
+            {
+                "page": "wood_dependencies",
+                "title": "Find dependencies from multiple repositories",
+                "topics": [
+                    "wood_dependencies"
+                ]
+            },
+            {
+                "page": "wood_github_dependencies",
+                "title": "Get dependencies of a package on GitHub",
+                "topics": [
+                    "wood_github_dependencies"
+                ]
+            },
+            {
+                "page": "wood_github_latest",
+                "title": "Get current package version on GitHub",
+                "topics": [
+                    "wood_github_latest"
+                ]
+            },
+            {
+                "page": "wood_github_packages",
+                "title": "List available package on a Github account",
+                "topics": [
+                    "wood_github_packages"
+                ]
+            },
+            {
+                "page": "wood_github_tags",
+                "title": "List GitHub tags for a repository",
+                "topics": [
+                    "wood_github_tags"
+                ]
+            },
+            {
+                "page": "wood_github_versions",
+                "title": "Get all tagged package versions on GitHub",
+                "topics": [
+                    "wood_github_versions"
+                ]
+            },
+            {
+                "page": "wood_gitlab_dependencies",
+                "title": "Get dependencies of a package on GitLab",
+                "topics": [
+                    "wood_gitlab_dependencies"
+                ]
+            },
+            {
+                "page": "wood_gitlab_latest",
+                "title": "Get current package version on GitLab",
+                "topics": [
+                    "wood_gitlab_latest"
+                ]
+            },
+            {
+                "page": "wood_gitlab_packages",
+                "title": "List available package on a Gitlab account",
+                "topics": [
+                    "wood_gitlab_packages"
+                ]
+            },
+            {
+                "page": "wood_gitlab_tags",
+                "title": "List GitLab tags for a repository",
+                "topics": [
+                    "wood_gitlab_tags"
+                ]
+            },
+            {
+                "page": "wood_gitlab_versions",
+                "title": "Get all tagged package versions on GitLab",
+                "topics": [
+                    "wood_gitlab_versions"
+                ]
+            },
+            {
+                "page": "wood_local_dependencies",
+                "title": "Get dependencies of locally available package",
+                "topics": [
+                    "wood_local_dependencies"
+                ]
+            },
+            {
+                "page": "wood_local_packages",
+                "title": "List locally available packages",
+                "topics": [
+                    "wood_local_packages"
+                ]
+            },
+            {
+                "page": "wood_local_versions",
+                "title": "Get locally available package versions",
+                "topics": [
+                    "wood_local_versions"
+                ]
+            },
+            {
+                "page": "wood_packages",
+                "title": "Collect available packages from multiple repositories",
+                "topics": [
+                    "wood_packages"
+                ]
+            },
+            {
+                "page": "wood_runiverse_dependencies",
+                "title": "Get dependencies of a package in one of R universes",
+                "topics": [
+                    "wood_runiverse_dependencies"
+                ]
+            },
+            {
+                "page": "wood_runiverse_packages",
+                "title": "List available packages in one of R universes",
+                "topics": [
+                    "wood_runiverse_packages"
+                ]
+            },
+            {
+                "page": "wood_runiverse_version",
+                "title": "Get current package version in one of R universes",
+                "topics": [
+                    "wood_runiverse_version"
+                ]
+            },
+            {
+                "page": "wood_url_dependencies",
+                "title": "Get dependencies of a package in any repository",
+                "topics": [
+                    "wood_url_dependencies"
+                ]
+            },
+            {
+                "page": "wood_url_packages",
+                "title": "List available packages in any repository",
+                "topics": [
+                    "wood_url_packages"
+                ]
+            },
+            {
+                "page": "wood_url_version",
+                "title": "Get current package version in any repository",
+                "topics": [
+                    "wood_url_version"
+                ]
+            },
+            {
+                "page": "wood_versions",
+                "title": "Collect all package versions from multiple repositories",
+                "topics": [
+                    "wood_versions"
+                ]
+            }
+        ],
+        "_pkglogo": "https://github.com/turtletopia/woodendesc/raw/HEAD/man/figures/logo.svg",
+        "_readme": "https://github.com/turtletopia/woodendesc/raw/HEAD/README.md",
+        "_rundeps": [
+            "askpass",
+            "cli",
+            "curl",
+            "glue",
+            "httr2",
+            "lifecycle",
+            "magrittr",
+            "openssl",
+            "R6",
+            "rappdirs",
+            "rlang",
+            "sys",
+            "vctrs",
+            "versionsort",
+            "withr"
+        ],
+        "_vignettes": [
+            {
+                "source": "url.Rmd",
+                "filename": "url.html",
+                "title": "Analysing any URL",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Packages",
+                    "Available package version",
+                    "Package dependencies"
+                ],
+                "created": "2025-01-26 18:08:29",
+                "modified": "2025-01-26 18:08:29",
+                "commits": 1
+            },
+            {
+                "source": "core.Rmd",
+                "filename": "core.html",
+                "title": "Analysing base packages",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Packages",
+                    "Available package version",
+                    "Package dependencies"
+                ],
+                "created": "2025-01-26 18:08:29",
+                "modified": "2025-01-26 18:08:29",
+                "commits": 1
+            },
+            {
+                "source": "bioc.Rmd",
+                "filename": "bioc.html",
+                "title": "Analysing Bioconductor",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Packages",
+                    "Available package version",
+                    "Package dependencies",
+                    "Bioconductor releases"
+                ],
+                "created": "2025-01-26 18:08:29",
+                "modified": "2025-01-26 18:08:29",
+                "commits": 1
+            },
+            {
+                "source": "cran.Rmd",
+                "filename": "cran.html",
+                "title": "Analysing CRAN",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Packages",
+                    "Available package versions",
+                    "Latest package version",
+                    "Package dependencies"
+                ],
+                "created": "2025-01-26 18:08:29",
+                "modified": "2025-01-26 18:08:29",
+                "commits": 1
+            },
+            {
+                "source": "github.Rmd",
+                "filename": "github.html",
+                "title": "Analysing GitHub",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Packages",
+                    "Available tags",
+                    "Available package versions",
+                    "Latest package version",
+                    "Package dependencies"
+                ],
+                "created": "2025-01-26 18:08:29",
+                "modified": "2025-01-26 18:08:29",
+                "commits": 1
+            },
+            {
+                "source": "gitlab.Rmd",
+                "filename": "gitlab.html",
+                "title": "Analysing GitLab",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Packages",
+                    "Available tags",
+                    "Available package versions",
+                    "Latest package version",
+                    "Package dependencies"
+                ],
+                "created": "2025-01-26 18:08:29",
+                "modified": "2025-01-26 18:08:29",
+                "commits": 1
+            },
+            {
+                "source": "local.Rmd",
+                "filename": "local.html",
+                "title": "Analysing local libraries",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Packages",
+                    "Available package versions",
+                    "Package dependencies"
+                ],
+                "created": "2025-01-26 18:08:29",
+                "modified": "2025-01-26 18:08:29",
+                "commits": 1
+            },
+            {
+                "source": "runiverse.Rmd",
+                "filename": "runiverse.html",
+                "title": "Analysing R-universe",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Packages",
+                    "Available package version",
+                    "Package dependencies"
+                ],
+                "created": "2025-01-26 18:08:29",
+                "modified": "2025-01-26 18:08:29",
+                "commits": 1
+            }
+        ],
+        "_score": 4.301029995663981,
+        "_indexed": true,
+        "_nocasepkg": "woodendesc",
+        "_universes": [
+            "turtletopia",
+            "erdaradungaztea"
+        ],
+        "_binaries": [
+            {
+                "r": "4.5.0",
+                "os": "linux",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:19:43.000Z",
+                "distro": "noble",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "157ab38050ad998247a297af60ab709d47a048952704b472151981fd52cd1e19",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.4.2",
+                "os": "linux",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:17:14.000Z",
+                "distro": "noble",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "54194fbb4a3aaaf14fb77243d996d39122ed0ae62f7f037cacb861bb43209056",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.5.0",
+                "os": "mac",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:18:51.000Z",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "02d94df77a3a9aea61cb2c379f6e25b7737423a65510319646efa684b83f1b6f",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.3.3",
+                "os": "mac",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:18:58.000Z",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "8af0e4e89b024b8e14f3a45adaed155040e89a6567ad38ca4086d3fab1faddb8",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.4.2",
+                "os": "mac",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:19:02.000Z",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "8eba36ee6be0215c10d381723c1449ff85ce3e1000537cef0855542f48e94860",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.3.3",
+                "os": "wasm",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:19:28.000Z",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "71d8e8703804419bea120a9715e00181a4edd46332c03d47cfdbcd4ac8fb788d",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.4.1",
+                "os": "wasm",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:19:22.000Z",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "e9d140fe874c58fc22e84dfaa72fd93ad23b1d6018cd43fe385db05d48e28878",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.5.0",
+                "os": "win",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:19:14.000Z",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "055850df2be2b4e9daf48e4f39c0a564b06b0fe24598950c5068a6c33f213ee5",
+                "status": "success",
+                "check": "NOTE",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.3.3",
+                "os": "win",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:18:55.000Z",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "0f91bff600d60ef357a47c5ecc9e70c65f764597380d3591ad67275ff9f8c071",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            },
+            {
+                "r": "4.4.2",
+                "os": "win",
+                "version": "0.2.0",
+                "date": "2025-01-26T19:18:44.000Z",
+                "commit": "fe117768fa5b066ff32e2cc5628daa9047c90204",
+                "fileid": "99406d45855de3c5fb29e21cff4024b23759aca19a87d1a073efb26371791dea",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12977582503"
+            }
+        ]
+    },
+    {
+        "Package": "gglgbtq",
+        "Type": "Package",
+        "Title": "Show Pride on 'ggplot2' Plots",
+        "Version": "0.2.0",
+        "Authors@R": "c(person(\"Laura\", \"Bakala\",\nemail = \"erdaradun.gaztea@gmail.com\",\nrole = c(\"cre\", \"aut\", \"cph\"),\ncomment = c(ORCID = \"0000-0002-3213-2484\")))",
+        "Description": "Provides multiple palettes based on pride flags with\ntailored themes.",
+        "License": "GPL (>= 3)",
+        "Encoding": "UTF-8",
+        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "7.2.3",
+        "Config/testthat/edition": "3",
+        "URL": "https://github.com/turtletopia/gglgbtq,\nhttps://turtletopia.github.io/gglgbtq/",
+        "Language": "en-US",
+        "VignetteBuilder": "knitr",
+        "Repository": "https://turtletopia.r-universe.dev",
+        "RemoteUrl": "https://github.com/turtletopia/gglgbtq",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+        "NeedsCompilation": "no",
+        "Packaged": {
+            "Date": "2025-01-10 05:18:05 UTC",
+            "User": "root"
+        },
+        "Author": "Laura Bakala [cre, aut, cph] (<https://orcid.org/0000-0002-3213-2484>)",
+        "Maintainer": "Laura Bakala <erdaradun.gaztea@gmail.com>",
+        "MD5sum": "ef43ae95ee91eb612c2acc783f9aef36",
+        "_user": "turtletopia",
+        "_type": "src",
+        "_file": "gglgbtq_0.2.0.tar.gz",
+        "_fileid": "9e4fc08799a3a72dbc05aae37342aaa54762d329efdc92eff9a1ef0334b97b00",
+        "_filesize": 429140,
+        "_sha256": "9e4fc08799a3a72dbc05aae37342aaa54762d329efdc92eff9a1ef0334b97b00",
+        "_created": "2025-01-10T05:18:05.000Z",
+        "_published": "2025-01-10T05:21:51.176Z",
+        "_upstream": "https://github.com/turtletopia/gglgbtq",
+        "_commit": {
+            "id": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+            "author": "Laura <erdaradun.gaztea+github@gmail.com>",
+            "committer": "Laura <erdaradun.gaztea+github@gmail.com>",
+            "message": "set min. ggplot2 version for linewidth parameter\n",
+            "time": 1720213796
+        },
+        "_maintainer": {
+            "name": "Laura Bakala",
+            "email": "erdaradun.gaztea@gmail.com",
+            "login": "erdaradungaztea",
+            "uuid": 32573962,
+            "orcid": "0000-0002-3213-2484"
+        },
+        "_distro": "noble",
+        "_host": "GitHub-Actions",
+        "_status": "success",
+        "_pkgdocs": "skipped",
+        "_winbinary": "success",
+        "_macbinary": "success",
+        "_wasmbinary": "success",
+        "_linuxdevel": "success",
+        "_windevel": "success",
+        "_buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615",
+        "_registered": true,
+        "_dependencies": [
+            {
+                "package": "R",
+                "version": ">= 2.10",
+                "role": "Depends"
+            },
+            {
+                "package": "ggplot2",
+                "version": ">= 3.4.0",
+                "role": "Imports"
+            },
+            {
+                "package": "graphics",
+                "role": "Imports"
+            },
+            {
+                "package": "grDevices",
+                "role": "Imports"
+            },
+            {
+                "package": "rlang",
+                "role": "Imports"
+            },
+            {
+                "package": "tibble",
+                "role": "Imports"
+            },
+            {
+                "package": "knitr",
+                "role": "Suggests"
+            },
+            {
+                "package": "rmarkdown",
+                "role": "Suggests"
+            },
+            {
+                "package": "spelling",
+                "role": "Suggests"
+            },
+            {
+                "package": "testthat",
+                "version": ">= 3.0.0",
+                "role": "Suggests"
+            },
+            {
+                "package": "vdiffr",
+                "role": "Suggests"
+            }
+        ],
+        "_owner": "turtletopia",
+        "_selfowned": true,
+        "_usedby": 0,
+        "_updates": [
+            {
+                "week": "2024-26",
+                "n": 2
+            },
+            {
+                "week": "2024-27",
+                "n": 1
+            }
+        ],
+        "_tags": [
+            {
+                "name": "v0.2.0",
+                "date": "2024-06-25"
+            }
+        ],
+        "_topics": [
+            "ggplot2",
+            "ggplot2-themes",
+            "lgbt",
+            "palettes",
+            "pride",
+            "pride-flags"
+        ],
+        "_stars": 14,
+        "_contributions": {
+            "erdaradungaztea": 102
+        },
+        "_userbio": {
+            "uuid": 103829938,
+            "type": "organization",
+            "name": "turtletopia"
+        },
+        "_downloads": {
+            "count": 184,
+            "source": "https://cranlogs.r-pkg.org/downloads/total/last-month/gglgbtq"
+        },
+        "_devurl": "https://github.com/turtletopia/gglgbtq",
+        "_pkgdown": "https://turtletopia.github.io/gglgbtq/",
+        "_searchresults": 16,
+        "_assets": [
+            "extra/citation.cff",
+            "extra/citation.html",
+            "extra/citation.json",
+            "extra/citation.txt",
+            "extra/contents.json",
+            "extra/gglgbtq.html",
+            "extra/NEWS.html",
+            "extra/NEWS.txt",
+            "extra/readme.html",
+            "extra/readme.md",
+            "manual.pdf"
+        ],
+        "_homeurl": "https://github.com/turtletopia/gglgbtq",
+        "_realowner": "turtletopia",
+        "_cranurl": true,
+        "_releases": [
+            {
+                "version": "0.1.0",
+                "date": "2022-08-16"
+            },
+            {
+                "version": "0.1.1",
+                "date": "2022-11-01"
+            },
+            {
+                "version": "0.2.0",
+                "date": "2024-06-25"
+            }
+        ],
+        "_exports": [
+            "palette_lgbtq",
+            "scale_color_lgbtq",
+            "scale_colour_lgbtq",
+            "scale_fill_lgbtq",
+            "show_pride",
+            "theme_lgbtq"
+        ],
+        "_help": [
+            {
+                "page": "lgbtq-scales",
+                "title": "Apply gglgbtq scales",
+                "topics": [
+                    "lgbtq-scales",
+                    "scale_color_lgbtq",
+                    "scale_colour_lgbtq",
+                    "scale_fill_lgbtq"
+                ]
+            },
+            {
+                "page": "palette_lgbtq",
+                "title": "Get one of LGBTQ palettes",
+                "topics": [
+                    "palette_lgbtq"
+                ]
+            },
+            {
+                "page": "show_pride",
+                "title": "List available palettes",
+                "topics": [
+                    "show_pride"
+                ]
+            },
+            {
+                "page": "theme_lgbtq",
+                "title": "Use default theme for an LGBTQ palette",
+                "topics": [
+                    "theme_lgbtq"
+                ]
+            }
+        ],
+        "_pkglogo": "https://github.com/turtletopia/gglgbtq/raw/HEAD/man/figures/logo.svg",
+        "_readme": "https://github.com/turtletopia/gglgbtq/raw/HEAD/README.md",
+        "_rundeps": [
+            "cli",
+            "colorspace",
+            "fansi",
+            "farver",
+            "ggplot2",
+            "glue",
+            "gtable",
+            "isoband",
+            "labeling",
+            "lattice",
+            "lifecycle",
+            "magrittr",
+            "MASS",
+            "Matrix",
+            "mgcv",
+            "munsell",
+            "nlme",
+            "pillar",
+            "pkgconfig",
+            "R6",
+            "RColorBrewer",
+            "rlang",
+            "scales",
+            "tibble",
+            "utf8",
+            "vctrs",
+            "viridisLite",
+            "withr"
+        ],
+        "_vignettes": [
+            {
+                "source": "gallery.Rmd",
+                "filename": "gallery.html",
+                "title": "Palette gallery",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "The most common flags",
+                    "Rainbow variants",
+                    "Sexualities on A-spectrum",
+                    "Other sexualities",
+                    "Genders on fem-masc spectrum",
+                    "Galactian alignment system",
+                    "Other genders",
+                    "Subcultures",
+                    "Uncategorized"
+                ],
+                "created": "2022-09-11 13:26:45",
+                "modified": "2024-06-25 21:40:25",
+                "commits": 2
+            }
+        ],
+        "_score": 5.350248018334163,
+        "_indexed": true,
+        "_nocasepkg": "gglgbtq",
+        "_universes": [
+            "turtletopia",
+            "erdaradungaztea"
+        ],
+        "_binaries": [
+            {
+                "r": "4.5.0",
+                "os": "linux",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:20:23.000Z",
+                "distro": "noble",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "d979243dc523f7c1facd4bf76539e49b4c0ffed76972d711283845666941a2c9",
+                "status": "success",
+                "check": "NOTE",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            },
+            {
+                "r": "4.4.2",
+                "os": "linux",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:18:06.000Z",
+                "distro": "noble",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "71eaa879ea162ab824e9682f76fd9ec4ca61702bcefc309843bb5f2b43694055",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            },
+            {
+                "r": "4.3.3",
+                "os": "mac",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:20:30.000Z",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "6565cf0286ceb2f4f2e7b8ab05ddc854178d92ef6fc97ee5cc1d86ca1be725b4",
+                "status": "success",
+                "check": "NOTE",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            },
+            {
+                "r": "4.4.2",
+                "os": "mac",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:20:59.000Z",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "703549e21c50f464fb2b6e294cb893f513661f5a666ab131de6944b3b87692a2",
+                "status": "success",
+                "check": "NOTE",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            },
+            {
+                "r": "4.3.3",
+                "os": "wasm",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:20:03.000Z",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "1469d9852324bbed1f1f566bdf1ef6238227ad92e3b515c0871d395425413581",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            },
+            {
+                "r": "4.4.1",
+                "os": "wasm",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:19:59.000Z",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "c30a3d4efd198ddff2fed2d1fdbb72acc1c5d9166a804aed5bc35fe2155e0adc",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            },
+            {
+                "r": "4.5.0",
+                "os": "win",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:19:25.000Z",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "e593dc3e688458ff85d02e9af5f596cb79c29a600b0ee2f26cf5d02508bf0c72",
+                "status": "success",
+                "check": "NOTE",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            },
+            {
+                "r": "4.3.3",
+                "os": "win",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:19:36.000Z",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "ea9667a4db9ea9eaaff27abd4ccbb8a2b77606bcf65803017badf03824626d88",
+                "status": "success",
+                "check": "NOTE",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            },
+            {
+                "r": "4.4.2",
+                "os": "win",
+                "version": "0.2.0",
+                "date": "2025-01-10T05:19:36.000Z",
+                "commit": "d157c987ddc625af77c2b00cec108cd22ad7aad0",
+                "fileid": "fd214ea44363fb03b426c1c15b6c3111c824a1a87c6b2585342b741c0c5c326c",
+                "status": "success",
+                "check": "NOTE",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12703730615"
+            }
+        ]
+    },
+    {
+        "Package": "deepdep",
+        "Title": "Visualise and Explore the Deep Dependencies of R Packages",
+        "Version": "0.4.2",
+        "Authors@R": "c(person(\"Dominik\", \"Rafacz\", email = \"dominikrafacz@gmail.com\",\nrole = c(\"aut\", \"cre\"),\ncomment = c(ORCID = \"0000-0003-0925-1909\")),\nperson(\"Hubert\", \"Baniecki\", role = c(\"aut\")),\nperson(\"Szymon\", \"Maksymiuk\", role = c(\"aut\")),\nperson(\"Laura\", \"Bakala\", role = c(\"aut\")),\nperson(\"Dirk\", \"Eddelbuettel\", role = c(\"ctb\")))",
+        "Description": "Provides tools for exploration of R package dependencies.\nThe main deepdep() function allows to acquire deep dependencies\nof any package and plot them in an elegant way. It also adds\nsome popularity measures for the packages e.g. in the form of\ndownload count through the 'cranlogs' package. Uses the CRAN\nmetadata database <http://crandb.r-pkg.org> and Bioconductor\nmetadata <http://bioconductor.org>. Other data acquire\nfunctions are: get_dependencies(), get_downloads() and\nget_description(). The deepdep_shiny() function runs shiny\napplication that helps to produce a nice 'deepdep' plot.",
+        "License": "GPL-3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "VignetteBuilder": "knitr",
+        "URL": "https://dominikrafacz.github.io/deepdep/,\nhttps://github.com/DominikRafacz/deepdep",
+        "BugReports": "https://github.com/DominikRafacz/deepdep/issues",
+        "Language": "en-GB",
+        "Config/pak/sysreqs": "libssl-dev",
+        "Repository": "https://turtletopia.r-universe.dev",
+        "RemoteUrl": "https://github.com/DominikRafacz/deepdep",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+        "NeedsCompilation": "no",
+        "Packaged": {
+            "Date": "2025-01-25 18:14:21 UTC",
+            "User": "root"
+        },
+        "Author": "Dominik Rafacz [aut, cre] (<https://orcid.org/0000-0003-0925-1909>),\nHubert Baniecki [aut],\nSzymon Maksymiuk [aut],\nLaura Bakala [aut],\nDirk Eddelbuettel [ctb]",
+        "Maintainer": "Dominik Rafacz <dominikrafacz@gmail.com>",
+        "MD5sum": "beadaa6355234db5da0cb74da2d07526",
+        "_user": "turtletopia",
+        "_type": "src",
+        "_file": "deepdep_0.4.2.tar.gz",
+        "_fileid": "8e3bb123f9dacbb0e54bb1f3c4eab7cbc2f9d0c0c938ab4564056546e9ff888a",
+        "_filesize": 1627461,
+        "_sha256": "8e3bb123f9dacbb0e54bb1f3c4eab7cbc2f9d0c0c938ab4564056546e9ff888a",
+        "_created": "2025-01-25T18:14:21.000Z",
+        "_published": "2025-01-25T18:22:12.651Z",
+        "_upstream": "https://github.com/DominikRafacz/deepdep",
+        "_commit": {
+            "id": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+            "author": "dominik-aigora <dominik.rafacz@aigora.com>",
+            "committer": "dominik-aigora <dominik.rafacz@aigora.com>",
+            "message": "remove travis.yml\n\n",
+            "time": 1676924857
+        },
+        "_maintainer": {
+            "name": "Dominik Rafacz",
+            "email": "dominikrafacz@gmail.com",
+            "login": "dominikrafacz",
+            "uuid": 32573752,
+            "orcid": "0000-0003-0925-1909"
+        },
+        "_distro": "noble",
+        "_host": "GitHub-Actions",
+        "_status": "success",
+        "_pkgdocs": "skipped",
+        "_winbinary": "success",
+        "_macbinary": "success",
+        "_wasmbinary": "success",
+        "_linuxdevel": "success",
+        "_windevel": "success",
+        "_buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704",
+        "_registered": true,
+        "_dependencies": [
+            {
+                "package": "R",
+                "version": ">= 3.2.0",
+                "role": "Depends"
+            },
+            {
+                "package": "cranlogs",
+                "role": "Imports"
+            },
+            {
+                "package": "httr",
+                "role": "Imports"
+            },
+            {
+                "package": "jsonlite",
+                "role": "Imports"
+            },
+            {
+                "package": "BiocManager",
+                "role": "Suggests"
+            },
+            {
+                "package": "covr",
+                "role": "Suggests"
+            },
+            {
+                "package": "devtools",
+                "role": "Suggests"
+            },
+            {
+                "package": "ggplot2",
+                "role": "Suggests"
+            },
+            {
+                "package": "ggraph",
+                "role": "Suggests"
+            },
+            {
+                "package": "graphlayouts",
+                "role": "Suggests"
+            },
+            {
+                "package": "igraph",
+                "role": "Suggests"
+            },
+            {
+                "package": "knitr",
+                "role": "Suggests"
+            },
+            {
+                "package": "miniCRAN",
+                "role": "Suggests"
+            },
+            {
+                "package": "plyr",
+                "role": "Suggests"
+            },
+            {
+                "package": "rmarkdown",
+                "role": "Suggests"
+            },
+            {
+                "package": "scales",
+                "role": "Suggests"
+            },
+            {
+                "package": "shiny",
+                "role": "Suggests"
+            },
+            {
+                "package": "shinycssloaders",
+                "role": "Suggests"
+            },
+            {
+                "package": "spelling",
+                "role": "Suggests"
+            },
+            {
+                "package": "stringi",
+                "role": "Suggests"
+            },
+            {
+                "package": "testthat",
+                "version": ">= 2.1.0",
+                "role": "Suggests"
+            },
+            {
+                "package": "vcr",
+                "role": "Suggests"
+            }
+        ],
+        "_owner": "dominikrafacz",
+        "_selfowned": false,
+        "_usedby": 0,
+        "_updates": [
+
+        ],
+        "_tags": [
+
+        ],
+        "_topics": [
+            "dependencies",
+            "plot",
+            "visualization"
+        ],
+        "_stars": 73,
+        "_contributions": {
+            "dominikrafacz": 123,
+            "erdaradungaztea": 83,
+            "maksymiuks": 16,
+            "dominik-aigora": 7,
+            "hbaniecki": 4,
+            "eddelbuettel": 3,
+            "michaelchirico": 1
+        },
+        "_userbio": {
+            "uuid": 103829938,
+            "type": "organization",
+            "name": "turtletopia"
+        },
+        "_downloads": {
+            "count": 308,
+            "source": "https://cranlogs.r-pkg.org/downloads/total/last-month/deepdep"
+        },
+        "_devurl": "https://github.com/dominikrafacz/deepdep",
+        "_pkgdown": "https://dominikrafacz.github.io/deepdep/",
+        "_rbuild": "4.4.2",
+        "_assets": [
+            "extra/citation.cff",
+            "extra/citation.html",
+            "extra/citation.json",
+            "extra/citation.txt",
+            "extra/contents.json",
+            "extra/deepdep.html",
+            "extra/NEWS.html",
+            "extra/NEWS.txt",
+            "extra/readme.html",
+            "extra/readme.md",
+            "manual.pdf"
+        ],
+        "_homeurl": "https://github.com/dominikrafacz/deepdep",
+        "_realowner": "dominikrafacz",
+        "_cranurl": true,
+        "_releases": [
+            {
+                "version": "0.2.0",
+                "date": "2020-03-06"
+            },
+            {
+                "version": "0.2.1",
+                "date": "2020-05-06"
+            },
+            {
+                "version": "0.2.2",
+                "date": "2021-03-31"
+            },
+            {
+                "version": "0.2.5.2",
+                "date": "2021-05-21"
+            },
+            {
+                "version": "0.2.5.3",
+                "date": "2021-06-07"
+            },
+            {
+                "version": "0.2.5.4",
+                "date": "2021-11-16"
+            },
+            {
+                "version": "0.3.0",
+                "date": "2021-12-09"
+            },
+            {
+                "version": "0.4.0",
+                "date": "2021-12-17"
+            },
+            {
+                "version": "0.4.1",
+                "date": "2021-12-20"
+            },
+            {
+                "version": "0.4.2",
+                "date": "2023-02-21"
+            },
+            {
+                "version": "0.4.3",
+                "date": "2024-03-12"
+            }
+        ],
+        "_exports": [
+            "deepdep",
+            "deepdep_shiny",
+            "get_available_packages",
+            "get_dependencies",
+            "get_description",
+            "get_downloads",
+            "plot_dependencies",
+            "plot_downloads"
+        ],
+        "_help": [
+            {
+                "page": "deepdep",
+                "title": "Acquire the dependencies of the package on any depth level",
+                "topics": [
+                    "deepdep"
+                ]
+            },
+            {
+                "page": "deepdep_shiny",
+                "title": "Run Shiny app",
+                "topics": [
+                    "deepdep_shiny"
+                ]
+            },
+            {
+                "page": "get_available_packages",
+                "title": "Get the list of available packages",
+                "topics": [
+                    "get_available_packages"
+                ]
+            },
+            {
+                "page": "get_dependencies",
+                "title": "Acquire the dependencies of the package",
+                "topics": [
+                    "get_dependencies"
+                ]
+            },
+            {
+                "page": "get_description",
+                "title": "Scrap the DESCRIPTION file and CRAN metadata of the package",
+                "topics": [
+                    "get_description"
+                ]
+            },
+            {
+                "page": "get_downloads",
+                "title": "Scrap the download data of the package",
+                "topics": [
+                    "get_downloads"
+                ]
+            },
+            {
+                "page": "plot_deepdep",
+                "title": "Main plot function for a 'deepdep' object",
+                "topics": [
+                    "plot_dependencies",
+                    "plot_dependencies.character",
+                    "plot_dependencies.deepdep",
+                    "plot_dependencies.default"
+                ]
+            },
+            {
+                "page": "plot_downloads",
+                "title": "Plot download count of CRAN packages.",
+                "topics": [
+                    "plot_downloads",
+                    "plot_downloads.character",
+                    "plot_downloads.deepdep",
+                    "plot_downloads.default",
+                    "plot_downloads.package_dependencies",
+                    "plot_downloads.package_downloads"
+                ]
+            },
+            {
+                "page": "print.available_packages",
+                "title": "Print function for an object of 'available_packages' class",
+                "topics": [
+                    "print.available_packages"
+                ]
+            },
+            {
+                "page": "print.deepdep",
+                "title": "Print function for an object of 'deepdep' class",
+                "topics": [
+                    "print.deepdep"
+                ]
+            },
+            {
+                "page": "print.package_dependencies",
+                "title": "Print function for an object of 'package_dependencies' class",
+                "topics": [
+                    "print.package_dependencies"
+                ]
+            },
+            {
+                "page": "print.package_description",
+                "title": "Print function for an object of 'package_description' class",
+                "topics": [
+                    "print.package_description"
+                ]
+            },
+            {
+                "page": "print.package_downloads",
+                "title": "Print function for an object of 'package_downloads' class",
+                "topics": [
+                    "print.package_downloads"
+                ]
+            }
+        ],
+        "_pkglogo": "https://github.com/DominikRafacz/deepdep/raw/HEAD/man/figures/logo.png",
+        "_readme": "https://github.com/DominikRafacz/deepdep/raw/HEAD/README.md",
+        "_rundeps": [
+            "askpass",
+            "cranlogs",
+            "curl",
+            "httr",
+            "jsonlite",
+            "mime",
+            "openssl",
+            "R6",
+            "sys"
+        ],
+        "_vignettes": [
+            {
+                "source": "deepdep-comparison.Rmd",
+                "filename": "deepdep-comparison.html",
+                "title": "Comparison of deepdep to similar packages",
+                "author": "Dominik Rafacz",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Comparison to other packages",
+                    "General advantages of deepdep",
+                    "DependenciesGraphs",
+                    "Advantages:",
+                    "Disadvantages:",
+                    "pkgnet",
+                    "Advantages",
+                    "Disadvantages",
+                    "miniCRAN"
+                ],
+                "created": "2019-11-14 10:38:51",
+                "modified": "2023-02-20 18:16:02",
+                "commits": 14
+            },
+            {
+                "source": "deepdep-package.Rmd",
+                "filename": "deepdep-package.html",
+                "title": "deepdep package",
+                "engine": "knitr::rmarkdown",
+                "headings": [
+                    "Introduction",
+                    "Use case",
+                    "Features",
+                    "get_available_packages",
+                    "get_description",
+                    "get_downloads",
+                    "get_dependencies",
+                    "deepdep",
+                    "plot_dependencies",
+                    "Caching"
+                ],
+                "created": "2019-11-14 10:38:51",
+                "modified": "2023-02-20 18:16:02",
+                "commits": 15
+            }
+        ],
+        "_score": 6.6414741105041,
+        "_indexed": false,
+        "_nocasepkg": "deepdep",
+        "_universes": [
+            "turtletopia"
+        ],
+        "_indexurl": "https://dominikrafacz.r-universe.dev/deepdep",
+        "_binaries": [
+            {
+                "r": "4.5.0",
+                "os": "linux",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:17:03.000Z",
+                "distro": "noble",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "2d295321c87acfc89d15c6a1eb9024929267ebcee3ed19232b4a46964fe93e8b",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.4.2",
+                "os": "linux",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:14:22.000Z",
+                "distro": "noble",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "90472d8b1cd5965ed648e4d25f7cd79aa98e505296fe67d84ab7529242d1ae07",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.5.0",
+                "os": "mac",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:16:59.000Z",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "cd33532b58486884f47ab14504edca7f8db717f3006694b4502ea9f37371543f",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.3.3",
+                "os": "mac",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:16:55.000Z",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "9ad2301a66e1f767d77c7da337dd1172f8d598b726201108fcfd969f58eec83d",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.4.2",
+                "os": "mac",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:17:04.000Z",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "57d68875c096f7754d516e4e829e03fd27abe66953cf6f466cd160e074040cd6",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.3.3",
+                "os": "wasm",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:16:16.000Z",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "53bc06267187d36936f55c4c913621f65f323087209f55a0ddec5570657fe780",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.4.1",
+                "os": "wasm",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:16:19.000Z",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "9936a3d5838c1cc56ea68d44e2054e553e61dde76cd13633b83fe8b91aeee3b0",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.5.0",
+                "os": "win",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:21:03.000Z",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "882d89bf5c262d5956a539c63dd3b73df9da20aae52ec01dec9af5e62db7f716",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.3.3",
+                "os": "win",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:16:50.000Z",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "0528e2ad705be44470252da49bea5bdb9a2e0f866492d9c5f412057bf6e10d3f",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            },
+            {
+                "r": "4.4.2",
+                "os": "win",
+                "version": "0.4.2",
+                "date": "2025-01-25T18:16:23.000Z",
+                "commit": "df6678e07c9cfaef4ab48afba7c5fdf97f3719f5",
+                "fileid": "a56bf8e1e9e42a41b0f7d6e420204e269e5068b42ebe385a4f30a161233801eb",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270704"
+            }
+        ]
+    },
+    {
+        "Package": "openaccess",
+        "Type": "Package",
+        "Title": "Check If a Paper Is in Open Access",
+        "Version": "0.1.0",
+        "Date": "2023-02-12",
+        "Authors@R": "c(person(\"Laura\", \"Bakala\",\nemail = \"erdaradun.gaztea@gmail.com\",\nrole = c(\"cre\", \"aut\", \"cph\"),\ncomment = c(ORCID = \"0000-0002-3213-2484\")))",
+        "Description": "Check whether the papers you use are in open access.",
+        "License": "GPL (>= 3)",
+        "Encoding": "UTF-8",
+        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "7.2.3",
+        "URL": "https://github.com/turtletopia/openaccess",
+        "BugReports": "https://github.com/turtletopia/openaccess/issues",
+        "Language": "en-US",
+        "Config/pak/sysreqs": "libicu-dev libxml2-dev libssl-dev",
+        "Repository": "https://turtletopia.r-universe.dev",
+        "RemoteUrl": "https://github.com/turtletopia/openaccess",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+        "NeedsCompilation": "no",
+        "Packaged": {
+            "Date": "2025-01-25 18:11:05 UTC",
+            "User": "root"
+        },
+        "Author": "Laura Bakala [cre, aut, cph] (<https://orcid.org/0000-0002-3213-2484>)",
+        "Maintainer": "Laura Bakala <erdaradun.gaztea@gmail.com>",
+        "MD5sum": "6d74e50db5cc0ead5188c391062303b6",
+        "_user": "turtletopia",
+        "_type": "src",
+        "_file": "openaccess_0.1.0.tar.gz",
+        "_fileid": "bff4f4419b3c6b4b223bf5726c92c41c9875461c1b0d8bf34d6bd7ed31bfbffc",
+        "_filesize": 90797,
+        "_sha256": "bff4f4419b3c6b4b223bf5726c92c41c9875461c1b0d8bf34d6bd7ed31bfbffc",
+        "_created": "2025-01-25T18:11:05.000Z",
+        "_published": "2025-01-25T18:13:49.404Z",
+        "_upstream": "https://github.com/turtletopia/openaccess",
+        "_commit": {
+            "id": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+            "author": "Laura Bąkała <32573962+ErdaradunGaztea@users.noreply.github.com>",
+            "committer": "GitHub <noreply@github.com>",
+            "message": "Merge pull request #4 from turtletopia/devel\n\nUpdate repo owner",
+            "time": 1676917033
+        },
+        "_maintainer": {
+            "name": "Laura Bakala",
+            "email": "erdaradun.gaztea@gmail.com",
+            "login": "erdaradungaztea",
+            "uuid": 32573962,
+            "orcid": "0000-0002-3213-2484"
+        },
+        "_distro": "noble",
+        "_host": "GitHub-Actions",
+        "_status": "success",
+        "_pkgdocs": "skipped",
+        "_winbinary": "failure",
+        "_macbinary": "failure",
+        "_wasmbinary": "success",
+        "_linuxdevel": "failure",
+        "_windevel": "failure",
+        "_buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897",
+        "_registered": true,
+        "_dependencies": [
+            {
+                "package": "glue",
+                "role": "Imports"
+            },
+            {
+                "package": "RSelenium",
+                "role": "Imports"
+            },
+            {
+                "package": "rvest",
+                "version": ">= 1.0.0",
+                "role": "Imports"
+            },
+            {
+                "package": "stringr",
+                "role": "Imports"
+            },
+            {
+                "package": "utils",
+                "role": "Imports"
+            }
+        ],
+        "_owner": "turtletopia",
+        "_selfowned": true,
+        "_usedby": 0,
+        "_updates": [
+
+        ],
+        "_tags": [
+
+        ],
+        "_stars": 2,
+        "_contributions": {
+            "erdaradungaztea": 31
+        },
+        "_userbio": {
+            "uuid": 103829938,
+            "type": "organization",
+            "name": "turtletopia"
+        },
+        "_downloads": {
+            "count": 0,
+            "source": "https://cranlogs.r-pkg.org/downloads/total/last-month/openaccess"
+        },
+        "_devurl": "https://github.com/turtletopia/openaccess",
+        "_rbuild": "4.4.2",
+        "_assets": [
+            "extra/citation.cff",
+            "extra/citation.html",
+            "extra/citation.json",
+            "extra/citation.txt",
+            "extra/contents.json",
+            "extra/NEWS.html",
+            "extra/NEWS.txt",
+            "extra/openaccess.html",
+            "extra/readme.html",
+            "extra/readme.md",
+            "manual.pdf"
+        ],
+        "_cranurl": false,
+        "_exports": [
+            "%>%",
+            "is_open_access",
+            "start_remote_driver"
+        ],
+        "_help": [
+            {
+                "page": "is_open_access",
+                "title": "Check a paper for open access",
+                "topics": [
+                    "is_open_access",
+                    "is_open_access.character",
+                    "is_open_access.oa_html_document",
+                    "is_open_access.oa_remote_driver",
+                    "is_open_access.xml_document"
+                ]
+            },
+            {
+                "page": "start_remote_driver",
+                "title": "Create browser connection for RSelenium",
+                "topics": [
+                    "start_remote_driver"
+                ]
+            }
+        ],
+        "_readme": "https://github.com/turtletopia/openaccess/raw/HEAD/README.md",
+        "_rundeps": [
+            "askpass",
+            "assertthat",
+            "binman",
+            "bitops",
+            "caTools",
+            "cli",
+            "curl",
+            "fansi",
+            "glue",
+            "httr",
+            "jsonlite",
+            "lifecycle",
+            "magrittr",
+            "mime",
+            "openssl",
+            "pillar",
+            "pkgconfig",
+            "processx",
+            "ps",
+            "R6",
+            "rappdirs",
+            "Rcpp",
+            "rlang",
+            "RSelenium",
+            "rvest",
+            "selectr",
+            "semver",
+            "stringi",
+            "stringr",
+            "sys",
+            "tibble",
+            "utf8",
+            "vctrs",
+            "wdman",
+            "xml2",
+            "yaml"
+        ],
+        "_score": 2,
+        "_indexed": true,
+        "_nocasepkg": "openaccess",
+        "_universes": [
+            "turtletopia",
+            "erdaradungaztea"
+        ],
+        "_binaries": [
+            {
+                "r": "4.5.0",
+                "os": "linux",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:18.000Z",
+                "distro": "noble",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "5ad0ded049b7adb0e9a0563dc51eb762293f27d5b078bddc4327053aa7f3e21e",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.4.2",
+                "os": "linux",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:11:06.000Z",
+                "distro": "noble",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "0f67511f2075fa121731bf4fbc756187c400ed526321c29821fa0b7d9ce6097b",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.5.0",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:00.000Z",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "25b4749527afaf315956bf4f595b8bf90e8e657515454561bd88e95b4712a358",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.3.3",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:54.000Z",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "1a3902336e81981a6411499e5957a57a44e1befd7410a51d01f42e513291b2bb",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.4.2",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:35.000Z",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "69c2e378c29537fbfea3e924289c0660a8fa7d244dacd33de16a2d6bc0781973",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.3.3",
+                "os": "wasm",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:03.000Z",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "78f6de9cc470a36928b9c11212b90a5cf07a87615f5ef02982481c60c1209b72",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.4.1",
+                "os": "wasm",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:56.000Z",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "bf087d0cf049b5b75329c5db5d18b9d6fb15aee6b0a636beddc88f36cc3bfcf1",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.5.0",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:51.000Z",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "a3bf2f4889e6c5df1fd1f33713cb5ff61c59869903505cab432f8f40bf6fbe1a",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.3.3",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:21.000Z",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "ded291d43d8e61677b26293ff69867dc047d6cadb557950960347702760ce21e",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            },
+            {
+                "r": "4.4.2",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:28.000Z",
+                "commit": "d97f7c16b0a71a3893a6d2ea726c556316106c77",
+                "fileid": "015920b174ef55813b9cc9064b276f60b75b7ea2629507530141047221b77985",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270897"
+            }
+        ]
+    },
+    {
+        "Package": "aurrera",
+        "Type": "Package",
+        "Title": "Wrap an Interable in a Progress Bar",
+        "Version": "0.1.0",
+        "Date": "2022-05-11",
+        "Authors@R": "c(person(\"Laura\", \"Bakala\",\nemail = \"erdaradun.gaztea@gmail.com\",\nrole = c(\"cre\", \"aut\", \"cph\"),\ncomment = c(ORCID = \"0000-0002-3213-2484\")))",
+        "Description": "Allows a simple creation of progress bars by wrapping the\niterated object in 'pb()'.",
+        "License": "GPL (>= 3)",
+        "Encoding": "UTF-8",
+        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "7.2.3",
+        "Config/testthat/edition": "3",
+        "URL": "https://github.com/turtletopia/aurrera",
+        "Repository": "https://turtletopia.r-universe.dev",
+        "RemoteUrl": "https://github.com/turtletopia/aurrera",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+        "NeedsCompilation": "no",
+        "Packaged": {
+            "Date": "2025-01-25 18:11:33 UTC",
+            "User": "root"
+        },
+        "Author": "Laura Bakala [cre, aut, cph] (<https://orcid.org/0000-0002-3213-2484>)",
+        "Maintainer": "Laura Bakala <erdaradun.gaztea@gmail.com>",
+        "MD5sum": "fa5c7a98078a8c86d4b39a72f6c72360",
+        "_user": "turtletopia",
+        "_type": "src",
+        "_file": "aurrera_0.1.0.tar.gz",
+        "_fileid": "c940709b8c3614a96f5d722c0a0fcd3ea1d9942a381e25d604ba6c254a97f60c",
+        "_filesize": 81286,
+        "_sha256": "c940709b8c3614a96f5d722c0a0fcd3ea1d9942a381e25d604ba6c254a97f60c",
+        "_created": "2025-01-25T18:11:33.000Z",
+        "_published": "2025-01-25T18:14:19.468Z",
+        "_upstream": "https://github.com/turtletopia/aurrera",
+        "_commit": {
+            "id": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+            "author": "Laura Bąkała <32573962+ErdaradunGaztea@users.noreply.github.com>",
+            "committer": "GitHub <noreply@github.com>",
+            "message": "Merge pull request #2 from turtletopia/devel\n\nfix mclapply() tests",
+            "time": 1675619072
+        },
+        "_maintainer": {
+            "name": "Laura Bakala",
+            "email": "erdaradun.gaztea@gmail.com",
+            "login": "erdaradungaztea",
+            "uuid": 32573962,
+            "orcid": "0000-0002-3213-2484"
+        },
+        "_distro": "noble",
+        "_host": "GitHub-Actions",
+        "_status": "success",
+        "_pkgdocs": "skipped",
+        "_winbinary": "success",
+        "_macbinary": "success",
+        "_wasmbinary": "success",
+        "_linuxdevel": "success",
+        "_windevel": "success",
+        "_buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527",
+        "_registered": true,
+        "_dependencies": [
+            {
+                "package": "covr",
+                "role": "Suggests"
+            },
+            {
+                "package": "foreach",
+                "role": "Suggests"
+            },
+            {
+                "package": "gmp",
+                "role": "Suggests"
+            },
+            {
+                "package": "parallel",
+                "role": "Suggests"
+            },
+            {
+                "package": "plyr",
+                "role": "Suggests"
+            },
+            {
+                "package": "purrr",
+                "role": "Suggests"
+            },
+            {
+                "package": "testthat",
+                "version": ">= 3.0.0",
+                "role": "Suggests"
+            }
+        ],
+        "_owner": "turtletopia",
+        "_selfowned": true,
+        "_usedby": 0,
+        "_updates": [
+
+        ],
+        "_tags": [
+
+        ],
+        "_topics": [
+            "iterable",
+            "lapply",
+            "progress-bar"
+        ],
+        "_stars": 2,
+        "_contributions": {
+            "erdaradungaztea": 31
+        },
+        "_userbio": {
+            "uuid": 103829938,
+            "type": "organization",
+            "name": "turtletopia"
+        },
+        "_downloads": {
+            "count": 0,
+            "source": "https://cranlogs.r-pkg.org/downloads/total/last-month/aurrera"
+        },
+        "_devurl": "https://github.com/turtletopia/aurrera",
+        "_rbuild": "4.4.2",
+        "_assets": [
+            "extra/aurrera.html",
+            "extra/citation.cff",
+            "extra/citation.html",
+            "extra/citation.json",
+            "extra/citation.txt",
+            "extra/contents.json",
+            "extra/readme.html",
+            "extra/readme.md",
+            "manual.pdf"
+        ],
+        "_cranurl": false,
+        "_exports": [
+            "pb"
+        ],
+        "_help": [
+            {
+                "page": "pb",
+                "title": "Add a progress bar to an iterable",
+                "topics": [
+                    "pb",
+                    "pb.aurrera_iter",
+                    "pb.default"
+                ]
+            }
+        ],
+        "_readme": "https://github.com/turtletopia/aurrera/raw/HEAD/README.md",
+        "_rundeps": [
+
+        ],
+        "_score": 2,
+        "_indexed": true,
+        "_nocasepkg": "aurrera",
+        "_universes": [
+            "turtletopia",
+            "erdaradungaztea"
+        ],
+        "_binaries": [
+            {
+                "r": "4.5.0",
+                "os": "linux",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:47.000Z",
+                "distro": "noble",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "cfbfb11c93e50d55c2aa6aeb11cf5e3624e6019cf1098063d98fef9f24b8a671",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.4.2",
+                "os": "linux",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:11:33.000Z",
+                "distro": "noble",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "14a8e64c0aa6424b4cc29748fb6d2901d11721109c03bbed14f2c2dc0f9adfb0",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.5.0",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:30.000Z",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "86ef075fae39601a84f4c6a6851d5c9e43ced023a921061433d7665de5734f7a",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.3.3",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:57.000Z",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "7f0c381d2b33af43709f60b524fe25535c5eaf2a0eeb3a07939ef22d9cb2574c",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.4.2",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:05.000Z",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "1a50ce2af49ce880fa38ab4251cbfaabd3c56b4500c35d6c064687e24fd0f857",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.3.3",
+                "os": "wasm",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:13.000Z",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "b83d664cbc909da8b75199a79f2883cd068a19aca0c44774419dcdd5bfd41f7c",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.4.1",
+                "os": "wasm",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:05.000Z",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "824efb7ced48785aa0086396dc9a5a3e645516f2b40d57f907f1ece6aaa308af",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.5.0",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:10.000Z",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "228393f59abeb79a5124bf5cb88182826682ce58925fd63b6242b04766416407",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.3.3",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:40.000Z",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "795d0cca1af74f9ea4d00442d67a279d032ed14cd37f2ac0de1ccca8ce53e101",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            },
+            {
+                "r": "4.4.2",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:49.000Z",
+                "commit": "fa24e9873a2897e97eb845feb58b53a5eccb01e7",
+                "fileid": "655242aedaf588fe53478b65ccf866c4b693b2f545d58272d439bf631b336f04",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270527"
+            }
+        ]
+    },
+    {
+        "Package": "versionsort",
+        "Type": "Package",
+        "Title": "Sort and Order Version Codes",
+        "Version": "1.1.0",
+        "Date": "2022-03-23",
+        "Authors@R": "c(person(\"Laura\", \"Bakala\",\nemail = \"erdaradun.gaztea@gmail.com\",\nrole = c(\"cre\", \"aut\", \"cph\")))",
+        "Description": "A lightweight package for sorting version codes in various\nforms. No strong dependencies guaranteed.",
+        "License": "GPL (>= 3)",
+        "Encoding": "UTF-8",
+        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "7.1.2",
+        "URL": "https://github.com/turtletopia/versionsort",
+        "Config/testthat/edition": "3",
+        "Language": "en-US",
+        "Repository": "https://turtletopia.r-universe.dev",
+        "RemoteUrl": "https://github.com/turtletopia/versionsort",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "2303d4c02b42e2727722e743339281c76a4d505e",
+        "NeedsCompilation": "no",
+        "Packaged": {
+            "Date": "2025-01-19 05:15:59 UTC",
+            "User": "root"
+        },
+        "Author": "Laura Bakala [cre, aut, cph]",
+        "Maintainer": "Laura Bakala <erdaradun.gaztea@gmail.com>",
+        "MD5sum": "cac164842eb8e6fee8798cd2cc597717",
+        "_user": "turtletopia",
+        "_type": "src",
+        "_file": "versionsort_1.1.0.tar.gz",
+        "_fileid": "96ffcaa78b77afc249eeb664935b389440a8ab0b991e255fc2cc4698c48f6532",
+        "_filesize": 79793,
+        "_sha256": "96ffcaa78b77afc249eeb664935b389440a8ab0b991e255fc2cc4698c48f6532",
+        "_created": "2025-01-19T05:15:59.000Z",
+        "_published": "2025-01-19T05:19:19.593Z",
+        "_upstream": "https://github.com/turtletopia/versionsort",
+        "_commit": {
+            "id": "2303d4c02b42e2727722e743339281c76a4d505e",
+            "author": "Laura <erdaradun.gaztea+github@gmail.com>",
+            "committer": "Laura <erdaradun.gaztea+github@gmail.com>",
+            "message": "add lint workflow\n\n",
+            "time": 1652709089
+        },
+        "_maintainer": {
+            "name": "Laura Bakala",
+            "email": "erdaradun.gaztea@gmail.com",
+            "login": "erdaradungaztea",
+            "uuid": 32573962
+        },
+        "_distro": "noble",
+        "_host": "GitHub-Actions",
+        "_status": "success",
+        "_pkgdocs": "skipped",
+        "_winbinary": "success",
+        "_macbinary": "success",
+        "_wasmbinary": "success",
+        "_linuxdevel": "success",
+        "_windevel": "success",
+        "_buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478",
+        "_registered": true,
+        "_dependencies": [
+            {
+                "package": "covr",
+                "role": "Suggests"
+            },
+            {
+                "package": "spelling",
+                "role": "Suggests"
+            },
+            {
+                "package": "testthat",
+                "version": ">= 3.0.0",
+                "role": "Suggests"
+            }
+        ],
+        "_owner": "turtletopia",
+        "_selfowned": true,
+        "_usedby": 0,
+        "_updates": [
+
+        ],
+        "_tags": [
+
+        ],
+        "_topics": [
+            "natural-sort",
+            "version-code"
+        ],
+        "_stars": 5,
+        "_contributions": {
+            "erdaradungaztea": 56
+        },
+        "_userbio": {
+            "uuid": 103829938,
+            "type": "organization",
+            "name": "turtletopia"
+        },
+        "_downloads": {
+            "count": 180,
+            "source": "https://cranlogs.r-pkg.org/downloads/total/last-month/versionsort"
+        },
+        "_devurl": "https://github.com/turtletopia/versionsort",
+        "_searchresults": 4,
+        "_rbuild": "4.4.2",
+        "_assets": [
+            "extra/citation.cff",
+            "extra/citation.html",
+            "extra/citation.json",
+            "extra/citation.txt",
+            "extra/contents.json",
+            "extra/NEWS.html",
+            "extra/NEWS.txt",
+            "extra/readme.html",
+            "extra/readme.md",
+            "extra/versionsort.html",
+            "manual.pdf"
+        ],
+        "_homeurl": "https://github.com/turtletopia/versionsort",
+        "_realowner": "turtletopia",
+        "_cranurl": true,
+        "_releases": [
+            {
+                "version": "1.0.0",
+                "date": "2021-12-15"
+            },
+            {
+                "version": "1.1.0",
+                "date": "2022-03-25"
+            }
+        ],
+        "_exports": [
+            "ver_latest",
+            "ver_oldest",
+            "ver_order",
+            "ver_sort"
+        ],
+        "_help": [
+            {
+                "page": "ver_latest",
+                "title": "Find the latest version code",
+                "topics": [
+                    "ver_latest"
+                ]
+            },
+            {
+                "page": "ver_oldest",
+                "title": "Find the oldest version code",
+                "topics": [
+                    "ver_oldest"
+                ]
+            },
+            {
+                "page": "ver_order",
+                "title": "Order version codes",
+                "topics": [
+                    "ver_order"
+                ]
+            },
+            {
+                "page": "ver_sort",
+                "title": "Sort version codes",
+                "topics": [
+                    "ver_sort"
+                ]
+            }
+        ],
+        "_readme": "https://github.com/turtletopia/versionsort/raw/HEAD/README.md",
+        "_rundeps": [
+
+        ],
+        "_score": 3.3979400086720375,
+        "_indexed": true,
+        "_nocasepkg": "versionsort",
+        "_universes": [
+            "turtletopia",
+            "erdaradungaztea"
+        ],
+        "_binaries": [
+            {
+                "r": "4.5.0",
+                "os": "linux",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:18:09.000Z",
+                "distro": "noble",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "772a1c139012904fac669c7aada3e13c843d5a91ca6ccc7f6ecd9404baedd617",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            },
+            {
+                "r": "4.4.2",
+                "os": "linux",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:15:59.000Z",
+                "distro": "noble",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "9c639ebfed2d7bb2dacc3f8023440085a54dd04ac212a442f917cc21f6ec678a",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            },
+            {
+                "r": "4.3.3",
+                "os": "mac",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:18:19.000Z",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "a89ca00e48e62a9b83c3e73951538fb9ac7c3b10f93019b5937e27d43a504d75",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            },
+            {
+                "r": "4.4.2",
+                "os": "mac",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:18:01.000Z",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "1d5163ef5f49b9c7f2b91be7925d5ea2910330c13acca7c5df326a04dc98c688",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            },
+            {
+                "r": "4.3.3",
+                "os": "wasm",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:17:31.000Z",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "553a6cd6346ebfa5b3244f4bbfe107854b96cfdd53c7dff4f6a262f66127bdf5",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            },
+            {
+                "r": "4.4.1",
+                "os": "wasm",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:17:39.000Z",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "4d72d9d986fe08877939ec01a7b89b413212f77af8e0c802eb06069e591e979a",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            },
+            {
+                "r": "4.5.0",
+                "os": "win",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:17:11.000Z",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "eac9e65035570513f58640bc51c1351e934767586d9f7b1fc2df8e70994bb5c9",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            },
+            {
+                "r": "4.3.3",
+                "os": "win",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:17:28.000Z",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "313d2ba67c9265d6279de95e487ad6fbf8056fa3e0abe1ade4736b51d126258a",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            },
+            {
+                "r": "4.4.2",
+                "os": "win",
+                "version": "1.1.0",
+                "date": "2025-01-19T05:17:30.000Z",
+                "commit": "2303d4c02b42e2727722e743339281c76a4d505e",
+                "fileid": "a30884f50e1eb2e25741fa7575d6f552d4697ba1df880355d3b7c9cbf08884d0",
+                "status": "success",
+                "check": "OK",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12850623478"
+            }
+        ]
+    },
+    {
+        "Package": "ggpizza",
+        "Title": "Makes Points Which Are Pizza",
+        "Version": "0.1.0",
+        "Authors@R": "person(\"Dominik\", \"Rafacz\",\nemail = \"dominikrafacz@gmail.com\",\ncomment = c(ORCID = \"0000-0003-0925-1909\"),\nrole = c(\"cre\", \"aut\"))",
+        "Description": "Makes pizza. Will expand that later",
+        "License": "`use_mit_license()`, `use_gpl3_license()` or friends to pick a\nlicense",
+        "Encoding": "UTF-8",
+        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "7.1.2",
+        "URL": "https://github.com/turtletopia/ggpizza",
+        "Repository": "https://turtletopia.r-universe.dev",
+        "RemoteUrl": "https://github.com/turtletopia/ggpizza",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+        "NeedsCompilation": "no",
+        "Packaged": {
+            "Date": "2025-01-25 18:10:53 UTC",
+            "User": "root"
+        },
+        "Author": "Dominik Rafacz [cre, aut] (<https://orcid.org/0000-0003-0925-1909>)",
+        "Maintainer": "Dominik Rafacz <dominikrafacz@gmail.com>",
+        "MD5sum": "f677e5a64b2f7bf5144fee1fcecab6f0",
+        "_user": "turtletopia",
+        "_type": "src",
+        "_file": "ggpizza_0.1.0.tar.gz",
+        "_fileid": "5e3b6f7ea17141d8e428ef834d4c36162be0dc50c01da15a9dd42fb2ff9e2cba",
+        "_filesize": 108900,
+        "_sha256": "5e3b6f7ea17141d8e428ef834d4c36162be0dc50c01da15a9dd42fb2ff9e2cba",
+        "_created": "2025-01-25T18:10:53.000Z",
+        "_published": "2025-01-25T18:13:56.665Z",
+        "_upstream": "https://github.com/turtletopia/ggpizza",
+        "_commit": {
+            "id": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+            "author": "ErdaradunGaztea <32573962+ErdaradunGaztea@users.noreply.github.com>",
+            "committer": "GitHub <noreply@github.com>",
+            "message": "add URL",
+            "time": 1651676395
+        },
+        "_maintainer": {
+            "name": "Dominik Rafacz",
+            "email": "dominikrafacz@gmail.com",
+            "login": "dominikrafacz",
+            "uuid": 32573752,
+            "orcid": "0000-0003-0925-1909"
+        },
+        "_distro": "noble",
+        "_host": "GitHub-Actions",
+        "_status": "success",
+        "_pkgdocs": "skipped",
+        "_winbinary": "failure",
+        "_macbinary": "failure",
+        "_wasmbinary": "success",
+        "_linuxdevel": "failure",
+        "_windevel": "failure",
+        "_buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770",
+        "_registered": true,
+        "_dependencies": [
+            {
+                "package": "ggplot2",
+                "role": "Imports"
+            },
+            {
+                "package": "dplyr",
+                "role": "Imports"
+            }
+        ],
+        "_owner": "turtletopia",
+        "_selfowned": true,
+        "_usedby": 0,
+        "_updates": [
+
+        ],
+        "_tags": [
+
+        ],
+        "_stars": 2,
+        "_contributions": {
+            "dominikrafacz": 9,
+            "erdaradungaztea": 1
+        },
+        "_userbio": {
+            "uuid": 103829938,
+            "type": "organization",
+            "name": "turtletopia"
+        },
+        "_downloads": {
+            "count": 0,
+            "source": "https://cranlogs.r-pkg.org/downloads/total/last-month/ggpizza"
+        },
+        "_devurl": "https://github.com/turtletopia/ggpizza",
+        "_rbuild": "4.4.2",
+        "_assets": [
+            "extra/citation.cff",
+            "extra/citation.html",
+            "extra/citation.json",
+            "extra/citation.txt",
+            "extra/contents.json",
+            "extra/ggpizza.html",
+            "extra/NEWS.html",
+            "extra/NEWS.txt",
+            "extra/readme.html",
+            "extra/readme.md",
+            "manual.pdf"
+        ],
+        "_cranurl": false,
+        "_exports": [
+            "geom_point_pizza",
+            "GeomPointPizza"
+        ],
+        "_help": [
+            {
+                "page": "hello",
+                "title": "Hello, World!",
+                "topics": [
+                    "hello"
+                ]
+            }
+        ],
+        "_readme": "https://github.com/turtletopia/ggpizza/raw/HEAD/README.md",
+        "_rundeps": [
+            "cli",
+            "colorspace",
+            "dplyr",
+            "fansi",
+            "farver",
+            "generics",
+            "ggplot2",
+            "glue",
+            "gtable",
+            "isoband",
+            "labeling",
+            "lattice",
+            "lifecycle",
+            "magrittr",
+            "MASS",
+            "Matrix",
+            "mgcv",
+            "munsell",
+            "nlme",
+            "pillar",
+            "pkgconfig",
+            "R6",
+            "RColorBrewer",
+            "rlang",
+            "scales",
+            "tibble",
+            "tidyselect",
+            "utf8",
+            "vctrs",
+            "viridisLite",
+            "withr"
+        ],
+        "_score": 2,
+        "_indexed": true,
+        "_nocasepkg": "ggpizza",
+        "_universes": [
+            "turtletopia",
+            "dominikrafacz"
+        ],
+        "_binaries": [
+            {
+                "r": "4.5.0",
+                "os": "linux",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:25.000Z",
+                "distro": "noble",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "abaa0f480ba46d989bababf1132dd6232a8b3666e869a90a1ea501b6924a7b94",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.4.2",
+                "os": "linux",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:10:54.000Z",
+                "distro": "noble",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "6a59a5b8aea0e0d616df32ef2deb8a8513a122f2289dacac3f6375638b6685bb",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.5.0",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:13:10.000Z",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "977adf0fc1d0f0d54498263566658e4e6961d047ece69b938e274c3826474e5b",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.3.3",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:27.000Z",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "7bb2fc8b1971e2d5e1843bc7a8c80828c24c696aa3f4debe75942f2366559eeb",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.4.2",
+                "os": "mac",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:26.000Z",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "2660476146273814794d224c614de9e5a39a8b0796468bdd56fd5bf50d3483ce",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.3.3",
+                "os": "wasm",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:35.000Z",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "c0cf4b9053e58f0a14041fcfd087b58146d4a7c7386966407f4ea7c9ff6a0135",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.4.1",
+                "os": "wasm",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:43.000Z",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "7abc2c9fa79086fcd27ab09a22dc41823d7e40ad4d111c08fee9fc49c1dca3fb",
+                "status": "success",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.5.0",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:31.000Z",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "898239488be5877f2871913793f0f964ab8893bcff7e83c0dad32ea795ba32a4",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.3.3",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:09.000Z",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "75aa15f05ad13229840c2d98b4fc147803070f3df97cf049c2a4f5e8ecac38c5",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            },
+            {
+                "r": "4.4.2",
+                "os": "win",
+                "version": "0.1.0",
+                "date": "2025-01-25T18:12:43.000Z",
+                "commit": "cd025993657df066b8bf8585e5f5e68bbd33ce86",
+                "fileid": "be0ba910c07d079ba21daa168476dabe9366cb531a725015c5770122a595d6eb",
+                "status": "failure",
+                "check": "ERROR",
+                "buildurl": "https://github.com/r-universe/turtletopia/actions/runs/12967270770"
+            }
+        ]
+    }
+]

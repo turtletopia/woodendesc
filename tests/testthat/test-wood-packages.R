@@ -6,7 +6,7 @@ httptest2::with_mock_api({
   packages <- wood_packages(repos = c("local#all", "cran", "bioc@1.8"))
 })
 
-with_mock_dir("1", {
+httptest2::with_mock_api({
   colinfay_packages <- wood_packages(repos = "https://colinfay.me")
 })
 

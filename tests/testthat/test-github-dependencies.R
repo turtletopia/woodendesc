@@ -3,7 +3,7 @@ skip_if(over_gh_limit(), "Github rate limit not sufficient")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("n", {
+httptest2::with_mock_api({
   gglgbtq_deps <- wood_github_dependencies("gglgbtq", "turtletopia", tag = "v0.1.0")
 })
 
@@ -14,7 +14,7 @@ test_param_package(wood_github_dependencies(package = "gglgbtq", user = "turtlet
 test_param_gh_user(wood_github_dependencies(package = "gglgbtq", user = "turtletopia"))
 test_param_tag(wood_github_dependencies(package = "gglgbtq", user = "turtletopia"))
 
-with_mock_dir("o", {
+httptest2::with_mock_api({
   test_that("uses cache from wood_github_versions() if available if not latest commit", {
     wood_clear_cache()
     wood_github_versions("gglgbtq", "turtletopia")
@@ -25,7 +25,7 @@ with_mock_dir("o", {
   })
 })
 
-with_mock_dir("p", {
+httptest2::with_mock_api({
   test_that("uses cache from wood_github_latest() if available if latest commit", {
     gglgbtq_deps_latest <- wood_github_dependencies(
       "gglgbtq", "turtletopia", tag = "latest"

@@ -3,7 +3,7 @@ skip_if(over_gh_limit(), "Github rate limit not sufficient")
 wood_clear_cache()
 
 # SETUP ----
-with_mock_dir("q", {
+httptest2::with_mock_api({
   gglgbtq_latest <- wood_github_latest("gglgbtq", "turtletopia")
 })
 
