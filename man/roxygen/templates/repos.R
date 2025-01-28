@@ -3,10 +3,12 @@
 #'  * `"cran"`, meaning CRAN;
 #'  * `"bioc@release"`, meaning Bioconductor, where `release` should be replaced
 #'    with a valid Bioconductor release code or one of `"release"`, `"devel"`;
-#'  * `"github/user"`, meaning GitHub, where `user` should be replaced with a
-#'    valid user or organization name (e.g. `turtletopia`);
 #'  * `"runiverse@universe"`, meaning R-universe, where `universe` should be
 #'    replaced with a valid universe name (e.g. `turtletopia`);
+#'  * `"github/user"`, meaning GitHub, where `user` should be replaced with a
+#'    valid user or organization name (e.g. `turtletopia`);
+#'  * `"gitlab/user"`, meaning GitLab, where `user` should be replaced with a
+#'    valid user or group name (e.g. `r-packages`);
 #'  * `"local#index"`, meaning a local library, where `index` should be replaced
 #'    with an integer index of a library in [base::.libPaths()] or an `all`
 #'    keyword;

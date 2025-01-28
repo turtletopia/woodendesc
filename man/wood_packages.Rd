@@ -13,10 +13,12 @@ A vector of repositories to query. The following values are available:
 \item \code{"cran"}, meaning CRAN;
 \item \code{"bioc@release"}, meaning Bioconductor, where \code{release} should be replaced
 with a valid Bioconductor release code or one of \code{"release"}, \code{"devel"};
-\item \code{"github/user"}, meaning GitHub, where \code{user} should be replaced with a
-valid user or organization name (e.g. \code{turtletopia});
 \item \code{"runiverse@universe"}, meaning R-universe, where \code{universe} should be
 replaced with a valid universe name (e.g. \code{turtletopia});
+\item \code{"github/user"}, meaning GitHub, where \code{user} should be replaced with a
+valid user or organization name (e.g. \code{turtletopia});
+\item \code{"gitlab/user"}, meaning GitLab, where \code{user} should be replaced with a
+valid user or group name (e.g. \code{r-packages});
 \item \code{"local#index"}, meaning a local library, where \code{index} should be replaced
 with an integer index of a library in \code{\link[base:libPaths]{base::.libPaths()}} or an \code{all}
 keyword;
