@@ -15,13 +15,12 @@ silence <- function(expr) {
 
 local_fake_library <- function(fake_pkgs = "fakepackage",
                                true_pkgs = "woodendesc",
-                               path = "test_dir") {
-  lib_dir <- file.path(tempdir(), path)
-  withr::local_tempdir(tmpdir = lib_dir)
+                               .local_envir = parent.frame()) {
+  lib_dir <- withr::local_tempdir(pattern = "lib", .local_envir = .local_envir)
 
   for (pkg in fake_pkgs) {
     withr::with_dir(lib_dir, {
-      silence(usethis::create_package("fakepackage"))
+      silence(usethis::create_package(pkg))
     })
   }
   for (pkg in true_pkgs) {
