@@ -1,5 +1,7 @@
 # woodendesc (development version)
 
+* Explicitly stated {curl} as a dependency for tests (precisely, for `skip_if_offline()` checks).
+
 # woodendesc 0.2.1
 
 * Fixed GitLab being missing as an option for `wood_packages()`, `wood_dependencies()`, and `wood_versions()`.
