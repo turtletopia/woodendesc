@@ -1,7 +1,7 @@
 # SETUP ----
 # Create fake local library
 fake_lib_pkgs <- c("fakepackage", "woodendesc")
-lib_dir <- local_fake_library("fakepackage", "woodendesc")
+lib_dir <- local_fake_library("fakepackage", "woodendesc", path = "unreal_dir")
 lib_dir_2 <- local_fake_library("fakepackage", "woodendesc", path = "fake_dir")
 
 # TESTS ----
