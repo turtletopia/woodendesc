@@ -24,7 +24,7 @@ wood_runiverse_dependencies <- function(package, universe = "ropensci") {
 
   # TODO: use runiverse_packages_cache() output if possible
   desc <- runiverse_description_cache(package, universe)
-  ret <- data.frame(
+  data.frame(
     package = vapply(desc[["deps"]], `[[`, character(1), "package"),
     version = vapply(desc[["deps"]], function(dep) {
       version <- dep[["version"]]
@@ -35,6 +35,6 @@ wood_runiverse_dependencies <- function(package, universe = "ropensci") {
     }, character(1)),
     type = vapply(desc[["deps"]], `[[`, character(1), "role"),
     stringsAsFactors = FALSE
-  )
-  as_wood_deps(ret)
+  ) |>
+    as_wood_deps()
 }

@@ -28,9 +28,8 @@ wood_versions <- function(packages, repos = "cran") {
 
   query_makers <- interpret_repos(repos, context = "version")
 
-  ret <- lapply(packages, function(package) {
+  lapply(packages, function(package) {
     versionsort::ver_sort(collect_repos(query_makers, package = package))
-  })
-  names(ret) <- packages
-  ret
+  }) |>
+    rlang::set_names(packages)
 }
