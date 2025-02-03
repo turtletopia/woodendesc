@@ -5,8 +5,11 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' print(wood_cran_packages(), max = 15)
+#' }
 #'
 #' @family cran
 #' @family packages

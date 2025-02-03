@@ -22,14 +22,21 @@ This function queries Bioconductor for the code of the available
 version of the selected package for given Bioconductor release.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 wood_bioc_version("Biostrings")
+}
 
+if (interactive()) {
 # What's coming next?
 wood_bioc_version("Biostrings", release = "devel")
+}
+
+if (interactive()) {
 # Can query releases as old as 1.8:
 wood_bioc_version("Biostrings", release = "1.8")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for Bioconductor:

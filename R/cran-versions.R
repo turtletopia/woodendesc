@@ -7,8 +7,11 @@
 #'
 #' @return A character vector of version codes.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_cran_versions("versionsort")
+#' }
 #'
 #' @family cran
 #' @family versions

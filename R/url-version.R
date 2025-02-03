@@ -8,8 +8,11 @@
 #'
 #' @return A single string with a version code.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_url_version("dockerfiler", repository = "https://colinfay.me")
+#' }
 #'
 #' @family url
 #' @family versions

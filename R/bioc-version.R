@@ -8,13 +8,21 @@
 #'
 #' @return A single string with a version code.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_bioc_version("Biostrings")
+#' }
 #'
+#' if (interactive()) {
 #' # What's coming next?
 #' wood_bioc_version("Biostrings", release = "devel")
+#' }
+#'
+#' if (interactive()) {
 #' # Can query releases as old as 1.8:
 #' wood_bioc_version("Biostrings", release = "1.8")
+#' }
 #'
 #' @family bioc
 #' @family versions

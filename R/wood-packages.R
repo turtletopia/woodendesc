@@ -7,11 +7,20 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' print(wood_packages(c("local#all", "bioc@1.7", "cran", "core")), max = 15)
+#' }
+#'
+#' if (interactive()) {
 #' wood_packages(c("https://colinfay.me", "runiverse@turtletopia"))
+#' }
+#'
+#' if (interactive()) {
 #' # By default, only CRAN is queried:
 #' print(wood_packages(), max = 15)
+#' }
 #'
 #' @family wood
 #' @family packages

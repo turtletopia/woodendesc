@@ -20,18 +20,28 @@ packages. Current and previous releases can be queried, up to
 Bioconductor 1.5.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 print(wood_bioc_packages(), max = 15)
 # is the same as
 print(wood_bioc_packages("release"), max = 15)
+}
 
+if (interactive()) {
 # A glimpse in the future:
 print(wood_bioc_packages("devel"), max = 15)
+}
+
+if (interactive()) {
 # Previous versions can be queried as well:
 print(wood_bioc_packages("3.9"), max = 15)
+}
+
+if (interactive()) {
 # The oldest available version is 1.8:
 wood_bioc_packages("1.8")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for Bioconductor:

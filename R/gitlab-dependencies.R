@@ -14,9 +14,15 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_gitlab_dependencies("limonaid", "r-packages")
+#' }
+#'
+#' if (interactive()) {
 #' wood_gitlab_dependencies("rock", "r-packages", tag = "0.6.3")
+#' }
 #'
 #' @family gitlab
 #' @family dependencies

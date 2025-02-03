@@ -12,15 +12,22 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
 #' wood_dependencies("stats", "core")
+#'
+#' ## Only run with internet access
+#' if (interactive()) {
 #' # Multiple packages are also possible:
 #' wood_dependencies(
 #'   c("tibble", "Biostrings", "woodendesc"),
-#'   repos = c("runiverse@turtletopia", "cran", "bioc@1.5")
+#'   repos = c("runiverse@turtletopia", "cran", "bioc@1.8")
 #' )
+#' }
+#'
+#' if (interactive()) {
 #' # By default, only CRAN is queried:
 #' wood_dependencies("versionsort")
+#' }
 #'
 #' @family wood
 #' @family dependencies

@@ -10,9 +10,12 @@
 #' @return A `data.frame` object similar to these returned by `_dependencies`
 #' functions, but with additional column named `origin`.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' deps <- wood_dependencies(c("versionsort", "deepdep", "gglgbtq"))
 #' squash(deps)
+#' }
 #'
 #' @export
 squash <- function(object) {

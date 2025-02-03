@@ -9,13 +9,18 @@
 #'
 #' @return A character vector of version codes.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' # Latest version code is returned
 #' wood_github_latest("gglgbtq", "turtletopia")
+#' }
 #'
+#' if (interactive()) {
 #' # To get the latest *tagged* version code instead, use:
 #' codes <- wood_github_versions("gglgbtq", "turtletopia")
 #' versionsort::ver_latest(codes)
+#' }
 #'
 #' @family github
 #' @family versions

@@ -10,10 +10,16 @@
 #'
 #' @return A character vector of repository tags.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_github_tags("gglgbtq", "turtletopia")
+#' }
+#'
+#' if (interactive()) {
 #' # Sometimes there are no tags (yet?)
 #' wood_github_tags("ggpizza", "turtletopia")
+#' }
 #'
 #' @family github
 #' @export

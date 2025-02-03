@@ -19,10 +19,11 @@ available packages. They are returned as a vector of strings, each element
 being a package name.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-wood_runiverse_packages()
+## Only run with internet access
+if (interactive()) {
 wood_runiverse_packages("tidyverse")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for R-universe:

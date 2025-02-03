@@ -26,10 +26,11 @@ This function queries the selected universe for dependencies
 of the selected package.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-wood_runiverse_dependencies("targets")
+## Only run with internet access
+if (interactive()) {
 wood_runiverse_dependencies("ggplot2", universe = "tidyverse")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for R-universe:

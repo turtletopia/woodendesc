@@ -8,9 +8,11 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
-#' wood_runiverse_packages()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_runiverse_packages("tidyverse")
+#' }
 #'
 #' @family runiverse
 #' @family packages

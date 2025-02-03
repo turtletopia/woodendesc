@@ -23,9 +23,11 @@ element is a tag, which need not be identical or even related to version code
 of the package at the given time.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 wood_gitlab_tags("rock", "r-packages")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for GitLab:

@@ -8,9 +8,11 @@
 #'
 #' @return A single string with a version code.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
-#' wood_runiverse_version("targets")
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_runiverse_version("ggplot2", universe = "tidyverse")
+#' }
 #'
 #' @family runiverse
 #' @family versions

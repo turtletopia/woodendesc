@@ -8,8 +8,11 @@
 #'
 #' @return A character vector of version codes.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_github_versions("versionsort", "turtletopia")
+#' }
 #'
 #' @family github
 #' @family versions

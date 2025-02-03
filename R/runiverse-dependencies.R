@@ -11,9 +11,11 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
-#' wood_runiverse_dependencies("targets")
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_runiverse_dependencies("ggplot2", universe = "tidyverse")
+#' }
 #'
 #' @family runiverse
 #' @family dependencies

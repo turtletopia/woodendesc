@@ -22,14 +22,18 @@ version. This may reference a non-tagged commit; for the analysis of tagged
 commits only, see \code{\link[=wood_github_versions]{wood_github_versions()}}.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 # Latest version code is returned
 wood_github_latest("gglgbtq", "turtletopia")
+}
 
+if (interactive()) {
 # To get the latest *tagged* version code instead, use:
 codes <- wood_github_versions("gglgbtq", "turtletopia")
 versionsort::ver_latest(codes)
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for GitHub:

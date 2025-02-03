@@ -14,9 +14,11 @@ This function scrapes the Bioconductor site for version codes
 of all its releases.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 wood_bioc_releases()
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for Bioconductor:

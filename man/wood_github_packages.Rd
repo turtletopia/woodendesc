@@ -22,11 +22,16 @@ selected account. They are returned as a vector of strings, each element
 being a repository (and in most cases, package) name.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 wood_github_packages("turtletopia")
+}
+
+if (interactive()) {
 # I moved most my packages to turtletopia
 wood_github_packages("ErdaradunGaztea", include_forks = TRUE)
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for GitHub:

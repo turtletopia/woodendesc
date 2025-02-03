@@ -14,9 +14,15 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_github_dependencies("gglgbtq", "turtletopia")
+#' }
+#'
+#' if (interactive()) {
 #' wood_github_dependencies("versionsort", "turtletopia", tag = "v1.0.0")
+#' }
 #'
 #' @family github
 #' @family dependencies

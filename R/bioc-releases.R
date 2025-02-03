@@ -5,8 +5,11 @@
 #'
 #' @return A character vector, where each element is a Bioconductor release.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_bioc_releases()
+#' }
 #'
 #' @family bioc
 #' @export

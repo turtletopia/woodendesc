@@ -11,14 +11,25 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_bioc_dependencies("Biostrings")
+#' }
 #'
+#' if (interactive()) {
 #' # Will dependencies change?
 #' wood_bioc_dependencies("Biostrings", "devel")
+#' }
+#'
+#' if (interactive()) {
 #' # And what about dependencies in the past?
 #' wood_bioc_dependencies("Biostrings", "2.10")
+#' }
+#'
+#' if (interactive()) {
 #' wood_bioc_dependencies("Biostrings", "1.8")
+#' }
 #'
 #' @family bioc
 #' @family dependencies

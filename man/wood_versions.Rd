@@ -38,16 +38,24 @@ This function queries the selected repositories for version
 codes of the selected packages and collects the unique occurences.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 wood_versions("woodendesc", c("local#all", "runiverse@turtletopia"))
+}
+
+if (interactive()) {
 # Multiple packages are also possible:
 wood_versions(
   c("ggplot2", "Biostrings", "woodendesc"),
   repos = c("runiverse@turtletopia", "cran", "bioc@1.5")
 )
+}
+
+if (interactive()) {
 # By default, only CRAN is queried:
 wood_versions("versionsort")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for all repositories:

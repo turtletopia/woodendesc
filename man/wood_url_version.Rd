@@ -21,9 +21,11 @@ This function queries any online repository for the code of the
 current version of the selected package.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 wood_url_version("dockerfiler", repository = "https://colinfay.me")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for any URL:

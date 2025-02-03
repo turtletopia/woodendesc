@@ -12,9 +12,15 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_cran_dependencies("deepdep")
+#' }
+#'
+#' if (interactive()) {
 #' wood_cran_dependencies("ggplot2", version = "3.4.0")
+#' }
 #'
 #' @family cran
 #' @family dependencies

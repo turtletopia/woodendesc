@@ -21,9 +21,11 @@ This function queries GitHub for the codes of all tagged package
 versions. To get the latest available version, see \code{\link[=wood_github_latest]{wood_github_latest()}}.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 wood_github_versions("versionsort", "turtletopia")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for GitHub:

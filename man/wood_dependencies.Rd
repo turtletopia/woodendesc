@@ -43,16 +43,22 @@ This function queries the selected repositories for dependencies
 of the selected packages and returns the first working occurence.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wood_dependencies("stats", "core")
+
+## Only run with internet access
+if (interactive()) {
 # Multiple packages are also possible:
 wood_dependencies(
   c("tibble", "Biostrings", "woodendesc"),
-  repos = c("runiverse@turtletopia", "cran", "bioc@1.5")
+  repos = c("runiverse@turtletopia", "cran", "bioc@1.8")
 )
+}
+
+if (interactive()) {
 # By default, only CRAN is queried:
 wood_dependencies("versionsort")
-\dontshow{\}) # examplesIf}
+}
+
 }
 \seealso{
 Functions for all repositories:

@@ -11,8 +11,11 @@
 #' * `version` (minimum version requirement or `NA` if none),
 #' * `type` (dependency type, e.g. `"Imports"`).
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_url_dependencies("tidystringdist", repository = "https://colinfay.me")
+#' }
 #'
 #' @family url
 #' @family dependencies

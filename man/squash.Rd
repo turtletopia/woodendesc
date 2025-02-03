@@ -23,8 +23,10 @@ This function combines multiple dependency lists into a single
 has this dependency.
 }
 \examples{
-\dontshow{if (!woodendesc:::is_cran_check()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+## Only run with internet access
+if (interactive()) {
 deps <- wood_dependencies(c("versionsort", "deepdep", "gglgbtq"))
 squash(deps)
-\dontshow{\}) # examplesIf}
+}
+
 }

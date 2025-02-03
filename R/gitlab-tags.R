@@ -10,8 +10,11 @@
 #'
 #' @return A character vector of repository tags.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' wood_gitlab_tags("rock", "r-packages")
+#' }
 #'
 #' @family gitlab
 #' @export

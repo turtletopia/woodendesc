@@ -8,17 +8,28 @@
 #'
 #' @return A character vector of available packages.
 #'
-#' @examplesIf !woodendesc:::is_cran_check()
+#' @examples
+#' ## Only run with internet access
+#' if (interactive()) {
 #' print(wood_bioc_packages(), max = 15)
 #' # is the same as
 #' print(wood_bioc_packages("release"), max = 15)
+#' }
 #'
+#' if (interactive()) {
 #' # A glimpse in the future:
 #' print(wood_bioc_packages("devel"), max = 15)
+#' }
+#'
+#' if (interactive()) {
 #' # Previous versions can be queried as well:
 #' print(wood_bioc_packages("3.9"), max = 15)
+#' }
+#'
+#' if (interactive()) {
 #' # The oldest available version is 1.8:
 #' wood_bioc_packages("1.8")
+#' }
 #'
 #' @family bioc
 #' @family packages
